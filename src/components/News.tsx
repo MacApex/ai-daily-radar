@@ -25,14 +25,13 @@ export function News({ items, highlights, now }: { items: NewsItem[]; highlights
       .filter((n) => src === 'all' || n.source === src)
       .filter((n) => tags.length === 0 || tags.some((t) => n.tags.includes(t)))
       .filter((n) => !s || `${n.title} ${n.summary ?? ''} ${n.tags.join(' ')} ${hostOf(n.url)}`.toLowerCase().includes(s))
-      .sort((a, b) => (b.points ?? 0) - (a.points ?? 0))
   }, [items, q, src, tags])
   const toggleTag = (t: string) => setTags((ts) => (ts.includes(t) ? ts.filter((x) => x !== t) : [...ts, t]))
 
   return (
     <section aria-labelledby="news" className="page pt-20 sm:pt-28">
       <SectionHeader id="news" eyebrow="04 · Tech news" title="Off the wire">
-        <p className="max-w-sm text-[14px] text-muted">Top of Hacker News and Lobsters at run time, ranked by points.</p>
+        <p className="max-w-sm text-[14px] text-muted">Hacker News, Lobsters, DEV.to and AI/dev blogs, ranked by votes and freshness.</p>
       </SectionHeader>
 
       <div className="grid gap-4 sm:gap-5 lg:grid-cols-12">

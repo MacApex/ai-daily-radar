@@ -1,0 +1,199 @@
+{
+  "date": "2026-10-17",
+  "run_at": "2026-10-17T14:51:45.985056+08:00",
+  "archive_folder": "2026-10-17_144052_Asia-Shanghai",
+  "blockers": [],
+  "repos": [
+    {
+      "full_name": "anthropics/claude-plugins-official",
+      "rank": 1,
+      "stars": 40872,
+      "stars_today": 1552,
+      "decision": "saved",
+      "reason": "Official Claude Code plugin marketplace: LSP, code-review, security, skill/plugin/MCP-dev plugins plus partner MCP integrations; trust each plugin before installing.",
+      "rating": 5,
+      "license": "Apache-2.0",
+      "commit_sha": "ea10b213686c90bb1984b2016937310e05336cf3",
+      "size_mb": 13.6
+    },
+    {
+      "full_name": "K-Dense-AI/scientific-agent-skills",
+      "rank": 2,
+      "stars": 51705,
+      "stars_today": 1158,
+      "decision": "saved",
+      "reason": "177 Agent Skills for scientific research, data analysis and figures, portable across Claude Code, Codex and Cursor; domain libraries and datasets are separate.",
+      "rating": 4,
+      "license": "MIT",
+      "commit_sha": "a1043ef544e3a100c28e70a736b6cf32554d0677",
+      "size_mb": 277.2
+    },
+    {
+      "full_name": "affaan-m/ECC",
+      "rank": 3,
+      "stars": 281710,
+      "stars_today": 1057,
+      "decision": "eligible_not_archived",
+      "reason": "Agent harness (skills, memory, verification, security) with native Claude Code and Codex plugin paths; large and opinionated, so review before installing.",
+      "rating": 4,
+      "license": "MIT",
+      "commit_sha": "",
+      "size_mb": 59.0
+    },
+    {
+      "full_name": "HKUDS/CLI-Anything",
+      "rank": 4,
+      "stars": 53630,
+      "stars_today": 281,
+      "decision": "saved",
+      "reason": "Generates and catalogs agent-usable CLIs plus SKILL.md files for desktop software (Blender, draw.io, LibreOffice, Godot, Zotero and more); the target apps must be installed.",
+      "rating": 4,
+      "license": "Apache-2.0",
+      "commit_sha": "34f519533bc175d2fe287ab8316b0dd99bb9cc43",
+      "size_mb": 60.1
+    },
+    {
+      "full_name": "mksglu/context-mode",
+      "rank": 5,
+      "stars": 30319,
+      "stars_today": 449,
+      "decision": "upgraded",
+      "reason": "MCP indexing and output reduction help agents work with large tool results and preserve session context (already featured; newer commit archived).",
+      "rating": 5,
+      "license": "Elastic-2.0",
+      "commit_sha": "5f6298a9bdc480ebc7c88a29c9fbdf38ae2f8cb6",
+      "size_mb": 11.8
+    },
+    {
+      "full_name": "ruvnet/ruflo",
+      "rank": 6,
+      "stars": 75732,
+      "stars_today": 672,
+      "decision": "eligible_not_archived",
+      "reason": "Multi-agent swarm meta-harness and MCP server for Claude Code and Codex; broad and heavy, and its mods run with your account permissions.",
+      "rating": 3,
+      "license": "MIT",
+      "commit_sha": "",
+      "size_mb": 136.5
+    },
+    {
+      "full_name": "android/skills",
+      "rank": 7,
+      "stars": 8155,
+      "stars_today": 36,
+      "decision": "eligible_not_archived",
+      "reason": "Official Android SKILL.md set installable in Claude Code and Codex, aimed at Android tasks where LLMs underperform; Android-specific.",
+      "rating": 4,
+      "license": "Apache-2.0",
+      "commit_sha": "",
+      "size_mb": 4.0
+    },
+    {
+      "full_name": "obra/superpowers",
+      "rank": 8,
+      "stars": 300811,
+      "stars_today": 973,
+      "decision": "saved",
+      "reason": "Composable skills methodology (brainstorm, plan, subagent TDD, review, verify) installable in Claude Code, Codex and many other harnesses.",
+      "rating": 5,
+      "license": "MIT",
+      "commit_sha": "bb92a77741419a4ab5f06e711a283343f1ada0c3",
+      "size_mb": 2.0
+    },
+    {
+      "full_name": "cursor/plugins",
+      "rank": 9,
+      "stars": 12074,
+      "stars_today": 278,
+      "decision": "eligible_not_archived",
+      "reason": "Cursor's plugin spec and official plugins (review, orchestration, CLI-for-agents patterns); Cursor-centric, though the skills are partly portable.",
+      "rating": 3,
+      "license": "README states MIT",
+      "commit_sha": "",
+      "size_mb": 7.0
+    },
+    {
+      "full_name": "debpalash/VoiceStudio",
+      "rank": 10,
+      "stars": 71688,
+      "stars_today": 2301,
+      "decision": "eligible_not_archived",
+      "reason": "Local voice cloning, dubbing and transcription app with a local API and MCP for agents; heavy models, Apple Silicon MPS supported.",
+      "rating": 3,
+      "license": "AGPL-3.0",
+      "commit_sha": "",
+      "size_mb": 70.7
+    },
+    {
+      "full_name": "MadsLorentzen/ai-job-search",
+      "rank": 11,
+      "stars": 48835,
+      "stars_today": 898,
+      "decision": "eligible_not_archived",
+      "reason": "Claude Code workflow template (/scrape, /apply, drafter-reviewer agents, LaTeX CVs); a worked example of a document-producing agent pipeline, but niche.",
+      "rating": 3,
+      "license": "MIT",
+      "commit_sha": "",
+      "size_mb": 3.2
+    },
+    {
+      "full_name": "hmjz100/LinkSwift",
+      "rank": 12,
+      "stars": 23995,
+      "stars_today": 538,
+      "decision": "rejected",
+      "reason": "Not selected: userscript for cloud-drive direct download links; not a coding-agent tool.",
+      "rating": null,
+      "license": "AGPL-3.0",
+      "commit_sha": "",
+      "size_mb": null
+    },
+    {
+      "full_name": "xerj-org/xerj",
+      "rank": 13,
+      "stars": 7149,
+      "stars_today": 1648,
+      "decision": "eligible_not_archived",
+      "reason": "Local auto-indexing search with MCP and skill wiring for Claude Code and Cursor to cut agent file-reading tokens; binary install, and --insecure mode is for single-user dev only.",
+      "rating": 4,
+      "license": "Apache-2.0",
+      "commit_sha": "",
+      "size_mb": 197.9
+    }
+  ],
+  "featured": [
+    {
+      "full_name": "obra/superpowers",
+      "reason": "Composable skills methodology (brainstorm, plan, subagent TDD, review, verify) installable in Claude Code, Codex and many other harnesses.",
+      "ideas": [
+        "Run its brainstorming → writing-plans flow on one small feature to get a reviewed spec and step-by-step plan before any code is written.",
+        "Try subagent-driven-development together with test-driven-development on a toy repo and compare the result with a normal single-agent session.",
+        "Use the using-git-worktrees skill to run two feature branches in parallel with separate agents, without them overwriting each other.",
+        "Learn the writing-skills skill and write your own SKILL.md (for example for this GitHub Trending archive routine) in the same composable format.",
+        "Install the same skill set in both Claude Code and Codex CLI (both documented) and compare how each harness triggers the skills."
+      ]
+    },
+    {
+      "full_name": "anthropics/claude-plugins-official",
+      "reason": "Official Claude Code plugin marketplace: LSP, code-review, security, skill/plugin/MCP-dev plugins plus partner MCP integrations; trust each plugin before installing.",
+      "ideas": [
+        "Add a language-server plugin (pyright-lsp, typescript-lsp, rust-analyzer-lsp, etc.) so Claude Code gets real diagnostics and go-to-definition in a project.",
+        "Run pr-review-toolkit or code-review on a real pull request and study how its review output is structured.",
+        "Use plugin-dev or skill-creator, with example-plugin as the reference, to package one of your own workflows as a plugin (plugin.json, commands, skills, .mcp.json).",
+        "Explore mcp-server-dev to scaffold a small read-only MCP server, for example one that exposes this archive's archive-index.json.",
+        "Study the marketplace.json rules (immutable names, the renames map, strict:false skill bundles) to host a private marketplace for your own skills."
+      ]
+    },
+    {
+      "full_name": "HKUDS/CLI-Anything",
+      "reason": "Generates and catalogs agent-usable CLIs plus SKILL.md files for desktop software (Blender, draw.io, LibreOffice, Godot, Zotero and more); the target apps must be installed.",
+      "ideas": [
+        "Install the drawio or mermaid harness and have an agent create and revise diagrams through the CLI instead of the GUI.",
+        "Use the blender or freecad harness to let Claude Code build a simple 3D or CAD model end to end with its preview loop.",
+        "Drive the libreoffice harness to generate or convert documents and slide decks from an agent session.",
+        "Follow HARNESS.md and skill_generator to wrap a desktop app you use that has no harness yet into an agent-native CLI with its own SKILL.md.",
+        "Combine the zotero and obsidian harnesses into a research-notes pipeline where an agent pulls citations into linked notes."
+      ]
+    }
+  ]
+}
