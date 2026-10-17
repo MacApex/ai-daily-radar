@@ -1,17 +1,17 @@
 import { Canvas, useFrame, useThree } from '@react-three/fiber'
 import { Environment, Float, Lightformer, PerformanceMonitor } from '@react-three/drei'
-import { useMemo, useRef, useState } from 'react'
+import { useEffect, useMemo, useRef, useState } from 'react'
 import * as THREE from 'three'
 
 type Props = { theme: 'dark' | 'light'; mobile: boolean; active: boolean; picks: number }
 
 const PALETTE = {
-  dark: { a: '#8b7bff', b: '#3ee6c4', c: '#ff9d5c', glass: '#d9d4ff', pts: '#c9c3ff', blob: 0.55, env: 1 },
-  light: { a: '#a79bff', b: '#7fe8d2', c: '#ffbf91', glass: '#cfc8ff', pts: '#5b45e0', blob: 0.45, env: 0.55 },
+  dark: { a: '#8b7bff', b: '#3ee6c4', c: '#ff9d5c', glass: '#d9d4ff', pts: '#c9c3ff', blob: 0.7, env: 1.25 },
+  light: { a: '#a79bff', b: '#7fe8d2', c: '#ffbf91', glass: '#cfc8ff', pts: '#5b45e0', blob: 0.5, env: 0.65 },
 }
 
 /** Soft gradient blobs behind the glass so transmission has colour to refract. */
-function Backdrop({ theme }: { theme: 'dark' | 'light' }) {
+function Backdrop({ theme, boost }: { theme: 'dark' | 'light'; boost: number }) {
   const p = PALETTE[theme]
   const mat = useMemo(
     () =>
@@ -23,7 +23,7 @@ function Backdrop({ theme }: { theme: 'dark' | 'light' }) {
           uA: { value: new THREE.Color(p.a) },
           uB: { value: new THREE.Color(p.b) },
           uC: { value: new THREE.Color(p.c) },
-          uK: { value: p.blob },
+          uK: { value: Math.min(p.blob * boost, 0.95) },
         },
         vertexShader: 'varying vec2 vUv; void main(){ vUv=uv; gl_Position=projectionMatrix*modelViewMatrix*vec4(position,1.0); }',
         fragmentShader: `
@@ -40,11 +40,11 @@ function Backdrop({ theme }: { theme: 'dark' | 'light' }) {
             gl_FragColor = vec4(col / max(a+b+c, 0.001), alpha);
           }`,
       }),
-    [p.a, p.b, p.c, p.blob],
+    [p.a, p.b, p.c, p.blob, boost],
   )
   useFrame((_, dt) => { mat.uniforms.uTime.value += dt })
   return (
-    <mesh position={[0, 0, -6]} scale={[30, 18, 1]} material={mat}>
+    <mesh position={[0, 0, -6]} scale={[40, 40, 1]} material={mat}>
       <planeGeometry />
     </mesh>
   )
@@ -112,28 +112,46 @@ function Glass({ geometry, position, scale, color, speed, env }: { geometry: JSX
   )
 }
 
-/** Pointer + scroll reactive rig. */
+/** Adapts camera fov to the viewport aspect so portrait screens get a framed, full-bleed scene. */
+function CameraFit() {
+  const { camera, size } = useThree()
+  useEffect(() => {
+    const cam = camera as THREE.PerspectiveCamera
+    const aspect = size.width / Math.max(size.height, 1)
+    // portrait: widen the vertical fov a little so the tall view is filled, pull camera closer
+    cam.fov = aspect < 1 ? 52 : 40
+    cam.position.z = aspect < 1 ? 7 : 8
+    cam.updateProjectionMatrix()
+  }, [camera, size.width, size.height])
+  return null
+}
+
+/** Pointer + scroll reactive rig. Scroll keeps the scene turning instead of sliding it away. */
 function Rig({ children, mobile }: { children: React.ReactNode; mobile: boolean }) {
   const g = useRef<THREE.Group>(null)
   const { viewport } = useThree()
   useFrame((state, dt) => {
     if (!g.current) return
-    const scroll = Math.min(window.scrollY / Math.max(window.innerHeight, 1), 1.2)
+    const scroll = window.scrollY / Math.max(window.innerHeight, 1)
+    const hero = Math.min(scroll, 1)
     const k = 1 - Math.pow(0.002, dt)
-    g.current.rotation.y = THREE.MathUtils.lerp(g.current.rotation.y, state.pointer.x * 0.35 + scroll * 0.6, k)
-    g.current.rotation.x = THREE.MathUtils.lerp(g.current.rotation.x, -state.pointer.y * 0.2 + scroll * 0.25, k)
-    g.current.position.y = THREE.MathUtils.lerp(g.current.position.y, scroll * 2.4, k)
-    const x = mobile ? 0 : Math.min(viewport.width * 0.2, 2.6)
+    g.current.rotation.y = THREE.MathUtils.lerp(g.current.rotation.y, state.pointer.x * 0.35 + scroll * 0.45, k)
+    g.current.rotation.x = THREE.MathUtils.lerp(g.current.rotation.x, -state.pointer.y * 0.2 + Math.sin(scroll * 0.6) * 0.3, k)
+    g.current.position.y = THREE.MathUtils.lerp(g.current.position.y, Math.sin(scroll * 0.8) * (mobile ? 0.6 : 0.4), k)
+    // desktop: sits right of the hero copy, drifts toward centre once you scroll into content
+    const x = mobile ? 0 : Math.min(viewport.width * 0.2, 2.6) * (1 - hero * 0.55)
     g.current.position.x = THREE.MathUtils.lerp(g.current.position.x, x, k)
   })
   return <group ref={g}>{children}</group>
 }
 
 export default function HeroScene({ theme, mobile, active, picks }: Props) {
-  const [dpr, setDpr] = useState(mobile ? 1 : 1.5)
+  const [dpr, setDpr] = useState(1.5)
   const [degraded, setDegraded] = useState(false)
   const p = PALETTE[theme]
-  const s = mobile ? 0.5 : 1
+  const s = mobile ? 0.72 : 1
+  // portrait: spread the forms vertically so they fill a tall viewport instead of clustering
+  const P = (x: number, y: number, z: number): [number, number, number] => (mobile ? [x * 1.0, y * 1.9, z] : [x, y, z])
   return (
     <Canvas
       dpr={[1, dpr]}
@@ -145,16 +163,17 @@ export default function HeroScene({ theme, mobile, active, picks }: Props) {
       eventPrefix="client"
       aria-hidden
     >
+      <CameraFit />
       <PerformanceMonitor onDecline={() => { setDpr(1); setDegraded(true) }} />
-      <Backdrop theme={theme} />
+      <Backdrop theme={theme} boost={mobile ? 1.3 : 1} />
       <Constellation count={degraded || mobile ? 280 : 600} color={p.pts} picks={picks} />
       <Rig mobile={mobile}>
-        <group position={mobile ? [0.35, 1.05, 0] : [0, 0, 0]} scale={s}>
-          <Glass geometry={<torusKnotGeometry args={[0.8, 0.28, 180, 28]} />} position={[0.2, 0.3, 0]} scale={1} color={p.glass} speed={1.4} env={p.env} />
-          <Glass geometry={<icosahedronGeometry args={[0.75, 0]} />} position={[-2.0, 1.3, -0.8]} scale={1} color={p.a} speed={1.8} env={p.env} />
-          <Glass geometry={<capsuleGeometry args={[0.32, 0.9, 12, 24]} />} position={[1.9, -1.1, 0.4]} scale={1} color={p.b} speed={2.1} env={p.env} />
-          {!degraded && <Glass geometry={<torusGeometry args={[0.55, 0.2, 32, 80]} />} position={[2.1, 1.5, -1.2]} scale={1} color={p.c} speed={1.6} env={p.env} />}
-          {!degraded && <Glass geometry={<octahedronGeometry args={[0.55, 0]} />} position={[-1.5, -1.4, 0.2]} scale={1} color={p.glass} speed={2.4} env={p.env} />}
+        <group position={[0, mobile ? 1.5 : 0, 0]} scale={s}>
+          <Glass geometry={<torusKnotGeometry args={[0.8, 0.28, 180, 28]} />} position={P(0.2, 0.3, 0)} scale={1} color={p.glass} speed={1.4} env={p.env} />
+          <Glass geometry={<icosahedronGeometry args={[0.75, 0]} />} position={P(-2.0, 1.3, -0.8)} scale={1} color={p.a} speed={1.8} env={p.env} />
+          <Glass geometry={<capsuleGeometry args={[0.32, 0.9, 12, 24]} />} position={P(1.9, -1.1, 0.4)} scale={1} color={p.b} speed={2.1} env={p.env} />
+          {!degraded && <Glass geometry={<torusGeometry args={[0.55, 0.2, 32, 80]} />} position={P(2.1, 1.5, -1.2)} scale={1} color={p.c} speed={1.6} env={p.env} />}
+          {!degraded && <Glass geometry={<octahedronGeometry args={[0.55, 0]} />} position={P(-1.5, -1.4, 0.2)} scale={1} color={p.glass} speed={2.4} env={p.env} />}
         </group>
       </Rig>
       <Environment resolution={256} frames={1}>

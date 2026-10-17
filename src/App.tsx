@@ -1,3 +1,4 @@
+import { Backdrop } from './components/Backdrop'
 import { AnimatePresence, MotionConfig, motion } from 'framer-motion'
 import { useCallback, useEffect, useMemo, useState } from 'react'
 import type { DailyReport, HistoryEntry } from './lib/types'
@@ -86,6 +87,7 @@ export default function App() {
     <MotionConfig reducedMotion="user">
       <a href="#main" className="sr-only z-[70] rounded-lg bg-fg px-3 py-2 text-bg focus:not-sr-only focus:fixed focus:left-3 focus:top-3">Skip to content</a>
       <div className="ambient" aria-hidden />
+      <Backdrop theme={theme} picks={view?.featured.length ?? 0} />
       <div className="grain" aria-hidden />
       <TopBar theme={theme} onTheme={toggleTheme} active={active} updated={latest?.generated_at} />
       <main id="main">

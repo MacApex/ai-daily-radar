@@ -4,7 +4,7 @@
 
 :root, [data-theme='dark'] {
   --bg: #07080d; --bg-2: #0d0f17;
-  --panel: rgba(22, 25, 38, 0.55); --panel-solid: #12141f; --panel-border: rgba(255, 255, 255, 0.08);
+  --panel: rgba(16, 18, 30, 0.58); --panel-solid: #12141f; --panel-border: rgba(255, 255, 255, 0.08);
   --panel-hi: rgba(255, 255, 255, 0.06);
   --text: #eef0f7; --muted: #9aa0b4;
   --accent: #8b7bff; --accent-2: #3ee6c4; --accent-3: #ff9d5c; --danger: #ff6b81; --sky: #5cc8ff;
@@ -94,3 +94,43 @@ body {
 @keyframes ping-slow { 0% { transform: scale(1); opacity: .7 } 100% { transform: scale(2.6); opacity: 0 } }
 .radar-ping { animation: ping-slow 2.4s cubic-bezier(0,0,.2,1) infinite; }
 @media (prefers-reduced-motion: reduce) { .radar-ping { animation: none; } }
+
+/* ---- site-wide animated backdrop (fixed, full viewport, behind all content) ---- */
+.backdrop-layer {
+  position: fixed; inset: 0; z-index: -1; pointer-events: none; overflow: hidden;
+  width: 100vw; height: 100vh; height: 100lvh; /* lvh: no gap when the mobile URL bar collapses */
+  contain: strict;
+}
+.backdrop-layer canvas { width: 100% !important; height: 100% !important; }
+.aurora { position: absolute; inset: 0; }
+.orb {
+  position: absolute; display: block; border-radius: 50%;
+  width: var(--s); height: var(--s); left: var(--x); top: var(--y);
+  background: radial-gradient(circle at center, var(--c) 0%, transparent 68%);
+  opacity: var(--o, .5); will-change: transform; transform: translate3d(0,0,0);
+  animation: var(--anim) var(--d) ease-in-out infinite alternate;
+}
+.orb-a { --s: 70vmax; --x: 40%; --y: -20%; --c: color-mix(in srgb, var(--accent) 70%, transparent); --anim: drift-a; --d: 26s; }
+.orb-b { --s: 60vmax; --x: -30%; --y: 25%;  --c: color-mix(in srgb, var(--accent-2) 55%, transparent); --anim: drift-b; --d: 32s; }
+.orb-c { --s: 55vmax; --x: 45%; --y: 55%;  --c: color-mix(in srgb, var(--accent-3) 50%, transparent); --anim: drift-c; --d: 29s; --o: .42; }
+.orb-d { --s: 45vmax; --x: 10%; --y: 70%;  --c: color-mix(in srgb, var(--sky) 50%, transparent); --anim: drift-b; --d: 37s; --o: .38; }
+.orb-e { --s: 40vmax; --x: 60%; --y: 15%;  --c: color-mix(in srgb, #ff5ccf 45%, transparent); --anim: drift-c; --d: 41s; --o: .32; }
+@keyframes drift-a { 0% { transform: translate3d(0,0,0) scale(1) } 50% { transform: translate3d(-25vw,20vh,0) scale(1.15) } 100% { transform: translate3d(-45vw,45vh,0) scale(.9) } }
+@keyframes drift-b { 0% { transform: translate3d(0,0,0) scale(1) } 50% { transform: translate3d(35vw,-15vh,0) scale(1.2) } 100% { transform: translate3d(60vw,20vh,0) scale(.95) } }
+@keyframes drift-c { 0% { transform: translate3d(0,0,0) scale(1.1) } 50% { transform: translate3d(-40vw,-25vh,0) scale(.9) } 100% { transform: translate3d(-10vw,-50vh,0) scale(1.15) } }
+.aurora-static .orb { animation: none; }
+@media (max-width: 767px) {
+  /* mobile: bigger, brighter orbs so every scroll position has colour */
+  .orb { opacity: calc(var(--o, .5) + .15); }
+  .orb-a { --s: 110vmax; } .orb-b { --s: 95vmax; } .orb-c { --s: 90vmax; } .orb-d { --s: 80vmax; } .orb-e { --s: 70vmax; }
+}
+[data-theme='light'] .orb { opacity: calc(var(--o, .5) * .7); }
+@media (prefers-reduced-motion: reduce) {
+  /* gentle fallback: very slow breathing opacity only */
+  .orb { animation: breathe 18s ease-in-out infinite alternate; }
+  @keyframes breathe { from { opacity: calc(var(--o, .5) * .8) } to { opacity: var(--o, .5) } }
+}
+.backdrop-vignette {
+  position: absolute; inset: 0;
+  background: radial-gradient(120% 90% at 50% 40%, transparent 55%, color-mix(in srgb, var(--bg) 55%, transparent) 100%);
+}

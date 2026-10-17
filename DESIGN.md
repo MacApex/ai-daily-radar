@@ -86,7 +86,7 @@ Shared components: `GlassPanel`, `TiltCard`, `Counter`, `StarRating`, `Badge`, `
 
 ## 6. 3D scene concept ("Radar Field")
 
-React Three Fiber canvas fixed behind the hero (fades out as you scroll past it):
+React Three Fiber canvas in a site-wide `position: fixed; inset: 0; height: 100lvh` backdrop layer (`src/components/Backdrop.tsx`) behind all content, together with drifting CSS aurora orbs (transform/opacity only). Scroll keeps the scene turning rather than fading it out; portrait screens get a wider fov, larger forms spread vertically and brighter blobs. Reduced motion: static aurora with slow opacity breathing, no 3D:
 - 5 floating glass forms (torus knot, icosahedron, capsule, torus, octahedron) with
   `MeshTransmissionMaterial`-style physical glass (`meshPhysicalMaterial`, transmission 1, iridescence
   1, thickness, roughness .15, clearcoat) refracting a gradient environment (drei `Environment` with
