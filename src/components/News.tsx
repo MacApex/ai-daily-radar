@@ -5,7 +5,10 @@ import { hostOf, relTime } from '../lib/format'
 import { EmptyState, Reveal, SectionHeader, fadeUp, stagger } from './ui'
 import { Arrow, Comment, Search, Sparkle, Up } from './Icons'
 
-const SRC_COLOR: Record<string, string> = { 'Hacker News': '#ff7a3d', Lobsters: '#c9302c' }
+const SRC_COLOR: Record<string, string> = {
+  'Hacker News': '#ff7a3d', Lobsters: '#d8453f', 'DEV.to': '#8b8fa3', 'Simon Willison': '#3ea8ff',
+  'Hugging Face': '#ffbf1f', 'GitHub Blog': '#a371f7',
+}
 
 export function News({ items, highlights, now }: { items: NewsItem[]; highlights: Highlight[]; now: number }) {
   const [q, setQ] = useState('')
@@ -57,13 +60,13 @@ export function News({ items, highlights, now }: { items: NewsItem[]; highlights
         {/* list */}
         <Reveal className="glass overflow-hidden lg:order-1 lg:col-span-8">
           <div className="space-y-3 border-b border-line p-3 sm:p-4">
-            <div className="flex flex-col gap-3 sm:flex-row sm:items-center">
-              <label className="relative flex-1">
+            <div className="flex flex-col gap-3">
+              <label className="relative">
                 <span className="sr-only">Search news</span>
                 <Search className="pointer-events-none absolute left-3 top-1/2 -translate-y-1/2 text-muted" />
                 <input className="input pl-9" placeholder="Search headlines, domains, tags…" value={q} onChange={(e) => setQ(e.target.value)} />
               </label>
-              <div className="no-scrollbar -mx-3 flex gap-1.5 overflow-x-auto px-3 sm:mx-0 sm:px-0" role="group" aria-label="Filter by source">
+              <div className="no-scrollbar -mx-3 flex gap-1.5 overflow-x-auto px-3 sm:mx-0 sm:flex-wrap sm:px-0" role="group" aria-label="Filter by source">
                 {['all', ...sources].map((s) => (
                   <button key={s} type="button" className="pill" aria-pressed={src === s} onClick={() => setSrc(s)}>
                     {s !== 'all' && <span className="h-2 w-2 rounded-full" style={{ background: SRC_COLOR[s] ?? 'var(--accent)' }} />}
