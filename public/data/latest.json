@@ -1,0 +1,983 @@
+{
+  "sample": false,
+  "generated_at": "2026-10-17T14:40:52+08:00",
+  "date": "2026-10-17",
+  "run": {
+    "trending_observed": 13,
+    "saved": 4,
+    "upgraded": 1,
+    "relocated": 0,
+    "unchanged": 0,
+    "incomplete": 0,
+    "eligible_not_archived": 7,
+    "rejected": 1,
+    "blockers": [],
+    "archive_folder": "2026-10-17_144052_Asia-Shanghai"
+  },
+  "featured": [
+    {
+      "full_name": "obra/superpowers",
+      "url": "https://github.com/obra/superpowers",
+      "stars": 300811,
+      "rating": 5,
+      "license": "MIT",
+      "reason": "The most complete agentic-skills methodology on GitHub: brainstorm, plan, TDD and review skills that compose into a disciplined coding workflow. 300k stars and still gaining ~1k/day.",
+      "ideas": [
+        "Port its brainstorm, plan, execute loop into the daily-radar job so each run self-reviews before pushing.",
+        "Write a 'radar-curator' skill in its format that scores trending repos with a fixed rubric.",
+        "Adopt its TDD skill for the dashboard: snapshot-test the JSON contract before every deploy.",
+        "Record a 60-second Douyin explainer comparing superpowers vs. plain prompting on a real bug.",
+        "Fork the skill index into a personal library and tag which skills you actually use weekly."
+      ]
+    },
+    {
+      "full_name": "anthropics/claude-plugins-official",
+      "url": "https://github.com/anthropics/claude-plugins-official",
+      "stars": 40872,
+      "rating": 5,
+      "license": "Apache-2.0",
+      "reason": "Anthropic's own curated plugin directory: the canonical source for vetted Claude Code plugins, and a template for how plugins should be packaged and documented.",
+      "ideas": [
+        "Diff the directory daily and surface newly added plugins as a radar section.",
+        "Package the radar scraper itself as a Claude Code plugin following the official layout.",
+        "Build a one-page 'best 10 official plugins' cheat-sheet for Chinese-speaking devs.",
+        "Use its manifest schema to validate any third-party plugin before installing it.",
+        "Turn each plugin into a short demo clip series: one plugin, one real task, 30 seconds."
+      ]
+    },
+    {
+      "full_name": "HKUDS/CLI-Anything",
+      "url": "https://github.com/HKUDS/CLI-Anything",
+      "stars": 53630,
+      "rating": 4,
+      "license": "Apache-2.0",
+      "reason": "Generates agent-native CLIs for existing desktop software (GIMP, Inkscape, LibreOffice and more), so agents can drive real apps without brittle GUI automation.",
+      "ideas": [
+        "Generate a CLI for a video editor and let an agent cut daily Douyin clips end-to-end.",
+        "Wrap Inkscape via CLI-Anything to auto-render social cards for each featured repo.",
+        "Benchmark CLI-driven vs. computer-use control on the same 5 tasks and publish the numbers.",
+        "Contribute a CLI harness for a Chinese productivity app missing from CLI-Hub.",
+        "Chain it with the radar: auto-generate a cover image for each day's report."
+      ]
+    }
+  ],
+  "archived": [
+    {
+      "full_name": "obra/superpowers",
+      "url": "https://github.com/obra/superpowers",
+      "stars": 300811,
+      "rating": 5,
+      "license": "MIT",
+      "commit_sha": "bb92a77741419a4ab5f06e711a283343f1ada0c3",
+      "status": "saved",
+      "size_mb": 7.5,
+      "description": "An agentic skills framework & software development methodology that works."
+    },
+    {
+      "full_name": "anthropics/claude-plugins-official",
+      "url": "https://github.com/anthropics/claude-plugins-official",
+      "stars": 40872,
+      "rating": 5,
+      "license": "Apache-2.0",
+      "commit_sha": "ea10b213686c90bb1984b2016937310e05336cf3",
+      "status": "saved",
+      "size_mb": 16.7,
+      "description": "Official, Anthropic-managed directory of high quality Claude Code Plugins."
+    },
+    {
+      "full_name": "HKUDS/CLI-Anything",
+      "url": "https://github.com/HKUDS/CLI-Anything",
+      "stars": 53630,
+      "rating": 4,
+      "license": "Apache-2.0",
+      "commit_sha": "34f519533bc175d2fe287ab8316b0dd99bb9cc43",
+      "status": "saved",
+      "size_mb": 41.3,
+      "description": "CLI-Anything: Making ALL Software Agent-Native. CLI-Hub: clianything.cc"
+    },
+    {
+      "full_name": "mksglu/context-mode",
+      "url": "https://github.com/mksglu/context-mode",
+      "stars": 30319,
+      "rating": 5,
+      "license": "Elastic-2.0",
+      "commit_sha": "5f6298a9bdc480ebc7c88a29c9fbdf38ae2f8cb6",
+      "status": "upgraded",
+      "size_mb": 34.1,
+      "description": "Context window optimization for AI coding agents. Sandboxes tool output (98% reduction), persists session memory, and enforces routing across 17 platforms via MCP + hooks."
+    },
+    {
+      "full_name": "K-Dense-AI/scientific-agent-skills",
+      "url": "https://github.com/K-Dense-AI/scientific-agent-skills",
+      "stars": 51705,
+      "rating": 4,
+      "license": "MIT",
+      "commit_sha": "a1043ef544e3a100c28e70a736b6cf32554d0677",
+      "status": "saved",
+      "size_mb": 460.1,
+      "description": "Turn any AI agent into an AI Scientist. 177 validated Agent Skills plus 100+ scientific databases across biology, chemistry and medicine."
+    }
+  ],
+  "trending": [
+    {
+      "rank": 1,
+      "full_name": "anthropics/claude-plugins-official",
+      "url": "https://github.com/anthropics/claude-plugins-official",
+      "stars": 40872,
+      "stars_today": 1552,
+      "language": "Python",
+      "description": "Official, Anthropic-managed directory of high quality Claude Code Plugins.",
+      "decision": "archived",
+      "decision_reason": "Saved: official plugin directory, high signal for Claude Code workflows."
+    },
+    {
+      "rank": 2,
+      "full_name": "K-Dense-AI/scientific-agent-skills",
+      "url": "https://github.com/K-Dense-AI/scientific-agent-skills",
+      "stars": 51705,
+      "stars_today": 1158,
+      "language": "Python",
+      "description": "Turn any AI agent into an AI Scientist. 177 validated Agent Skills plus 100+ scientific databases across biology, chemistry and medicine.",
+      "decision": "archived",
+      "decision_reason": "Saved: large, well-structured skills library; useful reference for skill authoring."
+    },
+    {
+      "rank": 3,
+      "full_name": "affaan-m/ECC",
+      "url": "https://github.com/affaan-m/ECC",
+      "stars": 281781,
+      "stars_today": 1057,
+      "language": "JavaScript",
+      "description": "The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.",
+      "decision": "eligible_not_archived",
+      "decision_reason": "Eligible, but daily archive cap (5) reached; overlaps with superpowers."
+    },
+    {
+      "rank": 4,
+      "full_name": "HKUDS/CLI-Anything",
+      "url": "https://github.com/HKUDS/CLI-Anything",
+      "stars": 53630,
+      "stars_today": 281,
+      "language": "Python",
+      "description": "CLI-Anything: Making ALL Software Agent-Native. CLI-Hub: clianything.cc",
+      "decision": "archived",
+      "decision_reason": "Saved: turns GUI software into agent-callable CLIs; directly reusable."
+    },
+    {
+      "rank": 5,
+      "full_name": "mksglu/context-mode",
+      "url": "https://github.com/mksglu/context-mode",
+      "stars": 30319,
+      "stars_today": 449,
+      "language": "TypeScript",
+      "description": "Context window optimization for AI coding agents. Sandboxes tool output (98% reduction), persists session memory, and enforces routing across 17 platforms via MCP + hooks.",
+      "decision": "archived",
+      "decision_reason": "Upgraded: newer commit than the previous archived snapshot."
+    },
+    {
+      "rank": 6,
+      "full_name": "ruvnet/ruflo",
+      "url": "https://github.com/ruvnet/ruflo",
+      "stars": 75757,
+      "stars_today": 672,
+      "language": "TypeScript",
+      "description": "The original agent harness. Deploy multi-player swarms, coordinate autonomous workflows, adaptive memory and vector RAG integration.",
+      "decision": "eligible_not_archived",
+      "decision_reason": "Eligible, but daily archive cap (5) reached; very large repo (~640 MB)."
+    },
+    {
+      "rank": 7,
+      "full_name": "android/skills",
+      "url": "https://github.com/android/skills",
+      "stars": 8179,
+      "stars_today": 36,
+      "language": "Kotlin",
+      "description": "Official Android agent skills.",
+      "decision": "eligible_not_archived",
+      "decision_reason": "Eligible, but daily archive cap (5) reached; early-stage, few stars today."
+    },
+    {
+      "rank": 8,
+      "full_name": "obra/superpowers",
+      "url": "https://github.com/obra/superpowers",
+      "stars": 300811,
+      "stars_today": 973,
+      "language": "Shell",
+      "description": "An agentic skills framework & software development methodology that works.",
+      "decision": "archived",
+      "decision_reason": "Saved: the reference skills framework; top pick today."
+    },
+    {
+      "rank": 9,
+      "full_name": "cursor/plugins",
+      "url": "https://github.com/cursor/plugins",
+      "stars": 12109,
+      "stars_today": 278,
+      "language": "TypeScript",
+      "description": "Cursor plugin specification and official plugins.",
+      "decision": "eligible_not_archived",
+      "decision_reason": "Eligible, but daily archive cap (5) reached; no license file yet."
+    },
+    {
+      "rank": 10,
+      "full_name": "debpalash/VoiceStudio",
+      "url": "https://github.com/debpalash/VoiceStudio",
+      "stars": 71841,
+      "stars_today": 2301,
+      "language": "Python",
+      "description": "Open-source, fully-local ElevenLabs alternative: voice cloning, voice design, video dubbing, dictation, transcription & audiobooks in 646 languages.",
+      "decision": "eligible_not_archived",
+      "decision_reason": "Eligible, but daily archive cap (5) reached; AGPL-3.0, off-focus for agent tooling."
+    },
+    {
+      "rank": 11,
+      "full_name": "MadsLorentzen/ai-job-search",
+      "url": "https://github.com/MadsLorentzen/ai-job-search",
+      "stars": 48942,
+      "stars_today": 898,
+      "language": "Python",
+      "description": "The job search that runs on your machine. AI job application framework built on Claude Code: evaluate postings, tailor CVs, write cover letters, prep interviews.",
+      "decision": "eligible_not_archived",
+      "decision_reason": "Eligible, but daily archive cap (5) reached; niche use case."
+    },
+    {
+      "rank": 12,
+      "full_name": "hmjz100/LinkSwift",
+      "url": "https://github.com/hmjz100/LinkSwift",
+      "stars": 24100,
+      "stars_today": 538,
+      "language": "JavaScript",
+      "description": "JavaScript tool for obtaining direct download links from Chinese cloud drives (Baidu, Aliyun, Quark, 123pan and more).",
+      "decision": "rejected",
+      "decision_reason": "Rejected: userscript for bypassing cloud-drive download limits; ToS risk, not AI tooling."
+    },
+    {
+      "rank": 13,
+      "full_name": "xerj-org/xerj",
+      "url": "https://github.com/xerj-org/xerj",
+      "stars": 7220,
+      "stars_today": 1648,
+      "language": "Rust",
+      "description": "XERJ is the new way for AI to search data. One command indexes code, docs, logs and PDFs for search, RAG and agent memory, Elasticsearch compatible.",
+      "decision": "eligible_not_archived",
+      "decision_reason": "Eligible, but daily archive cap (5) reached; promising, revisit tomorrow."
+    }
+  ],
+  "news": [
+    {
+      "title": "Ultramarine 1 Flash",
+      "url": "https://www.paperinstruments.com/ultramarine",
+      "source": "Hacker News",
+      "points": 219,
+      "comments": 66,
+      "comments_url": "https://news.ycombinator.com/item?id=50106747",
+      "published_at": "2026-10-16T01:06:01+08:00",
+      "tags": [
+        "misc"
+      ]
+    },
+    {
+      "title": "Tesla Roadster",
+      "url": "https://www.tesla.com/roadster",
+      "source": "Hacker News",
+      "points": 1402,
+      "comments": 2451,
+      "comments_url": "https://news.ycombinator.com/item?id=50112657",
+      "published_at": "2026-10-16T09:32:45+08:00",
+      "tags": [
+        "hardware"
+      ]
+    },
+    {
+      "title": "Show HN: Llmspeed – feel how fast a local LLM runs before you buy the hardware",
+      "url": "https://llmspeed.dev/",
+      "source": "Hacker News",
+      "points": 50,
+      "comments": 21,
+      "comments_url": "https://news.ycombinator.com/item?id=50127979",
+      "published_at": "2026-10-17T12:36:53+08:00",
+      "tags": [
+        "ai",
+        "hardware"
+      ]
+    },
+    {
+      "title": "Llama.cpp on a jailbroken PS5: run any GGUF model natively on the console",
+      "url": "https://github.com/cobanov/PS5LM",
+      "source": "Hacker News",
+      "points": 279,
+      "comments": 68,
+      "comments_url": "https://news.ycombinator.com/item?id=50122431",
+      "published_at": "2026-10-17T02:32:35+08:00",
+      "tags": [
+        "ai",
+        "hardware"
+      ]
+    },
+    {
+      "title": "Intuitive concurrent programming in any language",
+      "url": "https://www.lf-lang.org/",
+      "source": "Hacker News",
+      "points": 25,
+      "comments": 3,
+      "comments_url": "https://news.ycombinator.com/item?id=50103255",
+      "published_at": "2026-10-15T21:18:44+08:00",
+      "tags": [
+        "programming"
+      ]
+    },
+    {
+      "title": "You could have invented transformers from memory",
+      "url": "https://alexwang.ai/posts/associative-memory/",
+      "source": "Hacker News",
+      "points": 279,
+      "comments": 67,
+      "comments_url": "https://news.ycombinator.com/item?id=50122878",
+      "published_at": "2026-10-17T03:01:17+08:00",
+      "tags": [
+        "misc"
+      ]
+    },
+    {
+      "title": "Claude reveals ECDSA curve origins",
+      "url": "https://www.anthropic.com/research/ecdsa-curve-origins",
+      "source": "Hacker News",
+      "points": 852,
+      "comments": 316,
+      "comments_url": "https://news.ycombinator.com/item?id=50122800",
+      "published_at": "2026-10-17T02:55:59+08:00",
+      "tags": [
+        "ai",
+        "security"
+      ]
+    },
+    {
+      "title": "California is building a $400M shield for Yosemite's most dangerous highway",
+      "url": "https://www.sfchronicle.com/california/article/yosemite-national-park-highway-140-22463847.php",
+      "source": "Hacker News",
+      "points": 39,
+      "comments": 38,
+      "comments_url": "https://news.ycombinator.com/item?id=50088937",
+      "published_at": "2026-10-14T23:15:58+08:00",
+      "tags": [
+        "science"
+      ]
+    },
+    {
+      "title": "Why Math Dumped OpenAI",
+      "url": "https://raymyers.org/post/math-dumped-openai/",
+      "source": "Hacker News",
+      "points": 11,
+      "comments": 0,
+      "comments_url": "https://news.ycombinator.com/item?id=50128468",
+      "published_at": "2026-10-17T14:19:44+08:00",
+      "tags": [
+        "ai",
+        "science"
+      ]
+    },
+    {
+      "title": "FLUX 3 Image Klein",
+      "url": "https://bfl.ai/blog/flux-3-image-klein",
+      "source": "Hacker News",
+      "points": 163,
+      "comments": 45,
+      "comments_url": "https://news.ycombinator.com/item?id=50123580",
+      "published_at": "2026-10-17T03:47:13+08:00",
+      "tags": [
+        "ai"
+      ]
+    },
+    {
+      "title": "0/1 Knapsack Problem in PyTorch",
+      "url": "https://jedrzej.maczan.pl/2025_11_21_dp_knapsack_sliding_hirschberg",
+      "source": "Hacker News",
+      "points": 17,
+      "comments": 1,
+      "comments_url": "https://news.ycombinator.com/item?id=50088767",
+      "published_at": "2026-10-14T23:04:33+08:00",
+      "tags": [
+        "programming"
+      ]
+    },
+    {
+      "title": "Butlerian Jihad",
+      "url": "https://dune.fandom.com/wiki/Butlerian_Jihad",
+      "source": "Hacker News",
+      "points": 208,
+      "comments": 112,
+      "comments_url": "https://news.ycombinator.com/item?id=50127274",
+      "published_at": "2026-10-17T10:21:08+08:00",
+      "tags": [
+        "misc"
+      ]
+    },
+    {
+      "title": "Apple ML Research: Muse Spark Open with MLX on Mac Studio",
+      "url": "https://machinelearning.apple.com/research/mlx-distributed-inference",
+      "source": "Hacker News",
+      "points": 308,
+      "comments": 158,
+      "comments_url": "https://news.ycombinator.com/item?id=50118320",
+      "published_at": "2026-10-16T21:43:48+08:00",
+      "tags": [
+        "ai",
+        "hardware"
+      ]
+    },
+    {
+      "title": "eBay Restricts Listings of Radio Equipment, but Exempts Ham-Band-Only Gear",
+      "url": "https://www.arrl.org/arrlletterissue?issue=2026-10-15#eBay-Restricts-Listings-of-Radio-Equipment_-But-Exempts-Ham-Band-Only-Gear",
+      "source": "Hacker News",
+      "points": 216,
+      "comments": 177,
+      "comments_url": "https://news.ycombinator.com/item?id=50122034",
+      "published_at": "2026-10-17T02:06:17+08:00",
+      "tags": [
+        "hardware"
+      ]
+    },
+    {
+      "title": "JPEG XL vs. AVIF for web use-cases",
+      "url": "https://jakearchibald.com/2026/jpeg-xl-vs-avif/",
+      "source": "Hacker News",
+      "points": 252,
+      "comments": 175,
+      "comments_url": "https://news.ycombinator.com/item?id=50120224",
+      "published_at": "2026-10-17T00:12:02+08:00",
+      "tags": [
+        "web"
+      ]
+    },
+    {
+      "title": "Designing more efficient quantum circuits with Claude",
+      "url": "https://www.anthropic.com/research/designing-efficient-quantum-circuits",
+      "source": "Hacker News",
+      "points": 135,
+      "comments": 32,
+      "comments_url": "https://news.ycombinator.com/item?id=50121939",
+      "published_at": "2026-10-17T02:00:18+08:00",
+      "tags": [
+        "ai",
+        "science"
+      ]
+    },
+    {
+      "title": "$50k First Letters Prize Awarded for PHerc 343",
+      "url": "https://scrollprize.substack.com/p/50k-first-letters-prize-awarded-for",
+      "source": "Hacker News",
+      "points": 7,
+      "comments": 0,
+      "comments_url": "https://news.ycombinator.com/item?id=50110930",
+      "published_at": "2026-10-16T05:55:04+08:00",
+      "tags": [
+        "misc"
+      ]
+    },
+    {
+      "title": "A story of WiFi secrets, UART lockdowns and a damaged flash memory chip",
+      "url": "https://adepts.of0x.cc/eufy-homestation2-firmware/",
+      "source": "Hacker News",
+      "points": 43,
+      "comments": 3,
+      "comments_url": "https://news.ycombinator.com/item?id=50119751",
+      "published_at": "2026-10-16T23:38:28+08:00",
+      "tags": [
+        "security",
+        "hardware"
+      ]
+    },
+    {
+      "title": "I built the RealWorld app in Lean 4",
+      "url": "https://leangineer.com/blog/realworld-in-lean/",
+      "source": "Hacker News",
+      "points": 48,
+      "comments": 4,
+      "comments_url": "https://news.ycombinator.com/item?id=50088748",
+      "published_at": "2026-10-14T23:03:14+08:00",
+      "tags": [
+        "programming"
+      ]
+    },
+    {
+      "title": "Monte-Carlo Simulations",
+      "url": "https://eli.thegreenplace.net/2026/monte-carlo-simulations/",
+      "source": "Hacker News",
+      "points": 113,
+      "comments": 21,
+      "comments_url": "https://news.ycombinator.com/item?id=50076089",
+      "published_at": "2026-10-14T02:11:46+08:00",
+      "tags": [
+        "science"
+      ]
+    },
+    {
+      "title": "90% of US working hours are spent on tasks not covered well by AI benchmarks",
+      "url": "https://www.mercor.com/research/labor-index/benchmark-map/",
+      "source": "Hacker News",
+      "points": 491,
+      "comments": 413,
+      "comments_url": "https://news.ycombinator.com/item?id=50121179",
+      "published_at": "2026-10-17T01:08:38+08:00",
+      "tags": [
+        "ai"
+      ]
+    },
+    {
+      "title": "Show HN: Gemini 4 Argon plays StarCraft",
+      "url": "https://starskirmish.com/bench/v0-2/",
+      "source": "Hacker News",
+      "points": 218,
+      "comments": 98,
+      "comments_url": "https://news.ycombinator.com/item?id=50118688",
+      "published_at": "2026-10-16T22:18:44+08:00",
+      "tags": [
+        "ai"
+      ]
+    },
+    {
+      "title": "Wireless magnetic millirobots that deliver medicine inside the beating heart",
+      "url": "https://hub.jhu.edu/2026/10/12/magnetic-millirobots-cardiac-treatment/",
+      "source": "Hacker News",
+      "points": 94,
+      "comments": 16,
+      "comments_url": "https://news.ycombinator.com/item?id=50083673",
+      "published_at": "2026-10-14T15:21:12+08:00",
+      "tags": [
+        "science"
+      ]
+    },
+    {
+      "title": "How the Claude Code team does code review",
+      "url": "https://claude.dev/blog/solving-code-review-at-anthropic/",
+      "source": "Hacker News",
+      "points": 332,
+      "comments": 308,
+      "comments_url": "https://news.ycombinator.com/item?id=50122951",
+      "published_at": "2026-10-17T03:04:47+08:00",
+      "tags": [
+        "ai"
+      ]
+    },
+    {
+      "title": "C++26: The New Debugging Header",
+      "url": "https://www.sandordargo.com/blog/2026/09/30/cpp26-debugging",
+      "source": "Hacker News",
+      "points": 93,
+      "comments": 21,
+      "comments_url": "https://news.ycombinator.com/item?id=50122736",
+      "published_at": "2026-10-17T02:52:39+08:00",
+      "tags": [
+        "programming"
+      ]
+    },
+    {
+      "title": "I love software rendering",
+      "url": "https://www.jamesfmackenzie.com/2026/10/13/i-love-software-rendering/",
+      "source": "Hacker News",
+      "points": 318,
+      "comments": 202,
+      "comments_url": "https://news.ycombinator.com/item?id=50117746",
+      "published_at": "2026-10-16T20:52:08+08:00",
+      "tags": [
+        "misc"
+      ]
+    },
+    {
+      "title": "Nine-Inch Snails",
+      "url": "https://www.theatlantic.com/science/2026/10/giant-african-snails-florida-invasion/688850/",
+      "source": "Hacker News",
+      "points": 59,
+      "comments": 31,
+      "comments_url": "https://news.ycombinator.com/item?id=50125545",
+      "published_at": "2026-10-17T06:21:05+08:00",
+      "tags": [
+        "misc"
+      ]
+    },
+    {
+      "title": "New 'super ice' 10 times stronger, bringing it close to the strength of concrete",
+      "url": "https://www.sciencealert.com/a-new-super-ice-is-10-times-stronger-bringing-it-close-to-the-strength-of-concrete",
+      "source": "Hacker News",
+      "points": 98,
+      "comments": 73,
+      "comments_url": "https://news.ycombinator.com/item?id=50079280",
+      "published_at": "2026-10-14T05:42:38+08:00",
+      "tags": [
+        "science"
+      ]
+    },
+    {
+      "title": "Big Fish: Exploiting a 37-Year-Old Kernel Bug in OpenBSD",
+      "url": "https://calif.io/research/big-fish",
+      "source": "Hacker News",
+      "points": 186,
+      "comments": 58,
+      "comments_url": "https://news.ycombinator.com/item?id=50118977",
+      "published_at": "2026-10-16T22:44:02+08:00",
+      "tags": [
+        "security",
+        "linux"
+      ]
+    },
+    {
+      "title": "The NIST Elliptic Curves Seeds Bounty Has Been Claimed",
+      "url": "https://words.filippo.io/seeds-solved/",
+      "source": "Lobsters",
+      "points": 74,
+      "comments": 12,
+      "comments_url": "https://lobste.rs/s/ddtqtn/nist_elliptic_curves_seeds_bounty_has",
+      "published_at": "2026-10-17T04:18:36+08:00",
+      "tags": [
+        "security",
+        "ai"
+      ]
+    },
+    {
+      "title": "The Decoherence Trap: When AI slop drowns out the signal in an endless sea of noise",
+      "url": "https://maevyn.codes/decoherence",
+      "source": "Lobsters",
+      "points": 25,
+      "comments": 10,
+      "comments_url": "https://lobste.rs/s/vjmn84/decoherence_trap_when_ai_slop_drowns_out",
+      "published_at": "2026-10-17T00:36:29+08:00",
+      "tags": [
+        "ai"
+      ]
+    },
+    {
+      "title": "The road to iroh 1.0",
+      "url": "https://www.iroh.computer/blog/the-road-to-iroh-1-0",
+      "source": "Lobsters",
+      "points": 54,
+      "comments": 13,
+      "comments_url": "https://lobste.rs/s/6laoto/road_iroh_1_0",
+      "published_at": "2026-10-16T20:02:05+08:00",
+      "tags": [
+        "networking"
+      ]
+    },
+    {
+      "title": "Why are we even doing all this?",
+      "url": "https://terrytao.wordpress.com/2026/10/15/why-are-we-even-doing-all-this/",
+      "source": "Lobsters",
+      "points": 99,
+      "comments": 15,
+      "comments_url": "https://lobste.rs/s/qvomvk/why_are_we_even_doing_all_this",
+      "published_at": "2026-10-16T13:28:29+08:00",
+      "tags": [
+        "math",
+        "ai"
+      ]
+    },
+    {
+      "title": "Linus Torvalds on AI-assisted kernel contributions",
+      "url": "https://lore.kernel.org/lkml/CAHk-=whTs09_ozN+e09GU68N1wPP56MUzDjrg9rnKxQUa0A_4Q@mail.gmail.com/",
+      "source": "Lobsters",
+      "points": 85,
+      "comments": 151,
+      "comments_url": "https://lobste.rs/s/xiq59t/linus_torvalds_on_ai_assisted_kernel",
+      "published_at": "2026-10-16T10:50:33+08:00",
+      "tags": [
+        "ai",
+        "linux"
+      ]
+    },
+    {
+      "title": "Introducing GNOME OS Preview",
+      "url": "https://blogs.gnome.org/adrianvovk/2026/10/16/gnome-os-preview/",
+      "source": "Lobsters",
+      "points": 19,
+      "comments": 8,
+      "comments_url": "https://lobste.rs/s/xwng6u/introducing_gnome_os_preview",
+      "published_at": "2026-10-17T02:25:15+08:00",
+      "tags": [
+        "linux",
+        "release"
+      ]
+    },
+    {
+      "title": "Making a 88x31 button book using ImageMagick",
+      "url": "https://k.sosnierz.me/08-11-24/",
+      "source": "Lobsters",
+      "points": 40,
+      "comments": 10,
+      "comments_url": "https://lobste.rs/s/v6hhdr/making_88x31_button_book_using",
+      "published_at": "2026-10-16T19:21:12+08:00",
+      "tags": [
+        "art"
+      ]
+    },
+    {
+      "title": "Getting Canceled",
+      "url": "https://www.youtube.com/watch?v=5zIOfBLQ3U4",
+      "source": "Lobsters",
+      "points": 19,
+      "comments": 1,
+      "comments_url": "https://lobste.rs/s/tty7hm/getting_canceled",
+      "published_at": "2026-10-17T02:54:16+08:00",
+      "tags": [
+        "video",
+        "zig"
+      ]
+    },
+    {
+      "title": "Big Fish: Exploiting a 37-Year-Old Kernel Bug in OpenBSD",
+      "url": "https://calif.io/research/big-fish",
+      "source": "Lobsters",
+      "points": 31,
+      "comments": 0,
+      "comments_url": "https://lobste.rs/s/cxlrc5/big_fish_exploiting_37_year_old_kernel_bug",
+      "published_at": "2026-10-16T23:41:08+08:00",
+      "tags": [
+        "security",
+        "linux",
+        "openbsd"
+      ]
+    },
+    {
+      "title": "We're sunsetting Codeberg Pages v2",
+      "url": "https://blog.codeberg.org/migrate-your-site-to-the-new-git-pages-backed-codeberg-pages-now-were-sunsetting-codeberg-pages-v2.html",
+      "source": "Lobsters",
+      "points": 22,
+      "comments": 0,
+      "comments_url": "https://lobste.rs/s/e7rvsp/we_re_sunsetting_codeberg_pages_v2",
+      "published_at": "2026-10-17T02:03:21+08:00",
+      "tags": [
+        "web"
+      ]
+    },
+    {
+      "title": "orib: Bringing back the old Reddit interface, with a few new enhancements",
+      "url": "https://github.com/rajtilakjee/orib",
+      "source": "Lobsters",
+      "points": 2,
+      "comments": 1,
+      "comments_url": "https://lobste.rs/s/pllfoa/orib_bringing_back_old_reddit_interface",
+      "published_at": "2026-10-17T12:22:50+08:00",
+      "tags": [
+        "web",
+        "release",
+        "ai"
+      ]
+    },
+    {
+      "title": "Mull: note-taking with a language server / vscode extension",
+      "url": "https://github.com/stepchowfun/mull",
+      "source": "Lobsters",
+      "points": 12,
+      "comments": 8,
+      "comments_url": "https://lobste.rs/s/xcacrh/mull_note_taking_with_language_server",
+      "published_at": "2026-10-16T20:54:20+08:00",
+      "tags": [
+        "programming",
+        "editors"
+      ],
+      "summary": "I've been writing notes as plain text files since forever, and it occurred to me that note-taking could benefit from the typical features that a language server provides: clickable links, autocomplete, hover previews, formatting, diagnostics, refactoring, etc. So I built a little"
+    },
+    {
+      "title": "Some quick thoughts on Unit Testing ActivityPub",
+      "url": "https://shkspr.mobi/blog/2026/10/some-thoughts-on-unit-testing-activitypub/",
+      "source": "Lobsters",
+      "points": 2,
+      "comments": 2,
+      "comments_url": "https://lobste.rs/s/gwuebx/some_quick_thoughts_on_unit_testing",
+      "published_at": "2026-10-17T14:12:46+08:00",
+      "tags": [
+        "web",
+        "php",
+        "testing"
+      ]
+    },
+    {
+      "title": "JPEG XL vs AVIF for web use-cases",
+      "url": "https://jakearchibald.com/2026/jpeg-xl-vs-avif/",
+      "source": "Lobsters",
+      "points": 102,
+      "comments": 30,
+      "comments_url": "https://lobste.rs/s/uejdwj/jpeg_xl_vs_avif_for_web_use_cases",
+      "published_at": "2026-10-15T22:42:45+08:00",
+      "tags": [
+        "web",
+        "compsci"
+      ]
+    },
+    {
+      "title": "Do you let LLMs write both your tests and your code?",
+      "url": "https://lobste.rs/s/miwcai/do_you_let_llms_write_both_your_tests_your",
+      "source": "Lobsters",
+      "points": 4,
+      "comments": 3,
+      "comments_url": "https://lobste.rs/s/miwcai/do_you_let_llms_write_both_your_tests_your",
+      "published_at": "2026-10-17T07:53:05+08:00",
+      "tags": [
+        "ai"
+      ],
+      "summary": "I'm curious what stance others have taken? Or what they've experienced with this? I'm toying with adding a rule to our values.md that the LLM can only significantly generate one or the other.\r\n\r\nI'm reviewing a merge request at the moment where it's clear the LLM mostly did both,"
+    },
+    {
+      "title": "Ubuntu 26.10 (Stonking Stingray) released",
+      "url": "https://lists.ubuntu.com/archives/ubuntu-announce/2026-October/000330.html",
+      "source": "Lobsters",
+      "points": 12,
+      "comments": 0,
+      "comments_url": "https://lobste.rs/s/61ujum/ubuntu_26_10_stonking_stingray_released",
+      "published_at": "2026-10-17T02:01:39+08:00",
+      "tags": [
+        "linux",
+        "release"
+      ]
+    },
+    {
+      "title": "There's never been a better time to go into math",
+      "url": "https://www.youtube.com/watch?v=LKrwhjOI8Nc",
+      "source": "Lobsters",
+      "points": 6,
+      "comments": 4,
+      "comments_url": "https://lobste.rs/s/wzgadv/there_s_never_been_better_time_go_into_math",
+      "published_at": "2026-10-17T04:49:12+08:00",
+      "tags": [
+        "programming",
+        "science",
+        "math",
+        "video"
+      ]
+    },
+    {
+      "title": "Interactive refactoring in gopls",
+      "url": "https://go.dev/blog/interactive-refactoring",
+      "source": "Lobsters",
+      "points": 5,
+      "comments": 0,
+      "comments_url": "https://lobste.rs/s/wn293o/interactive_refactoring_gopls",
+      "published_at": "2026-10-17T09:12:09+08:00",
+      "tags": [
+        "editors",
+        "go"
+      ]
+    },
+    {
+      "title": "What are you doing this weekend?",
+      "url": "https://lobste.rs/s/hounpx/what_are_you_doing_this_weekend",
+      "source": "Lobsters",
+      "points": 15,
+      "comments": 28,
+      "comments_url": "https://lobste.rs/s/hounpx/what_are_you_doing_this_weekend",
+      "published_at": "2026-10-16T16:19:09+08:00",
+      "tags": [
+        "ask",
+        "programming"
+      ],
+      "summary": "Feel free to tell what you plan on doing this weekend and even ask for help or feedback.\r\n\r\nPlease keep in mind it’s more than OK to do nothing at all too!"
+    },
+    {
+      "title": "My C23 Conventions",
+      "url": "https://abner.page/post/c23-conventions-1/",
+      "source": "Lobsters",
+      "points": 64,
+      "comments": 15,
+      "comments_url": "https://lobste.rs/s/umdbht/my_c23_conventions",
+      "published_at": "2026-10-15T23:32:15+08:00",
+      "tags": [
+        "programming",
+        "c"
+      ]
+    },
+    {
+      "title": "Epic's EAC2 v2 seems fairly easily bypassable",
+      "url": "https://codon.org.uk/~mjg59/blog/p/epics-eac2-v2-seems-fairly-easily-bypassable/",
+      "source": "Lobsters",
+      "points": 36,
+      "comments": 20,
+      "comments_url": "https://lobste.rs/s/1iin5o/epic_s_eac2_v2_seems_fairly_easily",
+      "published_at": "2026-10-16T06:48:19+08:00",
+      "tags": [
+        "linux",
+        "security"
+      ]
+    },
+    {
+      "title": "STAC-M3 Benchmark: L tick database 1.0 on Oxide OxVM w/ 128 vCPUs & 1.25 TiB of RAM",
+      "url": "https://docs.stacresearch.com/M3-20261005a",
+      "source": "Lobsters",
+      "points": 2,
+      "comments": 0,
+      "comments_url": "https://lobste.rs/s/oh4yfc/stac_m3_benchmark_l_tick_database_1_0_on",
+      "published_at": "2026-10-17T13:08:50+08:00",
+      "tags": [
+        "ai",
+        "apl",
+        "performance"
+      ],
+      "summary": "It's using https://lv1.sh/"
+    },
+    {
+      "title": "Announcing Rust 1.99.1",
+      "url": "https://blog.rust-lang.org/2026/10/15/Rust-1.99.1/",
+      "source": "Lobsters",
+      "points": 32,
+      "comments": 7,
+      "comments_url": "https://lobste.rs/s/ttcx5k/announcing_rust_1_99_1",
+      "published_at": "2026-10-16T07:03:00+08:00",
+      "tags": [
+        "programming",
+        "release",
+        "rust"
+      ]
+    },
+    {
+      "title": "My self-hosted infrastructure with Incus OS",
+      "url": "https://dataswamp.org/~solene/2026-10-15-selfhosting-infrastructure-incus-os.html",
+      "source": "Lobsters",
+      "points": 28,
+      "comments": 5,
+      "comments_url": "https://lobste.rs/s/q0wobg/my_self_hosted_infrastructure_with_incus",
+      "published_at": "2026-10-16T11:25:49+08:00",
+      "tags": [
+        "linux",
+        "devops"
+      ]
+    },
+    {
+      "title": "Someone on Torrent Sites Kept Fucking With My Sonarr",
+      "url": "https://thereallo.dev/blog/someone-on-torrent-sites-kept-fucking-with-my-sonarr-setup",
+      "source": "Lobsters",
+      "points": 10,
+      "comments": 3,
+      "comments_url": "https://lobste.rs/s/1zknyw/someone_on_torrent_sites_kept_fucking",
+      "published_at": "2026-10-17T04:47:02+08:00",
+      "tags": [
+        "rant",
+        "reversing",
+        "security"
+      ]
+    }
+  ],
+  "news_highlights": [
+    {
+      "title": "Claude reveals ECDSA curve origins",
+      "url": "https://www.anthropic.com/research/ecdsa-curve-origins",
+      "why_it_matters": "Anthropic reports Claude recovering the origin of the NIST ECDSA curve seeds, a decades-old cryptography mystery; Lobsters notes the seeds bounty has been claimed."
+    },
+    {
+      "title": "How the Claude Code team does code review",
+      "url": "https://claude.dev/blog/solving-code-review-at-anthropic/",
+      "why_it_matters": "First-hand playbook from the Claude Code team on agent-assisted review; directly applicable to your own repo workflow."
+    },
+    {
+      "title": "90% of US working hours are spent on tasks not covered well by AI benchmarks",
+      "url": "https://www.mercor.com/research/labor-index/benchmark-map/",
+      "why_it_matters": "Mercor maps labor hours against AI benchmarks and finds most real work is unmeasured: a useful framing for choosing what to automate next."
+    },
+    {
+      "title": "Linus Torvalds on AI-assisted kernel contributions",
+      "url": "https://lore.kernel.org/lkml/CAHk-=whTs09_ozN+e09GU68N1wPP56MUzDjrg9rnKxQUa0A_4Q@mail.gmail.com/",
+      "why_it_matters": "Linus weighs in on AI-assisted kernel contributions (150+ comments): the clearest signal yet on how major OSS projects will treat agent-written patches."
+    },
+    {
+      "title": "Apple ML Research: Muse Spark Open with MLX on Mac Studio",
+      "url": "https://machinelearning.apple.com/research/mlx-distributed-inference",
+      "why_it_matters": "Apple ML Research shows distributed MLX inference on Mac Studio, relevant for running large open models locally."
+    }
+  ]
+}
