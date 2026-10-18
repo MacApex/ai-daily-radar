@@ -3,7 +3,8 @@ import type { DailyReport, HistoryEntry } from './types'
 const BASE = import.meta.env.BASE_URL + 'data/'
 
 async function getJSON<T>(path: string): Promise<T> {
-  const res = await fetch(BASE + path, { cache: 'no-cache' })
+  // Cache-bust every request: Pages sends max-age=600 and WebViews/CDNs can hold old copies.
+  const res = await fetch(`${BASE}${path}?t=${Date.now()}`, { cache: 'no-cache' })
   if (!res.ok) throw new Error(`${path}: HTTP ${res.status}`)
   return res.json() as Promise<T>
 }

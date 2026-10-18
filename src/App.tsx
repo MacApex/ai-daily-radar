@@ -5,6 +5,7 @@ import type { DailyReport, HistoryEntry } from './lib/types'
 import { loadDay, loadHistory, loadLatest } from './lib/data'
 import { fmtDateTime, fmtLongDate } from './lib/format'
 import { useActiveSection, useTheme } from './lib/hooks'
+import { useFreshness } from './lib/freshness'
 import { NAV, TopBar } from './components/TopBar'
 import { Hero } from './components/Hero'
 import { RunSummary } from './components/RunSummary'
@@ -58,6 +59,24 @@ export default function App() {
     loadHistory().then(setHistory)
   }, [])
 
+  // Long-lived tabs and the Android app's WebView: pick up a newer latest.json without a reload.
+  const [toast, setToast] = useState<string | null>(null)
+  useFreshness(async () => {
+    const d = await loadLatest()
+    if (latest && d.date === latest.date && d.generated_at === latest.generated_at) return
+    const prev = latest
+    setLatest(d)
+    setError(null)
+    setView((v) => (!v || !prev || v.date === prev.date ? d : v))
+    loadHistory().then(setHistory)
+    if (prev) setToast(d.date !== prev.date ? `Updated to ${d.date}` : 'Updated')
+  })
+  useEffect(() => {
+    if (!toast) return
+    const id = window.setTimeout(() => setToast(null), 3500)
+    return () => window.clearTimeout(id)
+  }, [toast])
+
   const active = useActiveSection(view ? IDS : NONE, view?.date)
 
   const pick = useCallback((date: string) => {
@@ -109,6 +128,14 @@ export default function App() {
           <Sections data={view} latest={latest} history={history} onPick={pick} loading={loading} theme={theme} />
         )}
       </main>
+      <AnimatePresence>
+        {toast && (
+          <motion.div role="status" initial={{ y: -16, opacity: 0 }} animate={{ y: 0, opacity: 1 }} exit={{ y: -16, opacity: 0 }}
+            className="fixed inset-x-0 top-20 z-50 mx-auto w-fit rounded-full border border-accent/40 bg-[var(--panel)] px-4 py-1.5 text-[12px] font-medium text-fg shadow-[var(--shadow)] backdrop-blur-xl">
+            {toast}
+          </motion.div>
+        )}
+      </AnimatePresence>
       <footer className="page mt-24 border-t border-line py-10 text-[13px] text-muted">
         <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
           <div>
