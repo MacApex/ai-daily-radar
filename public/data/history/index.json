@@ -1,5 +1,14 @@
 [
   {
+    "date": "2026-10-18",
+    "featured": [
+      "android/skills",
+      "stablyai/orca",
+      "akitaonrails/ai-memory"
+    ],
+    "archived_count": 5
+  },
+  {
     "date": "2026-10-17",
     "featured": [
       "obra/superpowers",

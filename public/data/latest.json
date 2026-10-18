@@ -1,63 +1,63 @@
 {
   "sample": false,
-  "generated_at": "2026-10-17T16:56:37+08:00",
-  "date": "2026-10-17",
+  "generated_at": "2026-10-18T10:16:23+08:00",
+  "date": "2026-10-18",
   "run": {
     "trending_observed": 13,
-    "saved": 4,
-    "upgraded": 1,
-    "relocated": 0,
+    "saved": 2,
+    "upgraded": 0,
+    "relocated": 3,
     "unchanged": 0,
     "incomplete": 0,
-    "eligible_not_archived": 7,
-    "rejected": 1,
+    "eligible_not_archived": 8,
+    "rejected": 0,
     "blockers": [],
-    "archive_folder": "2026-10-17_144052_Asia-Shanghai"
+    "archive_folder": "2026-10-18_100331_Asia-Shanghai"
   },
   "featured": [
     {
-      "full_name": "obra/superpowers",
-      "url": "https://github.com/obra/superpowers",
-      "stars": 300811,
-      "rating": 5,
-      "license": "MIT",
-      "reason": "Composable skills methodology (brainstorm, plan, subagent TDD, review, verify) installable in Claude Code, Codex and many other harnesses.",
-      "ideas": [
-        "Run its brainstorming → writing-plans flow on one small feature to get a reviewed spec and step-by-step plan before any code is written.",
-        "Try subagent-driven-development together with test-driven-development on a toy repo and compare the result with a normal single-agent session.",
-        "Use the using-git-worktrees skill to run two feature branches in parallel with separate agents, without them overwriting each other.",
-        "Learn the writing-skills skill and write your own SKILL.md (for example for this GitHub Trending archive routine) in the same composable format.",
-        "Install the same skill set in both Claude Code and Codex CLI (both documented) and compare how each harness triggers the skills."
-      ]
-    },
-    {
-      "full_name": "anthropics/claude-plugins-official",
-      "url": "https://github.com/anthropics/claude-plugins-official",
-      "stars": 40872,
-      "rating": 5,
-      "license": "Apache-2.0",
-      "reason": "Official Claude Code plugin marketplace: LSP, code-review, security, skill/plugin/MCP-dev plugins plus partner MCP integrations; trust each plugin before installing.",
-      "ideas": [
-        "Add a language-server plugin (pyright-lsp, typescript-lsp, rust-analyzer-lsp, etc.) so Claude Code gets real diagnostics and go-to-definition in a project.",
-        "Run pr-review-toolkit or code-review on a real pull request and study how its review output is structured.",
-        "Use plugin-dev or skill-creator, with example-plugin as the reference, to package one of your own workflows as a plugin (plugin.json, commands, skills, .mcp.json).",
-        "Explore mcp-server-dev to scaffold a small read-only MCP server, for example one that exposes this archive's archive-index.json.",
-        "Study the marketplace.json rules (immutable names, the renames map, strict:false skill bundles) to host a private marketplace for your own skills."
-      ]
-    },
-    {
-      "full_name": "HKUDS/CLI-Anything",
-      "url": "https://github.com/HKUDS/CLI-Anything",
-      "stars": 53630,
+      "full_name": "android/skills",
+      "url": "https://github.com/android/skills",
+      "stars": 8443,
       "rating": 4,
       "license": "Apache-2.0",
-      "reason": "Generates and catalogs agent-usable CLIs plus SKILL.md files for desktop software (Blender, draw.io, LibreOffice, Godot, Zotero and more); the target apps must be installed.",
+      "reason": "Official Android SKILL.md set installable in Claude Code and Codex, aimed at Android tasks where LLMs underperform; Android-specific. Yesterday's verified, unmodified snapshot (upstream unchanged) was moved back from the volume Trash into today's run instead of being downloaded again.",
       "ideas": [
-        "Install the drawio or mermaid harness and have an agent create and revise diagrams through the CLI instead of the GUI.",
-        "Use the blender or freecad harness to let Claude Code build a simple 3D or CAD model end to end with its preview loop.",
-        "Drive the libreoffice harness to generate or convert documents and slide decks from an agent session.",
-        "Follow HARNESS.md and skill_generator to wrap a desktop app you use that has no harness yet into an agent-native CLI with its own SKILL.md.",
-        "Combine the zotero and obsidian harnesses into a research-notes pipeline where an agent pulls citations into linked notes."
+        "Install it as a Claude Code plugin (/plugin install android-skills --marketplace android/skills) or through Codex's plugin marketplace, then ask the agent to make one of your apps edge-to-edge and see how the edge-to-edge skill shapes the change.",
+        "Run migrate-xml-views-to-jetpack-compose on one legacy XML screen from a past client app and compare the result with an unassisted agent run.",
+        "Let an agent do an AGP 9 or Play Billing Library upgrade on a branch with the agp-9-upgrade and play-billing-library-version-upgrade skills, and review the diff.",
+        "Use r8-analyzer and android-profiler to have an agent explain your release build's shrinker keep-rules and a performance trace.",
+        "Prototype an on-device AI feature with the device-ai skills (ml-kit-genai-prompt-api, litert-runtime) or expose app actions to agents with appfunctions."
+      ]
+    },
+    {
+      "full_name": "stablyai/orca",
+      "url": "https://github.com/stablyai/orca",
+      "stars": 95467,
+      "rating": 4,
+      "license": "MIT",
+      "reason": "Desktop orchestrator that runs Claude Code, Codex, OpenCode and other CLI agents side by side in isolated git worktrees, with Design Mode (click a UI element to send its HTML/CSS and a screenshot to the agent), diff annotation, SSH worktrees, a scriptable CLI and an iOS/Android companion. Large Electron + Expo codebase; use the signed release builds.",
+      "ideas": [
+        "Give the same feature prompt to Claude Code and Codex in separate Orca worktrees, comment on both diffs with Annotate AI Diffs, and merge the better one.",
+        "Open ai-daily-radar in Design Mode and click a card to send its HTML, CSS and a cropped screenshot straight into the agent's prompt for UI polish.",
+        "Pair the Android companion APK so you get a notification when a long agent run finishes and can send follow-ups from your phone.",
+        "Script a repeatable check with the Orca CLI (orca worktree create, snapshot, click, fill), for example a page smoke test after every agent change.",
+        "Study its Expo/React Native mobile app and the orca-emulator-android skill to learn how an agent drives an adb emulator (taps, logcat, accessibility tree) for mobile QA."
+      ]
+    },
+    {
+      "full_name": "akitaonrails/ai-memory",
+      "url": "https://github.com/akitaonrails/ai-memory",
+      "stars": 9940,
+      "rating": 4,
+      "license": "MIT",
+      "reason": "Shared long-term memory and typed handoffs across Claude Code, Codex, Cursor, OpenCode and 20+ other harnesses via MCP and lifecycle hooks; plain-markdown, git-backed wiki with a zero-LLM default path. You run its server, and its hooks capture sanitized prompts and tool calls, so review the privacy settings first.",
+      "ideas": [
+        "Quit a Claude Code session mid-task, start ai-memory run codex in the same repo, and check whether the handoff carries the open questions and failed approaches.",
+        "Host the memory server on the Mac mini so agent sessions on both the Mac mini and the MacBook Pro share one project memory.",
+        "Open its git-backed markdown wiki in Obsidian (or just grep it) to audit and hand-edit what your agents remember about a project.",
+        "Turn on the cross-project profile so your usual stack (package manager, test layout, Android and web conventions) reaches every new repo at session start.",
+        "Read docs/ARCHITECTURE.md and the memory-aging design to learn how zero-LLM decay, dedup and contradiction flags work before adding memory to your own agent tools."
       ]
     }
   ],
@@ -65,57 +65,57 @@
     {
       "full_name": "anthropics/claude-plugins-official",
       "url": "https://github.com/anthropics/claude-plugins-official",
-      "stars": 40872,
+      "stars": 41814,
       "rating": 5,
       "license": "Apache-2.0",
       "commit_sha": "ea10b213686c90bb1984b2016937310e05336cf3",
-      "status": "saved",
+      "status": "relocated",
       "size_mb": 13.6,
       "description": "Official, Anthropic-managed directory of high quality Claude Code Plugins."
     },
     {
-      "full_name": "mksglu/context-mode",
-      "url": "https://github.com/mksglu/context-mode",
-      "stars": 30319,
-      "rating": 5,
-      "license": "Elastic-2.0",
-      "commit_sha": "5f6298a9bdc480ebc7c88a29c9fbdf38ae2f8cb6",
-      "status": "upgraded",
-      "size_mb": 11.8,
-      "description": "Context window optimization for AI coding agents. Sandboxes tool output (98% reduction), persists session memory, and   enforces routing across 17 platforms via MCP + hooks."
-    },
-    {
-      "full_name": "obra/superpowers",
-      "url": "https://github.com/obra/superpowers",
-      "stars": 300811,
-      "rating": 5,
-      "license": "MIT",
-      "commit_sha": "bb92a77741419a4ab5f06e711a283343f1ada0c3",
-      "status": "saved",
-      "size_mb": 2.0,
-      "description": "An agentic skills framework & software development methodology that works."
-    },
-    {
-      "full_name": "K-Dense-AI/scientific-agent-skills",
-      "url": "https://github.com/K-Dense-AI/scientific-agent-skills",
-      "stars": 51705,
-      "rating": 4,
-      "license": "MIT",
-      "commit_sha": "a1043ef544e3a100c28e70a736b6cf32554d0677",
-      "status": "saved",
-      "size_mb": 277.2,
-      "description": "Turn any AI agent into an AI Scientist. The #1 Agent Skills library for science, used by 250,000+ scientists worldwide. 177 ready-to-use validated skills plus 100+ scientific databases covering biology, chemistry, medicine, and drug discovery. Compatible with Cursor, Claude Code, Codex, Pi, Antigravity, and the open Agent Skills standard."
-    },
-    {
       "full_name": "HKUDS/CLI-Anything",
       "url": "https://github.com/HKUDS/CLI-Anything",
-      "stars": 53630,
+      "stars": 54087,
       "rating": 4,
       "license": "Apache-2.0",
       "commit_sha": "34f519533bc175d2fe287ab8316b0dd99bb9cc43",
-      "status": "saved",
+      "status": "relocated",
       "size_mb": 60.1,
       "description": "\"CLI-Anything: Making ALL Software Agent-Native\" -- CLI-Hub: https://clianything.cc/"
+    },
+    {
+      "full_name": "akitaonrails/ai-memory",
+      "url": "https://github.com/akitaonrails/ai-memory",
+      "stars": 9940,
+      "rating": 4,
+      "license": "MIT",
+      "commit_sha": "995e35d5866973c3176709261e924a67e3c76158",
+      "status": "saved",
+      "size_mb": 29.3,
+      "description": "Solution for long term memory for agent coding CLIs and to facilitate handoff between different agent vendors"
+    },
+    {
+      "full_name": "android/skills",
+      "url": "https://github.com/android/skills",
+      "stars": 8443,
+      "rating": 4,
+      "license": "Apache-2.0",
+      "commit_sha": "5bda39f154fb859a08d45e2392f3568e049f83fb",
+      "status": "relocated",
+      "size_mb": 4.0,
+      "description": ""
+    },
+    {
+      "full_name": "stablyai/orca",
+      "url": "https://github.com/stablyai/orca",
+      "stars": 95467,
+      "rating": 4,
+      "license": "MIT",
+      "commit_sha": "33e6785fe2c36730bc0dfcdf1db6208d471df833",
+      "status": "saved",
+      "size_mb": 291.7,
+      "description": "Orca is the place for working with a fleet of agents (e.g. Grok Bot, Claude Code). Run any coding agent with your own subscription. Available on desktop, mobile and remote runtime."
     }
   ],
   "trending": [
@@ -123,30 +123,30 @@
       "rank": 1,
       "full_name": "anthropics/claude-plugins-official",
       "url": "https://github.com/anthropics/claude-plugins-official",
-      "stars": 40872,
-      "stars_today": 1552,
+      "stars": 41814,
+      "stars_today": 1397,
       "language": "Python",
       "description": "Official, Anthropic-managed directory of high quality Claude Code Plugins.",
       "decision": "archived",
-      "decision_reason": "Saved: Official Claude Code plugin marketplace: LSP, code-review, security, skill/plugin/MCP-dev plugins plus partner MCP integrations; trust each plugin before installing."
+      "decision_reason": "Relocated: Official Claude Code plugin marketplace: LSP, code-review, security, skill/plugin/MCP-dev plugins plus partner MCP integrations; trust each plugin before installing. Already archived and featured; upstream still at the archived commit, so the folder was moved into today's run."
     },
     {
       "rank": 2,
-      "full_name": "K-Dense-AI/scientific-agent-skills",
-      "url": "https://github.com/K-Dense-AI/scientific-agent-skills",
-      "stars": 51705,
-      "stars_today": 1158,
+      "full_name": "MadsLorentzen/ai-job-search",
+      "url": "https://github.com/MadsLorentzen/ai-job-search",
+      "stars": 50492,
+      "stars_today": 1365,
       "language": "Python",
-      "description": "Turn any AI agent into an AI Scientist. The #1 Agent Skills library for science, used by 250,000+ scientists worldwide. 177 ready-to-use validated skills plus 100+ scientific databases covering biology, chemistry, medicine, and drug discovery. Compatible with Cursor, Claude Code, Codex, Pi, Antigravity, and the open Agent Skills standard.",
-      "decision": "archived",
-      "decision_reason": "Saved: 177 Agent Skills for scientific research, data analysis and figures, portable across Claude Code, Codex and Cursor; domain libraries and datasets are separate."
+      "description": "The job search that runs on your machine. AI job application framework built on Claude Code: evaluate postings, tailor CVs, write cover letters, prep interviews. Fork it and own it.",
+      "decision": "eligible_not_archived",
+      "decision_reason": "Claude Code workflow template (/scrape, /apply, drafter-reviewer agents, LaTeX CVs); a worked example of a document-producing agent pipeline, but niche."
     },
     {
       "rank": 3,
       "full_name": "affaan-m/ECC",
       "url": "https://github.com/affaan-m/ECC",
-      "stars": 281710,
-      "stars_today": 1057,
+      "stars": 282548,
+      "stars_today": 1145,
       "language": "JavaScript",
       "description": "The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.",
       "decision": "eligible_not_archived",
@@ -156,74 +156,74 @@
       "rank": 4,
       "full_name": "HKUDS/CLI-Anything",
       "url": "https://github.com/HKUDS/CLI-Anything",
-      "stars": 53630,
-      "stars_today": 281,
+      "stars": 54087,
+      "stars_today": 574,
       "language": "Python",
       "description": "\"CLI-Anything: Making ALL Software Agent-Native\" -- CLI-Hub: https://clianything.cc/",
       "decision": "archived",
-      "decision_reason": "Saved: Generates and catalogs agent-usable CLIs plus SKILL.md files for desktop software (Blender, draw.io, LibreOffice, Godot, Zotero and more); the target apps must be installed."
+      "decision_reason": "Relocated: Generates and catalogs agent-usable CLIs plus SKILL.md files for desktop software (Blender, draw.io, LibreOffice, Godot, Zotero and more); the target apps must be installed. Already archived and featured; upstream unchanged, folder moved into today's run."
     },
     {
       "rank": 5,
-      "full_name": "mksglu/context-mode",
-      "url": "https://github.com/mksglu/context-mode",
-      "stars": 30319,
-      "stars_today": 449,
-      "language": "TypeScript",
-      "description": "Context window optimization for AI coding agents. Sandboxes tool output (98% reduction), persists session memory, and   enforces routing across 17 platforms via MCP + hooks.",
-      "decision": "archived",
-      "decision_reason": "Upgraded: MCP indexing and output reduction help agents work with large tool results and preserve session context (already featured; newer commit archived)."
+      "full_name": "K-Dense-AI/scientific-agent-skills",
+      "url": "https://github.com/K-Dense-AI/scientific-agent-skills",
+      "stars": 52277,
+      "stars_today": 878,
+      "language": "Python",
+      "description": "Turn any AI agent into an AI Scientist. The #1 Agent Skills library for science, used by 250,000+ scientists worldwide. 177 ready-to-use validated skills plus 100+ scientific databases covering biology, chemistry, medicine, and drug discovery. Compatible with Cursor, Claude Code, Codex, Pi, Antigravity, and the open Agent Skills standard.",
+      "decision": "eligible_not_archived",
+      "decision_reason": "177 Agent Skills for scientific research, data analysis and figures, portable across Claude Code, Codex and Cursor; domain libraries and datasets are separate. Archived copy stays in the 2026-10-17 folder (upstream unchanged); lost today's cap tie-break as the least relevant to web/mobile work."
     },
     {
       "rank": 6,
-      "full_name": "ruvnet/ruflo",
-      "url": "https://github.com/ruvnet/ruflo",
-      "stars": 75732,
-      "stars_today": 672,
-      "language": "TypeScript",
-      "description": "🌊 The original agent harness. Deploy intelligent multi-player swarms, coordinate autonomous workflows, and build conversational AI systems. Features adaptive memory, self-learning intelligence, federation, vector RAG integration, and native Claude Code / Codex / Hermes and many more Integrated",
-      "decision": "eligible_not_archived",
-      "decision_reason": "Multi-agent swarm meta-harness and MCP server for Claude Code and Codex; broad and heavy, and its mods run with your account permissions."
+      "full_name": "akitaonrails/ai-memory",
+      "url": "https://github.com/akitaonrails/ai-memory",
+      "stars": 9940,
+      "stars_today": 178,
+      "language": "Rust",
+      "description": "Solution for long term memory for agent coding CLIs and to facilitate handoff between different agent vendors",
+      "decision": "archived",
+      "decision_reason": "Saved: Shared long-term memory and typed handoffs across Claude Code, Codex, Cursor, OpenCode and 20+ other harnesses via MCP and lifecycle hooks; plain-markdown, git-backed wiki with a zero-LLM default path. You run its server, and its hooks capture sanitized prompts and tool calls, so review the privacy settings first."
     },
     {
       "rank": 7,
       "full_name": "android/skills",
       "url": "https://github.com/android/skills",
-      "stars": 8155,
-      "stars_today": 36,
+      "stars": 8443,
+      "stars_today": 355,
       "language": "Kotlin",
       "description": "",
-      "decision": "eligible_not_archived",
-      "decision_reason": "Official Android SKILL.md set installable in Claude Code and Codex, aimed at Android tasks where LLMs underperform; Android-specific."
+      "decision": "archived",
+      "decision_reason": "Relocated: Official Android SKILL.md set installable in Claude Code and Codex, aimed at Android tasks where LLMs underperform; Android-specific. Yesterday's verified, unmodified snapshot (upstream unchanged) was moved back from the volume Trash into today's run instead of being downloaded again."
     },
     {
       "rank": 8,
-      "full_name": "obra/superpowers",
-      "url": "https://github.com/obra/superpowers",
-      "stars": 300811,
-      "stars_today": 973,
-      "language": "Shell",
-      "description": "An agentic skills framework & software development methodology that works.",
+      "full_name": "stablyai/orca",
+      "url": "https://github.com/stablyai/orca",
+      "stars": 95467,
+      "stars_today": 830,
+      "language": "TypeScript",
+      "description": "Orca is the place for working with a fleet of agents (e.g. Grok Bot, Claude Code). Run any coding agent with your own subscription. Available on desktop, mobile and remote runtime.",
       "decision": "archived",
-      "decision_reason": "Saved: Composable skills methodology (brainstorm, plan, subagent TDD, review, verify) installable in Claude Code, Codex and many other harnesses."
+      "decision_reason": "Saved: Desktop orchestrator that runs Claude Code, Codex, OpenCode and other CLI agents side by side in isolated git worktrees, with Design Mode (click a UI element to send its HTML/CSS and a screenshot to the agent), diff annotation, SSH worktrees, a scriptable CLI and an iOS/Android companion. Large Electron + Expo codebase; use the signed release builds."
     },
     {
       "rank": 9,
-      "full_name": "cursor/plugins",
-      "url": "https://github.com/cursor/plugins",
-      "stars": 12074,
-      "stars_today": 278,
+      "full_name": "anthropics/claude-code",
+      "url": "https://github.com/anthropics/claude-code",
+      "stars": 151786,
+      "stars_today": 179,
       "language": "TypeScript",
-      "description": "Cursor plugin specification and official plugins",
+      "description": "Claude Code is an agentic coding tool that lives in your terminal, understands your codebase, and helps you code faster by executing routine tasks, explaining complex code, and handling git workflows - all through natural language commands.",
       "decision": "eligible_not_archived",
-      "decision_reason": "Cursor's plugin spec and official plugins (review, orchestration, CLI-for-agents patterns); Cursor-centric, though the skills are partly portable."
+      "decision_reason": "Official Claude Code repo: bundled example plugins, changelog and the issue tracker. The CLI itself ships as a closed binary and the repo has no OSI license (GitHub API: none), and its plugins overlap with the already archived claude-plugins-official."
     },
     {
       "rank": 10,
       "full_name": "debpalash/VoiceStudio",
       "url": "https://github.com/debpalash/VoiceStudio",
-      "stars": 71688,
-      "stars_today": 2301,
+      "stars": 73458,
+      "stars_today": 2125,
       "language": "Python",
       "description": "VoiceStudio is the open-source, fully-local ElevenLabs alternative — voice cloning, voice design, video dubbing, dictation, transcription & audiobook creation in 646 languages.",
       "decision": "eligible_not_archived",
@@ -231,205 +231,177 @@
     },
     {
       "rank": 11,
-      "full_name": "MadsLorentzen/ai-job-search",
-      "url": "https://github.com/MadsLorentzen/ai-job-search",
-      "stars": 48835,
-      "stars_today": 898,
-      "language": "Python",
-      "description": "The job search that runs on your machine. AI job application framework built on Claude Code: evaluate postings, tailor CVs, write cover letters, prep interviews. Fork it and own it.",
+      "full_name": "anomalyco/opencode",
+      "url": "https://github.com/anomalyco/opencode",
+      "stars": 215403,
+      "stars_today": 438,
+      "language": "TypeScript",
+      "description": "The open source coding agent.",
       "decision": "eligible_not_archived",
-      "decision_reason": "Claude Code workflow template (/scrape, /apply, drafter-reviewer agents, LaTeX CVs); a worked example of a document-producing agent pipeline, but niche."
+      "decision_reason": "Open-source terminal coding agent (TUI, beta desktop app, many model providers, MCP); good to study or run as an alternative harness, but a very large monorepo, and it lost the cap tie-break to tools that extend the agents Max already uses."
     },
     {
       "rank": 12,
-      "full_name": "hmjz100/LinkSwift",
-      "url": "https://github.com/hmjz100/LinkSwift",
-      "stars": 23995,
-      "stars_today": 538,
-      "language": "JavaScript",
-      "description": "一个基于 JavaScript 的网盘文件下载地址获取工具。基于【网盘直链下载助手】修改 ，支持 百度网盘 / 阿里云盘 / 中国移动云盘 / 天翼云盘 / 迅雷云盘 / 夸克网盘 / UC网盘 / 123云盘 八大网盘",
-      "decision": "rejected",
-      "decision_reason": "Not selected: userscript for cloud-drive direct download links; not a coding-agent tool."
+      "full_name": "ruvnet/ruflo",
+      "url": "https://github.com/ruvnet/ruflo",
+      "stars": 76099,
+      "stars_today": 420,
+      "language": "TypeScript",
+      "description": "🌊 The original agent harness. Deploy intelligent multi-player swarms, coordinate autonomous workflows, and build conversational AI systems. Features adaptive memory, self-learning intelligence, federation, vector RAG integration, and native Claude Code / Codex / Hermes and many more Integrated",
+      "decision": "eligible_not_archived",
+      "decision_reason": "Multi-agent swarm meta-harness and MCP server for Claude Code and Codex; broad and heavy, and its mods run with your account permissions."
     },
     {
       "rank": 13,
       "full_name": "xerj-org/xerj",
       "url": "https://github.com/xerj-org/xerj",
-      "stars": 7149,
-      "stars_today": 1648,
+      "stars": 7838,
+      "stars_today": 1160,
       "language": "Rust",
-      "description": "XERJ is the new way for AI to search data. Its autoindex capability activates agents to know your data without the token waste of grep and sed. One command indexes code, docs, logs and PDFs for search, RAG, security audits and agent memory, using 40x fewer tokens than grep. Elasticsearch compatible, so existing clients just work.",
+      "description": "XERJ is the new way for AI to search data. Its autoindex capability activates agents to know your data without the token waste of grep (1974 tool). One command indexes code, docs, logs and PDFs for search, RAG, security audits and agent memory, using 40x fewer tokens than grep. It’s durable and can replace ElasticSearch saving you x10 infra costs.",
       "decision": "eligible_not_archived",
       "decision_reason": "Local auto-indexing search with MCP and skill wiring for Claude Code and Cursor to cut agent file-reading tokens; binary install, and --insecure mode is for single-user dev only."
     }
   ],
   "news": [
     {
-      "title": "Claude reveals ECDSA curve origins",
-      "url": "https://www.anthropic.com/research/ecdsa-curve-origins",
+      "title": "OpenCode Hacked: User credentials leaked",
+      "url": "https://twitter.com/opencode/status/2111516673953935833",
       "source": "Hacker News",
-      "points": 856,
-      "comments": 317,
-      "comments_url": "https://news.ycombinator.com/item?id=50122800",
-      "published_at": "2026-10-17T02:55:59+08:00",
-      "tags": [
-        "ai",
-        "security"
-      ]
-    },
-    {
-      "title": "Butlerian Jihad",
-      "url": "https://dune.fandom.com/wiki/Butlerian_Jihad",
-      "source": "Hacker News",
-      "points": 217,
-      "comments": 117,
-      "comments_url": "https://news.ycombinator.com/item?id=50127274",
-      "published_at": "2026-10-17T10:21:08+08:00",
+      "points": 783,
+      "comments": 144,
+      "comments_url": "https://news.ycombinator.com/item?id=50133401",
+      "published_at": "2026-10-18T02:01:41+08:00",
       "tags": [
         "misc"
       ]
     },
     {
-      "title": "90% of US working hours are spent on tasks not covered well by AI benchmarks",
-      "url": "https://www.mercor.com/research/labor-index/benchmark-map/",
+      "title": "Zuckerberg's Meta Takes Down No Kings Instagram During Protest Day",
+      "url": "https://meidasnews.com/news/zuckerbergs-meta-takes-down-no-kings-instagram-during-massive-protest-day",
       "source": "Hacker News",
-      "points": 495,
-      "comments": 416,
-      "comments_url": "https://news.ycombinator.com/item?id=50121179",
-      "published_at": "2026-10-17T01:08:38+08:00",
+      "points": 185,
+      "comments": 86,
+      "comments_url": "https://news.ycombinator.com/item?id=50136881",
+      "published_at": "2026-10-18T09:18:50+08:00",
+      "tags": [
+        "misc"
+      ]
+    },
+    {
+      "title": "Solar surpasses nuclear power globally for first time",
+      "url": "https://www.pv-magazine.com/2026/09/29/solar-surpasses-nuclear-power-globally-for-first-time/",
+      "source": "Hacker News",
+      "points": 491,
+      "comments": 311,
+      "comments_url": "https://news.ycombinator.com/item?id=50131256",
+      "published_at": "2026-10-17T22:01:01+08:00",
+      "tags": [
+        "misc"
+      ]
+    },
+    {
+      "title": "DeepSeek-v4.1-Flash-1017",
+      "url": "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash-1017",
+      "source": "Hacker News",
+      "points": 710,
+      "comments": 592,
+      "comments_url": "https://news.ycombinator.com/item?id=50129045",
+      "published_at": "2026-10-17T16:21:25+08:00",
       "tags": [
         "ai"
       ]
     },
     {
-      "title": "How the Claude Code team does code review",
-      "url": "https://claude.dev/blog/solving-code-review-at-anthropic/",
+      "title": "Gold is now the top U.S. export",
+      "url": "https://www.numismaticnews.net/gold-now-top-u-s-export",
       "source": "Hacker News",
-      "points": 340,
-      "comments": 312,
-      "comments_url": "https://news.ycombinator.com/item?id=50122951",
-      "published_at": "2026-10-17T03:04:47+08:00",
+      "points": 246,
+      "comments": 127,
+      "comments_url": "https://news.ycombinator.com/item?id=50132870",
+      "published_at": "2026-10-18T01:06:07+08:00",
       "tags": [
-        "ai"
+        "misc"
       ]
     },
     {
-      "title": "Tesla Roadster",
-      "url": "https://www.tesla.com/roadster",
+      "title": "Making chicken transparent using Dorito dust",
+      "url": "https://chillphysicsenjoyer.substack.com/p/making-chicken-transparent-using",
       "source": "Hacker News",
-      "points": 1410,
-      "comments": 2468,
-      "comments_url": "https://news.ycombinator.com/item?id=50112657",
-      "published_at": "2026-10-16T09:32:45+08:00",
-      "tags": [
-        "hardware"
-      ]
-    },
-    {
-      "title": "You could have invented transformers from memory",
-      "url": "https://alexwang.ai/posts/associative-memory/",
-      "source": "Hacker News",
-      "points": 288,
+      "points": 259,
       "comments": 67,
-      "comments_url": "https://news.ycombinator.com/item?id=50122878",
-      "published_at": "2026-10-17T03:01:17+08:00",
-      "tags": [
-        "ai"
-      ]
-    },
-    {
-      "title": "Llama.cpp on a jailbroken PS5: run any GGUF model natively on the console",
-      "url": "https://github.com/cobanov/PS5LM",
-      "source": "Hacker News",
-      "points": 284,
-      "comments": 71,
-      "comments_url": "https://news.ycombinator.com/item?id=50122431",
-      "published_at": "2026-10-17T02:32:35+08:00",
-      "tags": [
-        "ai",
-        "hardware"
-      ]
-    },
-    {
-      "title": "eBay Restricts Listings of Radio Equipment, but Exempts Ham-Band-Only Gear",
-      "url": "https://www.arrl.org/arrlletterissue?issue=2026-10-15#eBay-Restricts-Listings-of-Radio-Equipment_-But-Exempts-Ham-Band-Only-Gear",
-      "source": "Hacker News",
-      "points": 217,
-      "comments": 182,
-      "comments_url": "https://news.ycombinator.com/item?id=50122034",
-      "published_at": "2026-10-17T02:06:17+08:00",
-      "tags": [
-        "hardware"
-      ]
-    },
-    {
-      "title": "JPEG XL vs. AVIF for web use-cases",
-      "url": "https://jakearchibald.com/2026/jpeg-xl-vs-avif/",
-      "source": "Hacker News",
-      "points": 252,
-      "comments": 177,
-      "comments_url": "https://news.ycombinator.com/item?id=50120224",
-      "published_at": "2026-10-17T00:12:02+08:00",
-      "tags": [
-        "web"
-      ]
-    },
-    {
-      "title": "I love software rendering",
-      "url": "https://www.jamesfmackenzie.com/2026/10/13/i-love-software-rendering/",
-      "source": "Hacker News",
-      "points": 320,
-      "comments": 202,
-      "comments_url": "https://news.ycombinator.com/item?id=50117746",
-      "published_at": "2026-10-16T20:52:08+08:00",
+      "comments_url": "https://news.ycombinator.com/item?id=50131213",
+      "published_at": "2026-10-17T21:55:28+08:00",
       "tags": [
         "misc"
       ]
     },
     {
-      "title": "Apple ML Research: Muse Spark Open with MLX on Mac Studio",
-      "url": "https://machinelearning.apple.com/research/mlx-distributed-inference",
+      "title": "Chrome and Edge are removing XSLT: what breaks and what does not",
+      "url": "https://doctor-seo.net/en/blog/news/chrome-edge-removing-xslt/",
       "source": "Hacker News",
-      "points": 312,
-      "comments": 158,
-      "comments_url": "https://news.ycombinator.com/item?id=50118320",
-      "published_at": "2026-10-16T21:43:48+08:00",
+      "points": 95,
+      "comments": 92,
+      "comments_url": "https://news.ycombinator.com/item?id=50134617",
+      "published_at": "2026-10-18T04:07:33+08:00",
       "tags": [
-        "ai",
-        "hardware",
-        "science"
+        "misc"
       ]
     },
     {
-      "title": "FLUX 3 Image Klein",
-      "url": "https://bfl.ai/blog/flux-3-image-klein",
+      "title": "Pele – Mermaid diagrams as themeable SVG",
+      "url": "https://pele.run/",
       "source": "Hacker News",
-      "points": 164,
-      "comments": 45,
-      "comments_url": "https://news.ycombinator.com/item?id=50123580",
-      "published_at": "2026-10-17T03:47:13+08:00",
+      "points": 249,
+      "comments": 26,
+      "comments_url": "https://news.ycombinator.com/item?id=50132193",
+      "published_at": "2026-10-17T23:55:09+08:00",
       "tags": [
-        "ai"
+        "misc"
       ]
     },
     {
-      "title": "Show HN: Gemini 4 Argon plays StarCraft",
-      "url": "https://starskirmish.com/bench/v0-2/",
+      "title": "JDK 28",
+      "url": "https://openjdk.org/projects/jdk/28/",
       "source": "Hacker News",
-      "points": 221,
-      "comments": 99,
-      "comments_url": "https://news.ycombinator.com/item?id=50118688",
-      "published_at": "2026-10-16T22:18:44+08:00",
+      "points": 65,
+      "comments": 29,
+      "comments_url": "https://news.ycombinator.com/item?id=50135379",
+      "published_at": "2026-10-18T05:37:07+08:00",
       "tags": [
-        "ai"
+        "misc"
+      ]
+    },
+    {
+      "title": "NY announces game ownership bill requiring ownership rather than licensing",
+      "url": "https://www.tomshardware.com/video-games/new-york-rep-announces-game-ownership-bill-that-would-require-consumer-ownership-rather-than-sale-of-licenses-would-also-require-publishers-to-keep-the-game-functional-after-support-ends",
+      "source": "Hacker News",
+      "points": 57,
+      "comments": 13,
+      "comments_url": "https://news.ycombinator.com/item?id=50136536",
+      "published_at": "2026-10-18T08:14:22+08:00",
+      "tags": [
+        "misc"
+      ]
+    },
+    {
+      "title": "Codex Desktop continuously generates Crashpad pending dumps",
+      "url": "https://github.com/openai/codex/issues/25921",
+      "source": "Hacker News",
+      "points": 76,
+      "comments": 31,
+      "comments_url": "https://news.ycombinator.com/item?id=50133231",
+      "published_at": "2026-10-18T01:45:08+08:00",
+      "tags": [
+        "misc"
       ]
     },
     {
       "title": "Show HN: Llmspeed – feel how fast a local LLM runs before you buy the hardware",
       "url": "https://llmspeed.dev/",
       "source": "Hacker News",
-      "points": 56,
-      "comments": 23,
+      "points": 255,
+      "comments": 77,
       "comments_url": "https://news.ycombinator.com/item?id=50127979",
       "published_at": "2026-10-17T12:36:53+08:00",
       "tags": [
@@ -438,38 +410,96 @@
       ]
     },
     {
-      "title": "Designing more efficient quantum circuits with Claude",
-      "url": "https://www.anthropic.com/research/designing-efficient-quantum-circuits",
+      "title": "You could have invented transformers from memory",
+      "url": "https://alexwang.ai/posts/associative-memory/",
       "source": "Hacker News",
-      "points": 138,
-      "comments": 32,
-      "comments_url": "https://news.ycombinator.com/item?id=50121939",
-      "published_at": "2026-10-17T02:00:18+08:00",
+      "points": 507,
+      "comments": 118,
+      "comments_url": "https://news.ycombinator.com/item?id=50122878",
+      "published_at": "2026-10-17T03:01:17+08:00",
       "tags": [
-        "ai",
-        "science"
+        "ai"
       ]
     },
     {
-      "title": "Nine-Inch Snails",
-      "url": "https://www.theatlantic.com/science/2026/10/giant-african-snails-florida-invasion/688850/",
+      "title": "Show HN: Esp32sim – Run ESP32 firmware in the browser",
+      "url": "https://github.com/mikroverk/esp32sim",
       "source": "Hacker News",
-      "points": 61,
-      "comments": 31,
-      "comments_url": "https://news.ycombinator.com/item?id=50125545",
-      "published_at": "2026-10-17T06:21:05+08:00",
+      "points": 126,
+      "comments": 13,
+      "comments_url": "https://news.ycombinator.com/item?id=50131189",
+      "published_at": "2026-10-17T21:51:08+08:00",
+      "tags": [
+        "security",
+        "web"
+      ]
+    },
+    {
+      "title": "Bleached corals thrive within days when touching healthy neighbour",
+      "url": "https://www.nature.com/articles/d41586-026-03266-x",
+      "source": "Hacker News",
+      "points": 334,
+      "comments": 72,
+      "comments_url": "https://news.ycombinator.com/item?id=50126253",
+      "published_at": "2026-10-17T07:38:27+08:00",
       "tags": [
         "misc"
       ]
     },
     {
-      "title": "C++26: The New Debugging Header",
-      "url": "https://www.sandordargo.com/blog/2026/09/30/cpp26-debugging",
+      "title": "Source code of the Estonian online voting system",
+      "url": "https://github.com/valimised/ivxv",
       "source": "Hacker News",
-      "points": 95,
-      "comments": 21,
-      "comments_url": "https://news.ycombinator.com/item?id=50122736",
-      "published_at": "2026-10-17T02:52:39+08:00",
+      "points": 173,
+      "comments": 138,
+      "comments_url": "https://news.ycombinator.com/item?id=50127586",
+      "published_at": "2026-10-17T11:18:39+08:00",
+      "tags": [
+        "misc"
+      ]
+    },
+    {
+      "title": "Show HN: High-quality duck audio synthesizer",
+      "url": "https://celphase.github.io/duck-pond/",
+      "source": "Hacker News",
+      "points": 88,
+      "comments": 24,
+      "comments_url": "https://news.ycombinator.com/item?id=50131006",
+      "published_at": "2026-10-17T21:28:46+08:00",
+      "tags": [
+        "misc"
+      ]
+    },
+    {
+      "title": "Dam removals are bringing fish back across the northeastern United States",
+      "url": "https://www.smithsonianmag.com/science-nature/dam-removals-are-bringing-fish-back-across-the-northeastern-united-states-striking-down-one-tiny-barrier-at-a-time-180989679/",
+      "source": "Hacker News",
+      "points": 209,
+      "comments": 55,
+      "comments_url": "https://news.ycombinator.com/item?id=50126312",
+      "published_at": "2026-10-17T07:47:31+08:00",
+      "tags": [
+        "misc"
+      ]
+    },
+    {
+      "title": "A skeptic's first contact with Kubernetes (2024)",
+      "url": "https://blog.davidv.dev/posts/first-contact-with-k8s/",
+      "source": "Hacker News",
+      "points": 86,
+      "comments": 51,
+      "comments_url": "https://news.ycombinator.com/item?id=50127572",
+      "published_at": "2026-10-17T11:16:25+08:00",
+      "tags": [
+        "devtools"
+      ]
+    },
+    {
+      "title": "Inline rendering with document​.currentScript",
+      "url": "https://simonwillison.net/2026/Oct/17/document-currentscript/",
+      "source": "Simon Willison",
+      "published_at": "2026-10-18T05:11:12+08:00",
+      "summary": "Inline rendering with document​.currentScript Lean Rada describes a neat trick that takes advantage of the document.currentScript property. You can use that to drop in a tiny inline <script> element that replaces itself when the page loads: The year is <script>…",
       "tags": [
         "programming"
       ]
@@ -478,8 +508,8 @@
       "title": "The NIST Elliptic Curves Seeds Bounty Has Been Claimed",
       "url": "https://words.filippo.io/seeds-solved/",
       "source": "Lobsters",
-      "points": 75,
-      "comments": 12,
+      "points": 99,
+      "comments": 18,
       "comments_url": "https://lobste.rs/s/ddtqtn/nist_elliptic_curves_seeds_bounty_has",
       "published_at": "2026-10-17T04:18:36+08:00",
       "tags": [
@@ -488,23 +518,23 @@
       ]
     },
     {
-      "title": "DeepSeek-v4.1-Flash-1017",
-      "url": "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash-1017",
+      "title": "Rendering pretty sky in Around The World game",
+      "url": "https://frozenfractal.com/blog/2026/10/12/around-the-world-34-a-pretty-sky/",
       "source": "Hacker News",
-      "points": 21,
-      "comments": 7,
-      "comments_url": "https://news.ycombinator.com/item?id=50129045",
-      "published_at": "2026-10-17T16:21:25+08:00",
+      "points": 128,
+      "comments": 9,
+      "comments_url": "https://news.ycombinator.com/item?id=50119315",
+      "published_at": "2026-10-16T23:06:43+08:00",
       "tags": [
-        "ai"
+        "misc"
       ]
     },
     {
       "title": "Linus Torvalds on AI-assisted kernel contributions",
       "url": "https://lore.kernel.org/lkml/CAHk-=whTs09_ozN+e09GU68N1wPP56MUzDjrg9rnKxQUa0A_4Q@mail.gmail.com/",
       "source": "Lobsters",
-      "points": 85,
-      "comments": 151,
+      "points": 88,
+      "comments": 159,
       "comments_url": "https://lobste.rs/s/xiq59t/linus_torvalds_on_ai_assisted_kernel",
       "published_at": "2026-10-16T10:50:33+08:00",
       "tags": [
@@ -513,11 +543,23 @@
       ]
     },
     {
+      "title": "Why are we even doing all this?",
+      "url": "https://terrytao.wordpress.com/2026/10/15/why-are-we-even-doing-all-this/",
+      "source": "Lobsters",
+      "points": 125,
+      "comments": 19,
+      "comments_url": "https://lobste.rs/s/qvomvk/why_are_we_even_doing_all_this",
+      "published_at": "2026-10-16T13:28:29+08:00",
+      "tags": [
+        "ai"
+      ]
+    },
+    {
       "title": "10 Prompting Techniques My Deep Learning Exam Taught Me (That I Actually Use Now)",
       "url": "https://dev.to/dj29/10-prompting-techniques-my-deep-learning-exam-taught-me-that-i-actually-use-now-43h0",
       "source": "DEV.to",
-      "points": 25,
-      "comments": 6,
+      "points": 31,
+      "comments": 12,
       "comments_url": "https://dev.to/dj29/10-prompting-techniques-my-deep-learning-exam-taught-me-that-i-actually-use-now-43h0#comments",
       "published_at": "2026-10-17T03:39:20Z",
       "summary": "You already use prompting every day. You just don't know the names of what you're doing. Every time...",
@@ -526,25 +568,25 @@
       ]
     },
     {
-      "title": "Ultramarine 1 Flash",
-      "url": "https://www.paperinstruments.com/ultramarine",
-      "source": "Hacker News",
-      "points": 227,
-      "comments": 68,
-      "comments_url": "https://news.ycombinator.com/item?id=50106747",
-      "published_at": "2026-10-16T01:06:01+08:00",
+      "title": "Intuitive concurrent programming in any language",
+      "url": "https://www.lf-lang.org/",
+      "source": "Lobsters",
+      "points": 18,
+      "comments": 8,
+      "comments_url": "https://lobste.rs/s/srao9u/intuitive_concurrent_programming_any",
+      "published_at": "2026-10-17T20:17:20+08:00",
       "tags": [
-        "misc"
+        "programming"
       ]
     },
     {
-      "title": "Why are we even doing all this?",
-      "url": "https://terrytao.wordpress.com/2026/10/15/why-are-we-even-doing-all-this/",
+      "title": "The Decoherence Trap: When AI slop drowns out the signal in an endless sea of noise",
+      "url": "https://maevyn.codes/decoherence",
       "source": "Lobsters",
-      "points": 101,
-      "comments": 15,
-      "comments_url": "https://lobste.rs/s/qvomvk/why_are_we_even_doing_all_this",
-      "published_at": "2026-10-16T13:28:29+08:00",
+      "points": 45,
+      "comments": 18,
+      "comments_url": "https://lobste.rs/s/vjmn84/decoherence_trap_when_ai_slop_drowns_out",
+      "published_at": "2026-10-17T00:36:29+08:00",
       "tags": [
         "ai"
       ]
@@ -553,8 +595,8 @@
       "title": "The road to iroh 1.0",
       "url": "https://www.iroh.computer/blog/the-road-to-iroh-1-0",
       "source": "Lobsters",
-      "points": 54,
-      "comments": 13,
+      "points": 63,
+      "comments": 15,
       "comments_url": "https://lobste.rs/s/6laoto/road_iroh_1_0",
       "published_at": "2026-10-16T20:02:05+08:00",
       "tags": [
@@ -562,39 +604,55 @@
       ]
     },
     {
-      "title": "A story of WiFi secrets, UART lockdowns and a damaged flash memory chip",
-      "url": "https://adepts.of0x.cc/eufy-homestation2-firmware/",
-      "source": "Hacker News",
-      "points": 44,
-      "comments": 3,
-      "comments_url": "https://news.ycombinator.com/item?id=50119751",
-      "published_at": "2026-10-16T23:38:28+08:00",
-      "tags": [
-        "hardware"
-      ]
-    },
-    {
-      "title": "The Decoherence Trap: When AI slop drowns out the signal in an endless sea of noise",
-      "url": "https://maevyn.codes/decoherence",
-      "source": "Lobsters",
-      "points": 27,
-      "comments": 11,
-      "comments_url": "https://lobste.rs/s/vjmn84/decoherence_trap_when_ai_slop_drowns_out",
-      "published_at": "2026-10-17T00:36:29+08:00",
-      "tags": [
-        "ai"
-      ]
-    },
-    {
       "title": "Making a 88x31 button book using ImageMagick",
       "url": "https://k.sosnierz.me/08-11-24/",
       "source": "Lobsters",
-      "points": 40,
-      "comments": 10,
+      "points": 49,
+      "comments": 14,
       "comments_url": "https://lobste.rs/s/v6hhdr/making_88x31_button_book_using",
       "published_at": "2026-10-16T19:21:12+08:00",
       "tags": [
         "misc"
+      ]
+    },
+    {
+      "title": "Interactive refactoring in gopls",
+      "url": "https://go.dev/blog/interactive-refactoring",
+      "source": "Lobsters",
+      "points": 22,
+      "comments": 7,
+      "comments_url": "https://lobste.rs/s/wn293o/interactive_refactoring_gopls",
+      "published_at": "2026-10-17T09:12:09+08:00",
+      "tags": [
+        "programming",
+        "devtools"
+      ]
+    },
+    {
+      "title": "Introducing GNOME OS Preview",
+      "url": "https://blogs.gnome.org/adrianvovk/2026/10/16/gnome-os-preview/",
+      "source": "Lobsters",
+      "points": 26,
+      "comments": 11,
+      "comments_url": "https://lobste.rs/s/xwng6u/introducing_gnome_os_preview",
+      "published_at": "2026-10-17T02:25:15+08:00",
+      "tags": [
+        "linux",
+        "release"
+      ]
+    },
+    {
+      "title": "Do you let LLMs write both your tests and your code?",
+      "url": "https://lobste.rs/s/miwcai/do_you_let_llms_write_both_your_tests_your",
+      "source": "Lobsters",
+      "points": 15,
+      "comments": 13,
+      "comments_url": "https://lobste.rs/s/miwcai/do_you_let_llms_write_both_your_tests_your",
+      "published_at": "2026-10-17T07:53:05+08:00",
+      "summary": "I'm curious what stance others have taken? Or what they've experienced with this? I'm toying with adding a rule to our values.md that the LLM can only significantly generate one or the other. I'm reviewing a merge request at the moment where it's clear the LLM mostly did both,…",
+      "tags": [
+        "ai",
+        "programming"
       ]
     },
     {
@@ -609,86 +667,11 @@
       ]
     },
     {
-      "title": "Singularity News :: 0010",
-      "url": "https://dev.to/pengeszikra/singularity-news-0010-nhn",
-      "source": "DEV.to",
-      "points": 18,
-      "comments": 6,
-      "comments_url": "https://dev.to/pengeszikra/singularity-news-0010-nhn#comments",
-      "published_at": "2026-10-16T21:22:38Z",
-      "summary": "Bartender R2D66 explained the next step in evolution. Whisky made it sound reasonable. Welcome to...",
-      "tags": [
-        "misc"
-      ]
-    },
-    {
-      "title": "Introducing GNOME OS Preview",
-      "url": "https://blogs.gnome.org/adrianvovk/2026/10/16/gnome-os-preview/",
-      "source": "Lobsters",
-      "points": 19,
-      "comments": 8,
-      "comments_url": "https://lobste.rs/s/xwng6u/introducing_gnome_os_preview",
-      "published_at": "2026-10-17T02:25:15+08:00",
-      "tags": [
-        "linux",
-        "release"
-      ]
-    },
-    {
-      "title": "My C23 Conventions",
-      "url": "https://abner.page/post/c23-conventions-1/",
-      "source": "Lobsters",
-      "points": 64,
-      "comments": 15,
-      "comments_url": "https://lobste.rs/s/umdbht/my_c23_conventions",
-      "published_at": "2026-10-15T23:32:15+08:00",
-      "tags": [
-        "programming"
-      ]
-    },
-    {
-      "title": "Epic's EAC2 v2 seems fairly easily bypassable",
-      "url": "https://codon.org.uk/~mjg59/blog/p/epics-eac2-v2-seems-fairly-easily-bypassable/",
-      "source": "Lobsters",
-      "points": 36,
-      "comments": 20,
-      "comments_url": "https://lobste.rs/s/1iin5o/epic_s_eac2_v2_seems_fairly_easily",
-      "published_at": "2026-10-16T06:48:19+08:00",
-      "tags": [
-        "security"
-      ]
-    },
-    {
-      "title": "Getting Canceled",
-      "url": "https://www.youtube.com/watch?v=5zIOfBLQ3U4",
-      "source": "Lobsters",
-      "points": 21,
-      "comments": 1,
-      "comments_url": "https://lobste.rs/s/tty7hm/getting_canceled",
-      "published_at": "2026-10-17T02:54:16+08:00",
-      "tags": [
-        "misc"
-      ]
-    },
-    {
-      "title": "AI Made Your Easy Work Free. That Made You More Valuable.",
-      "url": "https://dev.to/james_anderson_h/ai-made-your-easy-work-free-that-made-you-more-valuable-413f",
-      "source": "DEV.to",
-      "points": 12,
-      "comments": 0,
-      "comments_url": "https://dev.to/james_anderson_h/ai-made-your-easy-work-free-that-made-you-more-valuable-413f#comments",
-      "published_at": "2026-10-17T05:57:07Z",
-      "summary": "Let's start by admitting the scary part is true, because the whole argument falls apart if I pretend...",
-      "tags": [
-        "ai"
-      ]
-    },
-    {
       "title": "Your Browser Can Do WHAT?! 5 AI Features That Actually Work",
       "url": "https://dev.to/sylwia-lask/your-browser-can-do-what-5-ai-features-that-actually-work-1blb",
       "source": "DEV.to",
-      "points": 151,
-      "comments": 96,
+      "points": 168,
+      "comments": 109,
       "comments_url": "https://dev.to/sylwia-lask/your-browser-can-do-what-5-ai-features-that-actually-work-1blb#comments",
       "published_at": "2026-10-14T07:05:48Z",
       "summary": "Are AI models running directly in the browser finally good enough to use in production? Let's find...",
@@ -696,6 +679,19 @@
         "ai",
         "web",
         "programming"
+      ]
+    },
+    {
+      "title": "Singularity News :: 0010",
+      "url": "https://dev.to/pengeszikra/singularity-news-0010-nhn",
+      "source": "DEV.to",
+      "points": 20,
+      "comments": 6,
+      "comments_url": "https://dev.to/pengeszikra/singularity-news-0010-nhn#comments",
+      "published_at": "2026-10-16T21:22:38Z",
+      "summary": "Bartender R2D66 explained the next step in evolution. Whisky made it sound reasonable. Welcome to...",
+      "tags": [
+        "misc"
       ]
     },
     {
@@ -750,29 +746,29 @@
   ],
   "news_highlights": [
     {
-      "title": "Claude reveals ECDSA curve origins",
-      "url": "https://www.anthropic.com/research/ecdsa-curve-origins",
-      "why_it_matters": "A top AI discussion on Hacker News today (856 points, 317 comments)."
+      "title": "OpenCode Hacked: User credentials leaked",
+      "url": "https://twitter.com/opencode/status/2111516673953935833",
+      "why_it_matters": "OpenCode says a breach tied to a large-scale distillation attack hit 1.4% of OpenCode Console users, who were emailed, and the incident is still ongoing. OpenCode is on today's GitHub Trending list too. If you use OpenCode Console, check your email and consider rotating the provider keys you connected."
     },
     {
-      "title": "90% of US working hours are spent on tasks not covered well by AI benchmarks",
-      "url": "https://www.mercor.com/research/labor-index/benchmark-map/",
-      "why_it_matters": "A top AI discussion on Hacker News today (495 points, 416 comments)."
+      "title": "DeepSeek-v4.1-Flash-1017",
+      "url": "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash-1017",
+      "why_it_matters": "An MIT-licensed open-weights update that reports big agentic-coding gains (Terminal-Bench 4.0 in the Claude Code harness: 42.3, up from 31.2) with shorter outputs and a 1M-token context. It could be a cheaper model to put behind coding agents."
     },
     {
-      "title": "How the Claude Code team does code review",
-      "url": "https://claude.dev/blog/solving-code-review-at-anthropic/",
-      "why_it_matters": "A top AI discussion on Hacker News today (340 points, 312 comments)."
+      "title": "Linus Torvalds on AI-assisted kernel contributions",
+      "url": "https://lore.kernel.org/lkml/CAHk-=whTs09_ozN+e09GU68N1wPP56MUzDjrg9rnKxQUa0A_4Q@mail.gmail.com/",
+      "why_it_matters": "How the Linux kernel treats AI-assisted patches is likely to shape contribution rules for agent-written code across open source. The thread drew 159 comments on Lobsters."
     },
     {
-      "title": "Apple ML Research: Muse Spark Open with MLX on Mac Studio",
-      "url": "https://machinelearning.apple.com/research/mlx-distributed-inference",
-      "why_it_matters": "A top AI discussion on Hacker News today (312 points, 158 comments)."
+      "title": "Codex Desktop continuously generates Crashpad pending dumps",
+      "url": "https://github.com/openai/codex/issues/25921",
+      "why_it_matters": "An open Codex issue reports the desktop app writing crash dumps over and over. If you run Codex Desktop, watch its disk usage until a fix lands."
     },
     {
-      "title": "Llama.cpp on a jailbroken PS5: run any GGUF model natively on the console",
-      "url": "https://github.com/cobanov/PS5LM",
-      "why_it_matters": "A top AI discussion on Hacker News today (284 points, 71 comments)."
+      "title": "Chrome and Edge are removing XSLT: what breaks and what does not",
+      "url": "https://doctor-seo.net/en/blog/news/chrome-edge-removing-xslt/",
+      "why_it_matters": "Chromium browsers are dropping built-in XSLT, which some sites still use to style XML such as RSS/Atom feeds and sitemaps in the browser. Check whether any client sites depend on it."
     }
   ]
 }
