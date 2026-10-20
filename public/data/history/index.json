@@ -1,5 +1,14 @@
 [
   {
+    "date": "2026-10-20",
+    "featured": [
+      "cloudflare/security-audit-skill",
+      "Graphify-Labs/graphify",
+      "DietrichGebert/ponytail"
+    ],
+    "archived_count": 5
+  },
+  {
     "date": "2026-10-18",
     "featured": [
       "android/skills",
