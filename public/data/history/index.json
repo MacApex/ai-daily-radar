@@ -1,5 +1,13 @@
 [
   {
+    "date": "2026-10-21",
+    "featured": [
+      "wshobson/agents",
+      "headroomlabs-ai/headroom"
+    ],
+    "archived_count": 5
+  },
+  {
     "date": "2026-10-20",
     "featured": [
       "cloudflare/security-audit-skill",
