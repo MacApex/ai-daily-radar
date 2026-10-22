@@ -1,59 +1,29 @@
 {
   "sample": false,
-  "generated_at": "2026-10-21T10:27:10+08:00",
-  "date": "2026-10-21",
+  "generated_at": "2026-10-22T10:32:52+08:00",
+  "date": "2026-10-22",
   "run": {
-    "trending_observed": 15,
-    "saved": 1,
-    "upgraded": 2,
+    "trending_observed": 12,
+    "saved": 0,
+    "upgraded": 3,
     "relocated": 2,
     "unchanged": 0,
     "incomplete": 0,
-    "eligible_not_archived": 9,
-    "rejected": 1,
+    "eligible_not_archived": 3,
+    "rejected": 4,
     "blockers": [
-      "Mac mini was briefly unreachable from Grok Bot (about 10:08-10:23 Asia/Shanghai) right after the Trending fetch; the run resumed once it reconnected, with no data loss.",
-      "stablyai/orca has a newer upstream commit (065e6873) but was not upgraded today (daily cap of 5); its archive stays at cf6582c in the 2026-10-20 folder."
+      "Mac mini was unreachable from Grok Bot for about 20 minutes (roughly 10:08-10:28 Asia/Shanghai) right after the Trending fetch; the run resumed once it reconnected, with no data loss. Star counts were verified after reconnecting.",
+      "stablyai/orca has a newer upstream commit (7a912a3a) but was not upgraded today (daily cap of 5); its archive stays at cf6582c in the 2026-10-20 folder.",
+      "No new featured picks: every eligible coding-agent repo on today's list had already been featured, and the never-featured eligible ones (vllm, ComfyUI) are not strong enough coding-agent picks to recommend."
     ],
-    "archive_folder": "2026-10-21_100711_Asia-Shanghai"
+    "archive_folder": "2026-10-22_100735_Asia-Shanghai"
   },
-  "featured": [
-    {
-      "full_name": "wshobson/agents",
-      "url": "https://github.com/wshobson/agents",
-      "stars": 41276,
-      "rating": 4,
-      "license": "MIT",
-      "reason": "One Markdown source of 94 plugins (202 agents, 185 skills, 105 commands) installable natively in Claude Code, Codex CLI and Cursor, with generators for OpenCode, Copilot, Antigravity and Pi; includes frontend-mobile-development, ui-design (iOS/Android/React Native), multi-platform-apps, accessibility and SEO plugins plus a static plugin-eval scorer. Broad, so install single plugins or skills rather than everything.",
-      "ideas": [
-        "Install just the ui-design plugin in Claude Code (/plugin marketplace add wshobson/agents, then /plugin install ui-design@claude-code-workflows) and run its /design-review command on the ai-daily-radar site to get concrete fixes for the mobile layout.",
-        "Use the mobile-android-design and mobile-ios-design skills on your next client app screen and compare the agent's output against the same prompt without the skills.",
-        "Run the accessibility-compliance plugin's /accessibility-audit on one of your portfolio sites and turn the WCAG findings into a checklist you can offer clients.",
-        "Install the same plugin in Codex CLI (codex plugin marketplace add wshobson/agents) and in Claude Code to see how one Markdown source behaves in two harnesses, then copy that layout for your own skills.",
-        "Score a SKILL.md you wrote with the static plugin-eval scorer (uv run --project plugins/plugin-eval plugin-eval score ... --depth quick) to learn what makes a skill trigger and read well, without spending model calls."
-      ]
-    },
-    {
-      "full_name": "headroomlabs-ai/headroom",
-      "url": "https://github.com/headroomlabs-ai/headroom",
-      "stars": 76795,
-      "rating": 4,
-      "license": "Apache-2.0",
-      "reason": "Local context-compression layer (library, proxy, MCP server, `headroom wrap claude|codex|...`) that shrinks tool outputs, logs and JSON with reversible retrieval (CCR), cross-agent memory and `headroom learn`; adds a local proxy in the request path, and `wrap` also registers the Serena MCP server unless you pass --code-memory none. Relocated from 2026-10-20 and upgraded in place by incremental fetch.",
-      "ideas": [
-        "Wrap one Codex or Claude Code session with `headroom wrap codex` (use --code-memory none if you don't want Serena registered) and watch `headroom dashboard` to see how many tokens a real build-log-heavy task saves.",
-        "Add only the MCP server (`headroom mcp install`) to an agent and let it call headroom_compress and headroom_retrieve on large JSON API responses while you check that nothing important gets lost.",
-        "Run `headroom learn` in dry-run mode on past failed agent sessions to see which corrections it would write to AGENTS.md or CLAUDE.local.md, then decide which ones to keep.",
-        "Try the shared cross-agent memory by handing a half-finished task from a wrapped Claude Code session to a wrapped Codex session in the same repo.",
-        "Put `headroom proxy --port 8787` in front of a small script of your own that calls a model API with long logs, and compare cost and answer quality with the proxy on and off."
-      ]
-    }
-  ],
+  "featured": [],
   "archived": [
     {
       "full_name": "cloudflare/security-audit-skill",
       "url": "https://github.com/cloudflare/security-audit-skill",
-      "stars": 34364,
+      "stars": 36692,
       "rating": 5,
       "license": "MIT",
       "commit_sha": "c1c8a8c1471069fb0e188eeaff69b8e8db6564a8",
@@ -64,18 +34,29 @@
     {
       "full_name": "Graphify-Labs/graphify",
       "url": "https://github.com/Graphify-Labs/graphify",
-      "stars": 130339,
+      "stars": 131745,
       "rating": 5,
       "license": "Apache-2.0",
-      "commit_sha": "b90b9df7949bd04a15b40a1624af85d0a9cfdf04",
+      "commit_sha": "847a93f3cab5e2c82ea9170014b21cd2c52a4417",
       "status": "upgraded",
       "size_mb": 27.9,
       "description": "Turn any codebase, with its docs, SQL schemas, configs, and PDFs, into a queryable knowledge graph. A /graphify skill for Claude Code, Cursor, Codex, and Gemini CLI: local deterministic AST parsing, every edge explained, no vector store."
     },
     {
+      "full_name": "headroomlabs-ai/headroom",
+      "url": "https://github.com/headroomlabs-ai/headroom",
+      "stars": 77299,
+      "rating": 4,
+      "license": "Apache-2.0",
+      "commit_sha": "e995eb9f1dacac7ed548758406de6c1508caef95",
+      "status": "upgraded",
+      "size_mb": 69.9,
+      "description": "Compress tool outputs, logs, files, and RAG chunks before they reach the LLM. 20% fewer tokens for coding agents, 60-95% fewer tokens for JSON, same answers. Library, proxy, MCP server."
+    },
+    {
       "full_name": "DietrichGebert/ponytail",
       "url": "https://github.com/DietrichGebert/ponytail",
-      "stars": 169837,
+      "stars": 171788,
       "rating": 4,
       "license": "MIT",
       "commit_sha": "09c434ab73ca43761c5d8b0c5d341926c2fba710",
@@ -84,396 +65,448 @@
       "description": "Makes your AI agent think like the laziest senior dev in the room. The best code is the code you never wrote."
     },
     {
-      "full_name": "headroomlabs-ai/headroom",
-      "url": "https://github.com/headroomlabs-ai/headroom",
-      "stars": 76795,
-      "rating": 4,
-      "license": "Apache-2.0",
-      "commit_sha": "f380692b463637e90de84f1b5cc29c7ae9f7b969",
-      "status": "upgraded",
-      "size_mb": 69.9,
-      "description": "Compress tool outputs, logs, files, and RAG chunks before they reach the LLM. 20% fewer tokens for coding agents, 60-95% fewer tokens for JSON, same answers. Library, proxy, MCP server."
-    },
-    {
-      "full_name": "wshobson/agents",
-      "url": "https://github.com/wshobson/agents",
-      "stars": 41276,
+      "full_name": "akitaonrails/ai-memory",
+      "url": "https://github.com/akitaonrails/ai-memory",
+      "stars": 12379,
       "rating": 4,
       "license": "MIT",
-      "commit_sha": "0874a27b17a22e2b7c2e2bcd725768e0803cad06",
-      "status": "saved",
-      "size_mb": 7.9,
-      "description": "Multi-harness agentic plugin marketplace for Claude Code, Codex, Cursor, OpenCode, GitHub Copilot, Google Antigravity, and Pi"
+      "commit_sha": "1c86aebc14addccc7ac875913d565c681bfa4a50",
+      "status": "upgraded",
+      "size_mb": 30.6,
+      "description": "Solution for long term memory for agent coding CLIs and to facilitate handoff between different agent vendors"
     }
   ],
   "trending": [
     {
       "rank": 1,
-      "full_name": "MadsLorentzen/ai-job-search",
-      "url": "https://github.com/MadsLorentzen/ai-job-search",
-      "stars": 60805,
-      "stars_today": 3861,
-      "language": "Python",
-      "description": "The job search that runs on your machine. AI job application framework built on Claude Code: evaluate postings, tailor CVs, write cover letters, prep interviews. Fork it and own it.",
-      "decision": "eligible_not_archived",
-      "decision_reason": "Claude Code workflow template (/scrape, /apply, drafter-reviewer agents, LaTeX CVs); a worked example of a document-producing agent pipeline, but niche. Earlier snapshot stays in the volume Trash."
-    },
-    {
-      "rank": 2,
       "full_name": "cloudflare/security-audit-skill",
       "url": "https://github.com/cloudflare/security-audit-skill",
-      "stars": 34364,
-      "stars_today": 1712,
+      "stars": 36692,
+      "stars_today": 2012,
       "language": "JavaScript",
       "description": "A coding-agent skill for multi-phase security audits with independently verified, machine-readable findings",
       "decision": "archived",
       "decision_reason": "Relocated: Cloudflare's six-phase security-audit skill for coding agents: isolated hunters, adversarial verifiers, schema-validated findings.json and coverage ledger. Already archived and featured; upstream still at the archived commit, so the folder was moved into today's run."
     },
     {
+      "rank": 2,
+      "full_name": "vllm-project/vllm",
+      "url": "https://github.com/vllm-project/vllm",
+      "stars": 94914,
+      "stars_today": 441,
+      "language": "Python",
+      "description": "A high-throughput and memory-efficient inference and serving engine for LLMs",
+      "decision": "eligible_not_archived",
+      "decision_reason": "High-throughput LLM serving engine; relevant only for self-hosting models behind agents, CUDA-oriented and not a fit for this Mac."
+    },
+    {
       "rank": 3,
       "full_name": "stablyai/orca",
       "url": "https://github.com/stablyai/orca",
-      "stars": 99848,
-      "stars_today": 1565,
+      "stars": 101414,
+      "stars_today": 1541,
       "language": "TypeScript",
       "description": "Orca is the place for working with a fleet of agents (e.g. Grok Bot, Claude Code). Run any coding agent with your own subscription. Available on desktop, mobile and remote runtime.",
       "decision": "eligible_not_archived",
-      "decision_reason": "Desktop orchestrator that runs Claude Code, Codex and other CLI agents side by side in isolated git worktrees. Already archived and featured; upstream moved to a newer commit, but it lost today's cap tie-break (a large Electron/Expo app rather than an extension of the agents themselves). Archived copy stays in the 2026-10-20 folder at cf6582c."
+      "decision_reason": "Desktop orchestrator that runs Claude Code, Codex and other CLI agents side by side in isolated git worktrees. Already archived and featured; upstream moved to a newer commit (7a912a3), but it lost today's cap tie-break again (a large Electron/Expo app rather than an extension of the agents themselves). Archived copy stays in the 2026-10-20 folder at cf6582c."
     },
     {
       "rank": 4,
+      "full_name": "headroomlabs-ai/headroom",
+      "url": "https://github.com/headroomlabs-ai/headroom",
+      "stars": 77299,
+      "stars_today": 474,
+      "language": "Python",
+      "description": "Compress tool outputs, logs, files, and RAG chunks before they reach the LLM. 20% fewer tokens for coding agents, 60-95% fewer tokens for JSON, same answers. Library, proxy, MCP server.",
+      "decision": "archived",
+      "decision_reason": "Upgraded: Local context-compression layer (library, proxy, MCP server, `headroom wrap claude|codex|...`) that shrinks tool outputs, logs and JSON with reversible retrieval, cross-agent memory and `headroom learn`. Already archived and featured; relocated from 2026-10-21 and upgraded in place by incremental fetch."
+    },
+    {
+      "rank": 5,
       "full_name": "DietrichGebert/ponytail",
       "url": "https://github.com/DietrichGebert/ponytail",
-      "stars": 169837,
-      "stars_today": 1208,
+      "stars": 171788,
+      "stars_today": 2079,
       "language": "JavaScript",
       "description": "Makes your AI agent think like the laziest senior dev in the room. The best code is the code you never wrote.",
       "decision": "archived",
       "decision_reason": "Relocated: One-prompt skill/plugin for Claude Code, Codex and ~20 agents that pushes minimal, reuse-first code without cutting validation, security or tests, plus /ponytail-review, -audit and -debt commands. Already archived and featured; upstream unchanged, folder moved into today's run."
     },
     {
-      "rank": 5,
+      "rank": 6,
       "full_name": "Comfy-Org/ComfyUI",
       "url": "https://github.com/Comfy-Org/ComfyUI",
-      "stars": 140842,
-      "stars_today": 1206,
+      "stars": 141578,
+      "stars_today": 939,
       "language": "Python",
       "description": "The most powerful and modular diffusion model GUI, api and backend with a graph/nodes interface. The fastest local inference engine in the world.",
       "decision": "eligible_not_archived",
       "decision_reason": "Node-graph diffusion GUI/API/backend; strong for agent-driven image/video pipelines via its API, but a heavy app whose models are separate, and less directly a coding-agent tool."
     },
     {
-      "rank": 6,
-      "full_name": "ruvnet/ruflo",
-      "url": "https://github.com/ruvnet/ruflo",
-      "stars": 77888,
-      "stars_today": 684,
-      "language": "TypeScript",
-      "description": "🌊 The original agent harness. Deploy intelligent multi-player swarms, coordinate autonomous workflows, and build conversational AI systems. Features adaptive memory, self-learning intelligence, federation, vector RAG integration, and native Claude Code / Codex / Hermes and many more Integrated",
-      "decision": "eligible_not_archived",
-      "decision_reason": "Multi-agent swarm meta-harness and MCP server for Claude Code and Codex; broad and heavy, and its mods run with your account permissions. Earlier snapshot stays in the volume Trash."
-    },
-    {
       "rank": 7,
-      "full_name": "Graphify-Labs/graphify",
-      "url": "https://github.com/Graphify-Labs/graphify",
-      "stars": 130339,
-      "stars_today": 802,
-      "language": "Python",
-      "description": "Turn any codebase, with its docs, SQL schemas, configs, and PDFs, into a queryable knowledge graph. A /graphify skill for Claude Code, Cursor, Codex, and Gemini CLI: local deterministic AST parsing, every edge explained, no vector store.",
-      "decision": "archived",
-      "decision_reason": "Upgraded: /graphify skill for Claude Code, Codex, Cursor and 20+ assistants that turns a repo plus docs/PDFs into a local tree-sitter knowledge graph agents query instead of grepping. Already archived and featured; relocated from 2026-10-20 and upgraded in place by incremental fetch."
+      "full_name": "supabase/supabase",
+      "url": "https://github.com/supabase/supabase",
+      "stars": 113051,
+      "stars_today": 504,
+      "language": "TypeScript",
+      "description": "The Postgres development platform. Supabase gives you a dedicated Postgres database to build your web, mobile, and AI applications.",
+      "decision": "rejected",
+      "decision_reason": "Not selected: Postgres backend platform (database, auth, storage) for apps; useful as a project backend but not itself a coding-agent tool, skill or workflow."
     },
     {
       "rank": 8,
-      "full_name": "anomalyco/opencode",
-      "url": "https://github.com/anomalyco/opencode",
-      "stars": 219006,
-      "stars_today": 1240,
+      "full_name": "twentyhq/twenty",
+      "url": "https://github.com/twentyhq/twenty",
+      "stars": 59219,
+      "stars_today": 112,
       "language": "TypeScript",
-      "description": "The open source coding agent.",
-      "decision": "eligible_not_archived",
-      "decision_reason": "Open-source terminal coding agent (TUI, desktop app, many providers, MCP); very large monorepo, lost the cap tie-break to tools that extend the agents Max already uses."
+      "description": "The open alternative to Salesforce, designed for AI.",
+      "decision": "rejected",
+      "decision_reason": "Not selected: open-source CRM application; not a coding-agent tool."
     },
     {
       "rank": 9,
-      "full_name": "msitarzewski/agency-agents",
-      "url": "https://github.com/msitarzewski/agency-agents",
-      "stars": 162408,
-      "stars_today": 562,
-      "language": "Shell",
-      "description": "A complete AI agency at your fingertips - From frontend wizards to Reddit community ninjas, from whimsy injectors to reality checkers. Each agent is a specialized expert with personality, processes, and proven deliverables.",
-      "decision": "eligible_not_archived",
-      "decision_reason": "Large roster of persona-style agent definitions installable into Claude Code, Codex, Cursor and others; useful as prompt examples but marketing-heavy and generic."
-    },
-    {
-      "rank": 10,
-      "full_name": "headroomlabs-ai/headroom",
-      "url": "https://github.com/headroomlabs-ai/headroom",
-      "stars": 76795,
-      "stars_today": 549,
-      "language": "Python",
-      "description": "Compress tool outputs, logs, files, and RAG chunks before they reach the LLM. 20% fewer tokens for coding agents, 60-95% fewer tokens for JSON, same answers. Library, proxy, MCP server.",
-      "decision": "archived",
-      "decision_reason": "Upgraded: Local context-compression layer (library, proxy, MCP server, `headroom wrap claude|codex|...`) that shrinks tool outputs, logs and JSON with reversible retrieval (CCR), cross-agent memory and `headroom learn`; adds a local proxy in the request path, and `wrap` also registers the Serena MCP server unless you pass --code-memory none. Relocated from 2026-10-20 and upgraded in place by incremental fetch."
-    },
-    {
-      "rank": 11,
-      "full_name": "anthropics/knowledge-work-plugins",
-      "url": "https://github.com/anthropics/knowledge-work-plugins",
-      "stars": 30824,
-      "stars_today": 267,
-      "language": "Python",
-      "description": "Open source repository of plugins primarily intended for knowledge workers to use in Claude Cowork",
-      "decision": "eligible_not_archived",
-      "decision_reason": "Anthropic's role plugins (productivity, sales, PM, legal, finance...) built for Claude Cowork and usable in Claude Code; connector-heavy and aimed at knowledge work rather than coding."
-    },
-    {
-      "rank": 12,
-      "full_name": "wshobson/agents",
-      "url": "https://github.com/wshobson/agents",
-      "stars": 41276,
-      "stars_today": 93,
-      "language": "Python",
-      "description": "Multi-harness agentic plugin marketplace for Claude Code, Codex, Cursor, OpenCode, GitHub Copilot, Google Antigravity, and Pi",
-      "decision": "archived",
-      "decision_reason": "Saved: One Markdown source of 94 plugins (202 agents, 185 skills, 105 commands) installable natively in Claude Code, Codex CLI and Cursor, with generators for OpenCode, Copilot, Antigravity and Pi; includes frontend-mobile-development, ui-design (iOS/Android/React Native), multi-platform-apps, accessibility and SEO plugins plus a static plugin-eval scorer. Broad, so install single plugins or skills rather than everything."
-    },
-    {
-      "rank": 13,
-      "full_name": "sickn33/agentic-awesome-skills",
-      "url": "https://github.com/sickn33/agentic-awesome-skills",
-      "stars": 48128,
-      "stars_today": 83,
-      "language": "Python",
-      "description": "AAS Core is the local, agent-first control plane for complete catalog discovery, agent-owned selection, stack validation, and planning, backed by 2,600+ agentic skills. Includes CLI, local MCP, catalog, plugins, and Workbench.",
-      "decision": "eligible_not_archived",
-      "decision_reason": "Huge agent-skills catalog plus a local selection/planning CLI; breadth over curation, so review individual skills before installing."
-    },
-    {
-      "rank": 14,
       "full_name": "shiyu-coder/Kronos",
       "url": "https://github.com/shiyu-coder/Kronos",
-      "stars": 42382,
-      "stars_today": 733,
+      "stars": 42870,
+      "stars_today": 575,
       "language": "Python",
       "description": "Kronos: A Foundation Model for the Language of Financial Markets",
       "decision": "rejected",
       "decision_reason": "Not selected: financial-market foundation model; not a coding-agent tool."
     },
     {
-      "rank": 15,
-      "full_name": "vllm-project/vllm",
-      "url": "https://github.com/vllm-project/vllm",
-      "stars": 94465,
-      "stars_today": 128,
+      "rank": 10,
+      "full_name": "strelov1/freehire",
+      "url": "https://github.com/strelov1/freehire",
+      "stars": 2451,
+      "stars_today": 360,
+      "language": "Go",
+      "description": "freehire — the open-source search engine for job seekers",
+      "decision": "rejected",
+      "decision_reason": "Not selected: below the 3,000-star bar (2,451 verified) and a job-search engine rather than a coding-agent tool."
+    },
+    {
+      "rank": 11,
+      "full_name": "akitaonrails/ai-memory",
+      "url": "https://github.com/akitaonrails/ai-memory",
+      "stars": 12379,
+      "stars_today": 286,
+      "language": "Rust",
+      "description": "Solution for long term memory for agent coding CLIs and to facilitate handoff between different agent vendors",
+      "decision": "archived",
+      "decision_reason": "Upgraded: Shared long-term memory and typed handoffs across Claude Code, Codex, Cursor, OpenCode and 20+ other harnesses via MCP and lifecycle hooks; plain-markdown, git-backed wiki with a zero-LLM default path. Already archived (2026-10-18) and featured; relocated into today's run and upgraded in place by incremental fetch. Its hooks capture sanitized prompts and tool calls, so review privacy settings first."
+    },
+    {
+      "rank": 12,
+      "full_name": "Graphify-Labs/graphify",
+      "url": "https://github.com/Graphify-Labs/graphify",
+      "stars": 131745,
+      "stars_today": 1433,
       "language": "Python",
-      "description": "A high-throughput and memory-efficient inference and serving engine for LLMs",
-      "decision": "eligible_not_archived",
-      "decision_reason": "High-throughput LLM serving engine; relevant only for self-hosting models behind agents, CUDA-oriented and not a fit for this Mac."
+      "description": "Turn any codebase, with its docs, SQL schemas, configs, and PDFs, into a queryable knowledge graph. A /graphify skill for Claude Code, Cursor, Codex, and Gemini CLI: local deterministic AST parsing, every edge explained, no vector store.",
+      "decision": "archived",
+      "decision_reason": "Upgraded: /graphify skill for Claude Code, Codex, Cursor and 20+ assistants that turns a repo plus docs/PDFs into a local tree-sitter knowledge graph agents query instead of grepping. Already archived and featured; relocated from 2026-10-21 and upgraded in place by incremental fetch."
     }
   ],
   "news": [
     {
-      "title": "Show HN: SimCity, but with Permits",
-      "url": "https://permit.petercai.com/",
+      "title": "Security Disclosure",
+      "url": "https://blog.railway.com/p/security-disclosure-wednesday-october-21st",
       "source": "Hacker News",
-      "points": 589,
-      "comments": 296,
-      "comments_url": "https://news.ycombinator.com/item?id=50170593",
-      "published_at": "2026-10-21T02:29:09+08:00",
+      "points": 328,
+      "comments": 169,
+      "comments_url": "https://news.ycombinator.com/item?id=50188228",
+      "published_at": "2026-10-22T05:58:03+08:00",
+      "tags": [
+        "security",
+        "devtools"
+      ]
+    },
+    {
+      "title": "PHP 8.2.35",
+      "url": "https://github.com/php/php-src/releases/tag/php-8.2.35",
+      "source": "Hacker News",
+      "points": 977,
+      "comments": 536,
+      "comments_url": "https://news.ycombinator.com/item?id=50180873",
+      "published_at": "2026-10-21T21:45:33+08:00",
       "tags": [
         "misc"
       ]
     },
     {
-      "title": "DeepInfer: High-performance inference framework for DeepSeek models",
-      "url": "https://github.com/deepseek-ai/DeepInfer",
+      "title": "EA is shutting down BioWare",
+      "url": "https://www.theverge.com/games/1015647/ea-is-shutting-down-bioware",
       "source": "Hacker News",
-      "points": 2145,
-      "comments": 838,
-      "comments_url": "https://news.ycombinator.com/item?id=50163277",
-      "published_at": "2026-10-20T17:08:54+08:00",
+      "points": 545,
+      "comments": 327,
+      "comments_url": "https://news.ycombinator.com/item?id=50184586",
+      "published_at": "2026-10-22T01:29:33+08:00",
+      "tags": [
+        "misc"
+      ]
+    },
+    {
+      "title": "Today's PHP security release, and how we're strengthening security",
+      "url": "https://thephp.foundation/blog/2026/10/21/todays-php-security-release-and-how-were-strengthening-php-security/",
+      "source": "Hacker News",
+      "points": 688,
+      "comments": 338,
+      "comments_url": "https://news.ycombinator.com/item?id=50182987",
+      "published_at": "2026-10-21T23:48:56+08:00",
+      "tags": [
+        "security"
+      ]
+    },
+    {
+      "title": "Claude Duet",
+      "url": "https://claude.com/product/claude-duet",
+      "source": "Hacker News",
+      "points": 320,
+      "comments": 280,
+      "comments_url": "https://news.ycombinator.com/item?id=50186037",
+      "published_at": "2026-10-22T03:14:01+08:00",
+      "tags": [
+        "ai"
+      ]
+    },
+    {
+      "title": "mitmproxy adds --emudhra option",
+      "url": "https://github.com/mitmproxy/mitmproxy/commit/169234499088fc2c414644a67efaed3d64ae2e3b",
+      "source": "Hacker News",
+      "points": 230,
+      "comments": 61,
+      "comments_url": "https://news.ycombinator.com/item?id=50189232",
+      "published_at": "2026-10-22T07:51:37+08:00",
+      "tags": [
+        "misc"
+      ]
+    },
+    {
+      "title": "Meta ordered to pay $25B penalty in New Mexico Cambridge Analytica case",
+      "url": "https://www.cnbc.com/2026/10/21/meta-new-mexico-cambridge-analytica-penalty.html",
+      "source": "Hacker News",
+      "points": 394,
+      "comments": 251,
+      "comments_url": "https://news.ycombinator.com/item?id=50184820",
+      "published_at": "2026-10-22T01:45:13+08:00",
+      "tags": [
+        "misc"
+      ]
+    },
+    {
+      "title": "There isn't an easy exploit for this PHP vulnerability",
+      "url": "https://eliastaylor.com/noexploit/",
+      "source": "Hacker News",
+      "points": 186,
+      "comments": 87,
+      "comments_url": "https://news.ycombinator.com/item?id=50188948",
+      "published_at": "2026-10-22T07:13:27+08:00",
+      "tags": [
+        "security"
+      ]
+    },
+    {
+      "title": "Airbnb bans making guests do dishes and take out the trash",
+      "url": "https://www.theverge.com/tech/1015844/airbnb-chores-house-rules-update",
+      "source": "Hacker News",
+      "points": 121,
+      "comments": 102,
+      "comments_url": "https://news.ycombinator.com/item?id=50189150",
+      "published_at": "2026-10-22T07:38:32+08:00",
+      "tags": [
+        "misc"
+      ]
+    },
+    {
+      "title": "Rust Style Guide",
+      "url": "https://google.github.io/styleguide/rustguide.html",
+      "source": "Hacker News",
+      "points": 218,
+      "comments": 121,
+      "comments_url": "https://news.ycombinator.com/item?id=50186010",
+      "published_at": "2026-10-22T03:11:57+08:00",
+      "tags": [
+        "programming"
+      ]
+    },
+    {
+      "title": "Compromised LiteLLM 1.107.0 on PyPI Installs a Credential Stealer and Backdoor",
+      "url": "https://safedep.io/litellm-pypi-compromise-credential-stealer-backdoor/",
+      "source": "Hacker News",
+      "points": 445,
+      "comments": 148,
+      "comments_url": "https://news.ycombinator.com/item?id=50181114",
+      "published_at": "2026-10-21T22:00:26+08:00",
+      "tags": [
+        "misc"
+      ]
+    },
+    {
+      "title": "GitLab Critical Patch Release",
+      "url": "https://docs.gitlab.com/releases/patches/patch-release-gitlab-19-5-1-released/",
+      "source": "Hacker News",
+      "points": 257,
+      "comments": 64,
+      "comments_url": "https://news.ycombinator.com/item?id=50185869",
+      "published_at": "2026-10-22T03:01:12+08:00",
+      "tags": [
+        "misc"
+      ]
+    },
+    {
+      "title": "DuckDB 2.0.0 LTS “Cinnamon Teal”",
+      "url": "https://duckdb.org/2026/10/21/announcing-duckdb-200",
+      "source": "Hacker News",
+      "points": 372,
+      "comments": 48,
+      "comments_url": "https://news.ycombinator.com/item?id=50181136",
+      "published_at": "2026-10-21T22:01:22+08:00",
+      "tags": [
+        "misc"
+      ]
+    },
+    {
+      "title": "Patch the Planet: global response coordination as agents uncover vulnerabilities",
+      "url": "https://openai.com/index/coordinated-disclosure-of-critical-vulnerabilities/",
+      "source": "Hacker News",
+      "points": 237,
+      "comments": 162,
+      "comments_url": "https://news.ycombinator.com/item?id=50181175",
+      "published_at": "2026-10-21T22:03:43+08:00",
       "tags": [
         "ai",
-        "programming"
+        "security"
       ]
     },
     {
-      "title": "EMudhra Intermediate CA Compromise",
-      "url": "https://emudhra.we-have-a-problem.com/",
+      "title": "OpenAI models are coming to Google Cloud",
+      "url": "https://openai.com/index/openai-models-google-cloud/",
       "source": "Hacker News",
-      "points": 667,
-      "comments": 340,
-      "comments_url": "https://news.ycombinator.com/item?id=50166579",
-      "published_at": "2026-10-20T21:58:33+08:00",
-      "summary": "eMudhra Intermediate CA Compromise This is very, very bad news: The private keys of eight eMudhra intermediate CA certificates have been compromised. They chain to roots trusted by the Mozilla, Microsoft, Apple and Chrome root programs and by many downstream trust stores. Any…",
+      "points": 245,
+      "comments": 106,
+      "comments_url": "https://news.ycombinator.com/item?id=50180079",
+      "published_at": "2026-10-21T20:53:11+08:00",
       "tags": [
-        "programming"
+        "ai"
       ]
     },
     {
-      "title": "Voxtral 3",
-      "url": "https://mistral.ai/news/voxtral-3/",
+      "title": "Oregon lawmakers approve money to buy an iconic waterfall listed on Redfin",
+      "url": "https://apnews.com/article/oregon-waterfall-for-sale-lawmakers-996de63462d49ec3ad9bee1629fb9488",
       "source": "Hacker News",
-      "points": 538,
-      "comments": 143,
-      "comments_url": "https://news.ycombinator.com/item?id=50168396",
-      "published_at": "2026-10-21T00:02:07+08:00",
-      "tags": [
-        "misc"
-      ]
-    },
-    {
-      "title": "What shall I teach my son?",
-      "url": "https://stevekrouse.com/ends",
-      "source": "Hacker News",
-      "points": 276,
-      "comments": 342,
-      "comments_url": "https://news.ycombinator.com/item?id=50169707",
-      "published_at": "2026-10-21T01:25:07+08:00",
+      "points": 172,
+      "comments": 85,
+      "comments_url": "https://news.ycombinator.com/item?id=50182526",
+      "published_at": "2026-10-21T23:20:04+08:00",
       "tags": [
         "misc"
       ]
     },
     {
-      "title": "Apple broke an essential presentation feature of iPads",
-      "url": "https://teddysvoronos.com/2026-10-19-apple-broke-an-essential-presentation-feature-of-ipads/",
+      "title": "New plastic pollution discovered: 'Plasticorals' coral rubble fused with plastic",
+      "url": "https://www.oist.jp/news-center/news/2026/9/18/new-form-plastic-pollution-discovered-shores-vulnerable-coral-reefs",
       "source": "Hacker News",
-      "points": 500,
-      "comments": 255,
-      "comments_url": "https://news.ycombinator.com/item?id=50165208",
-      "published_at": "2026-10-20T20:17:28+08:00",
+      "points": 103,
+      "comments": 43,
+      "comments_url": "https://news.ycombinator.com/item?id=50183512",
+      "published_at": "2026-10-22T00:20:37+08:00",
       "tags": [
         "misc"
       ]
     },
     {
-      "title": "Ofcom concedes defeat in 4chan case",
-      "url": "https://prestonbyrne.com/2026/10/20/ofcom-concedes-defeat/",
-      "source": "Hacker News",
-      "points": 337,
-      "comments": 253,
-      "comments_url": "https://news.ycombinator.com/item?id=50167028",
-      "published_at": "2026-10-20T22:30:31+08:00",
+      "title": "Firefox Local Mode",
+      "url": "https://firefox-source-docs.mozilla.org/devtools-user/local_mode/index.html",
+      "source": "Lobsters",
+      "points": 76,
+      "comments": 14,
+      "comments_url": "https://lobste.rs/s/w9sxxq/firefox_local_mode",
+      "published_at": "2026-10-21T23:47:59+08:00",
       "tags": [
         "misc"
       ]
     },
     {
-      "title": "Tsrs: A Port of TypeScript to Rust",
-      "url": "https://blog.cloudflare.com/typescript-rust-port/",
+      "title": "Κ = 0.003 for integer multiplication crossed",
+      "url": "https://github.com/CrocSwap/integer-mult-bounds/pull/4441",
       "source": "Hacker News",
-      "points": 349,
-      "comments": 173,
-      "comments_url": "https://news.ycombinator.com/item?id=50165953",
-      "published_at": "2026-10-20T21:18:07+08:00",
-      "tags": [
-        "programming"
-      ]
-    },
-    {
-      "title": "Google open-sources TorchTPU, a native PyTorch back end for TPUs",
-      "url": "https://github.com/google-pytorch/torch_tpu",
-      "source": "Hacker News",
-      "points": 269,
-      "comments": 64,
-      "comments_url": "https://news.ycombinator.com/item?id=50169053",
-      "published_at": "2026-10-21T00:40:24+08:00",
-      "tags": [
-        "programming"
-      ]
-    },
-    {
-      "title": "Sixteen Years After Deepwater Horizon, Deep Sea Life Shows Few Signs of Recovery",
-      "url": "https://e360.yale.edu/digest/deepwater-horizon-deep-sea-recovery",
-      "source": "Hacker News",
-      "points": 206,
-      "comments": 121,
-      "comments_url": "https://news.ycombinator.com/item?id=50168357",
-      "published_at": "2026-10-20T23:59:06+08:00",
+      "points": 28,
+      "comments": 18,
+      "comments_url": "https://news.ycombinator.com/item?id=50189023",
+      "published_at": "2026-10-22T07:22:21+08:00",
       "tags": [
         "misc"
       ]
     },
     {
-      "title": "How I got over 300 Tor exit nodes removed",
-      "url": "https://kaba.cx/posts/20261020_Tor/",
+      "title": "Upcoming Critical PHP Security Release",
+      "url": "https://www.php.net/archive/2026.php#2026-10-20-1",
+      "source": "Lobsters",
+      "points": 180,
+      "comments": 119,
+      "comments_url": "https://lobste.rs/s/ekxoyt/upcoming_critical_php_security_release",
+      "published_at": "2026-10-21T06:23:54+08:00",
+      "tags": [
+        "security"
+      ]
+    },
+    {
+      "title": "PingCap TiDB Leaks",
+      "url": "https://fulcrumsec.vg/pingcap/",
       "source": "Hacker News",
-      "points": 326,
-      "comments": 78,
-      "comments_url": "https://news.ycombinator.com/item?id=50166257",
-      "published_at": "2026-10-20T21:39:24+08:00",
+      "points": 221,
+      "comments": 32,
+      "comments_url": "https://news.ycombinator.com/item?id=50173716",
+      "published_at": "2026-10-21T06:45:39+08:00",
       "tags": [
         "misc"
       ]
     },
     {
-      "title": "Feds suspect ransom negotiator ran ShinyHunters extortion site",
-      "url": "https://krebsonsecurity.com/2026/10/feds-suspect-ransom-negotiator-ran-shinyhunters-extortion-site/",
+      "title": "When Do We Become the Person We Ought to Be?",
+      "url": "https://www.graphsaboutreligion.com/p/when-do-we-become-the-person-we-ought",
       "source": "Hacker News",
-      "points": 111,
-      "comments": 41,
-      "comments_url": "https://news.ycombinator.com/item?id=50173487",
-      "published_at": "2026-10-21T06:21:05+08:00",
+      "points": 17,
+      "comments": 15,
+      "comments_url": "https://news.ycombinator.com/item?id=50189278",
+      "published_at": "2026-10-22T07:57:41+08:00",
       "tags": [
         "misc"
       ]
     },
     {
-      "title": "Academics have a duty to defend open knowledge systems like Wikipedia",
-      "url": "https://blogs.lse.ac.uk/impactofsocialsciences/2026/10/19/academics-have-a-duty-to-defend-open-knowledge-systems-like-wikipedia/",
-      "source": "Hacker News",
-      "points": 146,
-      "comments": 77,
-      "comments_url": "https://news.ycombinator.com/item?id=50170917",
-      "published_at": "2026-10-21T02:51:40+08:00",
+      "title": "Eight Bits of Trust; eMudhra's CA keys cracked in milliseconds",
+      "url": "https://scotthelme.co.uk/eight-bits-of-trust-emudhras-ca-keys-cracked-in-milliseconds/",
+      "source": "Lobsters",
+      "points": 43,
+      "comments": 10,
+      "comments_url": "https://lobste.rs/s/ebsqsp/eight_bits_trust_emudhra_s_ca_keys_cracked",
+      "published_at": "2026-10-21T21:50:10+08:00",
       "tags": [
-        "misc"
+        "security"
       ]
     },
     {
-      "title": "Google Cloud outage affects almost all banking and other operations in Europe",
-      "url": "https://www.neowin.net/news/google-cloud-outage-takes-down-hsbc-revolut-bank-of-scotland-llyods-equifax-more/",
-      "source": "Hacker News",
-      "points": 346,
-      "comments": 172,
-      "comments_url": "https://news.ycombinator.com/item?id=50163961",
-      "published_at": "2026-10-20T18:26:02+08:00",
+      "title": "zls 0.17.0",
+      "url": "https://zigtools.org/zls/releases/0.17.0/",
+      "source": "Lobsters",
+      "points": 57,
+      "comments": 2,
+      "comments_url": "https://lobste.rs/s/hty1qk/zls_0_17_0",
+      "published_at": "2026-10-21T23:24:05+08:00",
       "tags": [
-        "misc"
-      ]
-    },
-    {
-      "title": "The Other Epidemic: Trying to get off benzodiazepines",
-      "url": "https://www.thebeliever.net/the-other-epidemic/",
-      "source": "Hacker News",
-      "points": 74,
-      "comments": 46,
-      "comments_url": "https://news.ycombinator.com/item?id=50173891",
-      "published_at": "2026-10-21T07:04:09+08:00",
-      "tags": [
-        "misc"
-      ]
-    },
-    {
-      "title": "IKEA – 3D Guide",
-      "url": "https://sael.net/flatpack/",
-      "source": "Hacker News",
-      "points": 147,
-      "comments": 53,
-      "comments_url": "https://news.ycombinator.com/item?id=50168096",
-      "published_at": "2026-10-20T23:42:45+08:00",
-      "tags": [
-        "misc"
+        "release"
       ]
     },
     {
       "title": "Protecting Firefox users following the compromise of eMudhra intermediate certificates",
       "url": "https://blog.mozilla.org/security/2026/10/20/protecting-firefox-users-following-the-compromise-of-emudhra-intermediate-certificates/",
       "source": "Lobsters",
-      "points": 124,
-      "comments": 46,
+      "points": 168,
+      "comments": 69,
       "comments_url": "https://lobste.rs/s/gqyvn5/protecting_firefox_users_following",
       "published_at": "2026-10-20T21:00:50+08:00",
       "tags": [
@@ -481,36 +514,129 @@
       ]
     },
     {
-      "title": "Upcoming Critical PHP Security Release",
-      "url": "https://news-web.php.net/php.announce/509",
-      "source": "Hacker News",
-      "points": 77,
-      "comments": 11,
-      "comments_url": "https://news.ycombinator.com/item?id=50172041",
-      "published_at": "2026-10-21T04:15:50+08:00",
+      "title": "Passkeys Attestation Trap",
+      "url": "https://mjtsai.com/blog/2026/10/15/passkeys-attestation-trap/",
+      "source": "Lobsters",
+      "points": 16,
+      "comments": 19,
+      "comments_url": "https://lobste.rs/s/cdnepk/passkeys_attestation_trap",
+      "published_at": "2026-10-22T02:16:22+08:00",
+      "tags": [
+        "misc"
+      ]
+    },
+    {
+      "title": "Unikernels in OCaml",
+      "url": "https://uniker.nl/",
+      "source": "Lobsters",
+      "points": 57,
+      "comments": 6,
+      "comments_url": "https://lobste.rs/s/mfserj/unikernels_ocaml",
+      "published_at": "2026-10-21T15:51:20+08:00",
+      "tags": [
+        "ai"
+      ]
+    },
+    {
+      "title": "CVE-2026-107891: musl libc: multiple integer overflow in regcomp, possibly leading to incorrect allocation sizes and out-of-bounds heap writes",
+      "url": "https://www.openwall.com/lists/oss-security/2026/10/21/18",
+      "source": "Lobsters",
+      "points": 25,
+      "comments": 5,
+      "comments_url": "https://lobste.rs/s/dldfel/cve_2026_107891_musl_libc_multiple",
+      "published_at": "2026-10-22T01:40:17+08:00",
+      "tags": [
+        "security",
+        "programming"
+      ]
+    },
+    {
+      "title": "The Future of CSS",
+      "url": "https://www.joshwcomeau.com/css/interop-2027/",
+      "source": "Lobsters",
+      "points": 58,
+      "comments": 6,
+      "comments_url": "https://lobste.rs/s/vidyh0/future_css",
+      "published_at": "2026-10-21T14:16:50+08:00",
+      "tags": [
+        "web"
+      ]
+    },
+    {
+      "title": "Today's PHP Security Release, and How We're Strengthening PHP Security",
+      "url": "https://simonwillison.net/2026/Oct/21/php-security-release/",
+      "source": "Simon Willison",
+      "published_at": "2026-10-22T02:41:53+08:00",
+      "summary": "Today's PHP Security Release, and How We're Strengthening PHP Security If you're running anything on PHP it's vital you upgrade - today's updates (across the entire PHP 8.x line) address two remote code execution holes, and there have been exploits circulating since last night,…",
       "tags": [
         "security"
       ]
     },
     {
-      "title": "Updates to site guidelines and AI/LLM tags",
-      "url": "https://lobste.rs/s/h0eate/updates_site_guidelines_ai_llm_tags",
-      "source": "Lobsters",
-      "points": 358,
-      "comments": 390,
-      "comments_url": "https://lobste.rs/s/h0eate/updates_site_guidelines_ai_llm_tags",
-      "published_at": "2026-10-19T09:28:53+08:00",
-      "summary": "Hey folks, I've been having to perform an increasing number of [moderation actions](https://lobste.rs/moderations?moderator=355E3B) surrounding the `vibecoding` tag and AI/LLM related content. I started reading Lobsters because it had the most interesting viewpoints related to…",
+      "title": "NVIDIA Kumo Relational Outperforms Supervised Machine Learning on Relational Data, No Training Required",
+      "url": "https://huggingface.co/blog/nvidia/kumo-relational",
+      "source": "Hugging Face",
+      "published_at": "2026-10-22T02:26:30+08:00",
+      "tags": [
+        "ai",
+        "hardware"
+      ]
+    },
+    {
+      "title": "How Specializing the Vocabulary of SLMs Can Cut Inference Cost by 77% in Real Applications",
+      "url": "https://huggingface.co/blog/Dharma-AI/vocabx-vocabulary-specialization",
+      "source": "Hugging Face",
+      "published_at": "2026-10-22T01:35:36+08:00",
       "tags": [
         "ai"
+      ]
+    },
+    {
+      "title": "Panache — RTS Belle Époque pour mobile",
+      "url": "https://simonwillison.net/2026/Oct/21/panache/",
+      "source": "Simon Willison",
+      "published_at": "2026-10-22T00:25:16+08:00",
+      "summary": "Panache — RTS Belle Époque pour mobile Well this is delightful: I released Battle Drones yesterday under an Apache 2.0 License and there's already a French language fork which reskins the game to take place in steampunk 1900s France and adds an animated intro! Panache est un…",
+      "tags": [
+        "misc"
+      ]
+    },
+    {
+      "title": "Profiling TorchNeuron (Part 1): System-level profiling on AWS Trainium.",
+      "url": "https://huggingface.co/blog/amazon/profiling-torchneuron-part-1",
+      "source": "Hugging Face",
+      "published_at": "2026-10-22T00:04:43+08:00",
+      "tags": [
+        "misc"
+      ]
+    },
+    {
+      "title": "The bridge to agent-scale Git infrastructure",
+      "url": "https://github.blog/engineering/architecture-optimization/the-bridge-to-agent-scale-git-infrastructure/",
+      "source": "GitHub Blog",
+      "published_at": "2026-10-22T00:00:00+08:00",
+      "summary": "We moved a copy of 99.99999% of GitHub's repositories to Azure. Here's how per-reference quorums will bring over the rest, and how object storage lets reads scale independently. The post The bridge to agent-scale Git infrastructure appeared first on The GitHub Blog .",
+      "tags": [
+        "ai",
+        "programming",
+        "devtools"
+      ]
+    },
+    {
+      "title": "Granite Speech 5.0: Transcribe, Translate, and Attribute more Accurately and Faster",
+      "url": "https://huggingface.co/blog/ibm-granite/granite-speech-5",
+      "source": "Hugging Face",
+      "published_at": "2026-10-21T22:58:18+08:00",
+      "tags": [
+        "misc"
       ]
     },
     {
       "title": "NixOS is making me less afraid",
       "url": "https://entropicthoughts.com/nixos-is-making-me-less-afraid",
       "source": "Lobsters",
-      "points": 39,
-      "comments": 22,
+      "points": 64,
+      "comments": 42,
       "comments_url": "https://lobste.rs/s/7d1swo/nixos_is_making_me_less_afraid",
       "published_at": "2026-10-20T21:44:53+08:00",
       "tags": [
@@ -518,65 +644,13 @@
       ]
     },
     {
-      "title": "Setting up SSH keys on macOS with Touch ID",
-      "url": "https://nmattia.com/posts/2026-10-19-setting-up-ssh-keys-touch-id/",
-      "source": "Lobsters",
-      "points": 52,
-      "comments": 22,
-      "comments_url": "https://lobste.rs/s/d7m5j1/setting_up_ssh_keys_on_macos_with_touch_id",
-      "published_at": "2026-10-20T18:23:58+08:00",
+      "title": "eMudhra Intermediate CA Compromise",
+      "url": "https://simonwillison.net/2026/Oct/20/emudhra-certificates/",
+      "source": "Simon Willison",
+      "published_at": "2026-10-21T07:50:25+08:00",
+      "summary": "eMudhra Intermediate CA Compromise This is very, very bad news: The private keys of eight eMudhra intermediate CA certificates have been compromised. They chain to roots trusted by the Mozilla, Microsoft, Apple and Chrome root programs and by many downstream trust stores. Any…",
       "tags": [
-        "security"
-      ]
-    },
-    {
-      "title": "Good type against all odds",
-      "url": "https://unsung.aresluna.org/good-type-against-all-odds/",
-      "source": "Hacker News",
-      "points": 18,
-      "comments": 4,
-      "comments_url": "https://news.ycombinator.com/item?id=50175059",
-      "published_at": "2026-10-21T09:45:07+08:00",
-      "tags": [
-        "misc"
-      ]
-    },
-    {
-      "title": "OpenBSD 8.0",
-      "url": "https://www.openbsd.org/80.html",
-      "source": "Lobsters",
-      "points": 97,
-      "comments": 11,
-      "comments_url": "https://lobste.rs/s/sqdhu7/openbsd_8_0",
-      "published_at": "2026-10-20T09:46:00+08:00",
-      "tags": [
-        "linux",
-        "release"
-      ]
-    },
-    {
-      "title": "Somewhere, Coding Stopped Being Allowed to Be Fun",
-      "url": "https://dev.to/james_anderson_h/somewhere-coding-stopped-being-allowed-to-be-fun-14pe",
-      "source": "DEV.to",
-      "points": 39,
-      "comments": 35,
-      "comments_url": "https://dev.to/james_anderson_h/somewhere-coding-stopped-being-allowed-to-be-fun-14pe#comments",
-      "published_at": "2026-10-20T05:35:46Z",
-      "summary": "Somewhere in the last couple of years, a strange feeling crept in, and I don't think I'm the only one...",
-      "tags": [
-        "misc"
-      ]
-    },
-    {
-      "title": "Learning to live with Waymos",
-      "url": "https://www.newyorker.com/magazine/2026/10/19/were-learning-to-live-with-waymos-its-going-weird",
-      "source": "Hacker News",
-      "points": 14,
-      "comments": 3,
-      "comments_url": "https://news.ycombinator.com/item?id=50175057",
-      "published_at": "2026-10-21T09:44:34+08:00",
-      "tags": [
-        "misc"
+        "programming"
       ]
     },
     {
@@ -585,60 +659,6 @@
       "source": "Simon Willison",
       "published_at": "2026-10-21T03:34:19+08:00",
       "summary": "My latest vibe coded game experiment is a Command & Conquer style RTS (Real Time Strategy) game called Battle Drones ( play it here ). Unlike my previous experiments , this one is actually fun to play . I'm somewhat embarrassed to admit that I got there by telling Claude to…",
-      "tags": [
-        "ai"
-      ]
-    },
-    {
-      "title": "Wine ported to OpenBSD",
-      "url": "https://marc.info/?l=openbsd-ports&m=179236125692175",
-      "source": "Lobsters",
-      "points": 119,
-      "comments": 22,
-      "comments_url": "https://lobste.rs/s/gqepzd/wine_ported_openbsd",
-      "published_at": "2026-10-19T22:44:02+08:00",
-      "tags": [
-        "linux"
-      ]
-    },
-    {
-      "title": "NVIDIA Cosmos3-H-Dreams: Bringing Clinical Surgery to Life Through Generative Simulation",
-      "url": "https://huggingface.co/blog/nvidia/cosmos3-h-dreams",
-      "source": "Hugging Face",
-      "published_at": "2026-10-21T02:17:47+08:00",
-      "tags": [
-        "hardware"
-      ]
-    },
-    {
-      "title": "Mastodon 5.0: A closer look",
-      "url": "https://blog.joinmastodon.org/2026/10/5.0-a-closer-look/",
-      "source": "Lobsters",
-      "points": 20,
-      "comments": 7,
-      "comments_url": "https://lobste.rs/s/dlbufy/mastodon_5_0_closer_look",
-      "published_at": "2026-10-21T01:33:54+08:00",
-      "tags": [
-        "release"
-      ]
-    },
-    {
-      "title": "The Netherlands is building its own Linux OS to break free from Microsoft",
-      "url": "https://www.techspot.com/news/114018-netherlands-building-own-linux-os-break-free-microsoft.html",
-      "source": "Lobsters",
-      "points": 67,
-      "comments": 19,
-      "comments_url": "https://lobste.rs/s/nne5uh/netherlands_is_building_its_own_linux_os",
-      "published_at": "2026-10-20T04:10:46+08:00",
-      "tags": [
-        "linux"
-      ]
-    },
-    {
-      "title": "FairStress: A deeper evaluation of fairness in LLM decision-making",
-      "url": "https://huggingface.co/blog/allenai/fairstress",
-      "source": "Hugging Face",
-      "published_at": "2026-10-21T00:09:19+08:00",
       "tags": [
         "ai"
       ]
@@ -653,125 +673,33 @@
         "ai",
         "devtools"
       ]
-    },
-    {
-      "title": "Making a VGA Driver in SystemVerilog",
-      "url": "https://lukaswerner.com/post/2026-10-20@bottom-up-vga",
-      "source": "Lobsters",
-      "points": 17,
-      "comments": 9,
-      "comments_url": "https://lobste.rs/s/mngelc/making_vga_driver_systemverilog",
-      "published_at": "2026-10-20T23:58:18+08:00",
-      "tags": [
-        "misc"
-      ]
-    },
-    {
-      "title": "T3 Code now synced between GitHub and GitCafe",
-      "url": "https://git.cafe/pingdotgg/t3code",
-      "source": "Hacker News",
-      "points": 6,
-      "comments": 15,
-      "comments_url": "https://news.ycombinator.com/item?id=50175075",
-      "published_at": "2026-10-21T09:48:22+08:00",
-      "tags": [
-        "devtools"
-      ]
-    },
-    {
-      "title": "ALTK-Evolve: How learned memory tops the τ²-bench leaderboard on customer service tasks without a frontier model",
-      "url": "https://huggingface.co/blog/ibm-research/altk-evolve-bc",
-      "source": "Hugging Face",
-      "published_at": "2026-10-20T23:19:48+08:00",
-      "tags": [
-        "ai"
-      ]
-    },
-    {
-      "title": "Making all divisions slower to fix a bug in 0.000000000000000000542% of cases",
-      "url": "https://futhark-lang.org/blog/2026-10-14-defining-division.html",
-      "source": "Lobsters",
-      "points": 75,
-      "comments": 12,
-      "comments_url": "https://lobste.rs/s/a9f6z1/making_all_divisions_slower_fix_bug_0",
-      "published_at": "2026-10-20T00:42:07+08:00",
-      "tags": [
-        "programming"
-      ]
-    },
-    {
-      "title": "2 Agent Skills Every Frontend Developer Should Try",
-      "url": "https://dev.to/erikch/2-agent-skills-every-frontend-developer-should-try-16pl",
-      "source": "DEV.to",
-      "points": 15,
-      "comments": 1,
-      "comments_url": "https://dev.to/erikch/2-agent-skills-every-frontend-developer-should-try-16pl#comments",
-      "published_at": "2026-10-20T18:15:41Z",
-      "summary": "I love to try out new agent skills. Anything that can help me be more productive I'm all for. Today I...",
-      "tags": [
-        "ai",
-        "web"
-      ]
-    },
-    {
-      "title": "Your agent's retry bug isn't an AI problem. It's a distributed-systems problem with an LLM on top.",
-      "url": "https://dev.to/cyclopt_dimitrisk/your-agents-retry-bug-isnt-an-ai-problem-its-a-distributed-systems-problem-with-an-llm-on-top-1i6k",
-      "source": "DEV.to",
-      "points": 34,
-      "comments": 54,
-      "comments_url": "https://dev.to/cyclopt_dimitrisk/your-agents-retry-bug-isnt-an-ai-problem-its-a-distributed-systems-problem-with-an-llm-on-top-1i6k#comments",
-      "published_at": "2026-10-19T06:42:45Z",
-      "summary": "Most agent demos have a happy path: the model picks a tool, the tool returns 200, the agent moves on....",
-      "tags": [
-        "ai"
-      ]
-    },
-    {
-      "title": "Hugging Face ❤️ TorchTPU: TPUs, Natively",
-      "url": "https://huggingface.co/blog/hf-torchtpu",
-      "source": "Hugging Face",
-      "published_at": "2026-10-20T08:00:00+08:00",
-      "tags": [
-        "ai"
-      ]
-    },
-    {
-      "title": "My obituary for programming",
-      "url": "https://simonwillison.net/2026/Oct/19/my-obituary-for-programming/",
-      "source": "Simon Willison",
-      "published_at": "2026-10-20T07:58:25+08:00",
-      "summary": "My obituary for programming Jeremy Scheff poignantly captures the key loss caused by coding agents for career programmers who enjoyed the puzzle of developing code: Programming turned into one of the greatest jobs you could imagine. You got paid to work on tricky little logic…",
-      "tags": [
-        "ai",
-        "programming"
-      ]
     }
   ],
   "news_highlights": [
     {
-      "title": "DeepInfer: High-performance inference framework for DeepSeek models",
-      "url": "https://github.com/deepseek-ai/DeepInfer",
-      "why_it_matters": "DeepSeek has published its own inference framework for its models, and it's today's most-discussed story on Hacker News. Worth a look if you plan to self-host open models behind your coding agents."
+      "title": "Compromised LiteLLM 1.107.0 on PyPI Installs a Credential Stealer and Backdoor",
+      "url": "https://safedep.io/litellm-pypi-compromise-credential-stealer-backdoor/",
+      "why_it_matters": "The poisoned wheel ran on every Python start and specifically harvested Claude Code, Codex, Cursor and MCP config tokens plus SSH and cloud keys. If any agent setup pulled litellm 1.107.0 on Oct 21, rotate those credentials; 1.106.2 and the rc builds are clean."
     },
     {
-      "title": "EMudhra Intermediate CA Compromise",
-      "url": "https://emudhra.we-have-a-problem.com/",
-      "why_it_matters": "Private keys for eight eMudhra intermediate CA certificates that chain to browser-trusted roots were compromised, and Mozilla has posted its response. Any site or app that relies on those certificates needs to move to a different CA."
+      "title": "Today's PHP security release, and how we're strengthening security",
+      "url": "https://thephp.foundation/blog/2026/10/21/todays-php-security-release-and-how-were-strengthening-php-security/",
+      "why_it_matters": "Two remote code execution bugs across the whole PHP 8.x line, confirmed against WordPress and Drupal, and a disclosure leak means exploits are already circulating. Any PHP client site needs the patched release now."
     },
     {
-      "title": "Upcoming Critical PHP Security Release",
-      "url": "https://news-web.php.net/php.announce/509",
-      "why_it_matters": "The PHP project has announced a critical security release ahead of time. If any client site you maintain runs PHP, plan to patch it as soon as the release ships."
+      "title": "Patch the Planet: global response coordination as agents uncover vulnerabilities",
+      "url": "https://openai.com/index/coordinated-disclosure-of-critical-vulnerabilities/",
+      "why_it_matters": "The PHP bugs were found with frontier models, and OpenAI ships a PHP version checker as a Codex skill. It's a concrete sign that agent-driven bug hunting is now producing internet-scale findings, and that more are coming."
     },
     {
-      "title": "Tsrs: A Port of TypeScript to Rust",
-      "url": "https://blog.cloudflare.com/typescript-rust-port/",
-      "why_it_matters": "Cloudflare describes porting TypeScript to Rust. It's a useful case study in moving a large, widely used toolchain to a faster runtime, which affects build speed for web projects."
+      "title": "Claude Duet",
+      "url": "https://claude.com/product/claude-duet",
+      "why_it_matters": "Anthropic's proactive agent (research preview, US Pro/Max, iOS and Android) works on its own cloud computer, sends a morning brief and asks before sending or paying. It shows where always-on assistants are heading beyond chat."
     },
     {
-      "title": "Google open-sources TorchTPU, a native PyTorch back end for TPUs",
-      "url": "https://github.com/google-pytorch/torch_tpu",
-      "why_it_matters": "Google released a native PyTorch back end for TPUs, and Hugging Face has already announced support. PyTorch code could then run on TPUs without porting it to another framework."
+      "title": "The bridge to agent-scale Git infrastructure",
+      "url": "https://github.blog/engineering/architecture-optimization/the-bridge-to-agent-scale-git-infrastructure/",
+      "why_it_matters": "GitHub explains moving almost all repositories to Azure with per-reference quorums and object storage so reads scale independently, infrastructure built for the load that fleets of coding agents put on Git."
     }
   ]
 }
