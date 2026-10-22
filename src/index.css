@@ -10,10 +10,8 @@
   --accent: #8b7bff; --accent-2: #3ee6c4; --accent-3: #ff9d5c; --danger: #ff6b81; --sky: #5cc8ff;
   --shadow: 0 1px 0 rgba(255,255,255,.04) inset, 0 20px 50px -20px rgba(0,0,0,.7);
   --grain-opacity: .07;
-  --frost-tint: rgba(13, 15, 26, 0.74); --frost-border: rgba(255,255,255,.13); --frost-edge: rgba(255,255,255,.16); --frost-sheen: rgba(255,255,255,.07); --frost-blur: 30px;
-  --rim: 14px; --rim-blur: 5px; --rim-tint: rgba(13,15,26,.18); --sweep: rgba(255,255,255,.22); --lit: rgba(170,150,255,.20);
-  --btn-tint: rgba(255,255,255,.06); --btn-border: rgba(255,255,255,.16); --btn-sheen: rgba(255,255,255,.10);
-  --noise: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 .09 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  --surface: rgba(17, 19, 30, 0.94); --surface-border: rgba(255,255,255,.10); --surface-shadow: 0 12px 32px -16px rgba(0,0,0,.6);
+  --btn-bg: rgba(255,255,255,.07); --btn-bg-hover: rgba(255,255,255,.13);
   color-scheme: dark;
 }
 [data-theme='light'] {
@@ -24,10 +22,8 @@
   --accent: #5b45e0; --accent-2: #0b8f74; --accent-3: #b9520f; --danger: #c22a45; --sky: #0a6fa8;
   --shadow: 0 1px 0 rgba(255,255,255,.8) inset, 0 18px 40px -22px rgba(40,30,80,.28);
   --grain-opacity: .05;
-  --frost-tint: rgba(255, 255, 255, 0.76); --frost-border: rgba(15,17,26,.10); --frost-edge: rgba(255,255,255,.9); --frost-sheen: rgba(255,255,255,.5); --frost-blur: 30px;
-  --rim: 14px; --rim-blur: 5px; --rim-tint: rgba(255,255,255,.22); --sweep: rgba(255,255,255,.65); --lit: rgba(120,100,255,.14);
-  --btn-tint: rgba(255,255,255,.35); --btn-border: rgba(15,17,26,.12); --btn-sheen: rgba(255,255,255,.6);
-  --noise: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .07 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  --surface: rgba(255, 255, 255, 0.94); --surface-border: rgba(15,17,26,.10); --surface-shadow: 0 12px 30px -18px rgba(40,30,80,.25);
+  --btn-bg: rgba(15,17,26,.05); --btn-bg-hover: rgba(15,17,26,.09);
   color-scheme: light;
 }
 
@@ -59,65 +55,30 @@ body {
 }
 
 @layer components {
-  /* ---- liquid content glass ----
-     .frost itself paints nothing; ::before = refracted rim (backdrop blur + SVG displacement #lg-warp,
-     specular rim, chromatic edge, light sweep), ::after = inset frosted tint (strong blur, grain,
-     pointer highlight) so the distortion is strongest at the edges and the text sits on calm glass. */
+  /* ---- one consistent near-solid surface for every panel / card / nav / toast / footer ---- */
   .frost {
-    position: relative; isolation: isolate; overflow: hidden;
-    border-radius: 22px;
-    border: 1px solid var(--frost-border);
-    box-shadow: var(--shadow);
+    position: relative; border-radius: 20px;
+    background: var(--surface);
+    border: 1px solid var(--surface-border);
+    box-shadow: var(--surface-shadow);
   }
-  .frost::before {
-    content: ''; position: absolute; inset: -28px; z-index: -2; pointer-events: none;
-    background-color: var(--rim-tint);
-    background-image: linear-gradient(115deg, transparent 38%, var(--sweep) 50%, transparent 62%);
-    background-size: 260% 100%; background-position: 120% 0;
-    box-shadow:
-      inset 0 29.5px 0 -28px var(--frost-edge),
-      inset 30px 0 0 -28px rgba(255, 70, 160, .45), inset -30px 0 0 -28px rgba(60, 210, 255, .45),
-      inset 0 0 46px -18px rgba(255,255,255,.18);
-    -webkit-backdrop-filter: blur(var(--rim-blur)) saturate(200%) brightness(1.1);
-    backdrop-filter: blur(var(--rim-blur)) saturate(200%) brightness(1.1);
-    filter: url(#lg-warp);
-    animation: glass-sweep 9s ease-in-out infinite;
-  }
-  .frost::after {
-    content: ''; position: absolute; inset: var(--rim); z-index: -1; border-radius: calc(18px - var(--rim) / 3); pointer-events: none;
-    background-color: var(--frost-tint);
-    background-image:
-      radial-gradient(240px circle at calc(var(--mx, -999px) - var(--rim)) calc(var(--my, -999px) - var(--rim)), var(--lit), transparent 70%),
-      linear-gradient(180deg, var(--frost-sheen) 0%, transparent 38%),
-      var(--noise);
-    background-size: auto, auto, 180px 180px;
-    box-shadow: 0 0 calc(var(--rim) * .9) calc(var(--rim) * .25) var(--frost-tint);
-    -webkit-backdrop-filter: blur(var(--frost-blur)) saturate(150%);
-    backdrop-filter: blur(var(--frost-blur)) saturate(150%);
-  }
-  .frost.is-lit::before { animation: glass-sweep 9s ease-in-out infinite, rim-pulse .9s ease-out 1; }
-  .frost-hi::after { background-image:
-      radial-gradient(240px circle at calc(var(--mx, -999px) - var(--rim)) calc(var(--my, -999px) - var(--rim)), var(--lit), transparent 70%),
-      linear-gradient(180deg, var(--frost-sheen) 0%, transparent 45%), radial-gradient(120% 80% at 0% 0%, var(--panel-hi), transparent 60%), var(--noise);
-    background-size: auto, auto, auto, 180px 180px; }
-  /* light, mostly transparent glass for buttons / chips / nav (no blur when nested in a panel) */
+  .frost-hi { background: var(--surface); }
+  /* one consistent button / pill / chip style */
   .glass-btn {
-    position: relative; overflow: hidden;
-    background-color: var(--btn-tint);
-    background-image: linear-gradient(180deg, var(--btn-sheen), transparent 70%);
-    border: 1px solid var(--btn-border) !important;
-    box-shadow: inset 0 1px 0 var(--frost-edge), 0 4px 14px -6px rgba(0,0,0,.35);
+    background: var(--btn-bg); border: 1px solid var(--surface-border) !important;
+    transition: background-color .15s, transform .1s;
   }
-  .glass-btn-blur { -webkit-backdrop-filter: blur(10px) saturate(180%); backdrop-filter: blur(10px) saturate(180%); }
+  .glass-btn:hover { background: var(--btn-bg-hover); }
+  .glass-btn:active, .pill:active { transform: scale(.97); }
   .page { @apply mx-auto w-full max-w-page px-4 sm:px-6 lg:px-8; }
   .h2 { @apply font-display font-semibold tracking-[-0.03em] text-[26px] sm:text-[32px] lg:text-[36px] leading-[1.1]; }
   .eyebrow { @apply font-mono text-[11px] uppercase tracking-[0.18em] text-muted; }
-  .chip { @apply inline-flex items-center gap-1.5 rounded-full border px-2.5 py-1 text-[12px] font-medium leading-none; border-color: var(--btn-border); background-image: linear-gradient(180deg, var(--btn-sheen), transparent 80%); box-shadow: inset 0 1px 0 var(--frost-edge); position: relative; overflow: hidden; }
+  .chip { @apply inline-flex items-center gap-1.5 rounded-full border px-2.5 py-1 text-[12px] font-medium leading-none; border-color: var(--surface-border); }
   .pill {
-    @apply relative inline-flex shrink-0 items-center gap-1.5 rounded-full border px-3.5 py-2 text-[13px] font-medium text-muted transition-colors; overflow: hidden;
-    border-color: var(--btn-border); background-color: var(--btn-tint); background-image: linear-gradient(180deg, var(--btn-sheen), transparent 75%); box-shadow: inset 0 1px 0 var(--frost-edge);
+    @apply relative inline-flex shrink-0 items-center gap-1.5 rounded-full border px-3.5 py-2 text-[13px] font-medium text-muted transition; 
+    border-color: var(--surface-border); background: var(--btn-bg);
   }
-  .pill:hover { color: var(--text); background: var(--panel-hi); }
+  .pill:hover { color: var(--text); background: var(--btn-bg-hover); }
   .pill[aria-pressed='true'] { color: var(--text); border-color: color-mix(in srgb, var(--accent) 55%, transparent); background: color-mix(in srgb, var(--accent) 14%, transparent); }
   .input {
     @apply w-full rounded-xl border border-line bg-transparent px-3.5 py-2.5 text-[14px] placeholder:text-muted outline-none transition;
@@ -184,46 +145,3 @@ body {
   position: absolute; inset: 0;
   background: radial-gradient(120% 90% at 50% 40%, transparent 55%, color-mix(in srgb, var(--bg) 55%, transparent) 100%);
 }
-
-/* ---- glass: performance + fallbacks ---- */
-@media (max-width: 767px) {
-  /* mobile: smaller blur radius is much cheaper on Android; compensate with a denser tint */
-  :root, [data-theme='dark'] { --rim: 12px; --rim-blur: 3px; --frost-blur: 18px; --frost-tint: rgba(13, 15, 26, 0.80); }
-  [data-theme='light'] { --rim: 12px; --rim-blur: 3px; --frost-blur: 18px; --frost-tint: rgba(255, 255, 255, 0.82); }
-}
-@supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
-  :root, [data-theme='dark'] { --frost-tint: rgba(16, 18, 30, 0.95); --rim-tint: rgba(16, 18, 30, 0.85); --btn-tint: rgba(30, 33, 50, 0.85); }
-  [data-theme='light'] { --frost-tint: rgba(255, 255, 255, 0.95); --rim-tint: rgba(255, 255, 255, 0.85); --btn-tint: rgba(255, 255, 255, 0.85); }
-}
-@media (prefers-reduced-transparency: reduce) {
-  .frost::before, .frost::after, .glass-btn { background-color: var(--panel-solid); }
-}
-
-/* ---- liquid-glass-react host (displacement buttons) ---- */
-.liquid-host { position: relative; display: inline-flex; vertical-align: middle; }
-.liquid-sizer { visibility: hidden; display: inline-flex; white-space: nowrap; }
-.liquid-host > :not(.liquid-sizer) { width: max-content; white-space: nowrap; }
-/* the library hard-codes white 20px system-ui text + a dark text-shadow; inherit ours instead */
-.liquid-host .glass > div { font: inherit !important; color: inherit !important; text-shadow: none !important; }
-.liquid-host .glass { box-shadow: 0 8px 24px -10px rgba(0,0,0,.45) !important; }
-
-@keyframes glass-sweep { 0%, 100% { background-position: 120% 0 } 50% { background-position: -20% 0 } }
-@keyframes rim-pulse { 0% { box-shadow: inset 0 0 0 0 rgba(255,255,255,.5) } 100% { box-shadow: inset 0 0 0 18px rgba(255,255,255,0) } }
-.glass-ripple {
-  position: absolute; z-index: 2; border-radius: 50%; pointer-events: none;
-  background: radial-gradient(circle, rgba(255,255,255,.45) 0%, rgba(255,255,255,.15) 40%, transparent 70%);
-  transform: scale(0); animation: glass-ripple .7s cubic-bezier(.2,.7,.3,1) forwards; mix-blend-mode: screen;
-}
-[data-theme='light'] .glass-ripple { mix-blend-mode: normal; background: radial-gradient(circle, rgba(120,100,255,.28) 0%, rgba(120,100,255,.08) 40%, transparent 70%); }
-@keyframes glass-ripple { to { transform: scale(1); opacity: 0 } }
-@media (max-width: 767px) { .frost::before { animation-duration: 14s; } }
-@media (prefers-reduced-motion: reduce) { .frost::before, .frost.is-lit::before { animation: none; } .glass-ripple { display: none; } }
-/* faint grid behind everything so refraction has lines to bend */
-.backdrop-grid {
-  position: absolute; inset: 0; opacity: .5;
-  background-image: linear-gradient(var(--grid-line) 1px, transparent 1px), linear-gradient(90deg, var(--grid-line) 1px, transparent 1px);
-  background-size: 56px 56px;
-  -webkit-mask-image: radial-gradient(120% 100% at 50% 30%, #000 30%, transparent 85%); mask-image: radial-gradient(120% 100% at 50% 30%, #000 30%, transparent 85%);
-}
-:root, [data-theme='dark'] { --grid-line: rgba(255,255,255,.09); }
-[data-theme='light'] { --grid-line: rgba(30,20,90,.08); }

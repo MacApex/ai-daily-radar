@@ -15,7 +15,6 @@ import { Trending } from './components/Trending'
 import { News } from './components/News'
 import { History } from './components/History'
 import { Github } from './components/Icons'
-import { GlassFx, LiquidButton } from './components/glass'
 
 const IDS = NAV.map((n) => n.id)
 const NONE: string[] = []
@@ -31,7 +30,7 @@ function Sections({ data, latest, history, onPick, loading, theme }: { data: Dai
           <motion.div initial={{ y: -60, opacity: 0 }} animate={{ y: 0, opacity: 1 }} exit={{ y: -60, opacity: 0 }}
             className="fixed inset-x-0 bottom-4 z-40 mx-auto flex w-[calc(100%-2rem)] max-w-md items-center justify-between gap-3 frost !rounded-2xl !border-accent/40 px-4 py-3 text-[13px]">
             <span>Viewing <b className="font-mono">{data.date}</b></span>
-            <LiquidButton><button type="button" onClick={() => onPick(latest.date)} className="glass-btn rounded-full px-3 py-1.5 font-sans text-[13px] font-semibold leading-none text-fg">Back to latest →</button></LiquidButton>
+            <button type="button" onClick={() => onPick(latest.date)} className="glass-btn rounded-full px-3 py-1.5 font-sans text-[13px] font-semibold leading-none text-fg">Back to latest →</button>
           </motion.div>
         )}
       </AnimatePresence>
@@ -107,7 +106,6 @@ export default function App() {
     <MotionConfig reducedMotion="user">
       <a href="#main" className="sr-only z-[70] rounded-lg bg-fg px-3 py-2 text-bg focus:not-sr-only focus:fixed focus:left-3 focus:top-3">Skip to content</a>
       <div className="ambient" aria-hidden />
-      <GlassFx />
       <Backdrop theme={theme} picks={view?.featured.length ?? 0} />
       <div className="grain" aria-hidden />
       <TopBar theme={theme} onTheme={toggleTheme} active={active} updated={latest?.generated_at} />
@@ -117,7 +115,7 @@ export default function App() {
             <div className="frost max-w-md p-8">
               <p className="font-display text-xl font-semibold">Couldn't load today's data</p>
               <p className="mt-2 text-sm text-muted">{error}. The daily job may still be publishing; try again in a minute.</p>
-              <LiquidButton className="mt-5"><button type="button" className="pill" onClick={() => location.reload()}>Retry</button></LiquidButton>
+              <button type="button" className="pill mx-auto mt-5" onClick={() => location.reload()}>Retry</button>
             </div>
           </div>
         ) : !view || !latest ? (
@@ -145,8 +143,8 @@ export default function App() {
             <p className="mt-1">{view ? <>Report for {fmtLongDate(view.date)} · generated {fmtDateTime(view.generated_at)} (Asia/Shanghai)</> : 'Static dashboard, refreshed daily around 10:00 CST.'}</p>
           </div>
           <div className="flex items-center gap-4">
-            <LiquidButton><a className="glass-btn rounded-full px-3 py-1.5 text-fg" href={`${import.meta.env.BASE_URL}data/latest.json`}>latest.json</a></LiquidButton>
-            <LiquidButton><a className="glass-btn inline-flex items-center gap-1.5 rounded-full px-3 py-1.5 text-fg" href="https://github.com/MacApex/ai-daily-radar" target="_blank" rel="noreferrer"><Github /> Source</a></LiquidButton>
+            <a className="glass-btn rounded-full px-3 py-1.5 text-fg" href={`${import.meta.env.BASE_URL}data/latest.json`}>latest.json</a>
+            <a className="glass-btn inline-flex items-center gap-1.5 rounded-full px-3 py-1.5 text-fg" href="https://github.com/MacApex/ai-daily-radar" target="_blank" rel="noreferrer"><Github /> Source</a>
           </div>
         </div>
       </footer>

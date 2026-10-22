@@ -4,7 +4,6 @@ import type { DailyReport } from '../lib/types'
 import { fmtDateTime, fmtLongDate } from '../lib/format'
 import { useReducedMotion } from '../lib/hooks'
 import { Clock, Sparkle } from './Icons'
-import { LiquidButton } from './glass'
 
 
 export function Hero({ data, theme, viewingHistory }: { data: DailyReport; theme: 'dark' | 'light'; viewingHistory: boolean }) {
@@ -45,12 +44,10 @@ export function Hero({ data, theme, viewingHistory }: { data: DailyReport; theme
             <span className="text-fg">{data.news.length}</span> stories from the tech wire.
           </motion.p>
           <motion.div initial={{ opacity: 0, y: 14 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.5, duration: 0.7 }} className="mt-8 flex flex-wrap items-center gap-3">
-            <LiquidButton>
-              <a href="#picks" className="glass-btn group inline-flex items-center gap-2 rounded-full !bg-accent/30 px-5 py-3 font-sans text-[14px] font-semibold leading-none text-fg transition hover:!bg-accent/40">
+            <a href="#picks" className="glass-btn group inline-flex items-center gap-2 rounded-full !bg-accent/30 px-5 py-3 font-sans text-[14px] font-semibold leading-none text-fg transition hover:!bg-accent/40">
                 See today's picks
                 <span className="transition-transform group-hover:translate-y-0.5">↓</span>
               </a>
-            </LiquidButton>
             <span className="inline-flex items-center gap-2 text-[13px] text-muted">
               <Clock width={14} height={14} /> Last updated {fmtDateTime(data.generated_at)}
             </span>
