@@ -36,6 +36,7 @@ export function Backdrop({ theme, picks }: { theme: 'dark' | 'light'; picks: num
         <span className="orb orb-d" />
         <span className="orb orb-e" />
       </div>
+      <div className="backdrop-grid" />
       {show3D && (
         <motion.div className="absolute inset-0" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1.6 }}>
           <Suspense fallback={null}>

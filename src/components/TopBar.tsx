@@ -69,9 +69,9 @@ export function TopBar({ theme, onTheme, active, updated }: { theme: 'dark' | 'l
       {/* mobile section nav */}
       <nav aria-label="Sections (mobile)" className="no-scrollbar mx-auto mt-2 flex max-w-page gap-1.5 overflow-x-auto md:hidden">
         {NAV.map((n) => (
-          <a key={n.id} href={`#${n.id}`} className={`shrink-0 rounded-full border px-3 py-1.5 text-[12px] font-medium glass-btn glass-btn-blur transition ${active === n.id ? '!border-accent/50 !bg-accent/25 text-fg' : 'text-fg/80'}`}>
+          <LiquidButton key={n.id} className="shrink-0"><a href={`#${n.id}`} className={`shrink-0 rounded-full border px-3 py-1.5 text-[12px] font-medium glass-btn glass-btn-blur transition ${active === n.id ? '!border-accent/50 !bg-accent/25 text-fg' : 'text-fg/80'}`}>
             {n.label}
-          </a>
+          </a></LiquidButton>
         ))}
       </nav>
     </header>
