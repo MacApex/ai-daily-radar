@@ -1,5 +1,4 @@
 import { AnimatePresence, motion, useMotionValueEvent, useScroll } from 'framer-motion'
-import { LiquidButton, GlassBg } from './glass'
 import { useState } from 'react'
 import { fmtTime } from '../lib/format'
 import { Moon, Sun } from './Icons'
@@ -21,10 +20,9 @@ export function TopBar({ theme, onTheme, active, updated }: { theme: 'dark' | 'l
       <div aria-hidden className={`pointer-events-none absolute inset-x-0 top-0 -z-10 h-32 bg-gradient-to-b from-[var(--bg)] via-[var(--bg)]/70 to-transparent transition-opacity duration-300 md:hidden ${scrolled ? 'opacity-100' : 'opacity-0'}`} />
       <div
         className={`mx-auto flex h-14 max-w-page items-center gap-2 rounded-2xl border px-3 transition-all duration-300 sm:px-4 ${
-          scrolled ? 'frost !rounded-2xl' : 'border-transparent'
+          scrolled ? 'border-line bg-[var(--panel)] shadow-[var(--shadow)] backdrop-blur-xl' : 'border-transparent'
         }`}
       >
-        {scrolled && <GlassBg radius={16} />}
         <a href="#top" className="flex items-center gap-2.5 pr-2" aria-label="AI Daily Radar, back to top">
           <span className="relative grid h-7 w-7 place-items-center">
             <span className="radar-ping absolute inset-1 rounded-full bg-accent/40" />
@@ -53,10 +51,9 @@ export function TopBar({ theme, onTheme, active, updated }: { theme: 'dark' | 'l
             Updated {fmtTime(updated)} CST
           </span>
         )}
-        <LiquidButton radius={12} className="ml-auto shrink-0 sm:ml-2">
         <button
           type="button" onClick={onTheme}
-          className="glass-btn grid h-9 w-9 shrink-0 place-items-center rounded-xl text-fg transition hover:bg-[var(--panel-hi)] active:scale-95"
+          className="ml-auto grid h-9 w-9 shrink-0 place-items-center rounded-xl border border-line text-fg transition hover:bg-[var(--panel-hi)] active:scale-95 sm:ml-2"
           aria-label={`Switch to ${theme === 'dark' ? 'light' : 'dark'} theme`}
         >
           <AnimatePresence mode="wait" initial={false}>
@@ -65,14 +62,13 @@ export function TopBar({ theme, onTheme, active, updated }: { theme: 'dark' | 'l
             </motion.span>
           </AnimatePresence>
         </button>
-        </LiquidButton>
       </div>
       {/* mobile section nav */}
       <nav aria-label="Sections (mobile)" className="no-scrollbar mx-auto mt-2 flex max-w-page gap-1.5 overflow-x-auto md:hidden">
         {NAV.map((n) => (
-          <LiquidButton key={n.id} className="shrink-0"><a href={`#${n.id}`} className={`shrink-0 rounded-full border px-3 py-1.5 text-[12px] font-medium glass-btn transition ${active === n.id ? '!border-accent/50 !bg-[color-mix(in_srgb,var(--accent)_30%,var(--surface))] text-fg' : '!bg-[var(--surface)] text-fg/80'}`}>
+          <a key={n.id} href={`#${n.id}`} className={`shrink-0 rounded-full border px-3 py-1.5 text-[12px] font-medium backdrop-blur-xl transition ${active === n.id ? 'border-accent/50 bg-accent/15 text-fg' : 'border-line bg-[var(--panel)] text-muted'}`}>
             {n.label}
-          </a></LiquidButton>
+          </a>
         ))}
       </nav>
     </header>

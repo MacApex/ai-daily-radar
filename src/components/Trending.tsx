@@ -1,5 +1,4 @@
 import { AnimatePresence, motion } from 'framer-motion'
-import { GlassBg, LiquidButton } from './glass'
 import { useMemo, useState } from 'react'
 import type { Trending as T } from '../lib/types'
 import { fmtNum } from '../lib/format'
@@ -54,7 +53,7 @@ export function Trending({ items }: { items: T[] }) {
         <p className="max-w-sm text-[14px] text-muted">Every repo observed on GitHub Trending today, with the decision and why.</p>
       </SectionHeader>
       {items.length === 0 ? <EmptyState title="No trending data for this day." /> : (
-        <Reveal className="frost overflow-hidden"><GlassBg />
+        <Reveal className="glass overflow-hidden">
           <div className="flex flex-col gap-3 border-b border-line p-3 sm:p-4 lg:flex-row lg:items-center">
             <label className="relative flex-1 lg:max-w-xs">
               <span className="sr-only">Search trending repos</span>
@@ -63,9 +62,9 @@ export function Trending({ items }: { items: T[] }) {
             </label>
             <div className="no-scrollbar -mx-3 flex gap-1.5 overflow-x-auto px-3 sm:mx-0 sm:px-0" role="group" aria-label="Filter by decision">
               {FILTERS.map((f) => (
-                <LiquidButton key={f.id} className="shrink-0"><button type="button" className="pill" aria-pressed={dec === f.id} onClick={() => setDec(f.id)}>
+                <button key={f.id} type="button" className="pill" aria-pressed={dec === f.id} onClick={() => setDec(f.id)}>
                   {f.label} <span className="font-mono text-[11px] opacity-70">{counts[f.id] ?? 0}</span>
-                </button></LiquidButton>
+                </button>
               ))}
             </div>
             <label className="relative lg:ml-auto">
@@ -127,9 +126,9 @@ export function Trending({ items }: { items: T[] }) {
             <div className="no-scrollbar flex gap-1.5 overflow-x-auto border-b border-line px-3 py-2.5 text-[12px] text-muted" role="group" aria-label="Sort by">
               <span className="self-center pr-1">Sort</span>
               {([['rank', 'Rank'], ['stars_today', 'Today'], ['stars', 'Stars'], ['full_name', 'Name']] as [Key, string][]).map(([k, l]) => (
-                <LiquidButton key={k} className="shrink-0" minor><button type="button" className="pill !py-1.5" aria-pressed={sort.k === k} onClick={() => setKey(k)}>
+                <button key={k} type="button" className="pill !py-1.5" aria-pressed={sort.k === k} onClick={() => setKey(k)}>
                   {l}{sort.k === k && <Up width={11} height={11} className={sort.dir === -1 ? 'rotate-180' : ''} />}
-                </button></LiquidButton>
+                </button>
               ))}
             </div>
             <ul>

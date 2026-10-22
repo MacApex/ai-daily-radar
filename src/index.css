@@ -10,8 +10,6 @@
   --accent: #8b7bff; --accent-2: #3ee6c4; --accent-3: #ff9d5c; --danger: #ff6b81; --sky: #5cc8ff;
   --shadow: 0 1px 0 rgba(255,255,255,.04) inset, 0 20px 50px -20px rgba(0,0,0,.7);
   --grain-opacity: .07;
-  --surface: rgba(17, 19, 30, 0.94); --surface-border: rgba(255,255,255,.10); --surface-shadow: 0 12px 32px -16px rgba(0,0,0,.6);
-  --btn-bg: rgba(255,255,255,.07); --btn-bg-hover: rgba(255,255,255,.13);
   color-scheme: dark;
 }
 [data-theme='light'] {
@@ -22,8 +20,6 @@
   --accent: #5b45e0; --accent-2: #0b8f74; --accent-3: #b9520f; --danger: #c22a45; --sky: #0a6fa8;
   --shadow: 0 1px 0 rgba(255,255,255,.8) inset, 0 18px 40px -22px rgba(40,30,80,.28);
   --grain-opacity: .05;
-  --surface: rgba(255, 255, 255, 0.94); --surface-border: rgba(15,17,26,.10); --surface-shadow: 0 12px 30px -18px rgba(40,30,80,.25);
-  --btn-bg: rgba(15,17,26,.05); --btn-bg-hover: rgba(15,17,26,.09);
   color-scheme: light;
 }
 
@@ -55,26 +51,23 @@ body {
 }
 
 @layer components {
-  /* ---- EXTREME liquid glass: one material everywhere ----
-     .frost is just a shape; the material is a full-size liquid-glass-react instance (.glass-bg, z -1)
-     plus a feathered tint (.glass-tint) under the text. Without Chromium/reduced motion -> solid surface. */
-  .frost { position: relative; isolation: isolate; border-radius: 24px; border: 0; background: transparent; }
-  .frost-hi { background: transparent; }
-  .glass-btn {
-    background: var(--btn-bg); border: 1px solid var(--surface-border) !important;
-    transition: background-color .15s, transform .1s;
+  .glass {
+    background: var(--panel);
+    border: 1px solid var(--panel-border);
+    box-shadow: var(--shadow);
+    backdrop-filter: blur(18px) saturate(140%);
+    -webkit-backdrop-filter: blur(18px) saturate(140%);
+    border-radius: 22px;
   }
-  .glass-btn:hover { background: var(--btn-bg-hover); }
-  .glass-btn:active, .pill:active { transform: scale(.97); }
+  .glass-hi { background: linear-gradient(180deg, var(--panel-hi), transparent 60%), var(--panel); }
   .page { @apply mx-auto w-full max-w-page px-4 sm:px-6 lg:px-8; }
   .h2 { @apply font-display font-semibold tracking-[-0.03em] text-[26px] sm:text-[32px] lg:text-[36px] leading-[1.1]; }
   .eyebrow { @apply font-mono text-[11px] uppercase tracking-[0.18em] text-muted; }
-  .chip { @apply inline-flex items-center gap-1.5 rounded-full border px-2.5 py-1 text-[12px] font-medium leading-none; border-color: var(--surface-border); }
+  .chip { @apply inline-flex items-center gap-1.5 rounded-full border border-line px-2.5 py-1 text-[12px] font-medium leading-none; }
   .pill {
-    @apply relative inline-flex shrink-0 items-center gap-1.5 rounded-full border px-3.5 py-2 text-[13px] font-medium text-muted transition; 
-    border-color: var(--surface-border); background: var(--btn-bg);
+    @apply relative inline-flex shrink-0 items-center gap-1.5 rounded-full border border-line px-3.5 py-2 text-[13px] font-medium text-muted transition-colors;
   }
-  .pill:hover { color: var(--text); background: var(--btn-bg-hover); }
+  .pill:hover { color: var(--text); background: var(--panel-hi); }
   .pill[aria-pressed='true'] { color: var(--text); border-color: color-mix(in srgb, var(--accent) 55%, transparent); background: color-mix(in srgb, var(--accent) 14%, transparent); }
   .input {
     @apply w-full rounded-xl border border-line bg-transparent px-3.5 py-2.5 text-[14px] placeholder:text-muted outline-none transition;
@@ -141,33 +134,3 @@ body {
   position: absolute; inset: 0;
   background: radial-gradient(120% 90% at 50% 40%, transparent 55%, color-mix(in srgb, var(--bg) 55%, transparent) 100%);
 }
-
-.glass-bg { position: absolute; inset: 0; z-index: -1; pointer-events: none; border-radius: inherit; }
-.glass-tint {
-  position: absolute; inset: var(--tint-inset); border-radius: 18px;
-  background: var(--glass-tint);
-  border-radius: inherit;
-}
-:root, [data-theme='dark'] { --glass-tint: rgba(10, 12, 22, 0.78); --tint-inset: 0px; }
-[data-theme='light'] { --glass-tint: rgba(255, 255, 255, 0.8); }
-@media (max-width: 767px) { :root { --tint-inset: 0px; } }
-/* no liquid (Firefox/Safari, reduced motion): the tint becomes the full solid surface */
-.glass-bg:not(:has(.glass)) .glass-tint { inset: 0; box-shadow: 0 12px 32px -16px rgba(0,0,0,.5); border: 1px solid var(--surface-border); border-radius: inherit; background: var(--surface); }
-@supports not selector(:has(*)) { .glass-tint { background: var(--surface); } }
-/* library: its content wrapper forces white 20px system-ui + text-shadow; inherit ours */
-.liquid-host { position: relative; display: inline-flex; vertical-align: middle; }
-.liquid-sizer { visibility: hidden; display: inline-flex; white-space: nowrap; }
-.liquid-host > :not(.liquid-sizer) { width: max-content; white-space: nowrap; }
-.liquid-host .glass > div, .glass-bg .glass > div { font: inherit !important; color: inherit !important; text-shadow: none !important; }
-.liquid-host .glass .glass-btn, .liquid-host .glass .pill { background-color: var(--btn-liquid) !important; }
-:root, [data-theme='dark'] { --btn-liquid: rgba(12, 14, 24, .38); }
-[data-theme='light'] { --btn-liquid: rgba(255, 255, 255, .45); }
-.glass-ripple {
-  position: absolute; z-index: 3; border-radius: 50%; pointer-events: none;
-  background: radial-gradient(circle, rgba(255,255,255,.5) 0%, rgba(255,255,255,.15) 40%, transparent 70%);
-  transform: scale(0); animation: glass-ripple .75s cubic-bezier(.2,.7,.3,1) forwards; mix-blend-mode: screen;
-}
-[data-theme='light'] .glass-ripple { mix-blend-mode: normal; background: radial-gradient(circle, rgba(120,100,255,.3) 0%, rgba(120,100,255,.1) 40%, transparent 70%); }
-@keyframes glass-ripple { to { transform: scale(1); opacity: 0 } }
-.liquid-host .glass, .pill, .glass-btn { overflow: hidden; }
-@media (prefers-reduced-motion: reduce) { .glass-ripple { display: none; } }

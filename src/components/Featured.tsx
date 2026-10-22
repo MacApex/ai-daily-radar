@@ -1,5 +1,4 @@
 import { motion } from 'framer-motion'
-import { LiquidButton } from './glass'
 import type { Featured as F } from '../lib/types'
 import { fmtNum } from '../lib/format'
 import { EmptyState, SectionHeader, StarRating, TiltCard, fadeUp, stagger } from './ui'
@@ -26,7 +25,7 @@ function Card({ f, i }: { f: F; i: number }) {
           <span className="chip font-mono text-muted">{f.license || 'No license'}</span>
         </div>
         <p className="mt-4 text-[14.5px] leading-relaxed text-muted">{f.reason}</p>
-        <div className="mb-6 mt-5 border-t border-line pt-4">
+        <div className="mt-5 border-t border-line pt-4">
           <p className="eyebrow mb-3">5 ideas</p>
           <ol className="space-y-2.5">
             {f.ideas.map((idea, j) => (
@@ -37,11 +36,9 @@ function Card({ f, i }: { f: F; i: number }) {
             ))}
           </ol>
         </div>
-        <LiquidButton className="mt-auto self-start">
-        <a href={f.url} target="_blank" rel="noreferrer" className="glass-btn group/btn inline-flex items-center gap-1.5 self-start rounded-full px-3.5 py-2 text-[13px] font-semibold text-fg hover:!bg-accent/20">
+        <a href={f.url} target="_blank" rel="noreferrer" className="group/btn mt-auto inline-flex items-center gap-1.5 self-start pt-6 text-[13px] font-semibold text-accent">
           Open on GitHub <Arrow className="transition-transform group-hover/btn:-translate-y-0.5 group-hover/btn:translate-x-0.5" />
         </a>
-        </LiquidButton>
       </article>
     </TiltCard>
   )

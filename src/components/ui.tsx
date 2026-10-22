@@ -1,5 +1,4 @@
 import { animate, motion, useInView, useMotionValue, useSpring, useTransform } from 'framer-motion'
-import { GlassBg } from './glass'
 import { useEffect, useRef, useState, type ReactNode, type PointerEvent } from 'react'
 import { useFinePointer, useReducedMotion } from '../lib/hooks'
 import { fmtNum } from '../lib/format'
@@ -85,8 +84,8 @@ export function TiltCard({ children, className = '', max = 7 }: { children: Reac
         style={on ? { rotateX: rotX, rotateY: rotY, transformStyle: 'preserve-3d' } : undefined}
         whileHover={on ? { y: -4 } : undefined}
         transition={{ type: 'spring', stiffness: 300, damping: 24 }}
-        className={`group relative h-full frost frost-hi ${className}`}
-      ><GlassBg />
+        className={`group relative h-full glass glass-hi ${className}`}
+      >
         {on && <motion.div aria-hidden className="pointer-events-none absolute inset-0 rounded-[22px] opacity-0 transition-opacity duration-300 group-hover:opacity-100" style={{ background: sheen }} />}
         <div className="relative h-full" style={on ? { transform: 'translateZ(24px)' } : undefined}>{children}</div>
       </motion.div>
@@ -96,7 +95,7 @@ export function TiltCard({ children, className = '', max = 7 }: { children: Reac
 
 export function SectionHeader({ id, eyebrow, title, children }: { id: string; eyebrow: string; title: string; children?: ReactNode }) {
   return (
-    <Reveal className="mb-6 flex flex-col gap-3 [text-shadow:0_1px_14px_var(--bg),0_0_2px_var(--bg)] sm:mb-8 sm:flex-row sm:items-end sm:justify-between">
+    <Reveal className="mb-6 flex flex-col gap-3 sm:mb-8 sm:flex-row sm:items-end sm:justify-between">
       <div>
         <p className="eyebrow mb-2">{eyebrow}</p>
         <h2 id={id} className="h2">{title}</h2>
@@ -108,7 +107,7 @@ export function SectionHeader({ id, eyebrow, title, children }: { id: string; ey
 
 export function EmptyState({ title, hint }: { title: string; hint?: string }) {
   return (
-    <div className="frost flex flex-col items-center justify-center gap-3 px-6 py-14 text-center"><GlassBg />
+    <div className="glass flex flex-col items-center justify-center gap-3 px-6 py-14 text-center">
       <div className="relative grid h-14 w-14 place-items-center">
         <span className="absolute inset-0 rounded-full border border-line" />
         <span className="absolute inset-3 rounded-full border border-line" />
@@ -135,7 +134,7 @@ export const statusMeta = (s: string) => STATUS[s] ?? { label: s.replace(/_/g, '
 export function Badge({ status }: { status: string }) {
   const m = statusMeta(status)
   return (
-    <span className="chip whitespace-nowrap capitalize" style={{ color: m.color, borderColor: `color-mix(in srgb, ${m.color} 45%, transparent)`, backgroundColor: `color-mix(in srgb, ${m.color} 14%, transparent)` }}>
+    <span className="chip whitespace-nowrap capitalize" style={{ color: m.color, borderColor: `color-mix(in srgb, ${m.color} 40%, transparent)`, background: `color-mix(in srgb, ${m.color} 10%, transparent)` }}>
       <span className="h-1.5 w-1.5 rounded-full" style={{ background: m.color }} />
       {m.label}
     </span>

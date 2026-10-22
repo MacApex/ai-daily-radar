@@ -1,5 +1,4 @@
 import { AnimatePresence, motion } from 'framer-motion'
-import { GlassBg, LiquidButton } from './glass'
 import { useMemo, useState } from 'react'
 import type { Highlight, NewsItem } from '../lib/types'
 import { hostOf, relTime } from '../lib/format'
@@ -41,7 +40,7 @@ export function News({ items, highlights, now }: { items: NewsItem[]; highlights
       <div className="grid gap-4 sm:gap-5 lg:grid-cols-12">
         {/* highlights rail */}
         <motion.aside aria-label="News highlights" className="lg:order-2 lg:col-span-4" initial="hidden" whileInView="show" viewport={{ once: true, amount: 0.1 }} variants={stagger(0.08)}>
-          <div className="frost frost-hi relative overflow-hidden p-5 lg:sticky lg:top-24"><GlassBg />
+          <div className="glass glass-hi relative overflow-hidden p-5 lg:sticky lg:top-24">
             <div aria-hidden className="pointer-events-none absolute -right-16 -top-16 h-48 w-48 rounded-full bg-accent/25 blur-3xl" />
             <p className="eyebrow mb-4 flex items-center gap-2"><Sparkle width={13} height={13} className="text-accent" /> Why it matters</p>
             {highlights.length === 0 ? <p className="text-sm text-muted">No highlights picked today.</p> : (
@@ -59,7 +58,7 @@ export function News({ items, highlights, now }: { items: NewsItem[]; highlights
         </motion.aside>
 
         {/* list */}
-        <Reveal className="frost overflow-hidden lg:order-1 lg:col-span-8"><GlassBg />
+        <Reveal className="glass overflow-hidden lg:order-1 lg:col-span-8">
           <div className="space-y-3 border-b border-line p-3 sm:p-4">
             <div className="flex flex-col gap-3">
               <label className="relative">
@@ -69,18 +68,18 @@ export function News({ items, highlights, now }: { items: NewsItem[]; highlights
               </label>
               <div className="no-scrollbar -mx-3 flex gap-1.5 overflow-x-auto px-3 sm:mx-0 sm:flex-wrap sm:px-0" role="group" aria-label="Filter by source">
                 {['all', ...sources].map((s) => (
-                  <LiquidButton key={s} className="shrink-0"><button type="button" className="pill" aria-pressed={src === s} onClick={() => setSrc(s)}>
+                  <button key={s} type="button" className="pill" aria-pressed={src === s} onClick={() => setSrc(s)}>
                     {s !== 'all' && <span className="h-2 w-2 rounded-full" style={{ background: SRC_COLOR[s] ?? 'var(--accent)' }} />}
                     {s === 'all' ? 'All sources' : s}
-                  </button></LiquidButton>
+                  </button>
                 ))}
               </div>
             </div>
             <div className="no-scrollbar -mx-3 flex gap-1.5 overflow-x-auto px-3 sm:mx-0 sm:flex-wrap sm:px-0" role="group" aria-label="Filter by tag">
               {(allTagsOpen ? allTags : allTags.slice(0, 9)).map(({ t, n }) => (
-                <LiquidButton key={t} className="shrink-0" minor><button type="button" className="pill !px-3 !py-1.5 !text-[12px]" aria-pressed={tags.includes(t)} onClick={() => toggleTag(t)}>
+                <button key={t} type="button" className="pill !px-3 !py-1.5 !text-[12px]" aria-pressed={tags.includes(t)} onClick={() => toggleTag(t)}>
                   #{t} <span className="font-mono text-[10px] opacity-60">{n}</span>
-                </button></LiquidButton>
+                </button>
               ))}
               {allTags.length > 9 && <button type="button" className="shrink-0 px-2 text-[12px] font-medium text-muted hover:text-fg" onClick={() => setAllTagsOpen((o) => !o)} aria-expanded={allTagsOpen}>{allTagsOpen ? 'Fewer tags' : `+${allTags.length - 9} tags`}</button>}
               {tags.length > 0 && <button type="button" className="shrink-0 px-2 text-[12px] font-medium text-accent" onClick={() => setTags([])}>Clear</button>}
@@ -126,7 +125,7 @@ export function News({ items, highlights, now }: { items: NewsItem[]; highlights
           )}
           {rows.length > limit && (
             <div className="border-t border-line p-3 text-center">
-              <LiquidButton><button type="button" onClick={() => setLimit((l) => l + 20)} className="pill mx-auto">Show {Math.min(20, rows.length - limit)} more · {rows.length - limit} left</button></LiquidButton>
+              <button type="button" onClick={() => setLimit((l) => l + 20)} className="pill mx-auto">Show {Math.min(20, rows.length - limit)} more · {rows.length - limit} left</button>
             </div>
           )}
         </Reveal>
