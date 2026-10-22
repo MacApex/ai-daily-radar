@@ -1,4 +1,5 @@
 import { animate, motion, useInView, useMotionValue, useSpring, useTransform } from 'framer-motion'
+import { GlassBg } from './glass'
 import { useEffect, useRef, useState, type ReactNode, type PointerEvent } from 'react'
 import { useFinePointer, useReducedMotion } from '../lib/hooks'
 import { fmtNum } from '../lib/format'
@@ -85,7 +86,7 @@ export function TiltCard({ children, className = '', max = 7 }: { children: Reac
         whileHover={on ? { y: -4 } : undefined}
         transition={{ type: 'spring', stiffness: 300, damping: 24 }}
         className={`group relative h-full frost frost-hi ${className}`}
-      >
+      ><GlassBg />
         {on && <motion.div aria-hidden className="pointer-events-none absolute inset-0 rounded-[22px] opacity-0 transition-opacity duration-300 group-hover:opacity-100" style={{ background: sheen }} />}
         <div className="relative h-full" style={on ? { transform: 'translateZ(24px)' } : undefined}>{children}</div>
       </motion.div>
@@ -107,7 +108,7 @@ export function SectionHeader({ id, eyebrow, title, children }: { id: string; ey
 
 export function EmptyState({ title, hint }: { title: string; hint?: string }) {
   return (
-    <div className="frost flex flex-col items-center justify-center gap-3 px-6 py-14 text-center">
+    <div className="frost flex flex-col items-center justify-center gap-3 px-6 py-14 text-center"><GlassBg />
       <div className="relative grid h-14 w-14 place-items-center">
         <span className="absolute inset-0 rounded-full border border-line" />
         <span className="absolute inset-3 rounded-full border border-line" />

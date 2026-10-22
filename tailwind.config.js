@@ -1,6 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: ['./index.html', './src/**/*.{ts,tsx}'],
+  content: ['./index.html', './src/**/*.{ts,tsx}', './node_modules/liquid-glass-react/dist/index.esm.js'],
   darkMode: ['class', '[data-theme="dark"]'],
   theme: {
     extend: {
