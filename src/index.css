@@ -10,6 +10,9 @@
   --accent: #8b7bff; --accent-2: #3ee6c4; --accent-3: #ff9d5c; --danger: #ff6b81; --sky: #5cc8ff;
   --shadow: 0 1px 0 rgba(255,255,255,.04) inset, 0 20px 50px -20px rgba(0,0,0,.7);
   --grain-opacity: .07;
+  --frost-tint: rgba(13, 15, 26, 0.74); --frost-border: rgba(255,255,255,.13); --frost-edge: rgba(255,255,255,.16); --frost-sheen: rgba(255,255,255,.07); --frost-blur: 30px;
+  --btn-tint: rgba(255,255,255,.06); --btn-border: rgba(255,255,255,.16); --btn-sheen: rgba(255,255,255,.10);
+  --noise: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 .09 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
   color-scheme: dark;
 }
 [data-theme='light'] {
@@ -20,6 +23,9 @@
   --accent: #5b45e0; --accent-2: #0b8f74; --accent-3: #b9520f; --danger: #c22a45; --sky: #0a6fa8;
   --shadow: 0 1px 0 rgba(255,255,255,.8) inset, 0 18px 40px -22px rgba(40,30,80,.28);
   --grain-opacity: .05;
+  --frost-tint: rgba(255, 255, 255, 0.76); --frost-border: rgba(15,17,26,.10); --frost-edge: rgba(255,255,255,.9); --frost-sheen: rgba(255,255,255,.5); --frost-blur: 30px;
+  --btn-tint: rgba(255,255,255,.35); --btn-border: rgba(15,17,26,.12); --btn-sheen: rgba(255,255,255,.6);
+  --noise: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .07 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
   color-scheme: light;
 }
 
@@ -51,21 +57,36 @@ body {
 }
 
 @layer components {
-  .glass {
-    background: var(--panel);
-    border: 1px solid var(--panel-border);
-    box-shadow: var(--shadow);
-    backdrop-filter: blur(18px) saturate(140%);
-    -webkit-backdrop-filter: blur(18px) saturate(140%);
+  /* ---- frosted content glass (cheap CSS recipe; used for all repeated panels) ---- */
+  .frost {
+    position: relative; isolation: isolate;
     border-radius: 22px;
+    border: 1px solid var(--frost-border);
+    background-color: var(--frost-tint);
+    background-image:
+      linear-gradient(180deg, var(--frost-sheen) 0%, transparent 38%),
+      var(--noise);
+    background-size: auto, 180px 180px;
+    box-shadow: inset 0 1px 0 var(--frost-edge), inset 0 0 0 1px rgba(255,255,255,.02), var(--shadow);
+    -webkit-backdrop-filter: blur(var(--frost-blur)) saturate(165%);
+    backdrop-filter: blur(var(--frost-blur)) saturate(165%);
   }
-  .glass-hi { background: linear-gradient(180deg, var(--panel-hi), transparent 60%), var(--panel); }
+  .frost-hi { background-image: linear-gradient(180deg, var(--frost-sheen) 0%, transparent 45%), radial-gradient(120% 80% at 0% 0%, var(--panel-hi), transparent 60%), var(--noise); background-size: auto, auto, 180px 180px; }
+  /* light, mostly transparent glass for buttons / chips / nav (no blur when nested in a panel) */
+  .glass-btn {
+    background-color: var(--btn-tint);
+    background-image: linear-gradient(180deg, var(--btn-sheen), transparent 70%);
+    border: 1px solid var(--btn-border) !important;
+    box-shadow: inset 0 1px 0 var(--frost-edge), 0 4px 14px -6px rgba(0,0,0,.35);
+  }
+  .glass-btn-blur { -webkit-backdrop-filter: blur(10px) saturate(180%); backdrop-filter: blur(10px) saturate(180%); }
   .page { @apply mx-auto w-full max-w-page px-4 sm:px-6 lg:px-8; }
   .h2 { @apply font-display font-semibold tracking-[-0.03em] text-[26px] sm:text-[32px] lg:text-[36px] leading-[1.1]; }
   .eyebrow { @apply font-mono text-[11px] uppercase tracking-[0.18em] text-muted; }
-  .chip { @apply inline-flex items-center gap-1.5 rounded-full border border-line px-2.5 py-1 text-[12px] font-medium leading-none; }
+  .chip { @apply inline-flex items-center gap-1.5 rounded-full border px-2.5 py-1 text-[12px] font-medium leading-none; border-color: var(--btn-border); background-image: linear-gradient(180deg, var(--btn-sheen), transparent 80%); box-shadow: inset 0 1px 0 var(--frost-edge); }
   .pill {
-    @apply relative inline-flex shrink-0 items-center gap-1.5 rounded-full border border-line px-3.5 py-2 text-[13px] font-medium text-muted transition-colors;
+    @apply relative inline-flex shrink-0 items-center gap-1.5 rounded-full border px-3.5 py-2 text-[13px] font-medium text-muted transition-colors;
+    border-color: var(--btn-border); background-color: var(--btn-tint); background-image: linear-gradient(180deg, var(--btn-sheen), transparent 75%); box-shadow: inset 0 1px 0 var(--frost-edge);
   }
   .pill:hover { color: var(--text); background: var(--panel-hi); }
   .pill[aria-pressed='true'] { color: var(--text); border-color: color-mix(in srgb, var(--accent) 55%, transparent); background: color-mix(in srgb, var(--accent) 14%, transparent); }
@@ -134,3 +155,25 @@ body {
   position: absolute; inset: 0;
   background: radial-gradient(120% 90% at 50% 40%, transparent 55%, color-mix(in srgb, var(--bg) 55%, transparent) 100%);
 }
+
+/* ---- glass: performance + fallbacks ---- */
+@media (max-width: 767px) {
+  /* mobile: smaller blur radius is much cheaper on Android; compensate with a denser tint */
+  :root, [data-theme='dark'] { --frost-blur: 18px; --frost-tint: rgba(13, 15, 26, 0.80); }
+  [data-theme='light'] { --frost-blur: 18px; --frost-tint: rgba(255, 255, 255, 0.82); }
+}
+@supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
+  :root, [data-theme='dark'] { --frost-tint: rgba(16, 18, 30, 0.95); --btn-tint: rgba(30, 33, 50, 0.85); }
+  [data-theme='light'] { --frost-tint: rgba(255, 255, 255, 0.95); --btn-tint: rgba(255, 255, 255, 0.85); }
+}
+@media (prefers-reduced-transparency: reduce) {
+  .frost, .glass-btn { --frost-tint: var(--panel-solid); background-color: var(--panel-solid); }
+}
+
+/* ---- liquid-glass-react host (displacement buttons) ---- */
+.liquid-host { position: relative; display: inline-flex; vertical-align: middle; }
+.liquid-sizer { visibility: hidden; display: inline-flex; white-space: nowrap; }
+.liquid-host > :not(.liquid-sizer) { width: max-content; white-space: nowrap; }
+/* the library hard-codes white 20px system-ui text + a dark text-shadow; inherit ours instead */
+.liquid-host .glass > div { font: inherit !important; color: inherit !important; text-shadow: none !important; }
+.liquid-host .glass { box-shadow: 0 8px 24px -10px rgba(0,0,0,.45) !important; }

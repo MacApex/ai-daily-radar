@@ -22,7 +22,7 @@ export function History({ entries, current, latestDate, onPick, loading }: { ent
         )}
       </SectionHeader>
       {entries.length === 0 ? <EmptyState title="No history yet." hint="Each daily run adds an entry here." /> : (
-        <Reveal className="glass p-4 sm:p-6">
+        <Reveal className="frost p-4 sm:p-6">
           <div className="no-scrollbar -mx-4 overflow-x-auto px-4 sm:-mx-6 sm:px-6">
             <ol className="relative flex min-w-max gap-3 pb-1">
               {entries.map((e) => {

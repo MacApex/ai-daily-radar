@@ -40,7 +40,7 @@ export function News({ items, highlights, now }: { items: NewsItem[]; highlights
       <div className="grid gap-4 sm:gap-5 lg:grid-cols-12">
         {/* highlights rail */}
         <motion.aside aria-label="News highlights" className="lg:order-2 lg:col-span-4" initial="hidden" whileInView="show" viewport={{ once: true, amount: 0.1 }} variants={stagger(0.08)}>
-          <div className="glass glass-hi relative overflow-hidden p-5 lg:sticky lg:top-24">
+          <div className="frost frost-hi relative overflow-hidden p-5 lg:sticky lg:top-24">
             <div aria-hidden className="pointer-events-none absolute -right-16 -top-16 h-48 w-48 rounded-full bg-accent/25 blur-3xl" />
             <p className="eyebrow mb-4 flex items-center gap-2"><Sparkle width={13} height={13} className="text-accent" /> Why it matters</p>
             {highlights.length === 0 ? <p className="text-sm text-muted">No highlights picked today.</p> : (
@@ -58,7 +58,7 @@ export function News({ items, highlights, now }: { items: NewsItem[]; highlights
         </motion.aside>
 
         {/* list */}
-        <Reveal className="glass overflow-hidden lg:order-1 lg:col-span-8">
+        <Reveal className="frost overflow-hidden lg:order-1 lg:col-span-8">
           <div className="space-y-3 border-b border-line p-3 sm:p-4">
             <div className="flex flex-col gap-3">
               <label className="relative">

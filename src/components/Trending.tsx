@@ -53,7 +53,7 @@ export function Trending({ items }: { items: T[] }) {
         <p className="max-w-sm text-[14px] text-muted">Every repo observed on GitHub Trending today, with the decision and why.</p>
       </SectionHeader>
       {items.length === 0 ? <EmptyState title="No trending data for this day." /> : (
-        <Reveal className="glass overflow-hidden">
+        <Reveal className="frost overflow-hidden">
           <div className="flex flex-col gap-3 border-b border-line p-3 sm:p-4 lg:flex-row lg:items-center">
             <label className="relative flex-1 lg:max-w-xs">
               <span className="sr-only">Search trending repos</span>
