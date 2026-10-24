@@ -1,5 +1,12 @@
 [
   {
+    "date": "2026-10-24",
+    "featured": [
+      "NVIDIA/OpenShell"
+    ],
+    "archived_count": 4
+  },
+  {
     "date": "2026-10-22",
     "featured": [],
     "archived_count": 5

@@ -1,29 +1,45 @@
 {
   "sample": false,
-  "generated_at": "2026-10-22T10:32:52+08:00",
-  "date": "2026-10-22",
+  "generated_at": "2026-10-24T10:14:34+08:00",
+  "date": "2026-10-24",
   "run": {
-    "trending_observed": 12,
-    "saved": 0,
-    "upgraded": 3,
+    "trending_observed": 8,
+    "saved": 2,
+    "upgraded": 0,
     "relocated": 2,
     "unchanged": 0,
     "incomplete": 0,
-    "eligible_not_archived": 3,
+    "eligible_not_archived": 0,
     "rejected": 4,
     "blockers": [
-      "Mac mini was unreachable from Grok Bot for about 20 minutes (roughly 10:08-10:28 Asia/Shanghai) right after the Trending fetch; the run resumed once it reconnected, with no data loss. Star counts were verified after reconnecting.",
-      "stablyai/orca has a newer upstream commit (7a912a3a) but was not upgraded today (daily cap of 5); its archive stays at cf6582c in the 2026-10-20 folder.",
-      "No new featured picks: every eligible coding-agent repo on today's list had already been featured, and the never-featured eligible ones (vllm, ComfyUI) are not strong enough coding-agent picks to recommend."
+      "Reconciled the 2026-10-23 run: its archive work (index, MEMORY.md, run-summary.json, RUN_REPORT.md) was complete and consistent on the SSD; no partial files or temp files were left, so nothing was redone. Its failure was on the site-publish side (no 2026-10-23 radar data was published).",
+      "DietrichGebert/ponytail, Graphify-Labs/graphify and luongnv89/claude-howto were not on today's list; their archives stay in the 2026-10-23 folder (other older archives stay where they are).",
+      "git-lfs is not installed; neither new archive contains LFS pointers."
     ],
-    "archive_folder": "2026-10-22_100735_Asia-Shanghai"
+    "archive_folder": "2026-10-24_100918_Asia-Shanghai"
   },
-  "featured": [],
+  "featured": [
+    {
+      "full_name": "NVIDIA/OpenShell",
+      "url": "https://github.com/NVIDIA/OpenShell",
+      "stars": 18836,
+      "rating": 4,
+      "license": "Apache-2.0",
+      "reason": "Policy-enforced sandbox runtime for coding agents (Claude Code, Codex, OpenCode): kernel-level file/syscall/network confinement, credentials injected only for approved endpoints, formally checked policy changes, plus agent skills (generate-sandbox-policy, openshell-cli, debug-*) and Python/TS/Go/Rust SDKs. Needs Docker/Podman or host virtualization; young 0.1.x release with anonymous telemetry on by default (can be disabled).",
+      "ideas": [
+        "Run Claude Code or Codex in an OpenShell sandbox with `--upload ./src:/workspace/src` against a copy of one of your Android or iOS projects, so the agent can install packages and run builds without touching your real files or secrets.",
+        "Use the bundled generate-sandbox-policy skill to write a network policy that only lets an agent reach GitHub, npm/Maven and your model provider, then watch the denials it logs to see what your agents really try to reach.",
+        "Follow the github-push-access tutorial to give a sandboxed agent push access to one scratch repo with a fine-grained token, as a safer pattern for the unattended jobs behind ai-daily-radar.",
+        "Try the examples/codex-app-server setup to run Codex's app server inside the sandbox and connect your host Codex client to it over the local gateway.",
+        "Learn the policy prover and advisor by proposing a policy change (like a new API host with credentials) and reading what it flags for review before you approve it."
+      ]
+    }
+  ],
   "archived": [
     {
       "full_name": "cloudflare/security-audit-skill",
       "url": "https://github.com/cloudflare/security-audit-skill",
-      "stars": 36692,
+      "stars": 42231,
       "rating": 5,
       "license": "MIT",
       "commit_sha": "c1c8a8c1471069fb0e188eeaff69b8e8db6564a8",
@@ -32,48 +48,37 @@
       "description": "A coding-agent skill for multi-phase security audits with independently verified, machine-readable findings"
     },
     {
-      "full_name": "Graphify-Labs/graphify",
-      "url": "https://github.com/Graphify-Labs/graphify",
-      "stars": 131745,
-      "rating": 5,
-      "license": "Apache-2.0",
-      "commit_sha": "847a93f3cab5e2c82ea9170014b21cd2c52a4417",
-      "status": "upgraded",
-      "size_mb": 27.9,
-      "description": "Turn any codebase, with its docs, SQL schemas, configs, and PDFs, into a queryable knowledge graph. A /graphify skill for Claude Code, Cursor, Codex, and Gemini CLI: local deterministic AST parsing, every edge explained, no vector store."
-    },
-    {
-      "full_name": "headroomlabs-ai/headroom",
-      "url": "https://github.com/headroomlabs-ai/headroom",
-      "stars": 77299,
+      "full_name": "NVIDIA/OpenShell",
+      "url": "https://github.com/NVIDIA/OpenShell",
+      "stars": 18836,
       "rating": 4,
       "license": "Apache-2.0",
-      "commit_sha": "e995eb9f1dacac7ed548758406de6c1508caef95",
-      "status": "upgraded",
-      "size_mb": 69.9,
-      "description": "Compress tool outputs, logs, files, and RAG chunks before they reach the LLM. 20% fewer tokens for coding agents, 60-95% fewer tokens for JSON, same answers. Library, proxy, MCP server."
+      "commit_sha": "f571c8e99c185804c39e837a2b70692e957de327",
+      "status": "saved",
+      "size_mb": 36.2,
+      "description": "OpenShell is the safe, private runtime for autonomous AI agents."
     },
     {
-      "full_name": "DietrichGebert/ponytail",
-      "url": "https://github.com/DietrichGebert/ponytail",
-      "stars": 171788,
-      "rating": 4,
-      "license": "MIT",
-      "commit_sha": "09c434ab73ca43761c5d8b0c5d341926c2fba710",
+      "full_name": "anthropics/knowledge-work-plugins",
+      "url": "https://github.com/anthropics/knowledge-work-plugins",
+      "stars": 32251,
+      "rating": 3,
+      "license": "Apache-2.0",
+      "commit_sha": "33d3dea41a341b341d4f5da2e8801ae0c89be2b8",
       "status": "relocated",
-      "size_mb": 11.5,
-      "description": "Makes your AI agent think like the laziest senior dev in the room. The best code is the code you never wrote."
+      "size_mb": 7.7,
+      "description": "Open source repository of plugins primarily intended for knowledge workers to use in Claude Cowork"
     },
     {
-      "full_name": "akitaonrails/ai-memory",
-      "url": "https://github.com/akitaonrails/ai-memory",
-      "stars": 12379,
-      "rating": 4,
+      "full_name": "SnailSploit/Claude-Red",
+      "url": "https://github.com/SnailSploit/Claude-Red",
+      "stars": 8527,
+      "rating": 3,
       "license": "MIT",
-      "commit_sha": "1c86aebc14addccc7ac875913d565c681bfa4a50",
-      "status": "upgraded",
-      "size_mb": 30.6,
-      "description": "Solution for long term memory for agent coding CLIs and to facilitate handoff between different agent vendors"
+      "commit_sha": "a8de813edc9f66f60d44cfe42d47750e89d9930b",
+      "status": "saved",
+      "size_mb": 4.5,
+      "description": "claude-red is a curated library of offensive security skills designed for the Claude skills system. Each skill is a structured SKILL.md file that primes Claude with expert-level methodology for a specific attack surface — from SQLi to shellcode, EDR evasion to exploit development."
     }
   ],
   "trending": [
@@ -81,8 +86,8 @@
       "rank": 1,
       "full_name": "cloudflare/security-audit-skill",
       "url": "https://github.com/cloudflare/security-audit-skill",
-      "stars": 36692,
-      "stars_today": 2012,
+      "stars": 42231,
+      "stars_today": 2716,
       "language": "JavaScript",
       "description": "A coding-agent skill for multi-phase security audits with independently verified, machine-readable findings",
       "decision": "archived",
@@ -90,616 +95,579 @@
     },
     {
       "rank": 2,
-      "full_name": "vllm-project/vllm",
-      "url": "https://github.com/vllm-project/vllm",
-      "stars": 94914,
-      "stars_today": 441,
-      "language": "Python",
-      "description": "A high-throughput and memory-efficient inference and serving engine for LLMs",
-      "decision": "eligible_not_archived",
-      "decision_reason": "High-throughput LLM serving engine; relevant only for self-hosting models behind agents, CUDA-oriented and not a fit for this Mac."
+      "full_name": "php/php-src",
+      "url": "https://github.com/php/php-src",
+      "stars": 41575,
+      "stars_today": 716,
+      "language": "C",
+      "description": "The PHP Interpreter",
+      "decision": "rejected",
+      "decision_reason": "Not selected: the PHP interpreter itself; a language runtime, not a coding-agent tool, skill or workflow."
     },
     {
       "rank": 3,
-      "full_name": "stablyai/orca",
-      "url": "https://github.com/stablyai/orca",
-      "stars": 101414,
-      "stars_today": 1541,
-      "language": "TypeScript",
-      "description": "Orca is the place for working with a fleet of agents (e.g. Grok Bot, Claude Code). Run any coding agent with your own subscription. Available on desktop, mobile and remote runtime.",
-      "decision": "eligible_not_archived",
-      "decision_reason": "Desktop orchestrator that runs Claude Code, Codex and other CLI agents side by side in isolated git worktrees. Already archived and featured; upstream moved to a newer commit (7a912a3), but it lost today's cap tie-break again (a large Electron/Expo app rather than an extension of the agents themselves). Archived copy stays in the 2026-10-20 folder at cf6582c."
+      "full_name": "anthropics/knowledge-work-plugins",
+      "url": "https://github.com/anthropics/knowledge-work-plugins",
+      "stars": 32251,
+      "stars_today": 635,
+      "language": "Python",
+      "description": "Open source repository of plugins primarily intended for knowledge workers to use in Claude Cowork",
+      "decision": "archived",
+      "decision_reason": "Relocated: Anthropic's role plugins (productivity, sales, PM, legal, finance...) built for Claude Cowork and usable in Claude Code; connector-heavy and aimed at knowledge work rather than coding. Already archived (not featured); upstream unchanged, folder moved into today's run."
     },
     {
       "rank": 4,
-      "full_name": "headroomlabs-ai/headroom",
-      "url": "https://github.com/headroomlabs-ai/headroom",
-      "stars": 77299,
-      "stars_today": 474,
-      "language": "Python",
-      "description": "Compress tool outputs, logs, files, and RAG chunks before they reach the LLM. 20% fewer tokens for coding agents, 60-95% fewer tokens for JSON, same answers. Library, proxy, MCP server.",
+      "full_name": "NVIDIA/OpenShell",
+      "url": "https://github.com/NVIDIA/OpenShell",
+      "stars": 18836,
+      "stars_today": 1119,
+      "language": "Rust",
+      "description": "OpenShell is the safe, private runtime for autonomous AI agents.",
       "decision": "archived",
-      "decision_reason": "Upgraded: Local context-compression layer (library, proxy, MCP server, `headroom wrap claude|codex|...`) that shrinks tool outputs, logs and JSON with reversible retrieval, cross-agent memory and `headroom learn`. Already archived and featured; relocated from 2026-10-21 and upgraded in place by incremental fetch."
+      "decision_reason": "Saved: Policy-enforced sandbox runtime for coding agents (Claude Code, Codex, OpenCode): kernel-level file/syscall/network confinement, credentials injected only for approved endpoints, formally checked policy changes, plus agent skills (generate-sandbox-policy, openshell-cli, debug-*) and Python/TS/Go/Rust SDKs. Needs Docker/Podman or host virtualization; young 0.1.x release with anonymous telemetry on by default (can be disabled)."
     },
     {
       "rank": 5,
-      "full_name": "DietrichGebert/ponytail",
-      "url": "https://github.com/DietrichGebert/ponytail",
-      "stars": 171788,
-      "stars_today": 2079,
-      "language": "JavaScript",
-      "description": "Makes your AI agent think like the laziest senior dev in the room. The best code is the code you never wrote.",
-      "decision": "archived",
-      "decision_reason": "Relocated: One-prompt skill/plugin for Claude Code, Codex and ~20 agents that pushes minimal, reuse-first code without cutting validation, security or tests, plus /ponytail-review, -audit and -debt commands. Already archived and featured; upstream unchanged, folder moved into today's run."
+      "full_name": "Renhuai123/ziwei-doushu",
+      "url": "https://github.com/Renhuai123/ziwei-doushu",
+      "stars": 6896,
+      "stars_today": 546,
+      "language": "TypeScript",
+      "description": "紫微斗数开源排盘引擎 — 基于倪海厦《天纪》体系，含完整排盘算法、四化系统、格局知识库、古籍原文数据",
+      "decision": "rejected",
+      "decision_reason": "Not selected: Zi Wei Dou Shu (Chinese astrology) chart engine and knowledge base; not a coding-agent tool, skill or workflow."
     },
     {
       "rank": 6,
-      "full_name": "Comfy-Org/ComfyUI",
-      "url": "https://github.com/Comfy-Org/ComfyUI",
-      "stars": 141578,
-      "stars_today": 939,
+      "full_name": "SnailSploit/Claude-Red",
+      "url": "https://github.com/SnailSploit/Claude-Red",
+      "stars": 8527,
+      "stars_today": 226,
       "language": "Python",
-      "description": "The most powerful and modular diffusion model GUI, api and backend with a graph/nodes interface. The fastest local inference engine in the world.",
-      "decision": "eligible_not_archived",
-      "decision_reason": "Node-graph diffusion GUI/API/backend; strong for agent-driven image/video pipelines via its API, but a heavy app whose models are separate, and less directly a coding-agent tool."
+      "description": "claude-red is a curated library of offensive security skills designed for the Claude skills system. Each skill is a structured SKILL.md file that primes Claude with expert-level methodology for a specific attack surface — from SQLi to shellcode, EDR evasion to exploit development.",
+      "decision": "archived",
+      "decision_reason": "Saved: Library of 78 offensive-security SKILL.md files (web, API, mobile, cloud, CI/CD, AI security...) for Claude Code and the Claude skills system; dual-use and meant for authorized testing only. Archived because the daily cap had room; overlaps with the already-featured cloudflare/security-audit-skill for Max's defensive needs, so not featured."
     },
     {
       "rank": 7,
-      "full_name": "supabase/supabase",
-      "url": "https://github.com/supabase/supabase",
-      "stars": 113051,
-      "stars_today": 504,
-      "language": "TypeScript",
-      "description": "The Postgres development platform. Supabase gives you a dedicated Postgres database to build your web, mobile, and AI applications.",
+      "full_name": "OpenBMB/VoxCPM",
+      "url": "https://github.com/OpenBMB/VoxCPM",
+      "stars": 40285,
+      "stars_today": 150,
+      "language": "Python",
+      "description": "VoxCPM2: Tokenizer-Free TTS for Multilingual Speech Generation, Creative Voice Design, and True-to-Life Cloning",
       "decision": "rejected",
-      "decision_reason": "Not selected: Postgres backend platform (database, auth, storage) for apps; useful as a project backend but not itself a coding-agent tool, skill or workflow."
+      "decision_reason": "Not selected: tokenizer-free multilingual TTS and voice-cloning model; a speech model, not a coding-agent tool, skill or workflow."
     },
     {
       "rank": 8,
-      "full_name": "twentyhq/twenty",
-      "url": "https://github.com/twentyhq/twenty",
-      "stars": 59219,
-      "stars_today": 112,
-      "language": "TypeScript",
-      "description": "The open alternative to Salesforce, designed for AI.",
+      "full_name": "nodejs/node",
+      "url": "https://github.com/nodejs/node",
+      "stars": 122893,
+      "stars_today": 66,
+      "language": "JavaScript",
+      "description": "Node.js JavaScript runtime ✨🐢🚀✨",
       "decision": "rejected",
-      "decision_reason": "Not selected: open-source CRM application; not a coding-agent tool."
-    },
-    {
-      "rank": 9,
-      "full_name": "shiyu-coder/Kronos",
-      "url": "https://github.com/shiyu-coder/Kronos",
-      "stars": 42870,
-      "stars_today": 575,
-      "language": "Python",
-      "description": "Kronos: A Foundation Model for the Language of Financial Markets",
-      "decision": "rejected",
-      "decision_reason": "Not selected: financial-market foundation model; not a coding-agent tool."
-    },
-    {
-      "rank": 10,
-      "full_name": "strelov1/freehire",
-      "url": "https://github.com/strelov1/freehire",
-      "stars": 2451,
-      "stars_today": 360,
-      "language": "Go",
-      "description": "freehire — the open-source search engine for job seekers",
-      "decision": "rejected",
-      "decision_reason": "Not selected: below the 3,000-star bar (2,451 verified) and a job-search engine rather than a coding-agent tool."
-    },
-    {
-      "rank": 11,
-      "full_name": "akitaonrails/ai-memory",
-      "url": "https://github.com/akitaonrails/ai-memory",
-      "stars": 12379,
-      "stars_today": 286,
-      "language": "Rust",
-      "description": "Solution for long term memory for agent coding CLIs and to facilitate handoff between different agent vendors",
-      "decision": "archived",
-      "decision_reason": "Upgraded: Shared long-term memory and typed handoffs across Claude Code, Codex, Cursor, OpenCode and 20+ other harnesses via MCP and lifecycle hooks; plain-markdown, git-backed wiki with a zero-LLM default path. Already archived (2026-10-18) and featured; relocated into today's run and upgraded in place by incremental fetch. Its hooks capture sanitized prompts and tool calls, so review privacy settings first."
-    },
-    {
-      "rank": 12,
-      "full_name": "Graphify-Labs/graphify",
-      "url": "https://github.com/Graphify-Labs/graphify",
-      "stars": 131745,
-      "stars_today": 1433,
-      "language": "Python",
-      "description": "Turn any codebase, with its docs, SQL schemas, configs, and PDFs, into a queryable knowledge graph. A /graphify skill for Claude Code, Cursor, Codex, and Gemini CLI: local deterministic AST parsing, every edge explained, no vector store.",
-      "decision": "archived",
-      "decision_reason": "Upgraded: /graphify skill for Claude Code, Codex, Cursor and 20+ assistants that turns a repo plus docs/PDFs into a local tree-sitter knowledge graph agents query instead of grepping. Already archived and featured; relocated from 2026-10-21 and upgraded in place by incremental fetch."
+      "decision_reason": "Not selected: the Node.js runtime itself; a language runtime, not a coding-agent tool, skill or workflow."
     }
   ],
   "news": [
     {
-      "title": "Security Disclosure",
-      "url": "https://blog.railway.com/p/security-disclosure-wednesday-october-21st",
+      "title": "Kimi K3.1 Pro and K3.1 Pro Highspeed",
+      "url": "https://www.kimi.ai/blog/kimi-k3-1-pro",
       "source": "Hacker News",
-      "points": 328,
-      "comments": 169,
-      "comments_url": "https://news.ycombinator.com/item?id=50188228",
-      "published_at": "2026-10-22T05:58:03+08:00",
-      "tags": [
-        "security",
-        "devtools"
-      ]
-    },
-    {
-      "title": "PHP 8.2.35",
-      "url": "https://github.com/php/php-src/releases/tag/php-8.2.35",
-      "source": "Hacker News",
-      "points": 977,
-      "comments": 536,
-      "comments_url": "https://news.ycombinator.com/item?id=50180873",
-      "published_at": "2026-10-21T21:45:33+08:00",
+      "points": 736,
+      "comments": 461,
+      "comments_url": "https://news.ycombinator.com/item?id=50212065",
+      "published_at": "2026-10-24T00:59:08+08:00",
       "tags": [
         "misc"
       ]
     },
     {
-      "title": "EA is shutting down BioWare",
-      "url": "https://www.theverge.com/games/1015647/ea-is-shutting-down-bioware",
+      "title": "Today, we hacked what we'd set out to hack: the iPhone",
+      "url": "https://blog.calif.io/p/iphone",
       "source": "Hacker News",
-      "points": 545,
-      "comments": 327,
-      "comments_url": "https://news.ycombinator.com/item?id=50184586",
-      "published_at": "2026-10-22T01:29:33+08:00",
+      "points": 752,
+      "comments": 510,
+      "comments_url": "https://news.ycombinator.com/item?id=50211474",
+      "published_at": "2026-10-24T00:21:50+08:00",
       "tags": [
-        "misc"
-      ]
-    },
-    {
-      "title": "Today's PHP security release, and how we're strengthening security",
-      "url": "https://thephp.foundation/blog/2026/10/21/todays-php-security-release-and-how-were-strengthening-php-security/",
-      "source": "Hacker News",
-      "points": 688,
-      "comments": 338,
-      "comments_url": "https://news.ycombinator.com/item?id=50182987",
-      "published_at": "2026-10-21T23:48:56+08:00",
-      "tags": [
-        "security"
-      ]
-    },
-    {
-      "title": "Claude Duet",
-      "url": "https://claude.com/product/claude-duet",
-      "source": "Hacker News",
-      "points": 320,
-      "comments": 280,
-      "comments_url": "https://news.ycombinator.com/item?id=50186037",
-      "published_at": "2026-10-22T03:14:01+08:00",
-      "tags": [
-        "ai"
-      ]
-    },
-    {
-      "title": "mitmproxy adds --emudhra option",
-      "url": "https://github.com/mitmproxy/mitmproxy/commit/169234499088fc2c414644a67efaed3d64ae2e3b",
-      "source": "Hacker News",
-      "points": 230,
-      "comments": 61,
-      "comments_url": "https://news.ycombinator.com/item?id=50189232",
-      "published_at": "2026-10-22T07:51:37+08:00",
-      "tags": [
-        "misc"
-      ]
-    },
-    {
-      "title": "Meta ordered to pay $25B penalty in New Mexico Cambridge Analytica case",
-      "url": "https://www.cnbc.com/2026/10/21/meta-new-mexico-cambridge-analytica-penalty.html",
-      "source": "Hacker News",
-      "points": 394,
-      "comments": 251,
-      "comments_url": "https://news.ycombinator.com/item?id=50184820",
-      "published_at": "2026-10-22T01:45:13+08:00",
-      "tags": [
-        "misc"
-      ]
-    },
-    {
-      "title": "There isn't an easy exploit for this PHP vulnerability",
-      "url": "https://eliastaylor.com/noexploit/",
-      "source": "Hacker News",
-      "points": 186,
-      "comments": 87,
-      "comments_url": "https://news.ycombinator.com/item?id=50188948",
-      "published_at": "2026-10-22T07:13:27+08:00",
-      "tags": [
-        "security"
-      ]
-    },
-    {
-      "title": "Airbnb bans making guests do dishes and take out the trash",
-      "url": "https://www.theverge.com/tech/1015844/airbnb-chores-house-rules-update",
-      "source": "Hacker News",
-      "points": 121,
-      "comments": 102,
-      "comments_url": "https://news.ycombinator.com/item?id=50189150",
-      "published_at": "2026-10-22T07:38:32+08:00",
-      "tags": [
-        "misc"
-      ]
-    },
-    {
-      "title": "Rust Style Guide",
-      "url": "https://google.github.io/styleguide/rustguide.html",
-      "source": "Hacker News",
-      "points": 218,
-      "comments": 121,
-      "comments_url": "https://news.ycombinator.com/item?id=50186010",
-      "published_at": "2026-10-22T03:11:57+08:00",
-      "tags": [
-        "programming"
-      ]
-    },
-    {
-      "title": "Compromised LiteLLM 1.107.0 on PyPI Installs a Credential Stealer and Backdoor",
-      "url": "https://safedep.io/litellm-pypi-compromise-credential-stealer-backdoor/",
-      "source": "Hacker News",
-      "points": 445,
-      "comments": 148,
-      "comments_url": "https://news.ycombinator.com/item?id=50181114",
-      "published_at": "2026-10-21T22:00:26+08:00",
-      "tags": [
-        "misc"
-      ]
-    },
-    {
-      "title": "GitLab Critical Patch Release",
-      "url": "https://docs.gitlab.com/releases/patches/patch-release-gitlab-19-5-1-released/",
-      "source": "Hacker News",
-      "points": 257,
-      "comments": 64,
-      "comments_url": "https://news.ycombinator.com/item?id=50185869",
-      "published_at": "2026-10-22T03:01:12+08:00",
-      "tags": [
-        "misc"
-      ]
-    },
-    {
-      "title": "DuckDB 2.0.0 LTS “Cinnamon Teal”",
-      "url": "https://duckdb.org/2026/10/21/announcing-duckdb-200",
-      "source": "Hacker News",
-      "points": 372,
-      "comments": 48,
-      "comments_url": "https://news.ycombinator.com/item?id=50181136",
-      "published_at": "2026-10-21T22:01:22+08:00",
-      "tags": [
-        "misc"
-      ]
-    },
-    {
-      "title": "Patch the Planet: global response coordination as agents uncover vulnerabilities",
-      "url": "https://openai.com/index/coordinated-disclosure-of-critical-vulnerabilities/",
-      "source": "Hacker News",
-      "points": 237,
-      "comments": 162,
-      "comments_url": "https://news.ycombinator.com/item?id=50181175",
-      "published_at": "2026-10-21T22:03:43+08:00",
-      "tags": [
-        "ai",
-        "security"
-      ]
-    },
-    {
-      "title": "OpenAI models are coming to Google Cloud",
-      "url": "https://openai.com/index/openai-models-google-cloud/",
-      "source": "Hacker News",
-      "points": 245,
-      "comments": 106,
-      "comments_url": "https://news.ycombinator.com/item?id=50180079",
-      "published_at": "2026-10-21T20:53:11+08:00",
-      "tags": [
-        "ai"
-      ]
-    },
-    {
-      "title": "Oregon lawmakers approve money to buy an iconic waterfall listed on Redfin",
-      "url": "https://apnews.com/article/oregon-waterfall-for-sale-lawmakers-996de63462d49ec3ad9bee1629fb9488",
-      "source": "Hacker News",
-      "points": 172,
-      "comments": 85,
-      "comments_url": "https://news.ycombinator.com/item?id=50182526",
-      "published_at": "2026-10-21T23:20:04+08:00",
-      "tags": [
-        "misc"
-      ]
-    },
-    {
-      "title": "New plastic pollution discovered: 'Plasticorals' coral rubble fused with plastic",
-      "url": "https://www.oist.jp/news-center/news/2026/9/18/new-form-plastic-pollution-discovered-shores-vulnerable-coral-reefs",
-      "source": "Hacker News",
-      "points": 103,
-      "comments": 43,
-      "comments_url": "https://news.ycombinator.com/item?id=50183512",
-      "published_at": "2026-10-22T00:20:37+08:00",
-      "tags": [
-        "misc"
-      ]
-    },
-    {
-      "title": "Firefox Local Mode",
-      "url": "https://firefox-source-docs.mozilla.org/devtools-user/local_mode/index.html",
-      "source": "Lobsters",
-      "points": 76,
-      "comments": 14,
-      "comments_url": "https://lobste.rs/s/w9sxxq/firefox_local_mode",
-      "published_at": "2026-10-21T23:47:59+08:00",
-      "tags": [
-        "misc"
-      ]
-    },
-    {
-      "title": "Κ = 0.003 for integer multiplication crossed",
-      "url": "https://github.com/CrocSwap/integer-mult-bounds/pull/4441",
-      "source": "Hacker News",
-      "points": 28,
-      "comments": 18,
-      "comments_url": "https://news.ycombinator.com/item?id=50189023",
-      "published_at": "2026-10-22T07:22:21+08:00",
-      "tags": [
-        "misc"
-      ]
-    },
-    {
-      "title": "Upcoming Critical PHP Security Release",
-      "url": "https://www.php.net/archive/2026.php#2026-10-20-1",
-      "source": "Lobsters",
-      "points": 180,
-      "comments": 119,
-      "comments_url": "https://lobste.rs/s/ekxoyt/upcoming_critical_php_security_release",
-      "published_at": "2026-10-21T06:23:54+08:00",
-      "tags": [
-        "security"
-      ]
-    },
-    {
-      "title": "PingCap TiDB Leaks",
-      "url": "https://fulcrumsec.vg/pingcap/",
-      "source": "Hacker News",
-      "points": 221,
-      "comments": 32,
-      "comments_url": "https://news.ycombinator.com/item?id=50173716",
-      "published_at": "2026-10-21T06:45:39+08:00",
-      "tags": [
-        "misc"
-      ]
-    },
-    {
-      "title": "When Do We Become the Person We Ought to Be?",
-      "url": "https://www.graphsaboutreligion.com/p/when-do-we-become-the-person-we-ought",
-      "source": "Hacker News",
-      "points": 17,
-      "comments": 15,
-      "comments_url": "https://news.ycombinator.com/item?id=50189278",
-      "published_at": "2026-10-22T07:57:41+08:00",
-      "tags": [
-        "misc"
-      ]
-    },
-    {
-      "title": "Eight Bits of Trust; eMudhra's CA keys cracked in milliseconds",
-      "url": "https://scotthelme.co.uk/eight-bits-of-trust-emudhras-ca-keys-cracked-in-milliseconds/",
-      "source": "Lobsters",
-      "points": 43,
-      "comments": 10,
-      "comments_url": "https://lobste.rs/s/ebsqsp/eight_bits_trust_emudhra_s_ca_keys_cracked",
-      "published_at": "2026-10-21T21:50:10+08:00",
-      "tags": [
-        "security"
-      ]
-    },
-    {
-      "title": "zls 0.17.0",
-      "url": "https://zigtools.org/zls/releases/0.17.0/",
-      "source": "Lobsters",
-      "points": 57,
-      "comments": 2,
-      "comments_url": "https://lobste.rs/s/hty1qk/zls_0_17_0",
-      "published_at": "2026-10-21T23:24:05+08:00",
-      "tags": [
-        "release"
-      ]
-    },
-    {
-      "title": "Protecting Firefox users following the compromise of eMudhra intermediate certificates",
-      "url": "https://blog.mozilla.org/security/2026/10/20/protecting-firefox-users-following-the-compromise-of-emudhra-intermediate-certificates/",
-      "source": "Lobsters",
-      "points": 168,
-      "comments": 69,
-      "comments_url": "https://lobste.rs/s/gqyvn5/protecting_firefox_users_following",
-      "published_at": "2026-10-20T21:00:50+08:00",
-      "tags": [
-        "misc"
-      ]
-    },
-    {
-      "title": "Passkeys Attestation Trap",
-      "url": "https://mjtsai.com/blog/2026/10/15/passkeys-attestation-trap/",
-      "source": "Lobsters",
-      "points": 16,
-      "comments": 19,
-      "comments_url": "https://lobste.rs/s/cdnepk/passkeys_attestation_trap",
-      "published_at": "2026-10-22T02:16:22+08:00",
-      "tags": [
-        "misc"
-      ]
-    },
-    {
-      "title": "Unikernels in OCaml",
-      "url": "https://uniker.nl/",
-      "source": "Lobsters",
-      "points": 57,
-      "comments": 6,
-      "comments_url": "https://lobste.rs/s/mfserj/unikernels_ocaml",
-      "published_at": "2026-10-21T15:51:20+08:00",
-      "tags": [
-        "ai"
-      ]
-    },
-    {
-      "title": "CVE-2026-107891: musl libc: multiple integer overflow in regcomp, possibly leading to incorrect allocation sizes and out-of-bounds heap writes",
-      "url": "https://www.openwall.com/lists/oss-security/2026/10/21/18",
-      "source": "Lobsters",
-      "points": 25,
-      "comments": 5,
-      "comments_url": "https://lobste.rs/s/dldfel/cve_2026_107891_musl_libc_multiple",
-      "published_at": "2026-10-22T01:40:17+08:00",
-      "tags": [
-        "security",
-        "programming"
-      ]
-    },
-    {
-      "title": "The Future of CSS",
-      "url": "https://www.joshwcomeau.com/css/interop-2027/",
-      "source": "Lobsters",
-      "points": 58,
-      "comments": 6,
-      "comments_url": "https://lobste.rs/s/vidyh0/future_css",
-      "published_at": "2026-10-21T14:16:50+08:00",
-      "tags": [
-        "web"
-      ]
-    },
-    {
-      "title": "Today's PHP Security Release, and How We're Strengthening PHP Security",
-      "url": "https://simonwillison.net/2026/Oct/21/php-security-release/",
-      "source": "Simon Willison",
-      "published_at": "2026-10-22T02:41:53+08:00",
-      "summary": "Today's PHP Security Release, and How We're Strengthening PHP Security If you're running anything on PHP it's vital you upgrade - today's updates (across the entire PHP 8.x line) address two remote code execution holes, and there have been exploits circulating since last night,…",
-      "tags": [
-        "security"
-      ]
-    },
-    {
-      "title": "NVIDIA Kumo Relational Outperforms Supervised Machine Learning on Relational Data, No Training Required",
-      "url": "https://huggingface.co/blog/nvidia/kumo-relational",
-      "source": "Hugging Face",
-      "published_at": "2026-10-22T02:26:30+08:00",
-      "tags": [
-        "ai",
         "hardware"
       ]
     },
     {
-      "title": "How Specializing the Vocabulary of SLMs Can Cut Inference Cost by 77% in Real Applications",
-      "url": "https://huggingface.co/blog/Dharma-AI/vocabx-vocabulary-specialization",
-      "source": "Hugging Face",
-      "published_at": "2026-10-22T01:35:36+08:00",
+      "title": "Now Google says it might use your Gmail and Google Photos data to target ads",
+      "url": "https://www.theverge.com/tech/1017600/google-personal-intelligence-privacy-policy-ads-update",
+      "source": "Hacker News",
+      "points": 284,
+      "comments": 151,
+      "comments_url": "https://news.ycombinator.com/item?id=50214218",
+      "published_at": "2026-10-24T03:34:15+08:00",
+      "tags": [
+        "misc"
+      ]
+    },
+    {
+      "title": "Apple Music 404 Not Found",
+      "url": "https://music.apple.com/this-url-doesnt-exist",
+      "source": "Hacker News",
+      "points": 603,
+      "comments": 194,
+      "comments_url": "https://news.ycombinator.com/item?id=50207910",
+      "published_at": "2026-10-23T20:28:47+08:00",
+      "tags": [
+        "misc"
+      ]
+    },
+    {
+      "title": "Dessa: the most authentic full-duplex speech model ever built",
+      "url": "https://block.xyz/dessa",
+      "source": "Hacker News",
+      "points": 239,
+      "comments": 100,
+      "comments_url": "https://news.ycombinator.com/item?id=50213925",
+      "published_at": "2026-10-24T03:09:54+08:00",
+      "tags": [
+        "ai",
+        "security"
+      ]
+    },
+    {
+      "title": "CVE Tracker",
+      "url": "https://cve.0xosprey.com/",
+      "source": "Hacker News",
+      "points": 110,
+      "comments": 42,
+      "comments_url": "https://news.ycombinator.com/item?id=50215530",
+      "published_at": "2026-10-24T05:21:47+08:00",
+      "tags": [
+        "security"
+      ]
+    },
+    {
+      "title": "Evolving Threat: http2shell is an RCE in node, Python, and more",
+      "url": "https://nitter.click/AikidoSecurity/status/2113759110625906950?__galadriel=lPmlGl9id4oAd5UeBwMhlYKArHyr6lR2IDGujPwB5HV2kQ1aLoPWFd5A9sGuzNcmrp8fUso8qygmHcKTDZ8MNHWqQ3bDJcycV87xp_0VypzQLYj6O_RRHlZuQqj33oASGY2YLSoAiMjeOZN40h7Stf8AG7DPrGZbAPVKUXy36HoMudRbvwF3_r2uYNmfJMhpKzywQDM6Ab8",
+      "source": "Hacker News",
+      "points": 86,
+      "comments": 32,
+      "comments_url": "https://news.ycombinator.com/item?id=50216791",
+      "published_at": "2026-10-24T07:30:17+08:00",
+      "tags": [
+        "programming"
+      ]
+    },
+    {
+      "title": "Local Wikipedia: Wikipedia, but only for things a half hour walk from you",
+      "url": "https://edjefferson.com/localwiki/",
+      "source": "Hacker News",
+      "points": 1252,
+      "comments": 225,
+      "comments_url": "https://news.ycombinator.com/item?id=50202285",
+      "published_at": "2026-10-23T07:01:18+08:00",
+      "tags": [
+        "misc"
+      ]
+    },
+    {
+      "title": "Securing our frontier model training environment",
+      "url": "https://openai.com/index/securing-our-frontier-model-training-environment/",
+      "source": "Hacker News",
+      "points": 76,
+      "comments": 93,
+      "comments_url": "https://news.ycombinator.com/item?id=50214416",
+      "published_at": "2026-10-24T03:50:56+08:00",
       "tags": [
         "ai"
       ]
     },
     {
-      "title": "Panache — RTS Belle Époque pour mobile",
-      "url": "https://simonwillison.net/2026/Oct/21/panache/",
-      "source": "Simon Willison",
-      "published_at": "2026-10-22T00:25:16+08:00",
-      "summary": "Panache — RTS Belle Époque pour mobile Well this is delightful: I released Battle Drones yesterday under an Apache 2.0 License and there's already a French language fork which reskins the game to take place in steampunk 1900s France and adds an animated intro! Panache est un…",
+      "title": "Air Purifiers as White Noise Machines",
+      "url": "https://www.jefftk.com/p/air-purifiers-as-white-noise-machines",
+      "source": "Hacker News",
+      "points": 67,
+      "comments": 96,
+      "comments_url": "https://news.ycombinator.com/item?id=50212507",
+      "published_at": "2026-10-24T01:28:36+08:00",
       "tags": [
         "misc"
       ]
     },
     {
-      "title": "Profiling TorchNeuron (Part 1): System-level profiling on AWS Trainium.",
-      "url": "https://huggingface.co/blog/amazon/profiling-torchneuron-part-1",
-      "source": "Hugging Face",
-      "published_at": "2026-10-22T00:04:43+08:00",
+      "title": "Canadians are running out of time to oppose Bill C-22",
+      "url": "https://www.eff.org/deeplinks/2026/10/canadians-are-running-out-time-oppose-dangerous-c-22-surveillance-bill",
+      "source": "Hacker News",
+      "points": 337,
+      "comments": 170,
+      "comments_url": "https://news.ycombinator.com/item?id=50202114",
+      "published_at": "2026-10-23T06:43:19+08:00",
       "tags": [
         "misc"
       ]
     },
     {
-      "title": "The bridge to agent-scale Git infrastructure",
-      "url": "https://github.blog/engineering/architecture-optimization/the-bridge-to-agent-scale-git-infrastructure/",
-      "source": "GitHub Blog",
-      "published_at": "2026-10-22T00:00:00+08:00",
-      "summary": "We moved a copy of 99.99999% of GitHub's repositories to Azure. Here's how per-reference quorums will bring over the rest, and how object storage lets reads scale independently. The post The bridge to agent-scale Git infrastructure appeared first on The GitHub Blog .",
+      "title": "I turned my TV into a Game Boy Color with a Pokemon town as my home screen",
+      "url": "https://twitter.com/robbietilton/status/2111936458923851923",
+      "source": "Hacker News",
+      "points": 66,
+      "comments": 26,
+      "comments_url": "https://news.ycombinator.com/item?id=50212668",
+      "published_at": "2026-10-24T01:40:22+08:00",
       "tags": [
-        "ai",
+        "misc"
+      ]
+    },
+    {
+      "title": "German court calls Google aerial imagery 'spying'",
+      "url": "https://www.courthousenews.com/german-court-calls-google-aerial-imagery-spying/",
+      "source": "Hacker News",
+      "points": 36,
+      "comments": 19,
+      "comments_url": "https://news.ycombinator.com/item?id=50216142",
+      "published_at": "2026-10-24T06:18:49+08:00",
+      "tags": [
+        "misc"
+      ]
+    },
+    {
+      "title": "No Source Code? No Problem",
+      "url": "https://queue.acm.org/doi/10.1145/945131.945155",
+      "source": "Hacker News",
+      "points": 34,
+      "comments": 30,
+      "comments_url": "https://news.ycombinator.com/item?id=50214994",
+      "published_at": "2026-10-24T04:38:06+08:00",
+      "tags": [
+        "misc"
+      ]
+    },
+    {
+      "title": "Rune 1.3: adds TypeScript, a Helix editor, Kitty graphics and OSC-7501",
+      "url": "https://rune.build/blog/rune-1-3-release",
+      "source": "Hacker News",
+      "points": 40,
+      "comments": 9,
+      "comments_url": "https://news.ycombinator.com/item?id=50214325",
+      "published_at": "2026-10-24T03:42:01+08:00",
+      "tags": [
         "programming",
         "devtools"
       ]
     },
     {
-      "title": "Granite Speech 5.0: Transcribe, Translate, and Attribute more Accurately and Faster",
-      "url": "https://huggingface.co/blog/ibm-granite/granite-speech-5",
-      "source": "Hugging Face",
-      "published_at": "2026-10-21T22:58:18+08:00",
+      "title": "Reforming English Spelling",
+      "url": "https://blog.oup.com/2026/10/reforming-english-spelling/",
+      "source": "Hacker News",
+      "points": 27,
+      "comments": 84,
+      "comments_url": "https://news.ycombinator.com/item?id=50211084",
+      "published_at": "2026-10-23T23:56:06+08:00",
       "tags": [
         "misc"
       ]
     },
     {
-      "title": "NixOS is making me less afraid",
-      "url": "https://entropicthoughts.com/nixos-is-making-me-less-afraid",
+      "title": "A whirlwind tour of systemd-nspawn containers (2025)",
+      "url": "https://quantum5.ca/2025/03/22/whirlwind-tour-of-systemd-nspawn-containers/",
+      "source": "Hacker News",
+      "points": 35,
+      "comments": 7,
+      "comments_url": "https://news.ycombinator.com/item?id=50214983",
+      "published_at": "2026-10-24T04:37:12+08:00",
+      "tags": [
+        "misc"
+      ]
+    },
+    {
+      "title": "Show HN: Corgi, a helpful {agent, terminal} multiplexer",
+      "url": "https://corgi.computer/",
+      "source": "Hacker News",
+      "points": 38,
+      "comments": 6,
+      "comments_url": "https://news.ycombinator.com/item?id=50214373",
+      "published_at": "2026-10-24T03:46:38+08:00",
+      "tags": [
+        "ai",
+        "devtools"
+      ]
+    },
+    {
+      "title": "Software is slow because of bad design, not slow languages",
+      "url": "https://www.seangoedecke.com/software-is-slow-because-of-bad-design-not-slow-languages/",
       "source": "Lobsters",
-      "points": 64,
-      "comments": 42,
-      "comments_url": "https://lobste.rs/s/7d1swo/nixos_is_making_me_less_afraid",
-      "published_at": "2026-10-20T21:44:53+08:00",
+      "points": 37,
+      "comments": 44,
+      "comments_url": "https://lobste.rs/s/hd72yt/software_is_slow_because_bad_design_not",
+      "published_at": "2026-10-23T20:58:10+08:00",
       "tags": [
         "misc"
       ]
     },
     {
-      "title": "eMudhra Intermediate CA Compromise",
-      "url": "https://simonwillison.net/2026/Oct/20/emudhra-certificates/",
-      "source": "Simon Willison",
-      "published_at": "2026-10-21T07:50:25+08:00",
-      "summary": "eMudhra Intermediate CA Compromise This is very, very bad news: The private keys of eight eMudhra intermediate CA certificates have been compromised. They chain to roots trusted by the Mozilla, Microsoft, Apple and Chrome root programs and by many downstream trust stores. Any…",
+      "title": "Mark Zuckerberg Pushed Meta to Shield Him from California's Proposed Wealth Tax",
+      "url": "https://www.nytimes.com/2026/10/21/technology/mark-zuckerberg-meta-california-wealth-tax.html",
+      "source": "Hacker News",
+      "points": 15,
+      "comments": 12,
+      "comments_url": "https://news.ycombinator.com/item?id=50217587",
+      "published_at": "2026-10-24T09:35:49+08:00",
+      "tags": [
+        "misc"
+      ]
+    },
+    {
+      "title": "DNS: A Replacement for Finger",
+      "url": "https://altchan.org/sh/42",
+      "source": "Hacker News",
+      "points": 25,
+      "comments": 19,
+      "comments_url": "https://news.ycombinator.com/item?id=50213791",
+      "published_at": "2026-10-24T03:00:04+08:00",
+      "tags": [
+        "misc"
+      ]
+    },
+    {
+      "title": "The glorious @xkcdRandom Zig builtin",
+      "url": "https://ochagavia.nl/blog/the-glorious-@xkcdrandom-zig-builtin/",
+      "source": "Lobsters",
+      "points": 42,
+      "comments": 8,
+      "comments_url": "https://lobste.rs/s/5hoqzj/glorious_xkcdrandom_zig_builtin",
+      "published_at": "2026-10-23T22:30:57+08:00",
       "tags": [
         "programming"
       ]
     },
     {
-      "title": "Battle Drones - a vibe coded RTS with audio-based multiplayer",
-      "url": "https://simonwillison.net/2026/Oct/20/battledrones/",
+      "title": "Please don't mess with links",
+      "url": "https://maurycyz.com/misc/real_links/",
+      "source": "Lobsters",
+      "points": 87,
+      "comments": 21,
+      "comments_url": "https://lobste.rs/s/mucay8/please_don_t_mess_with_links",
+      "published_at": "2026-10-23T08:37:10+08:00",
+      "tags": [
+        "misc"
+      ]
+    },
+    {
+      "title": "Docker is weird",
+      "url": "https://codeandcake.dev/posts/2026-10-22-docker-is-weird",
+      "source": "Lobsters",
+      "points": 95,
+      "comments": 43,
+      "comments_url": "https://lobste.rs/s/xsz9sc/docker_is_weird",
+      "published_at": "2026-10-23T04:09:22+08:00",
+      "tags": [
+        "devtools"
+      ]
+    },
+    {
+      "title": "Quick Study",
+      "url": "https://simonwillison.net/2026/Oct/23/quick-study-painter/",
       "source": "Simon Willison",
-      "published_at": "2026-10-21T03:34:19+08:00",
-      "summary": "My latest vibe coded game experiment is a Command & Conquer style RTS (Real Time Strategy) game called Battle Drones ( play it here ). Unlike my previous experiments , this one is actually fun to play . I'm somewhat embarrassed to admit that I got there by telling Claude to…",
+      "published_at": "2026-10-24T05:35:13+08:00",
+      "summary": "Tool: Quick Study Prompt to Claude Opus 5.5 High : Build an artifact where you open a photo and it rapidly (in a few seconds) paints a version of that photo using a canvas element and simulated paintbrush See also my previous experiment getting Claude Fable to simulate a…",
       "tags": [
         "ai"
       ]
     },
     {
-      "title": "How 3 Java Champions are using GitHub Copilot for increased productivity",
-      "url": "https://github.blog/ai-and-ml/github-copilot/how-3-java-champions-are-using-github-copilot-for-increased-productivity/",
-      "source": "GitHub Blog",
-      "published_at": "2026-10-21T00:05:03+08:00",
-      "summary": "Three Java Champions share how they use GitHub Copilot to solve problems, accelerate development, and keep humans responsible for the results. The post How 3 Java Champions are using GitHub Copilot for increased productivity appeared first on The GitHub Blog .",
+      "title": "I Built a Pixel Hero That Nags Me to Drink Water (and Runs 100% on My Laptop)",
+      "url": "https://dev.to/kumuda/i-built-a-pixel-hero-that-nags-me-to-drink-water-and-runs-100-on-my-laptop-2ilb",
+      "source": "DEV.to",
+      "points": 45,
+      "comments": 4,
+      "comments_url": "https://dev.to/kumuda/i-built-a-pixel-hero-that-nags-me-to-drink-water-and-runs-100-on-my-laptop-2ilb#comments",
+      "published_at": "2026-10-23T13:30:44Z",
+      "summary": "This is a submission for the Hacktoberfest Open-Source AI Challenge Week 3: Slow and Steady ...",
+      "tags": [
+        "ai"
+      ]
+    },
+    {
+      "title": "How close can pure FP get to C?",
+      "url": "https://rtfeldman.com/fp-vs-c",
+      "source": "Lobsters",
+      "points": 36,
+      "comments": 9,
+      "comments_url": "https://lobste.rs/s/7me8wm/how_close_can_pure_fp_get_c",
+      "published_at": "2026-10-23T19:37:22+08:00",
+      "tags": [
+        "misc"
+      ]
+    },
+    {
+      "title": "Introducing Kimi K3.1 Pro",
+      "url": "https://simonwillison.net/2026/Oct/23/kimi-k31-pro/",
+      "source": "Simon Willison",
+      "published_at": "2026-10-24T03:40:54+08:00",
+      "summary": "Introducing Kimi K3.1 Pro Kimi K3.1 Pro landed on the Kimi API today - it's not yet open weights, but Moonshot promise \"Full model weights will be released by Nov 4, 2026\". They're also offering a \"Highspeed\" version that's 2-3x faster, at twice the price (except for input…",
       "tags": [
         "ai",
-        "devtools"
+        "programming"
+      ]
+    },
+    {
+      "title": "Attention people who think UB is fine",
+      "url": "https://blog.habets.se/2026/10/Attention-people-who-think-UB-is-fine.html",
+      "source": "Lobsters",
+      "points": 15,
+      "comments": 9,
+      "comments_url": "https://lobste.rs/s/5xzuff/attention_people_who_think_ub_is_fine",
+      "published_at": "2026-10-24T04:47:58+08:00",
+      "tags": [
+        "programming"
+      ]
+    },
+    {
+      "title": "Quad9 DNS Resolver to exit France",
+      "url": "https://quad9.net/news/blog/au-revoir-france/",
+      "source": "Lobsters",
+      "points": 107,
+      "comments": 11,
+      "comments_url": "https://lobste.rs/s/s0aktw/quad9_dns_resolver_exit_france",
+      "published_at": "2026-10-23T03:47:39+08:00",
+      "tags": [
+        "misc"
+      ]
+    },
+    {
+      "title": "Debunking \"Faster than Rust\": Malicious Benchmarks in Tov",
+      "url": "https://blog.fyralabs.com/debunking-faster-than-rust-malicious-benchmarks-in-tov/",
+      "source": "Lobsters",
+      "points": 36,
+      "comments": 16,
+      "comments_url": "https://lobste.rs/s/gajtrm/debunking_faster_than_rust_malicious",
+      "published_at": "2026-10-23T15:44:09+08:00",
+      "tags": [
+        "ai",
+        "programming"
+      ]
+    },
+    {
+      "title": "What are you doing this weekend?",
+      "url": "https://lobste.rs/s/crqz1g/what_are_you_doing_this_weekend",
+      "source": "Lobsters",
+      "points": 19,
+      "comments": 41,
+      "comments_url": "https://lobste.rs/s/crqz1g/what_are_you_doing_this_weekend",
+      "published_at": "2026-10-23T16:43:10+08:00",
+      "summary": "Feel free to tell what you plan on doing this weekend and even ask for help or feedback. Please keep in mind it’s more than OK to do nothing at all too!",
+      "tags": [
+        "misc"
+      ]
+    },
+    {
+      "title": "LitPivot: Developing research ideas through dynamic contextualization within the literature landscape",
+      "url": "https://huggingface.co/blog/allenai/litpivot",
+      "source": "Hugging Face",
+      "published_at": "2026-10-24T00:15:50+08:00",
+      "tags": [
+        "science"
+      ]
+    },
+    {
+      "title": "We have Traits at Home",
+      "url": "https://www.axelmagn.com/blog/202610-zig-traits/",
+      "source": "Lobsters",
+      "points": 52,
+      "comments": 13,
+      "comments_url": "https://lobste.rs/s/05xrj8/we_have_traits_at_home",
+      "published_at": "2026-10-23T05:52:10+08:00",
+      "tags": [
+        "misc"
+      ]
+    },
+    {
+      "title": "Don't Be a Proxy Between Me and Your AI",
+      "url": "https://dev.to/adamthedeveloper/dont-be-a-proxy-between-me-and-your-ai-mcn",
+      "source": "DEV.to",
+      "points": 66,
+      "comments": 39,
+      "comments_url": "https://dev.to/adamthedeveloper/dont-be-a-proxy-between-me-and-your-ai-mcn#comments",
+      "published_at": "2026-10-22T04:31:09Z",
+      "summary": "I've had this conversation more times than I'd like to admit. I raise a technical question in a...",
+      "tags": [
+        "ai"
+      ]
+    },
+    {
+      "title": "AI Is Winning Literary Awards. The Data Says That's Not What's Happening.",
+      "url": "https://dev.to/james_anderson_h/ai-is-winning-literary-awards-the-data-says-thats-not-whats-happening-179d",
+      "source": "DEV.to",
+      "points": 25,
+      "comments": 5,
+      "comments_url": "https://dev.to/james_anderson_h/ai-is-winning-literary-awards-the-data-says-thats-not-whats-happening-179d#comments",
+      "published_at": "2026-10-23T05:29:29Z",
+      "summary": "The headlines have been impossible to miss. An AI-assisted novel takes a major prize in Japan. AI...",
+      "tags": [
+        "ai"
+      ]
+    },
+    {
+      "title": "5 Steps on How to not loose at a hackathon?",
+      "url": "https://dev.to/sanidhya_at_mlh/5-steps-on-how-to-not-loose-at-a-hackathon-3hd1",
+      "source": "DEV.to",
+      "points": 17,
+      "comments": 2,
+      "comments_url": "https://dev.to/sanidhya_at_mlh/5-steps-on-how-to-not-loose-at-a-hackathon-3hd1#comments",
+      "published_at": "2026-10-23T10:47:46Z",
+      "summary": "In 1999, ten developers gathered to work on cryptographic frameworks, IPv6, and IPsec for OpenBSD, in...",
+      "tags": [
+        "linux"
+      ]
+    },
+    {
+      "title": "Does Your Model Run on AWS Trainium? Look It Up",
+      "url": "https://huggingface.co/blog/torch-neuronx-model-support",
+      "source": "Hugging Face",
+      "published_at": "2026-10-23T08:00:00+08:00",
+      "tags": [
+        "ai"
+      ]
+    },
+    {
+      "title": "Turning Database Grading into RL Rewards: Post-Training Agents with ThinkingBox",
+      "url": "https://huggingface.co/blog/microsoft/thinkingbox-training",
+      "source": "Hugging Face",
+      "published_at": "2026-10-23T06:24:34+08:00",
+      "tags": [
+        "ai"
+      ]
+    },
+    {
+      "title": "DE STAAT - FREEDOM (Official Music Video)",
+      "url": "https://simonwillison.net/2026/Oct/22/de-staat-freedom/",
+      "source": "Simon Willison",
+      "published_at": "2026-10-23T03:42:26+08:00",
+      "summary": "DE STAAT - FREEDOM (Official Music Video) OK well this is a first for me... at 00:44 in this new music video by Dutch alternative rock band De Staat : The visual effects are credited to Matties Grooten of Fake it or Leave it . Via flir on Hacker News Tags: music , ai ,…",
+      "tags": [
+        "ai"
       ]
     }
   ],
   "news_highlights": [
     {
-      "title": "Compromised LiteLLM 1.107.0 on PyPI Installs a Credential Stealer and Backdoor",
-      "url": "https://safedep.io/litellm-pypi-compromise-credential-stealer-backdoor/",
-      "why_it_matters": "The poisoned wheel ran on every Python start and specifically harvested Claude Code, Codex, Cursor and MCP config tokens plus SSH and cloud keys. If any agent setup pulled litellm 1.107.0 on Oct 21, rotate those credentials; 1.106.2 and the rc builds are clean."
+      "title": "Introducing Kimi K3.1 Pro",
+      "url": "https://simonwillison.net/2026/Oct/23/kimi-k31-pro/",
+      "why_it_matters": "Moonshot's new model scores 55 on Artificial Analysis, just behind Claude Opus 5.5, at $2/$10 per million tokens with weights promised by Nov 4. It's an OpenAI-compatible endpoint, so it's a cheap model to try behind coding agents now and possibly run yourself later."
     },
     {
-      "title": "Today's PHP security release, and how we're strengthening security",
-      "url": "https://thephp.foundation/blog/2026/10/21/todays-php-security-release-and-how-were-strengthening-php-security/",
-      "why_it_matters": "Two remote code execution bugs across the whole PHP 8.x line, confirmed against WordPress and Drupal, and a disclosure leak means exploits are already circulating. Any PHP client site needs the patched release now."
+      "title": "Securing our frontier model training environment",
+      "url": "https://openai.com/index/securing-our-frontier-model-training-environment/",
+      "why_it_matters": "OpenAI's red-team agents escaped microVMs, found routes out through DNS and internal services, and talked across sandboxes via CPU cache timing; fixes went to Kata, gVisor and Docker. If you give agents shell access, this is the case for layered sandboxes and tight egress rules, the same idea as today's pick NVIDIA/OpenShell."
     },
     {
-      "title": "Patch the Planet: global response coordination as agents uncover vulnerabilities",
-      "url": "https://openai.com/index/coordinated-disclosure-of-critical-vulnerabilities/",
-      "why_it_matters": "The PHP bugs were found with frontier models, and OpenAI ships a PHP version checker as a Codex skill. It's a concrete sign that agent-driven bug hunting is now producing internet-scale findings, and that more are coming."
+      "title": "Show HN: Corgi, a helpful {agent, terminal} multiplexer",
+      "url": "https://corgi.computer/",
+      "why_it_matters": "A tmux-style terminal built for running Claude Code, Codex, OpenCode and Pi side by side. It shows which agent needs you, what files each one touched, plus worktrees and per-workspace resource use. Worth a look if you juggle several agent sessions on one project."
     },
     {
-      "title": "Claude Duet",
-      "url": "https://claude.com/product/claude-duet",
-      "why_it_matters": "Anthropic's proactive agent (research preview, US Pro/Max, iOS and Android) works on its own cloud computer, sends a morning brief and asks before sending or paying. It shows where always-on assistants are heading beyond chat."
-    },
-    {
-      "title": "The bridge to agent-scale Git infrastructure",
-      "url": "https://github.blog/engineering/architecture-optimization/the-bridge-to-agent-scale-git-infrastructure/",
-      "why_it_matters": "GitHub explains moving almost all repositories to Azure with per-reference quorums and object storage so reads scale independently, infrastructure built for the load that fleets of coding agents put on Git."
+      "title": "Today, we hacked what we'd set out to hack: the iPhone",
+      "url": "https://blog.calif.io/p/iphone",
+      "why_it_matters": "Calif showed a Signal 1-click exploit, iMessage attacks and persistence on iPhone at Hexacon, with details to be released later. For iOS developers, it's a reminder to ship on current SDKs and get users onto the next iOS security update quickly."
     }
   ]
 }

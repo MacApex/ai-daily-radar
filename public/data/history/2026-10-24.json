@@ -1,0 +1,673 @@
+{
+  "sample": false,
+  "generated_at": "2026-10-24T10:14:34+08:00",
+  "date": "2026-10-24",
+  "run": {
+    "trending_observed": 8,
+    "saved": 2,
+    "upgraded": 0,
+    "relocated": 2,
+    "unchanged": 0,
+    "incomplete": 0,
+    "eligible_not_archived": 0,
+    "rejected": 4,
+    "blockers": [
+      "Reconciled the 2026-10-23 run: its archive work (index, MEMORY.md, run-summary.json, RUN_REPORT.md) was complete and consistent on the SSD; no partial files or temp files were left, so nothing was redone. Its failure was on the site-publish side (no 2026-10-23 radar data was published).",
+      "DietrichGebert/ponytail, Graphify-Labs/graphify and luongnv89/claude-howto were not on today's list; their archives stay in the 2026-10-23 folder (other older archives stay where they are).",
+      "git-lfs is not installed; neither new archive contains LFS pointers."
+    ],
+    "archive_folder": "2026-10-24_100918_Asia-Shanghai"
+  },
+  "featured": [
+    {
+      "full_name": "NVIDIA/OpenShell",
+      "url": "https://github.com/NVIDIA/OpenShell",
+      "stars": 18836,
+      "rating": 4,
+      "license": "Apache-2.0",
+      "reason": "Policy-enforced sandbox runtime for coding agents (Claude Code, Codex, OpenCode): kernel-level file/syscall/network confinement, credentials injected only for approved endpoints, formally checked policy changes, plus agent skills (generate-sandbox-policy, openshell-cli, debug-*) and Python/TS/Go/Rust SDKs. Needs Docker/Podman or host virtualization; young 0.1.x release with anonymous telemetry on by default (can be disabled).",
+      "ideas": [
+        "Run Claude Code or Codex in an OpenShell sandbox with `--upload ./src:/workspace/src` against a copy of one of your Android or iOS projects, so the agent can install packages and run builds without touching your real files or secrets.",
+        "Use the bundled generate-sandbox-policy skill to write a network policy that only lets an agent reach GitHub, npm/Maven and your model provider, then watch the denials it logs to see what your agents really try to reach.",
+        "Follow the github-push-access tutorial to give a sandboxed agent push access to one scratch repo with a fine-grained token, as a safer pattern for the unattended jobs behind ai-daily-radar.",
+        "Try the examples/codex-app-server setup to run Codex's app server inside the sandbox and connect your host Codex client to it over the local gateway.",
+        "Learn the policy prover and advisor by proposing a policy change (like a new API host with credentials) and reading what it flags for review before you approve it."
+      ]
+    }
+  ],
+  "archived": [
+    {
+      "full_name": "cloudflare/security-audit-skill",
+      "url": "https://github.com/cloudflare/security-audit-skill",
+      "stars": 42231,
+      "rating": 5,
+      "license": "MIT",
+      "commit_sha": "c1c8a8c1471069fb0e188eeaff69b8e8db6564a8",
+      "status": "relocated",
+      "size_mb": 0.3,
+      "description": "A coding-agent skill for multi-phase security audits with independently verified, machine-readable findings"
+    },
+    {
+      "full_name": "NVIDIA/OpenShell",
+      "url": "https://github.com/NVIDIA/OpenShell",
+      "stars": 18836,
+      "rating": 4,
+      "license": "Apache-2.0",
+      "commit_sha": "f571c8e99c185804c39e837a2b70692e957de327",
+      "status": "saved",
+      "size_mb": 36.2,
+      "description": "OpenShell is the safe, private runtime for autonomous AI agents."
+    },
+    {
+      "full_name": "anthropics/knowledge-work-plugins",
+      "url": "https://github.com/anthropics/knowledge-work-plugins",
+      "stars": 32251,
+      "rating": 3,
+      "license": "Apache-2.0",
+      "commit_sha": "33d3dea41a341b341d4f5da2e8801ae0c89be2b8",
+      "status": "relocated",
+      "size_mb": 7.7,
+      "description": "Open source repository of plugins primarily intended for knowledge workers to use in Claude Cowork"
+    },
+    {
+      "full_name": "SnailSploit/Claude-Red",
+      "url": "https://github.com/SnailSploit/Claude-Red",
+      "stars": 8527,
+      "rating": 3,
+      "license": "MIT",
+      "commit_sha": "a8de813edc9f66f60d44cfe42d47750e89d9930b",
+      "status": "saved",
+      "size_mb": 4.5,
+      "description": "claude-red is a curated library of offensive security skills designed for the Claude skills system. Each skill is a structured SKILL.md file that primes Claude with expert-level methodology for a specific attack surface — from SQLi to shellcode, EDR evasion to exploit development."
+    }
+  ],
+  "trending": [
+    {
+      "rank": 1,
+      "full_name": "cloudflare/security-audit-skill",
+      "url": "https://github.com/cloudflare/security-audit-skill",
+      "stars": 42231,
+      "stars_today": 2716,
+      "language": "JavaScript",
+      "description": "A coding-agent skill for multi-phase security audits with independently verified, machine-readable findings",
+      "decision": "archived",
+      "decision_reason": "Relocated: Cloudflare's six-phase security-audit skill for coding agents: isolated hunters, adversarial verifiers, schema-validated findings.json and coverage ledger. Already archived and featured; upstream still at the archived commit, so the folder was moved into today's run."
+    },
+    {
+      "rank": 2,
+      "full_name": "php/php-src",
+      "url": "https://github.com/php/php-src",
+      "stars": 41575,
+      "stars_today": 716,
+      "language": "C",
+      "description": "The PHP Interpreter",
+      "decision": "rejected",
+      "decision_reason": "Not selected: the PHP interpreter itself; a language runtime, not a coding-agent tool, skill or workflow."
+    },
+    {
+      "rank": 3,
+      "full_name": "anthropics/knowledge-work-plugins",
+      "url": "https://github.com/anthropics/knowledge-work-plugins",
+      "stars": 32251,
+      "stars_today": 635,
+      "language": "Python",
+      "description": "Open source repository of plugins primarily intended for knowledge workers to use in Claude Cowork",
+      "decision": "archived",
+      "decision_reason": "Relocated: Anthropic's role plugins (productivity, sales, PM, legal, finance...) built for Claude Cowork and usable in Claude Code; connector-heavy and aimed at knowledge work rather than coding. Already archived (not featured); upstream unchanged, folder moved into today's run."
+    },
+    {
+      "rank": 4,
+      "full_name": "NVIDIA/OpenShell",
+      "url": "https://github.com/NVIDIA/OpenShell",
+      "stars": 18836,
+      "stars_today": 1119,
+      "language": "Rust",
+      "description": "OpenShell is the safe, private runtime for autonomous AI agents.",
+      "decision": "archived",
+      "decision_reason": "Saved: Policy-enforced sandbox runtime for coding agents (Claude Code, Codex, OpenCode): kernel-level file/syscall/network confinement, credentials injected only for approved endpoints, formally checked policy changes, plus agent skills (generate-sandbox-policy, openshell-cli, debug-*) and Python/TS/Go/Rust SDKs. Needs Docker/Podman or host virtualization; young 0.1.x release with anonymous telemetry on by default (can be disabled)."
+    },
+    {
+      "rank": 5,
+      "full_name": "Renhuai123/ziwei-doushu",
+      "url": "https://github.com/Renhuai123/ziwei-doushu",
+      "stars": 6896,
+      "stars_today": 546,
+      "language": "TypeScript",
+      "description": "紫微斗数开源排盘引擎 — 基于倪海厦《天纪》体系，含完整排盘算法、四化系统、格局知识库、古籍原文数据",
+      "decision": "rejected",
+      "decision_reason": "Not selected: Zi Wei Dou Shu (Chinese astrology) chart engine and knowledge base; not a coding-agent tool, skill or workflow."
+    },
+    {
+      "rank": 6,
+      "full_name": "SnailSploit/Claude-Red",
+      "url": "https://github.com/SnailSploit/Claude-Red",
+      "stars": 8527,
+      "stars_today": 226,
+      "language": "Python",
+      "description": "claude-red is a curated library of offensive security skills designed for the Claude skills system. Each skill is a structured SKILL.md file that primes Claude with expert-level methodology for a specific attack surface — from SQLi to shellcode, EDR evasion to exploit development.",
+      "decision": "archived",
+      "decision_reason": "Saved: Library of 78 offensive-security SKILL.md files (web, API, mobile, cloud, CI/CD, AI security...) for Claude Code and the Claude skills system; dual-use and meant for authorized testing only. Archived because the daily cap had room; overlaps with the already-featured cloudflare/security-audit-skill for Max's defensive needs, so not featured."
+    },
+    {
+      "rank": 7,
+      "full_name": "OpenBMB/VoxCPM",
+      "url": "https://github.com/OpenBMB/VoxCPM",
+      "stars": 40285,
+      "stars_today": 150,
+      "language": "Python",
+      "description": "VoxCPM2: Tokenizer-Free TTS for Multilingual Speech Generation, Creative Voice Design, and True-to-Life Cloning",
+      "decision": "rejected",
+      "decision_reason": "Not selected: tokenizer-free multilingual TTS and voice-cloning model; a speech model, not a coding-agent tool, skill or workflow."
+    },
+    {
+      "rank": 8,
+      "full_name": "nodejs/node",
+      "url": "https://github.com/nodejs/node",
+      "stars": 122893,
+      "stars_today": 66,
+      "language": "JavaScript",
+      "description": "Node.js JavaScript runtime ✨🐢🚀✨",
+      "decision": "rejected",
+      "decision_reason": "Not selected: the Node.js runtime itself; a language runtime, not a coding-agent tool, skill or workflow."
+    }
+  ],
+  "news": [
+    {
+      "title": "Kimi K3.1 Pro and K3.1 Pro Highspeed",
+      "url": "https://www.kimi.ai/blog/kimi-k3-1-pro",
+      "source": "Hacker News",
+      "points": 736,
+      "comments": 461,
+      "comments_url": "https://news.ycombinator.com/item?id=50212065",
+      "published_at": "2026-10-24T00:59:08+08:00",
+      "tags": [
+        "misc"
+      ]
+    },
+    {
+      "title": "Today, we hacked what we'd set out to hack: the iPhone",
+      "url": "https://blog.calif.io/p/iphone",
+      "source": "Hacker News",
+      "points": 752,
+      "comments": 510,
+      "comments_url": "https://news.ycombinator.com/item?id=50211474",
+      "published_at": "2026-10-24T00:21:50+08:00",
+      "tags": [
+        "hardware"
+      ]
+    },
+    {
+      "title": "Now Google says it might use your Gmail and Google Photos data to target ads",
+      "url": "https://www.theverge.com/tech/1017600/google-personal-intelligence-privacy-policy-ads-update",
+      "source": "Hacker News",
+      "points": 284,
+      "comments": 151,
+      "comments_url": "https://news.ycombinator.com/item?id=50214218",
+      "published_at": "2026-10-24T03:34:15+08:00",
+      "tags": [
+        "misc"
+      ]
+    },
+    {
+      "title": "Apple Music 404 Not Found",
+      "url": "https://music.apple.com/this-url-doesnt-exist",
+      "source": "Hacker News",
+      "points": 603,
+      "comments": 194,
+      "comments_url": "https://news.ycombinator.com/item?id=50207910",
+      "published_at": "2026-10-23T20:28:47+08:00",
+      "tags": [
+        "misc"
+      ]
+    },
+    {
+      "title": "Dessa: the most authentic full-duplex speech model ever built",
+      "url": "https://block.xyz/dessa",
+      "source": "Hacker News",
+      "points": 239,
+      "comments": 100,
+      "comments_url": "https://news.ycombinator.com/item?id=50213925",
+      "published_at": "2026-10-24T03:09:54+08:00",
+      "tags": [
+        "ai",
+        "security"
+      ]
+    },
+    {
+      "title": "CVE Tracker",
+      "url": "https://cve.0xosprey.com/",
+      "source": "Hacker News",
+      "points": 110,
+      "comments": 42,
+      "comments_url": "https://news.ycombinator.com/item?id=50215530",
+      "published_at": "2026-10-24T05:21:47+08:00",
+      "tags": [
+        "security"
+      ]
+    },
+    {
+      "title": "Evolving Threat: http2shell is an RCE in node, Python, and more",
+      "url": "https://nitter.click/AikidoSecurity/status/2113759110625906950?__galadriel=lPmlGl9id4oAd5UeBwMhlYKArHyr6lR2IDGujPwB5HV2kQ1aLoPWFd5A9sGuzNcmrp8fUso8qygmHcKTDZ8MNHWqQ3bDJcycV87xp_0VypzQLYj6O_RRHlZuQqj33oASGY2YLSoAiMjeOZN40h7Stf8AG7DPrGZbAPVKUXy36HoMudRbvwF3_r2uYNmfJMhpKzywQDM6Ab8",
+      "source": "Hacker News",
+      "points": 86,
+      "comments": 32,
+      "comments_url": "https://news.ycombinator.com/item?id=50216791",
+      "published_at": "2026-10-24T07:30:17+08:00",
+      "tags": [
+        "programming"
+      ]
+    },
+    {
+      "title": "Local Wikipedia: Wikipedia, but only for things a half hour walk from you",
+      "url": "https://edjefferson.com/localwiki/",
+      "source": "Hacker News",
+      "points": 1252,
+      "comments": 225,
+      "comments_url": "https://news.ycombinator.com/item?id=50202285",
+      "published_at": "2026-10-23T07:01:18+08:00",
+      "tags": [
+        "misc"
+      ]
+    },
+    {
+      "title": "Securing our frontier model training environment",
+      "url": "https://openai.com/index/securing-our-frontier-model-training-environment/",
+      "source": "Hacker News",
+      "points": 76,
+      "comments": 93,
+      "comments_url": "https://news.ycombinator.com/item?id=50214416",
+      "published_at": "2026-10-24T03:50:56+08:00",
+      "tags": [
+        "ai"
+      ]
+    },
+    {
+      "title": "Air Purifiers as White Noise Machines",
+      "url": "https://www.jefftk.com/p/air-purifiers-as-white-noise-machines",
+      "source": "Hacker News",
+      "points": 67,
+      "comments": 96,
+      "comments_url": "https://news.ycombinator.com/item?id=50212507",
+      "published_at": "2026-10-24T01:28:36+08:00",
+      "tags": [
+        "misc"
+      ]
+    },
+    {
+      "title": "Canadians are running out of time to oppose Bill C-22",
+      "url": "https://www.eff.org/deeplinks/2026/10/canadians-are-running-out-time-oppose-dangerous-c-22-surveillance-bill",
+      "source": "Hacker News",
+      "points": 337,
+      "comments": 170,
+      "comments_url": "https://news.ycombinator.com/item?id=50202114",
+      "published_at": "2026-10-23T06:43:19+08:00",
+      "tags": [
+        "misc"
+      ]
+    },
+    {
+      "title": "I turned my TV into a Game Boy Color with a Pokemon town as my home screen",
+      "url": "https://twitter.com/robbietilton/status/2111936458923851923",
+      "source": "Hacker News",
+      "points": 66,
+      "comments": 26,
+      "comments_url": "https://news.ycombinator.com/item?id=50212668",
+      "published_at": "2026-10-24T01:40:22+08:00",
+      "tags": [
+        "misc"
+      ]
+    },
+    {
+      "title": "German court calls Google aerial imagery 'spying'",
+      "url": "https://www.courthousenews.com/german-court-calls-google-aerial-imagery-spying/",
+      "source": "Hacker News",
+      "points": 36,
+      "comments": 19,
+      "comments_url": "https://news.ycombinator.com/item?id=50216142",
+      "published_at": "2026-10-24T06:18:49+08:00",
+      "tags": [
+        "misc"
+      ]
+    },
+    {
+      "title": "No Source Code? No Problem",
+      "url": "https://queue.acm.org/doi/10.1145/945131.945155",
+      "source": "Hacker News",
+      "points": 34,
+      "comments": 30,
+      "comments_url": "https://news.ycombinator.com/item?id=50214994",
+      "published_at": "2026-10-24T04:38:06+08:00",
+      "tags": [
+        "misc"
+      ]
+    },
+    {
+      "title": "Rune 1.3: adds TypeScript, a Helix editor, Kitty graphics and OSC-7501",
+      "url": "https://rune.build/blog/rune-1-3-release",
+      "source": "Hacker News",
+      "points": 40,
+      "comments": 9,
+      "comments_url": "https://news.ycombinator.com/item?id=50214325",
+      "published_at": "2026-10-24T03:42:01+08:00",
+      "tags": [
+        "programming",
+        "devtools"
+      ]
+    },
+    {
+      "title": "Reforming English Spelling",
+      "url": "https://blog.oup.com/2026/10/reforming-english-spelling/",
+      "source": "Hacker News",
+      "points": 27,
+      "comments": 84,
+      "comments_url": "https://news.ycombinator.com/item?id=50211084",
+      "published_at": "2026-10-23T23:56:06+08:00",
+      "tags": [
+        "misc"
+      ]
+    },
+    {
+      "title": "A whirlwind tour of systemd-nspawn containers (2025)",
+      "url": "https://quantum5.ca/2025/03/22/whirlwind-tour-of-systemd-nspawn-containers/",
+      "source": "Hacker News",
+      "points": 35,
+      "comments": 7,
+      "comments_url": "https://news.ycombinator.com/item?id=50214983",
+      "published_at": "2026-10-24T04:37:12+08:00",
+      "tags": [
+        "misc"
+      ]
+    },
+    {
+      "title": "Show HN: Corgi, a helpful {agent, terminal} multiplexer",
+      "url": "https://corgi.computer/",
+      "source": "Hacker News",
+      "points": 38,
+      "comments": 6,
+      "comments_url": "https://news.ycombinator.com/item?id=50214373",
+      "published_at": "2026-10-24T03:46:38+08:00",
+      "tags": [
+        "ai",
+        "devtools"
+      ]
+    },
+    {
+      "title": "Software is slow because of bad design, not slow languages",
+      "url": "https://www.seangoedecke.com/software-is-slow-because-of-bad-design-not-slow-languages/",
+      "source": "Lobsters",
+      "points": 37,
+      "comments": 44,
+      "comments_url": "https://lobste.rs/s/hd72yt/software_is_slow_because_bad_design_not",
+      "published_at": "2026-10-23T20:58:10+08:00",
+      "tags": [
+        "misc"
+      ]
+    },
+    {
+      "title": "Mark Zuckerberg Pushed Meta to Shield Him from California's Proposed Wealth Tax",
+      "url": "https://www.nytimes.com/2026/10/21/technology/mark-zuckerberg-meta-california-wealth-tax.html",
+      "source": "Hacker News",
+      "points": 15,
+      "comments": 12,
+      "comments_url": "https://news.ycombinator.com/item?id=50217587",
+      "published_at": "2026-10-24T09:35:49+08:00",
+      "tags": [
+        "misc"
+      ]
+    },
+    {
+      "title": "DNS: A Replacement for Finger",
+      "url": "https://altchan.org/sh/42",
+      "source": "Hacker News",
+      "points": 25,
+      "comments": 19,
+      "comments_url": "https://news.ycombinator.com/item?id=50213791",
+      "published_at": "2026-10-24T03:00:04+08:00",
+      "tags": [
+        "misc"
+      ]
+    },
+    {
+      "title": "The glorious @xkcdRandom Zig builtin",
+      "url": "https://ochagavia.nl/blog/the-glorious-@xkcdrandom-zig-builtin/",
+      "source": "Lobsters",
+      "points": 42,
+      "comments": 8,
+      "comments_url": "https://lobste.rs/s/5hoqzj/glorious_xkcdrandom_zig_builtin",
+      "published_at": "2026-10-23T22:30:57+08:00",
+      "tags": [
+        "programming"
+      ]
+    },
+    {
+      "title": "Please don't mess with links",
+      "url": "https://maurycyz.com/misc/real_links/",
+      "source": "Lobsters",
+      "points": 87,
+      "comments": 21,
+      "comments_url": "https://lobste.rs/s/mucay8/please_don_t_mess_with_links",
+      "published_at": "2026-10-23T08:37:10+08:00",
+      "tags": [
+        "misc"
+      ]
+    },
+    {
+      "title": "Docker is weird",
+      "url": "https://codeandcake.dev/posts/2026-10-22-docker-is-weird",
+      "source": "Lobsters",
+      "points": 95,
+      "comments": 43,
+      "comments_url": "https://lobste.rs/s/xsz9sc/docker_is_weird",
+      "published_at": "2026-10-23T04:09:22+08:00",
+      "tags": [
+        "devtools"
+      ]
+    },
+    {
+      "title": "Quick Study",
+      "url": "https://simonwillison.net/2026/Oct/23/quick-study-painter/",
+      "source": "Simon Willison",
+      "published_at": "2026-10-24T05:35:13+08:00",
+      "summary": "Tool: Quick Study Prompt to Claude Opus 5.5 High : Build an artifact where you open a photo and it rapidly (in a few seconds) paints a version of that photo using a canvas element and simulated paintbrush See also my previous experiment getting Claude Fable to simulate a…",
+      "tags": [
+        "ai"
+      ]
+    },
+    {
+      "title": "I Built a Pixel Hero That Nags Me to Drink Water (and Runs 100% on My Laptop)",
+      "url": "https://dev.to/kumuda/i-built-a-pixel-hero-that-nags-me-to-drink-water-and-runs-100-on-my-laptop-2ilb",
+      "source": "DEV.to",
+      "points": 45,
+      "comments": 4,
+      "comments_url": "https://dev.to/kumuda/i-built-a-pixel-hero-that-nags-me-to-drink-water-and-runs-100-on-my-laptop-2ilb#comments",
+      "published_at": "2026-10-23T13:30:44Z",
+      "summary": "This is a submission for the Hacktoberfest Open-Source AI Challenge Week 3: Slow and Steady ...",
+      "tags": [
+        "ai"
+      ]
+    },
+    {
+      "title": "How close can pure FP get to C?",
+      "url": "https://rtfeldman.com/fp-vs-c",
+      "source": "Lobsters",
+      "points": 36,
+      "comments": 9,
+      "comments_url": "https://lobste.rs/s/7me8wm/how_close_can_pure_fp_get_c",
+      "published_at": "2026-10-23T19:37:22+08:00",
+      "tags": [
+        "misc"
+      ]
+    },
+    {
+      "title": "Introducing Kimi K3.1 Pro",
+      "url": "https://simonwillison.net/2026/Oct/23/kimi-k31-pro/",
+      "source": "Simon Willison",
+      "published_at": "2026-10-24T03:40:54+08:00",
+      "summary": "Introducing Kimi K3.1 Pro Kimi K3.1 Pro landed on the Kimi API today - it's not yet open weights, but Moonshot promise \"Full model weights will be released by Nov 4, 2026\". They're also offering a \"Highspeed\" version that's 2-3x faster, at twice the price (except for input…",
+      "tags": [
+        "ai",
+        "programming"
+      ]
+    },
+    {
+      "title": "Attention people who think UB is fine",
+      "url": "https://blog.habets.se/2026/10/Attention-people-who-think-UB-is-fine.html",
+      "source": "Lobsters",
+      "points": 15,
+      "comments": 9,
+      "comments_url": "https://lobste.rs/s/5xzuff/attention_people_who_think_ub_is_fine",
+      "published_at": "2026-10-24T04:47:58+08:00",
+      "tags": [
+        "programming"
+      ]
+    },
+    {
+      "title": "Quad9 DNS Resolver to exit France",
+      "url": "https://quad9.net/news/blog/au-revoir-france/",
+      "source": "Lobsters",
+      "points": 107,
+      "comments": 11,
+      "comments_url": "https://lobste.rs/s/s0aktw/quad9_dns_resolver_exit_france",
+      "published_at": "2026-10-23T03:47:39+08:00",
+      "tags": [
+        "misc"
+      ]
+    },
+    {
+      "title": "Debunking \"Faster than Rust\": Malicious Benchmarks in Tov",
+      "url": "https://blog.fyralabs.com/debunking-faster-than-rust-malicious-benchmarks-in-tov/",
+      "source": "Lobsters",
+      "points": 36,
+      "comments": 16,
+      "comments_url": "https://lobste.rs/s/gajtrm/debunking_faster_than_rust_malicious",
+      "published_at": "2026-10-23T15:44:09+08:00",
+      "tags": [
+        "ai",
+        "programming"
+      ]
+    },
+    {
+      "title": "What are you doing this weekend?",
+      "url": "https://lobste.rs/s/crqz1g/what_are_you_doing_this_weekend",
+      "source": "Lobsters",
+      "points": 19,
+      "comments": 41,
+      "comments_url": "https://lobste.rs/s/crqz1g/what_are_you_doing_this_weekend",
+      "published_at": "2026-10-23T16:43:10+08:00",
+      "summary": "Feel free to tell what you plan on doing this weekend and even ask for help or feedback. Please keep in mind it’s more than OK to do nothing at all too!",
+      "tags": [
+        "misc"
+      ]
+    },
+    {
+      "title": "LitPivot: Developing research ideas through dynamic contextualization within the literature landscape",
+      "url": "https://huggingface.co/blog/allenai/litpivot",
+      "source": "Hugging Face",
+      "published_at": "2026-10-24T00:15:50+08:00",
+      "tags": [
+        "science"
+      ]
+    },
+    {
+      "title": "We have Traits at Home",
+      "url": "https://www.axelmagn.com/blog/202610-zig-traits/",
+      "source": "Lobsters",
+      "points": 52,
+      "comments": 13,
+      "comments_url": "https://lobste.rs/s/05xrj8/we_have_traits_at_home",
+      "published_at": "2026-10-23T05:52:10+08:00",
+      "tags": [
+        "misc"
+      ]
+    },
+    {
+      "title": "Don't Be a Proxy Between Me and Your AI",
+      "url": "https://dev.to/adamthedeveloper/dont-be-a-proxy-between-me-and-your-ai-mcn",
+      "source": "DEV.to",
+      "points": 66,
+      "comments": 39,
+      "comments_url": "https://dev.to/adamthedeveloper/dont-be-a-proxy-between-me-and-your-ai-mcn#comments",
+      "published_at": "2026-10-22T04:31:09Z",
+      "summary": "I've had this conversation more times than I'd like to admit. I raise a technical question in a...",
+      "tags": [
+        "ai"
+      ]
+    },
+    {
+      "title": "AI Is Winning Literary Awards. The Data Says That's Not What's Happening.",
+      "url": "https://dev.to/james_anderson_h/ai-is-winning-literary-awards-the-data-says-thats-not-whats-happening-179d",
+      "source": "DEV.to",
+      "points": 25,
+      "comments": 5,
+      "comments_url": "https://dev.to/james_anderson_h/ai-is-winning-literary-awards-the-data-says-thats-not-whats-happening-179d#comments",
+      "published_at": "2026-10-23T05:29:29Z",
+      "summary": "The headlines have been impossible to miss. An AI-assisted novel takes a major prize in Japan. AI...",
+      "tags": [
+        "ai"
+      ]
+    },
+    {
+      "title": "5 Steps on How to not loose at a hackathon?",
+      "url": "https://dev.to/sanidhya_at_mlh/5-steps-on-how-to-not-loose-at-a-hackathon-3hd1",
+      "source": "DEV.to",
+      "points": 17,
+      "comments": 2,
+      "comments_url": "https://dev.to/sanidhya_at_mlh/5-steps-on-how-to-not-loose-at-a-hackathon-3hd1#comments",
+      "published_at": "2026-10-23T10:47:46Z",
+      "summary": "In 1999, ten developers gathered to work on cryptographic frameworks, IPv6, and IPsec for OpenBSD, in...",
+      "tags": [
+        "linux"
+      ]
+    },
+    {
+      "title": "Does Your Model Run on AWS Trainium? Look It Up",
+      "url": "https://huggingface.co/blog/torch-neuronx-model-support",
+      "source": "Hugging Face",
+      "published_at": "2026-10-23T08:00:00+08:00",
+      "tags": [
+        "ai"
+      ]
+    },
+    {
+      "title": "Turning Database Grading into RL Rewards: Post-Training Agents with ThinkingBox",
+      "url": "https://huggingface.co/blog/microsoft/thinkingbox-training",
+      "source": "Hugging Face",
+      "published_at": "2026-10-23T06:24:34+08:00",
+      "tags": [
+        "ai"
+      ]
+    },
+    {
+      "title": "DE STAAT - FREEDOM (Official Music Video)",
+      "url": "https://simonwillison.net/2026/Oct/22/de-staat-freedom/",
+      "source": "Simon Willison",
+      "published_at": "2026-10-23T03:42:26+08:00",
+      "summary": "DE STAAT - FREEDOM (Official Music Video) OK well this is a first for me... at 00:44 in this new music video by Dutch alternative rock band De Staat : The visual effects are credited to Matties Grooten of Fake it or Leave it . Via flir on Hacker News Tags: music , ai ,…",
+      "tags": [
+        "ai"
+      ]
+    }
+  ],
+  "news_highlights": [
+    {
+      "title": "Introducing Kimi K3.1 Pro",
+      "url": "https://simonwillison.net/2026/Oct/23/kimi-k31-pro/",
+      "why_it_matters": "Moonshot's new model scores 55 on Artificial Analysis, just behind Claude Opus 5.5, at $2/$10 per million tokens with weights promised by Nov 4. It's an OpenAI-compatible endpoint, so it's a cheap model to try behind coding agents now and possibly run yourself later."
+    },
+    {
+      "title": "Securing our frontier model training environment",
+      "url": "https://openai.com/index/securing-our-frontier-model-training-environment/",
+      "why_it_matters": "OpenAI's red-team agents escaped microVMs, found routes out through DNS and internal services, and talked across sandboxes via CPU cache timing; fixes went to Kata, gVisor and Docker. If you give agents shell access, this is the case for layered sandboxes and tight egress rules, the same idea as today's pick NVIDIA/OpenShell."
+    },
+    {
+      "title": "Show HN: Corgi, a helpful {agent, terminal} multiplexer",
+      "url": "https://corgi.computer/",
+      "why_it_matters": "A tmux-style terminal built for running Claude Code, Codex, OpenCode and Pi side by side. It shows which agent needs you, what files each one touched, plus worktrees and per-workspace resource use. Worth a look if you juggle several agent sessions on one project."
+    },
+    {
+      "title": "Today, we hacked what we'd set out to hack: the iPhone",
+      "url": "https://blog.calif.io/p/iphone",
+      "why_it_matters": "Calif showed a Signal 1-click exploit, iMessage attacks and persistence on iPhone at Hexacon, with details to be released later. For iOS developers, it's a reminder to ship on current SDKs and get users onto the next iOS security update quickly."
+    }
+  ]
+}
