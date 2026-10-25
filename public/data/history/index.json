@@ -1,5 +1,13 @@
 [
   {
+    "date": "2026-10-25",
+    "featured": [
+      "pbakaus/impeccable",
+      "Nutlope/hallmark"
+    ],
+    "archived_count": 5
+  },
+  {
     "date": "2026-10-24",
     "featured": [
       "NVIDIA/OpenShell"
