@@ -1,5 +1,12 @@
 [
   {
+    "date": "2026-10-26",
+    "featured": [
+      "AgriciDaniel/claude-seo"
+    ],
+    "archived_count": 5
+  },
+  {
     "date": "2026-10-25",
     "featured": [
       "pbakaus/impeccable",
