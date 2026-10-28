@@ -1,0 +1,746 @@
+{
+  "sample": false,
+  "generated_at": "2026-10-28T10:11:46+08:00",
+  "date": "2026-10-28",
+  "run": {
+    "trending_observed": 11,
+    "saved": 2,
+    "upgraded": 3,
+    "relocated": 0,
+    "unchanged": 0,
+    "incomplete": 0,
+    "eligible_not_archived": 2,
+    "rejected": 4,
+    "blockers": [
+      "Yesterday's (2026-10-27) archive run was complete on the SSD (index, MEMORY.md, run-summary.json, RUN_REPORT.md); nothing was redone.",
+      "Daily cap: 7 eligible repos today; the 5 highest-rated were archived (3 relocations, all upgraded in place, plus 2 new clones). affaan-m/ECC (4) and makecindy/cindy (3) were logged as eligible, not archived (daily cap) without downloading.",
+      "affaan-m/ECC tied at 4 with today's picks and lost the tie-break on overlap with obra/superpowers. Its only earlier snapshot (76aaa77d, 2026-10-17) is in the volume Trash, which this session cannot list or read (Operation not permitted), so it was neither restored nor re-cloned. To archive it later, restore that folder from the Trash in Finder first.",
+      "makecindy/cindy was not upgraded or relocated (daily cap); its 2026-10-26 snapshot (7c5bd270, incomplete for 5 Git LFS payloads) stays in the 2026-10-26 folder.",
+      "JetBrains/thinkrail crossed the 3,000-star minimum today (4,075 verified, up from 2,980 yesterday), so it was evaluated and archived for the first time.",
+      "obra/superpowers was moved out of the 2026-10-17 folder (its archive since then); the upgrade removed 7 files dropped upstream (238 to 231 tracked files) and re-verified the rest.",
+      "pbakaus/impeccable's .gitattributes sets *.cmd to eol=crlf; the upgraded archive keeps the exact Git blob bytes (23 files restored from blob after checkout), verified against their Git oids.",
+      "Rewrote the git-links/.git pointers of the relocated archives so they point to the relocated object store (metadata outside source/ only).",
+      "nightly-labs/openbot (2,503 stars) was on today's list but below 3,000 stars, so not eligible.",
+      "git-lfs is still not installed on this Mac; none of today's archived trees contain LFS pointers."
+    ],
+    "archive_folder": "2026-10-28_100540_Asia-Shanghai"
+  },
+  "featured": [
+    {
+      "full_name": "elayadesign/ai-design-skills",
+      "url": "https://github.com/elayadesign/ai-design-skills",
+      "stars": 9489,
+      "rating": 4,
+      "license": "MIT",
+      "reason": "A design-skill collection for Claude Code, Codex, Cursor and Windsurf; today it holds one detailed landing-page-design SKILL.md: intake questions, page structure, layout choice, conversion copy, SEO/AEO and a strict visual system (type scale, spacing, radius, motion curve, states, ship checklist). MIT, plain Markdown, nothing to install.",
+      "ideas": [
+        "Build a one-offer landing page for your own job search (one primary action: book a call) by running the skill's Part A intake and seven-part output format before any code, then let the agent build it section by section.",
+        "Fork the repo and rewrite the 'make it yours' design-values section with your own fonts, colors, spacing and motion, so every agent-built client page starts from your house style.",
+        "Run its B10 ship requirements and quick checklist against two past client sites (hotel, e-commerce) and fix what's missing: 404 page, og:image, skip link, form validation, alt text.",
+        "Turn the B11 tagline reveal (word-by-word IntersectionObserver, cubic-bezier(0.22,1,0.36,1), prefers-reduced-motion fallback) into a reusable React component for a new portfolio project, keeping ai-daily-radar's design as is.",
+        "Paste the SKILL.md into a Codex AGENTS.md and give the same landing-page brief to it, impeccable and hallmark, then compare the three results to learn which rules actually change the output."
+      ]
+    },
+    {
+      "full_name": "JetBrains/thinkrail",
+      "url": "https://github.com/JetBrains/thinkrail",
+      "stars": 4075,
+      "rating": 4,
+      "license": "Apache-2.0",
+      "reason": "JetBrains incubator agentic IDE around the pi coding agent: each task in its own git-worktree workspace, Monaco editor, terminals, concurrent pi chats with cost readout, living SPEC.md graph the agent maintains, portable Agent Skills read in place, MCP servers with per-call approval and a GitHub PR/CI flow. Crossed 3,000 stars today (4,075). Apache-2.0; desktop app needs macOS 14+ and a JetBrains AI or pi provider login.",
+      "ideas": [
+        "Install the macOS desktop app on the Mac mini, open one Android or Swift project, and run two pi sessions in separate git-worktree workspaces on the same task, then merge the better branch.",
+        "Have the agent build a SPEC.md graph for a client app with its spec tools, so the intent behind screens and APIs survives between sessions and new agents can pick it up.",
+        "Point it at the Agent Skills you already keep (CLI-Anything and the archived skill repos) and check which ones pi reads in place without changes.",
+        "Use its PR flow on a repo with GitHub Actions: open a PR described from the plan, watch CI in the topbar, and hand a failing check back to the agent to fix.",
+        "Connect one or two MCP servers through pi's mcp.json with per-call approval, and try the before/after UI mockup comments as a lighter way to review agent-made UI changes; it's an early incubator release, so keep it off production repos at first."
+      ]
+    }
+  ],
+  "archived": [
+    {
+      "full_name": "obra/superpowers",
+      "url": "https://github.com/obra/superpowers",
+      "stars": 306482,
+      "rating": 5,
+      "license": "MIT",
+      "commit_sha": "2ce8aa15d05bd57213e6f746f953aafb7ded7a8b",
+      "status": "upgraded",
+      "size_mb": 1.5,
+      "description": "An agentic skills framework & software development methodology that works."
+    },
+    {
+      "full_name": "pbakaus/impeccable",
+      "url": "https://github.com/pbakaus/impeccable",
+      "stars": 90639,
+      "rating": 5,
+      "license": "Apache-2.0",
+      "commit_sha": "d34c87e1a00989ae8dbdd7f6b30b70f23319e860",
+      "status": "upgraded",
+      "size_mb": 82.1,
+      "description": "The design language that makes your AI harness better at design."
+    },
+    {
+      "full_name": "elayadesign/ai-design-skills",
+      "url": "https://github.com/elayadesign/ai-design-skills",
+      "stars": 9489,
+      "rating": 4,
+      "license": "MIT",
+      "commit_sha": "ded7efc9d5c02761c41a03caf3b78f9259ab8828",
+      "status": "saved",
+      "size_mb": 0.0,
+      "description": ""
+    },
+    {
+      "full_name": "Nutlope/hallmark",
+      "url": "https://github.com/Nutlope/hallmark",
+      "stars": 39105,
+      "rating": 4,
+      "license": "MIT",
+      "commit_sha": "6033bab2a8051b5454552d2e8e6cb8f27c483a42",
+      "status": "upgraded",
+      "size_mb": 63.0,
+      "description": "Anti-AI-slop design skill for Claude Code, Cursor, and Codex."
+    },
+    {
+      "full_name": "JetBrains/thinkrail",
+      "url": "https://github.com/JetBrains/thinkrail",
+      "stars": 4075,
+      "rating": 4,
+      "license": "Apache-2.0",
+      "commit_sha": "9066aa9f4bb5c0dcb681235b4b936e8be73651f7",
+      "status": "saved",
+      "size_mb": 20.3,
+      "description": "Vibe code with pi in a lightweight, real IDE that customises itself around the way you work — The Vibe You Need"
+    }
+  ],
+  "trending": [
+    {
+      "rank": 1,
+      "full_name": "elayadesign/ai-design-skills",
+      "url": "https://github.com/elayadesign/ai-design-skills",
+      "stars": 9489,
+      "stars_today": 1395,
+      "language": null,
+      "description": "",
+      "decision": "archived",
+      "decision_reason": "Saved: A design-skill collection for Claude Code, Codex, Cursor and Windsurf; today it holds one detailed landing-page-design SKILL.md: intake questions, page structure, layout choice, conversion copy, SEO/AEO and a strict visual system (type scale, spacing, radius, motion curve, states, ship checklist). MIT, plain Markdown, nothing to install."
+    },
+    {
+      "rank": 2,
+      "full_name": "Nutlope/hallmark",
+      "url": "https://github.com/Nutlope/hallmark",
+      "stars": 39105,
+      "stars_today": 2830,
+      "language": "CSS",
+      "description": "Anti-AI-slop design skill for Claude Code, Cursor, and Codex.",
+      "decision": "archived",
+      "decision_reason": "Upgraded: Together AI's anti-AI-slop design skill for Claude Code, Codex, Cursor and OpenCode (48 themes, sloplint at eight widths, report-only audit, content-preserving redesign). Already archived and featured on 2026-10-25; upstream moved to a new commit, so the folder was moved into today's run and upgraded in place with an incremental fetch (no re-clone)."
+    },
+    {
+      "rank": 3,
+      "full_name": "nightly-labs/openbot",
+      "url": "https://github.com/nightly-labs/openbot",
+      "stars": 2503,
+      "stars_today": 777,
+      "language": "TypeScript",
+      "description": "A local-first desktop workspace for persistent AI teammates. Run Codex, Claude, and Grok with dedicated workspaces, task queues, file sharing, browser control, and agent-to-agent collaboration.",
+      "decision": "rejected",
+      "decision_reason": "Not eligible: 2,503 verified stars, below the 3,000-star minimum (local-first desktop workspace for Codex/Claude/Grok teammates)."
+    },
+    {
+      "rank": 4,
+      "full_name": "obra/superpowers",
+      "url": "https://github.com/obra/superpowers",
+      "stars": 306482,
+      "stars_today": 617,
+      "language": "Shell",
+      "description": "An agentic skills framework & software development methodology that works.",
+      "decision": "archived",
+      "decision_reason": "Upgraded: Agentic skills framework and development methodology for Claude Code, Codex and other agents (brainstorm, plan, TDD, subagent-driven development, review). Archived on 2026-10-17 and featured that day; back on Trending with a new upstream commit, so the folder was moved from 2026-10-17 into today's run and upgraded in place with an incremental fetch (no re-clone)."
+    },
+    {
+      "rank": 5,
+      "full_name": "pbakaus/impeccable",
+      "url": "https://github.com/pbakaus/impeccable",
+      "stars": 90639,
+      "stars_today": 1449,
+      "language": "Rust",
+      "description": "The design language that makes your AI harness better at design.",
+      "decision": "archived",
+      "decision_reason": "Upgraded: Design skill for AI coding agents (24 commands, PRODUCT.md/DESIGN.md context, deterministic detector rules). Already archived and featured on 2026-10-25; upstream moved to a new commit, so the folder was moved into today's run and upgraded in place with an incremental fetch (no re-clone)."
+    },
+    {
+      "rank": 6,
+      "full_name": "makecindy/cindy",
+      "url": "https://github.com/makecindy/cindy",
+      "stars": 7514,
+      "stars_today": 1465,
+      "language": "TypeScript",
+      "description": "Consider it done. The open-source AI agent that works out of the box · 想到，就能做到。开源、开箱即用的 AI Agent。",
+      "decision": "eligible_not_archived",
+      "decision_reason": "Open-source desktop/mobile agent client (Electron + Expo) that runs Claude Code and Codex harnesses with shared memory, skills, MCP and automation. Upstream moved to a new commit, but rated 3 it ranked below today's five archive picks, so it was not upgraded; the 2026-10-26 snapshot stays where it is."
+    },
+    {
+      "rank": 7,
+      "full_name": "gitroomhq/postiz-app",
+      "url": "https://github.com/gitroomhq/postiz-app",
+      "stars": 39431,
+      "stars_today": 951,
+      "language": "TypeScript",
+      "description": "📨 The ultimate agentic social media scheduling tool 🤖",
+      "decision": "rejected",
+      "decision_reason": "Not selected: social-media scheduling platform (AGPL) with agent/MCP integrations; a publishing product rather than a tool, skill or workflow for coding agents."
+    },
+    {
+      "rank": 8,
+      "full_name": "affaan-m/ECC",
+      "url": "https://github.com/affaan-m/ECC",
+      "stars": 290934,
+      "stars_today": 1165,
+      "language": "JavaScript",
+      "description": "The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.",
+      "decision": "eligible_not_archived",
+      "decision_reason": "Agent harness (skills, instincts, memory, verification, security) with native Claude Code and Codex plugin paths; large and opinionated, so review before installing. Tied at 4 with today's picks; ties broken by coding-agent usefulness and overlap with the already-archived harness obra/superpowers (upgraded today), so logged without downloading. Its 2026-10-17 snapshot is in the volume Trash, which this session cannot read (Operation not permitted), so it could not be restored instead of re-cloned."
+    },
+    {
+      "rank": 9,
+      "full_name": "HKUDS/DeepTutor",
+      "url": "https://github.com/HKUDS/DeepTutor",
+      "stars": 46035,
+      "stars_today": 1598,
+      "language": "Python",
+      "description": "DeepTutor: Lifelong Personalized Tutoring. https://deeptutor.info/.",
+      "decision": "rejected",
+      "decision_reason": "Not selected: personalized AI tutoring application (lifelong learning agent); an end-user learning app, not a tool, skill or workflow for coding agents."
+    },
+    {
+      "rank": 10,
+      "full_name": "JetBrains/thinkrail",
+      "url": "https://github.com/JetBrains/thinkrail",
+      "stars": 4075,
+      "stars_today": 1204,
+      "language": "TypeScript",
+      "description": "Vibe code with pi in a lightweight, real IDE that customises itself around the way you work — The Vibe You Need",
+      "decision": "archived",
+      "decision_reason": "Saved: JetBrains incubator agentic IDE around the pi coding agent: each task in its own git-worktree workspace, Monaco editor, terminals, concurrent pi chats with cost readout, living SPEC.md graph the agent maintains, portable Agent Skills read in place, MCP servers with per-call approval and a GitHub PR/CI flow. Crossed 3,000 stars today (4,075). Apache-2.0; desktop app needs macOS 14+ and a JetBrains AI or pi provider login."
+    },
+    {
+      "rank": 11,
+      "full_name": "togg53192-cmd/jailbreaks",
+      "url": "https://github.com/togg53192-cmd/jailbreaks",
+      "stars": 5642,
+      "stars_today": 902,
+      "language": null,
+      "description": "LIST OF ALL MY JAILBREAKS",
+      "decision": "rejected",
+      "decision_reason": "Not selected: a list of LLM jailbreak prompts; not a coding-agent tool and not something to feed to Max's agents."
+    }
+  ],
+  "news": [
+    {
+      "title": "Genie 4",
+      "url": "https://deepmind.google/blog/genie-4-a-new-generation-of-world-simulation/",
+      "source": "Hacker News",
+      "points": 746,
+      "comments": 443,
+      "comments_url": "https://news.ycombinator.com/item?id=50261319",
+      "published_at": "2026-10-28T00:06:01+08:00",
+      "tags": [
+        "misc"
+      ]
+    },
+    {
+      "title": "Ghostty 1.4",
+      "url": "https://ghostty.org/docs/install/release-notes/1-4-0",
+      "source": "Hacker News",
+      "points": 785,
+      "comments": 236,
+      "comments_url": "https://news.ycombinator.com/item?id=50261998",
+      "published_at": "2026-10-28T00:51:22+08:00",
+      "tags": [
+        "release"
+      ]
+    },
+    {
+      "title": "US Government is hiding a secret court ruling about how it spies on Americans",
+      "url": "https://www.wired.com/story/the-us-government-is-hiding-a-secret-court-ruling-about-how-it-spies-on-americans/",
+      "source": "Hacker News",
+      "points": 798,
+      "comments": 291,
+      "comments_url": "https://news.ycombinator.com/item?id=50259604",
+      "published_at": "2026-10-27T22:06:42+08:00",
+      "tags": [
+        "misc"
+      ]
+    },
+    {
+      "title": "New 14‑inch MacBook Pro with M6",
+      "url": "https://www.apple.com/in/newsroom/2026/10/apple-introduces-the-new-14-inch-macbook-pro-with-m6/",
+      "source": "Hacker News",
+      "points": 287,
+      "comments": 364,
+      "comments_url": "https://news.ycombinator.com/item?id=50261352",
+      "published_at": "2026-10-28T00:08:32+08:00",
+      "tags": [
+        "misc"
+      ]
+    },
+    {
+      "title": "Discord will soon let anyone find public server messages through Google",
+      "url": "https://discord.com/blog/making-content-from-discoverable-servers-easier-to-discover",
+      "source": "Hacker News",
+      "points": 255,
+      "comments": 135,
+      "comments_url": "https://news.ycombinator.com/item?id=50263854",
+      "published_at": "2026-10-28T02:44:17+08:00",
+      "tags": [
+        "misc"
+      ]
+    },
+    {
+      "title": "Tailscale SSH: Investigation and remediation update",
+      "url": "https://tailscale.com/ssh-investigation-update",
+      "source": "Hacker News",
+      "points": 198,
+      "comments": 108,
+      "comments_url": "https://news.ycombinator.com/item?id=50264857",
+      "published_at": "2026-10-28T03:55:21+08:00",
+      "tags": [
+        "misc"
+      ]
+    },
+    {
+      "title": "Survival LLM: AI assistant and emergency library that runs on your own computer",
+      "url": "https://www.brangus.io/survival-llm",
+      "source": "Hacker News",
+      "points": 193,
+      "comments": 103,
+      "comments_url": "https://news.ycombinator.com/item?id=50264853",
+      "published_at": "2026-10-28T03:55:06+08:00",
+      "tags": [
+        "ai",
+        "programming"
+      ]
+    },
+    {
+      "title": "New iMac with M6",
+      "url": "https://www.apple.com/imac/",
+      "source": "Hacker News",
+      "points": 310,
+      "comments": 379,
+      "comments_url": "https://news.ycombinator.com/item?id=50258538",
+      "published_at": "2026-10-27T21:02:02+08:00",
+      "tags": [
+        "misc"
+      ]
+    },
+    {
+      "title": "Early progress on accelerating drug development with Claude",
+      "url": "https://www.anthropic.com/research/early-progress-drug-development",
+      "source": "Hacker News",
+      "points": 134,
+      "comments": 117,
+      "comments_url": "https://news.ycombinator.com/item?id=50265609",
+      "published_at": "2026-10-28T04:50:42+08:00",
+      "tags": [
+        "ai"
+      ]
+    },
+    {
+      "title": "Python's experimental JIT to be removed",
+      "url": "https://lwn.net/SubscriberLink/1102102/0c00e4d550f25f8c/",
+      "source": "Hacker News",
+      "points": 451,
+      "comments": 236,
+      "comments_url": "https://news.ycombinator.com/item?id=50257419",
+      "published_at": "2026-10-27T19:17:57+08:00",
+      "tags": [
+        "programming"
+      ]
+    },
+    {
+      "title": "Wikipedia's Cleanup of AI-Generated Content",
+      "url": "https://spectrum.ieee.org/wikipedia-wikiproject-ai-writing-cleanup",
+      "source": "Hacker News",
+      "points": 455,
+      "comments": 209,
+      "comments_url": "https://news.ycombinator.com/item?id=50257326",
+      "published_at": "2026-10-27T19:08:15+08:00",
+      "tags": [
+        "ai"
+      ]
+    },
+    {
+      "title": "Classification of Finite Simple Groups Formalized in Lean",
+      "url": "https://cfsg.axiommath.ai/",
+      "source": "Hacker News",
+      "points": 173,
+      "comments": 44,
+      "comments_url": "https://news.ycombinator.com/item?id=50261647",
+      "published_at": "2026-10-28T00:29:02+08:00",
+      "tags": [
+        "programming"
+      ]
+    },
+    {
+      "title": "Raspberry Pi Zero 3W and Pi 4 Model A spotted in device trees",
+      "url": "https://bret.dk/raspberry-pi-zero-3-w-pi-4-model-a/",
+      "source": "Hacker News",
+      "points": 100,
+      "comments": 36,
+      "comments_url": "https://news.ycombinator.com/item?id=50265594",
+      "published_at": "2026-10-28T04:48:49+08:00",
+      "tags": [
+        "ai",
+        "hardware"
+      ]
+    },
+    {
+      "title": "Reviewers rarely talk about reliability. Owners bring it up twice as often",
+      "url": "https://www.bettascore.ai/research/reliability-reviewers-vs-owners",
+      "source": "Hacker News",
+      "points": 60,
+      "comments": 63,
+      "comments_url": "https://news.ycombinator.com/item?id=50266780",
+      "published_at": "2026-10-28T06:31:15+08:00",
+      "tags": [
+        "misc"
+      ]
+    },
+    {
+      "title": "Introducing LFM3: Every Modality for Specialized Intelligence",
+      "url": "https://www.liquid.ai/blog/lfm3",
+      "source": "Hacker News",
+      "points": 123,
+      "comments": 50,
+      "comments_url": "https://news.ycombinator.com/item?id=50262229",
+      "published_at": "2026-10-28T01:04:50+08:00",
+      "tags": [
+        "misc"
+      ]
+    },
+    {
+      "title": "Four Months of Zig",
+      "url": "https://gracefulliberty.com/articles/four-months-of-zig/",
+      "source": "Hacker News",
+      "points": 76,
+      "comments": 46,
+      "comments_url": "https://news.ycombinator.com/item?id=50265128",
+      "published_at": "2026-10-28T04:13:27+08:00",
+      "tags": [
+        "programming"
+      ]
+    },
+    {
+      "title": "Hex Raises $100M",
+      "url": "https://hex.tech/blog/hex-new-era/",
+      "source": "Hacker News",
+      "points": 50,
+      "comments": 28,
+      "comments_url": "https://news.ycombinator.com/item?id=50265413",
+      "published_at": "2026-10-28T04:36:38+08:00",
+      "tags": [
+        "misc"
+      ]
+    },
+    {
+      "title": "Three TLS Bugs in GoAhead",
+      "url": "https://foxio.io/blog/choose-your-backend-three-tls-bugs-in-goahead",
+      "source": "Hacker News",
+      "points": 61,
+      "comments": 14,
+      "comments_url": "https://news.ycombinator.com/item?id=50263701",
+      "published_at": "2026-10-28T02:33:48+08:00",
+      "tags": [
+        "misc"
+      ]
+    },
+    {
+      "title": "Stratagems #32: The AI Logged a Withdrawal. P Took It as Proof.",
+      "url": "https://dev.to/xulingfeng/stratagems-32-the-ai-logged-a-withdrawal-p-took-it-as-proof-2jo2",
+      "source": "DEV.to",
+      "points": 57,
+      "comments": 15,
+      "comments_url": "https://dev.to/xulingfeng/stratagems-32-the-ai-logged-a-withdrawal-p-took-it-as-proof-2jo2#comments",
+      "published_at": "2026-10-27T16:46:17Z",
+      "summary": "Make empty what is already empty. Let doubt breed inside doubt. — The 36 Stratagems, The Empty Fort...",
+      "tags": [
+        "ai"
+      ]
+    },
+    {
+      "title": "A fast and secure tar parser for the Rust ecosystem",
+      "url": "https://astral.sh/blog/tar-codec",
+      "source": "Lobsters",
+      "points": 46,
+      "comments": 10,
+      "comments_url": "https://lobste.rs/s/q7arzy/fast_secure_tar_parser_for_rust_ecosystem",
+      "published_at": "2026-10-28T00:59:30+08:00",
+      "tags": [
+        "programming"
+      ]
+    },
+    {
+      "title": "Expanding our partnership with GSA to bring Claude to all levels of government",
+      "url": "https://www.anthropic.com/news/expanding-partnership-gsa",
+      "source": "Hacker News",
+      "points": 20,
+      "comments": 12,
+      "comments_url": "https://news.ycombinator.com/item?id=50266701",
+      "published_at": "2026-10-28T06:23:37+08:00",
+      "tags": [
+        "ai"
+      ]
+    },
+    {
+      "title": "Radio-tagged Monarch butterflies",
+      "url": "https://news.vt.edu/articles/2026/10/cmi-monarchs.html",
+      "source": "Hacker News",
+      "points": 29,
+      "comments": 9,
+      "comments_url": "https://news.ycombinator.com/item?id=50262982",
+      "published_at": "2026-10-28T01:48:15+08:00",
+      "tags": [
+        "hardware"
+      ]
+    },
+    {
+      "title": "Shitty Screenshare",
+      "url": "http://shittyscreenshare.com",
+      "source": "Lobsters",
+      "points": 75,
+      "comments": 31,
+      "comments_url": "https://lobste.rs/s/cxxcik/shitty_screenshare",
+      "published_at": "2026-10-27T08:12:16+08:00",
+      "tags": [
+        "misc"
+      ]
+    },
+    {
+      "title": "Game Boy Color on My Conference Badge",
+      "url": "https://simonwillison.net/2026/Oct/27/game-boy-color-on-my-conference-badge/",
+      "source": "Simon Willison",
+      "published_at": "2026-10-28T03:34:18+08:00",
+      "summary": "Game Boy Color on My Conference Badge I'm at GitHub Universe this week and, similar to last year , the conference badge is a full-blown color screen computer. I've been hacking around with it again, and then I ran into with Steve Francia... who worked with Gemini to get a full…",
+      "tags": [
+        "ai",
+        "devtools"
+      ]
+    },
+    {
+      "title": "1,447 emoji? We'll do it live",
+      "url": "https://planetpeanut.studio/post/2026/10/27/pidgin-emoji-twitch",
+      "source": "Lobsters",
+      "points": 29,
+      "comments": 2,
+      "comments_url": "https://lobste.rs/s/qd0hc9/1_447_emoji_we_ll_do_it_live",
+      "published_at": "2026-10-28T02:28:06+08:00",
+      "tags": [
+        "misc"
+      ]
+    },
+    {
+      "title": "The Exponential Time Hypothesis Is False [pdf]",
+      "url": "https://files.mathhelm.org/files/733/The-Exponential-Time-Hypothesis-is-False-October-25-2026.pdf",
+      "source": "Lobsters",
+      "points": 50,
+      "comments": 28,
+      "comments_url": "https://lobste.rs/s/pq6ju6/exponential_time_hypothesis_is_false_pdf",
+      "published_at": "2026-10-27T08:39:50+08:00",
+      "tags": [
+        "misc"
+      ]
+    },
+    {
+      "title": "Compile-Time Dependent Types",
+      "url": "https://thenumb.at/Syl-Intro/",
+      "source": "Lobsters",
+      "points": 23,
+      "comments": 9,
+      "comments_url": "https://lobste.rs/s/d09iy3/compile_time_dependent_types",
+      "published_at": "2026-10-27T22:40:12+08:00",
+      "tags": [
+        "ai"
+      ]
+    },
+    {
+      "title": "Build specialized multimodal models with LFM3",
+      "url": "https://huggingface.co/blog/LiquidAI/lfm3",
+      "source": "Hugging Face",
+      "published_at": "2026-10-28T01:16:52+08:00",
+      "tags": [
+        "ai"
+      ]
+    },
+    {
+      "title": "Can we trust LLMs to judge whether a research idea is novel?",
+      "url": "https://huggingface.co/blog/allenai/novelty-bench",
+      "source": "Hugging Face",
+      "published_at": "2026-10-28T00:12:42+08:00",
+      "tags": [
+        "ai",
+        "science"
+      ]
+    },
+    {
+      "title": "Oldest GUI application that still runs on Windows 11",
+      "url": "https://blog.enlyth.com/posts/oldest-windows-gui-app-win-11/",
+      "source": "Lobsters",
+      "points": 69,
+      "comments": 11,
+      "comments_url": "https://lobste.rs/s/rwubks/oldest_gui_application_still_runs_on",
+      "published_at": "2026-10-27T03:49:43+08:00",
+      "tags": [
+        "misc"
+      ]
+    },
+    {
+      "title": "Why is it so expensive to send an email?",
+      "url": "https://evancz.dev/why-is-it-so-expensive-to-send-an-email",
+      "source": "Lobsters",
+      "points": 65,
+      "comments": 47,
+      "comments_url": "https://lobste.rs/s/ryjnyi/why_is_it_so_expensive_send_email",
+      "published_at": "2026-10-26T21:25:41+08:00",
+      "tags": [
+        "misc"
+      ]
+    },
+    {
+      "title": "Websites Should Be Printable",
+      "url": "https://brennenputh.me/blog/printable-websites/",
+      "source": "Lobsters",
+      "points": 83,
+      "comments": 23,
+      "comments_url": "https://lobste.rs/s/olnqh2/websites_should_be_printable",
+      "published_at": "2026-10-26T20:02:58+08:00",
+      "tags": [
+        "misc"
+      ]
+    },
+    {
+      "title": "CSS-Tricks has a new owner",
+      "url": "https://css-tricks.com/css-tricks-has-a-new-owner/",
+      "source": "Lobsters",
+      "points": 108,
+      "comments": 2,
+      "comments_url": "https://lobste.rs/s/6ntoqr/css_tricks_has_new_owner",
+      "published_at": "2026-10-27T01:55:19+08:00",
+      "tags": [
+        "web"
+      ]
+    },
+    {
+      "title": "A stackless floodfill automation (2023)",
+      "url": "https://t3x.org/files/floodfill.pdf",
+      "source": "Lobsters",
+      "points": 22,
+      "comments": 2,
+      "comments_url": "https://lobste.rs/s/tp0zlk/stackless_floodfill_automation_2023",
+      "published_at": "2026-10-27T22:56:00+08:00",
+      "tags": [
+        "misc"
+      ]
+    },
+    {
+      "title": "The Most Embarrassing Private Key in Web PKI History",
+      "url": "https://dev.to/varshithvhegde/the-most-embarrassing-private-key-in-web-pki-history-f9b",
+      "source": "DEV.to",
+      "points": 24,
+      "comments": 8,
+      "comments_url": "https://dev.to/varshithvhegde/the-most-embarrassing-private-key-in-web-pki-history-f9b#comments",
+      "published_at": "2026-10-27T05:56:07Z",
+      "summary": "The strange thing about this incident is that the certificates looked normal. They had familiar CA...",
+      "tags": [
+        "web",
+        "devtools"
+      ]
+    },
+    {
+      "title": "MCP Token Cost: I Cut My MCP Server From 15 Tools to 4",
+      "url": "https://dev.to/aws-builders/mcp-token-cost-i-cut-my-mcp-server-from-15-tools-to-4-cek",
+      "source": "DEV.to",
+      "points": 34,
+      "comments": 38,
+      "comments_url": "https://dev.to/aws-builders/mcp-token-cost-i-cut-my-mcp-server-from-15-tools-to-4-cek#comments",
+      "published_at": "2026-10-26T12:52:18Z",
+      "summary": "I rebuilt a real AWS cost-triage MCP server from 15 tools to 4. Same account, same question, 7 tool calls down to 2, schemas 88% smaller.",
+      "tags": [
+        "ai"
+      ]
+    },
+    {
+      "title": "GPT-6.1 Terra",
+      "url": "https://simonwillison.net/2026/Oct/26/gpt-61-terra/",
+      "source": "Simon Willison",
+      "published_at": "2026-10-27T07:53:07+08:00",
+      "summary": "GPT-6.1 Terra It's always interesting to note which aspects of a new model are emphasized in the release announcement. In the case of GPT-6.1 Terra, OpenAI went with visual reasoning and computer use: We’re introducing GPT-6.1 Terra , a fast, efficient model that combines…",
+      "tags": [
+        "ai"
+      ]
+    },
+    {
+      "title": "Quoting Jason Koebler",
+      "url": "https://simonwillison.net/2026/Oct/26/jason-koebler/",
+      "source": "Simon Willison",
+      "published_at": "2026-10-27T03:00:25+08:00",
+      "summary": "Because big tech platforms essentially do not have customer support and make it impossible for their users to contact a human, many people experiencing run-of-the-mill tech problems have turned to ChatGPT. And, increasingly, ChatGPT is telling people that have normal tech…",
+      "tags": [
+        "ai"
+      ]
+    },
+    {
+      "title": "webframe: evaluated as a scraper and a sandbox",
+      "url": "https://simonwillison.net/2026/Oct/26/webframe-evaluation/",
+      "source": "Simon Willison",
+      "published_at": "2026-10-27T00:15:00+08:00",
+      "summary": "Research: webframe: evaluated as a scraper and a sandbox webframe is a neat little project from Jeff Lindsay which lets you \"run a web page like a program\" - you point it at a URL or file and it executes it in a hidden headless web view and outputs console.log() to standard…",
+      "tags": [
+        "web",
+        "science",
+        "programming"
+      ]
+    },
+    {
+      "title": "Human-in-the-Loop Agents in Pure Dart: Genkit, MCP and an Approval Gate on Cloud Run",
+      "url": "https://dev.to/gde/human-in-the-loop-agents-in-pure-dart-genkit-mcp-and-an-approval-gate-on-cloud-run-4gmc",
+      "source": "DEV.to",
+      "points": 8,
+      "comments": 4,
+      "comments_url": "https://dev.to/gde/human-in-the-loop-agents-in-pure-dart-genkit-mcp-and-an-approval-gate-on-cloud-run-4gmc#comments",
+      "published_at": "2026-10-27T09:53:26Z",
+      "summary": "1. The problem: an agent that can spend money Most agent demos stop at \"the model called a...",
+      "tags": [
+        "ai"
+      ]
+    }
+  ],
+  "news_highlights": [
+    {
+      "title": "MCP Token Cost: I Cut My MCP Server From 15 Tools to 4",
+      "url": "https://dev.to/aws-builders/mcp-token-cost-i-cut-my-mcp-server-from-15-tools-to-4-cek",
+      "why_it_matters": "A real MCP server rebuilt from 15 tools to 4: tool calls for the same question dropped from 7 to 2 and schemas shrank 88%. Concrete numbers to apply when you design MCP servers for Claude Code or Codex."
+    },
+    {
+      "title": "GPT-6.1 Terra",
+      "url": "https://simonwillison.net/2026/Oct/26/gpt-61-terra/",
+      "why_it_matters": "Simon Willison's notes on OpenAI's new GPT-6.1 Terra model and what its launch post chooses to emphasize. A quick read before deciding whether to try it in your coding-agent setup."
+    },
+    {
+      "title": "Genie 4",
+      "url": "https://deepmind.google/blog/genie-4-a-new-generation-of-world-simulation/",
+      "why_it_matters": "Google DeepMind's new world-simulation model was the top story on Hacker News today (746 points). Worth tracking if you're interested in AI-generated interactive 3D and game worlds."
+    },
+    {
+      "title": "Python's experimental JIT to be removed",
+      "url": "https://lwn.net/SubscriberLink/1102102/0c00e4d550f25f8c/",
+      "why_it_matters": "LWN reports that CPython's experimental JIT is being removed (451 points, 236 comments on Hacker News). Don't plan Python tooling around JIT speedups."
+    },
+    {
+      "title": "Wikipedia's Cleanup of AI-Generated Content",
+      "url": "https://spectrum.ieee.org/wikipedia-wikiproject-ai-writing-cleanup",
+      "why_it_matters": "Wikipedia editors are working to clean up AI-written content (455 points on Hacker News). A reminder that AI-written text gets checked, so have agents cite their sources and edit their own copy."
+    }
+  ]
+}

@@ -1,5 +1,13 @@
 [
   {
+    "date": "2026-10-28",
+    "featured": [
+      "elayadesign/ai-design-skills",
+      "JetBrains/thinkrail"
+    ],
+    "archived_count": 5
+  },
+  {
     "date": "2026-10-27",
     "featured": [
       "NVIDIA/SkillSpector",
