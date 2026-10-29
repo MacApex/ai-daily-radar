@@ -1,5 +1,12 @@
 [
   {
+    "date": "2026-10-29",
+    "featured": [
+      "expo/skills"
+    ],
+    "archived_count": 5
+  },
+  {
     "date": "2026-10-28",
     "featured": [
       "elayadesign/ai-design-skills",
