@@ -1,0 +1,522 @@
+{
+  "sample": false,
+  "generated_at": "2026-10-31T10:12:20+08:00",
+  "date": "2026-10-31",
+  "run": {
+    "trending_observed": 0,
+    "saved": 0,
+    "upgraded": 0,
+    "relocated": 0,
+    "unchanged": 0,
+    "incomplete": 0,
+    "eligible_not_archived": 0,
+    "rejected": 0,
+    "blockers": [
+      "Mac mini (maximas-Mac-mini.local) shell could not spawn processes (spawn /bin/zsh EAGAIN, 7 attempts ~10:05-10:20 CST); SSD mount could not be verified, so the 2026-10-31 Trending archive did not run and is pending. News-only publish."
+    ],
+    "archive_folder": ""
+  },
+  "featured": [],
+  "archived": [],
+  "trending": [],
+  "news": [
+    {
+      "title": "AI isn't replacing SREs, it's deskilling them",
+      "url": "https://newsletter.signoz.io/p/ai-isnt-replacing-sres-its-deskilling",
+      "source": "Hacker News",
+      "points": 512,
+      "comments": 385,
+      "comments_url": "https://news.ycombinator.com/item?id=50305693",
+      "published_at": "2026-10-30T23:52:18+08:00",
+      "tags": [
+        "ai"
+      ]
+    },
+    {
+      "title": "Through Captain Jean-Luc Picard, Patrick Stewart taught us the measure of a man",
+      "url": "https://www.bostonglobe.com/2026/10/29/metro/patrick-stewart-picard-star-trek-the-next-generation/",
+      "source": "Hacker News",
+      "points": 218,
+      "comments": 130,
+      "comments_url": "https://news.ycombinator.com/item?id=50309647",
+      "published_at": "2026-10-31T04:23:30+08:00",
+      "tags": [
+        "misc"
+      ]
+    },
+    {
+      "title": "Northflank Breached",
+      "url": "https://status.northflank.com",
+      "source": "Hacker News",
+      "points": 366,
+      "comments": 275,
+      "comments_url": "https://news.ycombinator.com/item?id=50305025",
+      "published_at": "2026-10-30T23:10:31+08:00",
+      "tags": [
+        "misc"
+      ]
+    },
+    {
+      "title": "Linode Security Incident",
+      "url": "https://status.linode.com/incidents/nt58zhx3pmgm",
+      "source": "Hacker News",
+      "points": 152,
+      "comments": 81,
+      "comments_url": "https://news.ycombinator.com/item?id=50310687",
+      "published_at": "2026-10-31T05:57:40+08:00",
+      "tags": [
+        "security"
+      ]
+    },
+    {
+      "title": "Backdoor in Claude Code for VS Code extension on the Cursor Marketplace",
+      "url": "https://phorion.io/blog/offical-claude-code-vsx-compromise/",
+      "source": "Hacker News",
+      "points": 786,
+      "comments": 491,
+      "comments_url": "https://news.ycombinator.com/item?id=50300683",
+      "published_at": "2026-10-30T15:09:12+08:00",
+      "tags": [
+        "ai"
+      ]
+    },
+    {
+      "title": "My favourite PowerMac is a Nintendo Wii",
+      "url": "https://virtuallyfun.com/2026/10/29/my-favourite-powermac-is-a-nintendo-wii/",
+      "source": "Hacker News",
+      "points": 250,
+      "comments": 65,
+      "comments_url": "https://news.ycombinator.com/item?id=50307190",
+      "published_at": "2026-10-31T01:25:15+08:00",
+      "tags": [
+        "misc"
+      ]
+    },
+    {
+      "title": "The $6.3B Binance hack was pulled off in just 20 minutes",
+      "url": "https://www.wired.com/story/the-dollar63-billion-binance-hack-was-pulled-off-in-just-20-minutes/",
+      "source": "Hacker News",
+      "points": 325,
+      "comments": 220,
+      "comments_url": "https://news.ycombinator.com/item?id=50303172",
+      "published_at": "2026-10-30T20:50:01+08:00",
+      "tags": [
+        "misc"
+      ]
+    },
+    {
+      "title": "Bunny CDN Security Incident",
+      "url": "https://status.bunny.net/incidents/p6gf1by9kr7m",
+      "source": "Hacker News",
+      "points": 203,
+      "comments": 40,
+      "comments_url": "https://news.ycombinator.com/item?id=50308697",
+      "published_at": "2026-10-31T03:05:22+08:00",
+      "tags": [
+        "security"
+      ]
+    },
+    {
+      "title": "Show HN: A working Nintendo in ~1GB of Qwen weights",
+      "url": "https://github.com/dbreunig/nesformer",
+      "source": "Hacker News",
+      "points": 196,
+      "comments": 112,
+      "comments_url": "https://news.ycombinator.com/item?id=50306442",
+      "published_at": "2026-10-31T00:40:22+08:00",
+      "tags": [
+        "ai"
+      ]
+    },
+    {
+      "title": "The federated code forge",
+      "url": "https://tangled.org/blog/forge/",
+      "source": "Hacker News",
+      "points": 236,
+      "comments": 78,
+      "comments_url": "https://news.ycombinator.com/item?id=50305573",
+      "published_at": "2026-10-30T23:44:29+08:00",
+      "tags": [
+        "misc"
+      ]
+    },
+    {
+      "title": "Florilegium: Procedural Flowers in LaTeX",
+      "url": "https://github.com/kevinraymond/florilegium",
+      "source": "Hacker News",
+      "points": 220,
+      "comments": 36,
+      "comments_url": "https://news.ycombinator.com/item?id=50305637",
+      "published_at": "2026-10-30T23:48:12+08:00",
+      "tags": [
+        "misc"
+      ]
+    },
+    {
+      "title": "Infinite Mac: BeOS",
+      "url": "https://blog.persistent.info/2026/10/infinite-mac-beos.html",
+      "source": "Hacker News",
+      "points": 106,
+      "comments": 40,
+      "comments_url": "https://news.ycombinator.com/item?id=50309029",
+      "published_at": "2026-10-31T03:30:09+08:00",
+      "tags": [
+        "misc"
+      ]
+    },
+    {
+      "title": "AO3 Down for Maintenance",
+      "url": "https://www.otwstatus.org",
+      "source": "Hacker News",
+      "points": 94,
+      "comments": 22,
+      "comments_url": "https://news.ycombinator.com/item?id=50310258",
+      "published_at": "2026-10-31T05:17:23+08:00",
+      "tags": [
+        "misc"
+      ]
+    },
+    {
+      "title": "The oldest ice disappears and the Stone Age emerges from it",
+      "url": "https://www.sciencenorway.no/archaeology-climate-culture/the-oldest-ice-is-disappearing-the-stone-age-is-emerging-from-the-melting-ice/2713921",
+      "source": "Hacker News",
+      "points": 94,
+      "comments": 34,
+      "comments_url": "https://news.ycombinator.com/item?id=50309266",
+      "published_at": "2026-10-31T03:51:33+08:00",
+      "tags": [
+        "science"
+      ]
+    },
+    {
+      "title": "Azure's Weakest Link – Five Full Cross-Tenant Compromises",
+      "url": "https://www.binarysecurity.no/posts/2026/10/one-root-case",
+      "source": "Hacker News",
+      "points": 268,
+      "comments": 53,
+      "comments_url": "https://news.ycombinator.com/item?id=50301854",
+      "published_at": "2026-10-30T18:06:15+08:00",
+      "tags": [
+        "misc"
+      ]
+    },
+    {
+      "title": "Show HN: To Honor Sir Patrick Stewart, Enjoy the TNG Episode Guessing Game",
+      "url": "https://tng.episodle.com/",
+      "source": "Hacker News",
+      "points": 59,
+      "comments": 21,
+      "comments_url": "https://news.ycombinator.com/item?id=50311686",
+      "published_at": "2026-10-31T07:51:24+08:00",
+      "tags": [
+        "misc"
+      ]
+    },
+    {
+      "title": "Cisco gives engineer unlimited AI tokens to rewrite legacy code",
+      "url": "https://fortune.com/2026/10/30/cisco-president-jeetu-patel-gen-z-27-year-old-unlimited-ai-tokens-rewrite-legacy-code-entry-level-jobs/",
+      "source": "Hacker News",
+      "points": 112,
+      "comments": 117,
+      "comments_url": "https://news.ycombinator.com/item?id=50304122",
+      "published_at": "2026-10-30T22:08:20+08:00",
+      "tags": [
+        "ai"
+      ]
+    },
+    {
+      "title": "Jules Verne's Lost Novel",
+      "url": "https://blue-continuum.com/verne-paris",
+      "source": "Hacker News",
+      "points": 83,
+      "comments": 19,
+      "comments_url": "https://news.ycombinator.com/item?id=50309314",
+      "published_at": "2026-10-31T03:55:10+08:00",
+      "tags": [
+        "misc"
+      ]
+    },
+    {
+      "title": "sanstun: A sans-IO, parallel-friendly WireGuard implementation in Rust",
+      "url": "https://www.firezone.dev/blog/introducing-sanstun",
+      "source": "Hacker News",
+      "points": 63,
+      "comments": 14,
+      "comments_url": "https://news.ycombinator.com/item?id=50310398",
+      "published_at": "2026-10-31T05:30:00+08:00",
+      "tags": [
+        "programming"
+      ]
+    },
+    {
+      "title": "Backdoors in Claude Code for VS, Cursor official extensions",
+      "url": "https://cyberplace.social/@GossiTheDog/117528831681803563",
+      "source": "Lobsters",
+      "points": 142,
+      "comments": 38,
+      "comments_url": "https://lobste.rs/s/ttp7aq/backdoors_claude_code_for_vs_cursor",
+      "published_at": "2026-10-30T19:04:55+08:00",
+      "tags": [
+        "ai"
+      ]
+    },
+    {
+      "title": "How do you take a picture of a black hole?",
+      "url": "https://www.quantamagazine.org/how-do-you-take-a-picture-of-a-black-hole-20261029/",
+      "source": "Hacker News",
+      "points": 87,
+      "comments": 65,
+      "comments_url": "https://news.ycombinator.com/item?id=50301717",
+      "published_at": "2026-10-30T17:49:02+08:00",
+      "tags": [
+        "misc"
+      ]
+    },
+    {
+      "title": "My open source project is brand new and already has contributors. Here's what I did.",
+      "url": "https://dev.to/nathan_tarbert/my-open-source-project-is-brand-new-and-already-has-contributors-heres-what-i-did-3fb4",
+      "source": "DEV.to",
+      "points": 60,
+      "comments": 11,
+      "comments_url": "https://dev.to/nathan_tarbert/my-open-source-project-is-brand-new-and-already-has-contributors-heres-what-i-did-3fb4#comments",
+      "published_at": "2026-10-30T16:03:47Z",
+      "summary": "In the spirit of Hacktoberfest, with it being the last day of October, I wanted to share my story...",
+      "tags": [
+        "programming"
+      ]
+    },
+    {
+      "title": "Do At-Proto Users Know This Is Public?",
+      "url": "https://melaniekat.com/blog/public-on-pds/",
+      "source": "Lobsters",
+      "points": 79,
+      "comments": 19,
+      "comments_url": "https://lobste.rs/s/htgcuc/do_at_proto_users_know_this_is_public",
+      "published_at": "2026-10-30T19:22:43+08:00",
+      "tags": [
+        "misc"
+      ]
+    },
+    {
+      "title": "No, npm, “estee” is not a typo of “testem”",
+      "url": "https://smoores.dev/post/no_npm_estee_is_not_a_typo/",
+      "source": "Lobsters",
+      "points": 27,
+      "comments": 19,
+      "comments_url": "https://lobste.rs/s/xudbqx/no_npm_estee_is_not_typo_testem",
+      "published_at": "2026-10-30T23:01:56+08:00",
+      "tags": [
+        "programming"
+      ]
+    },
+    {
+      "title": "dbreunig/nesformer",
+      "url": "https://simonwillison.net/2026/Oct/30/nesformer/",
+      "source": "Simon Willison",
+      "published_at": "2026-10-31T05:59:22+08:00",
+      "summary": "dbreunig/nesformer Inspired by qwenputer by Divyansh Agrawal, Drew Breunig baked a working emulator for a Nintendo Entertainment System 6502 CPU into the weights of Qwen3.5-4B. You can now play NES ROMs such as Super Mario Bros (very slowly) running inside Qwen! In a comment on…",
+      "tags": [
+        "ai",
+        "hardware"
+      ]
+    },
+    {
+      "title": "How curl was accidentally Turing-complete for nine months",
+      "url": "https://seriot.ch/computation/curl.html",
+      "source": "Lobsters",
+      "points": 70,
+      "comments": 6,
+      "comments_url": "https://lobste.rs/s/f4aqog/how_curl_was_accidentally_turing",
+      "published_at": "2026-10-30T15:24:01+08:00",
+      "tags": [
+        "misc"
+      ]
+    },
+    {
+      "title": "If you love a website, back it up",
+      "url": "http://blog.mistys-internet.website/post/2026/10/29/if-you-love-a-website-back-it-up/",
+      "source": "Lobsters",
+      "points": 75,
+      "comments": 21,
+      "comments_url": "https://lobste.rs/s/6ole9g/if_you_love_website_back_it_up",
+      "published_at": "2026-10-30T09:29:00+08:00",
+      "tags": [
+        "misc"
+      ]
+    },
+    {
+      "title": "London meetup",
+      "url": "https://lobste.rs/s/dsrruj/london_meetup",
+      "source": "Lobsters",
+      "points": 60,
+      "comments": 45,
+      "comments_url": "https://lobste.rs/s/dsrruj/london_meetup",
+      "published_at": "2026-10-30T04:56:43+08:00",
+      "summary": "Hi everyone, I recently saw a post about an NYC lobsters meetup, and am wondering how many people here could make it to a London meetup. If more than a couple of people here are based in London and can make it, I'll organise one in central London. If you could also let me know…",
+      "tags": [
+        "misc"
+      ]
+    },
+    {
+      "title": "nemotron-halloween",
+      "url": "https://huggingface.co/blog/nvidia/nemotron-halloween",
+      "source": "Hugging Face",
+      "published_at": "2026-10-31T01:57:24+08:00",
+      "tags": [
+        "misc"
+      ]
+    },
+    {
+      "title": "What are you doing this weekend?",
+      "url": "https://lobste.rs/s/u7dsbx/what_are_you_doing_this_weekend",
+      "source": "Lobsters",
+      "points": 19,
+      "comments": 36,
+      "comments_url": "https://lobste.rs/s/u7dsbx/what_are_you_doing_this_weekend",
+      "published_at": "2026-10-30T17:55:20+08:00",
+      "summary": "Feel free to tell what you plan on doing this weekend and even ask for help or feedback. Please keep in mind it’s more than OK to do nothing at all too!",
+      "tags": [
+        "misc"
+      ]
+    },
+    {
+      "title": "Shared password manager for families?",
+      "url": "https://lobste.rs/s/eccbci/shared_password_manager_for_families",
+      "source": "Lobsters",
+      "points": 52,
+      "comments": 58,
+      "comments_url": "https://lobste.rs/s/eccbci/shared_password_manager_for_families",
+      "published_at": "2026-10-29T22:39:51+08:00",
+      "summary": "Long story short, I need to have a bunch of shared accounts with family for finance and insurance and stuff, mostly for the sake of family members who are getting old and need help keeping things organized. So the requirements are: * Shared over long distances; just having each…",
+      "tags": [
+        "misc"
+      ]
+    },
+    {
+      "title": "Ghost in the Shell: Can a Log File Hijack an AI?",
+      "url": "https://dev.to/gramli/ghost-in-the-shell-can-a-log-file-hijack-an-ai-3gk",
+      "source": "DEV.to",
+      "points": 68,
+      "comments": 62,
+      "comments_url": "https://dev.to/gramli/ghost-in-the-shell-can-a-log-file-hijack-an-ai-3gk#comments",
+      "published_at": "2026-10-29T07:02:39Z",
+      "summary": "This week's Hacktoberfest theme is Ghost in the Machine. Unfortunately, I don't have enough time to...",
+      "tags": [
+        "ai"
+      ]
+    },
+    {
+      "title": "MoE Offloading Isn’t Always Faster: I Tested 5 Models on a 16GB GPU",
+      "url": "https://dev.to/sizzlebop/moe-offloading-isnt-always-faster-i-tested-5-models-on-a-16gb-gpu-498a",
+      "source": "DEV.to",
+      "points": 19,
+      "comments": 4,
+      "comments_url": "https://dev.to/sizzlebop/moe-offloading-isnt-always-faster-i-tested-5-models-on-a-16gb-gpu-498a#comments",
+      "published_at": "2026-10-30T14:04:55Z",
+      "summary": "I do a lot of experimenting with local language models, and I just ended up going down a bit of a...",
+      "tags": [
+        "ai",
+        "hardware"
+      ]
+    },
+    {
+      "title": "How hard is it to check for whitespace?",
+      "url": "https://serce.me/posts/2026-10-30-how-hard-is-it-to-check-for-whitespace",
+      "source": "Lobsters",
+      "points": 11,
+      "comments": 2,
+      "comments_url": "https://lobste.rs/s/1pmuy7/how_hard_is_it_check_for_whitespace",
+      "published_at": "2026-10-31T06:25:49+08:00",
+      "tags": [
+        "misc"
+      ]
+    },
+    {
+      "title": "Shrinking NixOS Ram footprint and resource requirements to the bare minimum",
+      "url": "https://lowendspirit.com/discussion/11543/shrinking-nixos-ram-footprint-and-resource-requirements-to-the-bare-minimum",
+      "source": "Lobsters",
+      "points": 14,
+      "comments": 6,
+      "comments_url": "https://lobste.rs/s/o1z9mm/shrinking_nixos_ram_footprint_resource",
+      "published_at": "2026-10-30T23:04:44+08:00",
+      "tags": [
+        "misc"
+      ]
+    },
+    {
+      "title": "No Human Will Ever Write Code Better Than LLMs? Better at What?",
+      "url": "https://dev.to/dannwaneri/no-human-will-ever-write-code-better-than-llms-better-at-what-1dme",
+      "source": "DEV.to",
+      "points": 49,
+      "comments": 39,
+      "comments_url": "https://dev.to/dannwaneri/no-human-will-ever-write-code-better-than-llms-better-at-what-1dme#comments",
+      "published_at": "2026-10-29T09:34:19Z",
+      "summary": "A tweet went around saying: \"No human will ever write code better than LLMs. Accept this fact, stop...",
+      "tags": [
+        "ai"
+      ]
+    },
+    {
+      "title": "API credits benefit for eligible ChatGPT subscriptions",
+      "url": "https://simonwillison.net/2026/Oct/29/api-credits/",
+      "source": "Simon Willison",
+      "published_at": "2026-10-30T06:48:29+08:00",
+      "summary": "API credits benefit for eligible ChatGPT subscriptions Earlier this month Anthropic announced a generous new benefit for their Max and Team subscriptions: $100, $200, and $500 per month subscribers would get the equivalent quantity of (expiring) credits to use with the…",
+      "tags": [
+        "ai",
+        "programming"
+      ]
+    },
+    {
+      "title": "Building a multiplayer game world with autonomous Fable-class models",
+      "url": "https://simonwillison.net/2026/Oct/29/how-i-built-the-most-ai-pilled-company-in-the-world/",
+      "source": "Simon Willison",
+      "published_at": "2026-10-30T01:00:26+08:00",
+      "summary": "How I Built the Most AI-Pilled Company in the World Don't be put off by the clickbait headline, this piece by Jacob Sansbury describing how they are building Spawn is a fascinating exploration of the bleeding edge of what's possible with agentic engineering against frontier…",
+      "tags": [
+        "ai"
+      ]
+    },
+    {
+      "title": "Quoting Ben Hylak",
+      "url": "https://simonwillison.net/2026/Oct/29/ben-hylak/",
+      "source": "Simon Willison",
+      "published_at": "2026-10-29T22:06:27+08:00",
+      "summary": "every product i use should just be a headless mcp, that feeds into an agent, where i never have to think about anything underneath. except for our product, of course. in our product, customers love the ui and love us very much. we're special that way. — Ben Hylak Tags:…",
+      "tags": [
+        "ai"
+      ]
+    },
+    {
+      "title": "Granite Switch 4.1.1 — Update models like you update software",
+      "url": "https://huggingface.co/blog/ibm-granite/granite-switch-4-1-1",
+      "source": "Hugging Face",
+      "published_at": "2026-10-29T21:37:07+08:00",
+      "tags": [
+        "ai"
+      ]
+    }
+  ],
+  "news_highlights": [
+    {
+      "title": "Backdoor in Claude Code for VS Code extension on the Cursor Marketplace",
+      "url": "https://phorion.io/blog/offical-claude-code-vsx-compromise/",
+      "why_it_matters": "Versions 2.1.312 and 2.1.313 of the Claude Code extension on the Cursor Marketplace planted an SSH key, a reverse tunnel and a fake com.apple.sysmond LaunchAgent on macOS. If you use Cursor, check your extension version, ~/.ssh/authorized_keys and ~/Library/LaunchAgents. Top AI thread on HN today (786 points)."
+    },
+    {
+      "title": "AI isn't replacing SREs, it's deskilling them",
+      "url": "https://newsletter.signoz.io/p/ai-isnt-replacing-sres-its-deskilling",
+      "why_it_matters": "Uses the 1983 'Ironies of Automation' paper to argue that letting AI handle routine incidents erodes the skills you need for rare novel ones. The same applies to leaning on coding agents for all your debugging (512 points on HN)."
+    },
+    {
+      "title": "Show HN: A working Nintendo in ~1GB of Qwen weights",
+      "url": "https://github.com/dbreunig/nesformer",
+      "why_it_matters": "Drew Breunig used two short Opus prompts to bake an NES 6502 CPU emulator into Qwen3.5-4B weights. It's a good example of how far an agent can take a loose idea when it has a conformance test suite to check against."
+    },
+    {
+      "title": "Cisco gives engineer unlimited AI tokens to rewrite legacy code",
+      "url": "https://fortune.com/2026/10/30/cisco-president-jeetu-patel-gen-z-27-year-old-unlimited-ai-tokens-rewrite-legacy-code-entry-level-jobs/",
+      "why_it_matters": "Big companies are starting to point coding agents at legacy rewrites, which is a growing kind of work for developers who know agent tooling well."
+    }
+  ]
+}
