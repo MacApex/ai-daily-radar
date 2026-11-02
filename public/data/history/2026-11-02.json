@@ -1,0 +1,530 @@
+{
+  "sample": false,
+  "generated_at": "2026-11-02T10:00:57+08:00",
+  "date": "2026-11-02",
+  "run": {
+    "trending_observed": 0,
+    "saved": 0,
+    "upgraded": 0,
+    "relocated": 0,
+    "unchanged": 0,
+    "incomplete": 0,
+    "eligible_not_archived": 0,
+    "rejected": 0,
+    "blockers": [
+      "Mac mini (maximas-Mac-mini.local) shell could not spawn processes (spawn /bin/zsh EAGAIN) for the fourth day running; SSD mount could not be verified, so the 2026-11-02 Trending archive did not run and is pending. News-only publish."
+    ],
+    "archive_folder": ""
+  },
+  "featured": [],
+  "archived": [],
+  "trending": [],
+  "news": [
+    {
+      "title": "Show HN: HackerBooks – HackerTube, but for books mentioned on HN",
+      "url": "https://hackerbooks.org",
+      "source": "Hacker News",
+      "points": 933,
+      "comments": 180,
+      "comments_url": "https://news.ycombinator.com/item?id=50326821",
+      "published_at": "2026-11-01T23:58:28+08:00",
+      "tags": [
+        "misc"
+      ]
+    },
+    {
+      "title": "Patrick Stewart taught us what good men do with power",
+      "url": "https://www.vox.com/politics/508526/patrick-stewart-jean-luc-picard-star-trek-liberalism",
+      "source": "Hacker News",
+      "points": 375,
+      "comments": 264,
+      "comments_url": "https://news.ycombinator.com/item?id=50327650",
+      "published_at": "2026-11-02T01:28:16+08:00",
+      "tags": [
+        "misc"
+      ]
+    },
+    {
+      "title": "AI delivers 'zero financial payoff' to most companies, Apollo economist says",
+      "url": "https://techcrunch.com/2026/10/25/ai-delivers-zero-financial-payoff-to-most-companies-according-to-apollo-economist/",
+      "source": "Hacker News",
+      "points": 169,
+      "comments": 136,
+      "comments_url": "https://news.ycombinator.com/item?id=50330456",
+      "published_at": "2026-11-02T06:10:45+08:00",
+      "tags": [
+        "ai"
+      ]
+    },
+    {
+      "title": "Mathematics has changed. Let's act like it",
+      "url": "https://terrytao.wordpress.com/2026/11/01/mathematics-has-changed-lets-act-like-it/",
+      "source": "Hacker News",
+      "points": 226,
+      "comments": 249,
+      "comments_url": "https://news.ycombinator.com/item?id=50328251",
+      "published_at": "2026-11-02T02:28:42+08:00",
+      "tags": [
+        "science"
+      ]
+    },
+    {
+      "title": "Lenovo's 'encrypted' fingerprint USB is just an unencrypted SD card in a case",
+      "url": "https://www.reddit.com/r/technology/comments/1xl2pr3/lenovos_encrypted_fingerprint_usb_drive_is_just/",
+      "source": "Hacker News",
+      "points": 398,
+      "comments": 144,
+      "comments_url": "https://news.ycombinator.com/item?id=50326099",
+      "published_at": "2026-11-01T22:34:43+08:00",
+      "tags": [
+        "misc"
+      ]
+    },
+    {
+      "title": "Ask HN: Which TV do you recommend for privacy?",
+      "url": "https://news.ycombinator.com/item?id=50328896",
+      "source": "Hacker News",
+      "points": 142,
+      "comments": 266,
+      "comments_url": "https://news.ycombinator.com/item?id=50328896",
+      "published_at": "2026-11-02T03:35:27+08:00",
+      "tags": [
+        "security"
+      ]
+    },
+    {
+      "title": "HackerTube: YouTube built from videos recommended by HN",
+      "url": "https://karpathy.bearblog.dev/hacker-tube/",
+      "source": "Hacker News",
+      "points": 2295,
+      "comments": 540,
+      "comments_url": "https://news.ycombinator.com/item?id=50319510",
+      "published_at": "2026-11-01T03:56:53+08:00",
+      "tags": [
+        "misc"
+      ]
+    },
+    {
+      "title": "Frontier Airlines Likely Breached",
+      "url": "https://www.reddit.com/r/frontierairlines/comments/1xl20e8/psa_email_scam/",
+      "source": "Hacker News",
+      "points": 177,
+      "comments": 69,
+      "comments_url": "https://news.ycombinator.com/item?id=50327266",
+      "published_at": "2026-11-02T00:46:33+08:00",
+      "tags": [
+        "misc"
+      ]
+    },
+    {
+      "title": "The AI cost of JavaScript frameworks",
+      "url": "https://nolanlawson.com/2026/10/28/the-ai-cost-of-javascript-frameworks/",
+      "source": "Hacker News",
+      "points": 299,
+      "comments": 230,
+      "comments_url": "https://news.ycombinator.com/item?id=50323088",
+      "published_at": "2026-11-01T14:06:19+08:00",
+      "tags": [
+        "ai",
+        "programming"
+      ]
+    },
+    {
+      "title": "An Italian farmer found some unknown seeds in his attic and planted them",
+      "url": "https://www.smithsonianmag.com/science-nature/italian-farmer-found-unknown-seeds-attic-with-nothing-lose-planted-them-result-biblical-180989644/",
+      "source": "Hacker News",
+      "points": 771,
+      "comments": 202,
+      "comments_url": "https://news.ycombinator.com/item?id=50320963",
+      "published_at": "2026-11-01T06:41:06+08:00",
+      "tags": [
+        "misc"
+      ]
+    },
+    {
+      "title": "Seoul Viosys begins production of rare-earth-free white light emitter",
+      "url": "https://www.semiconductor-today.com/news_items/2026/oct/seoul-291026.shtml",
+      "source": "Hacker News",
+      "points": 138,
+      "comments": 34,
+      "comments_url": "https://news.ycombinator.com/item?id=50327058",
+      "published_at": "2026-11-02T00:23:26+08:00",
+      "tags": [
+        "misc"
+      ]
+    },
+    {
+      "title": "Show HN: OmniDiff – Opensource, super fast, content aware Git difftool, in Rust",
+      "url": "https://github.com/ivankovic/omnidiff",
+      "source": "Hacker News",
+      "points": 163,
+      "comments": 41,
+      "comments_url": "https://news.ycombinator.com/item?id=50325253",
+      "published_at": "2026-11-01T21:02:30+08:00",
+      "tags": [
+        "programming"
+      ]
+    },
+    {
+      "title": "Proving and improving the Platonic Representation Hypothesis with JEPAs",
+      "url": "https://arxiv.org/abs/2610.39302",
+      "source": "Hacker News",
+      "points": 111,
+      "comments": 61,
+      "comments_url": "https://news.ycombinator.com/item?id=50325454",
+      "published_at": "2026-11-01T21:24:49+08:00",
+      "tags": [
+        "misc"
+      ]
+    },
+    {
+      "title": "Novellas with Groff",
+      "url": "https://movq.de/blog/postings/2026-10-31/0/POSTING-en.html",
+      "source": "Hacker News",
+      "points": 111,
+      "comments": 49,
+      "comments_url": "https://news.ycombinator.com/item?id=50325694",
+      "published_at": "2026-11-01T21:51:41+08:00",
+      "tags": [
+        "misc"
+      ]
+    },
+    {
+      "title": "Domain hacks with unusual Unicode characters (2018)",
+      "url": "https://shkspr.mobi/blog/2018/11/domain-hacks-with-unusual-unicode-characters/",
+      "source": "Hacker News",
+      "points": 55,
+      "comments": 47,
+      "comments_url": "https://news.ycombinator.com/item?id=50324371",
+      "published_at": "2026-11-01T18:44:20+08:00",
+      "tags": [
+        "misc"
+      ]
+    },
+    {
+      "title": "Introducing Kwi, a new KDE terminal emulator",
+      "url": "https://blogs.kde.org/2026/11/01/introducing-kwi/",
+      "source": "Lobsters",
+      "points": 101,
+      "comments": 26,
+      "comments_url": "https://lobste.rs/s/lt44rt/introducing_kwi_new_kde_terminal",
+      "published_at": "2026-11-01T10:56:29+08:00",
+      "tags": [
+        "linux",
+        "devtools"
+      ]
+    },
+    {
+      "title": "An outsider's perspective on Scion and Mononoke",
+      "url": "https://typesanitizer.com/blog/scion.html",
+      "source": "Lobsters",
+      "points": 52,
+      "comments": 5,
+      "comments_url": "https://lobste.rs/s/s2qeww/outsider_s_perspective_on_scion_mononoke",
+      "published_at": "2026-11-01T23:22:36+08:00",
+      "tags": [
+        "misc"
+      ]
+    },
+    {
+      "title": "OccupySaaS",
+      "url": "https://occupysaas.com/",
+      "source": "Hacker News",
+      "points": 21,
+      "comments": 4,
+      "comments_url": "https://news.ycombinator.com/item?id=50331402",
+      "published_at": "2026-11-02T08:17:27+08:00",
+      "tags": [
+        "misc"
+      ]
+    },
+    {
+      "title": "If in doubt, delete the uv.lock file",
+      "url": "https://simonwillison.net/2026/Nov/1/delete-uv-lock-first/",
+      "source": "Simon Willison",
+      "published_at": "2026-11-02T07:24:22+08:00",
+      "summary": "I've been getting the occasional confusing Python dependency error since switching over to Python 3.15 and the rule I'm having to remember is: If in doubt, delete the uv.lock file Most of my projects are libraries which don't include a uv.lock file, since it's rude for a…",
+      "tags": [
+        "programming"
+      ]
+    },
+    {
+      "title": "Bidirectional charging during grid outages",
+      "url": "https://www.jefftk.com/p/bidirectional-charging-during-grid-outages",
+      "source": "Hacker News",
+      "points": 85,
+      "comments": 125,
+      "comments_url": "https://news.ycombinator.com/item?id=50319749",
+      "published_at": "2026-11-01T04:21:55+08:00",
+      "tags": [
+        "misc"
+      ]
+    },
+    {
+      "title": "Game Off 2026: The theme is SHIFT",
+      "url": "https://github.blog/open-source/gaming/game-off-2026-the-theme-is-shift/",
+      "source": "GitHub Blog",
+      "published_at": "2026-11-02T05:36:00+08:00",
+      "summary": "GitHub’s annual month-long game jam is back for its 14th year! This November, make a game inspired by the theme SHIFT. Change gears, swap perspectives, bend reality, or just press a certain key. The post Game Off 2026: The theme is SHIFT appeared first on The GitHub Blog .",
+      "tags": [
+        "devtools"
+      ]
+    },
+    {
+      "title": "Pratt parsing is a black box",
+      "url": "https://vinipsmaker.github.io/blog/article/pratt-parsing-is-a-black-box/",
+      "source": "Lobsters",
+      "points": 24,
+      "comments": 10,
+      "comments_url": "https://lobste.rs/s/bzazar/pratt_parsing_is_black_box",
+      "published_at": "2026-11-02T01:41:53+08:00",
+      "tags": [
+        "misc"
+      ]
+    },
+    {
+      "title": "Jepsen: ParticleDB 1.1.4",
+      "url": "https://jepsen.io/analyses/particledb-1.1.4",
+      "source": "Lobsters",
+      "points": 142,
+      "comments": 38,
+      "comments_url": "https://lobste.rs/s/drwd4j/jepsen_particledb_1_1_4",
+      "published_at": "2026-10-31T21:39:52+08:00",
+      "tags": [
+        "misc"
+      ]
+    },
+    {
+      "title": "London Meetup - Nov 2026",
+      "url": "https://lobste.rs/s/cqzwwg/london_meetup_nov_2026",
+      "source": "Lobsters",
+      "points": 22,
+      "comments": 4,
+      "comments_url": "https://lobste.rs/s/cqzwwg/london_meetup_nov_2026",
+      "published_at": "2026-11-02T02:47:10+08:00",
+      "summary": "Pub Address: The Fellow, 24 York Way, London, N1 9AA. Date: Sunday, 15/11/2026 1pm The idea is to just meet and have a chat really. I have submitted a request to book a table. Hopefully they approve but if not we can just find an un-booked table. I am posting the meetup prior…",
+      "tags": [
+        "misc"
+      ]
+    },
+    {
+      "title": "One-minute frequency disturbances from synchronization in power systems",
+      "url": "https://www.nature.com/articles/s41560-026-02144-0",
+      "source": "Hacker News",
+      "points": 122,
+      "comments": 41,
+      "comments_url": "https://news.ycombinator.com/item?id=50314617",
+      "published_at": "2026-10-31T18:14:08+08:00",
+      "tags": [
+        "misc"
+      ]
+    },
+    {
+      "title": "Avoid Public Functions Calling Other Public Functions",
+      "url": "https://matklad.github.io/2026/10/29/pub-calls-pub.html",
+      "source": "Lobsters",
+      "points": 87,
+      "comments": 20,
+      "comments_url": "https://lobste.rs/s/k508we/avoid_public_functions_calling_other",
+      "published_at": "2026-11-01T02:05:03+08:00",
+      "tags": [
+        "misc"
+      ]
+    },
+    {
+      "title": "Mystery of 60-Second Fluctuations in Power Grids Solved",
+      "url": "https://www.fz-juelich.de/en/news/archive/press-release/2026/mystery-of-60-second-fluctuations-in-power-grids-solved",
+      "source": "Lobsters",
+      "points": 68,
+      "comments": 28,
+      "comments_url": "https://lobste.rs/s/qwou15/mystery_60_second_fluctuations_power",
+      "published_at": "2026-11-01T03:50:11+08:00",
+      "tags": [
+        "misc"
+      ]
+    },
+    {
+      "title": "Quoting Kyle Kingsbury",
+      "url": "https://simonwillison.net/2026/Nov/1/kyle-kingsbury/",
+      "source": "Simon Willison",
+      "published_at": "2026-11-02T00:49:04+08:00",
+      "summary": "More broadly, the use of LLMs erodes trust in documentation, in software, and in the organizations which produce them. Perhaps engineers will begin to treat any new software project with suspicion—the signals we used to rely on as markers of a mature system are now easier to…",
+      "tags": [
+        "ai"
+      ]
+    },
+    {
+      "title": "ESA's satellite is dead. Its ghost: 2,123 signals. TabPFN beat the published SOTA; 83¢ of Tinker stopped an LLM speaking for it",
+      "url": "https://dev.to/advikdivekar/esas-satellite-is-dead-its-ghost-2123-signals-tabpfn-beat-the-published-sota-83c-of-tinker-3ke1",
+      "source": "DEV.to",
+      "points": 49,
+      "comments": 28,
+      "comments_url": "https://dev.to/advikdivekar/esas-satellite-is-dead-its-ghost-2123-signals-tabpfn-beat-the-published-sota-83c-of-tinker-3ke1#comments",
+      "published_at": "2026-10-31T22:18:15Z",
+      "summary": "This is a submission for the Hacktoberfest Open-Source AI Challenge Week 4: Ghost in the...",
+      "tags": [
+        "ai"
+      ]
+    },
+    {
+      "title": "Every Codebase Has a '// DO NOT TOUCH' File. I Built an AI Necromancer to Summon the Ghost of the Developer Who Wrote It 💀🔮",
+      "url": "https://dev.to/dj29/every-codebase-has-a-do-not-touch-file-i-built-an-ai-necromancer-to-summon-the-ghost-of-the-2no5",
+      "source": "DEV.to",
+      "points": 54,
+      "comments": 32,
+      "comments_url": "https://dev.to/dj29/every-codebase-has-a-do-not-touch-file-i-built-an-ai-necromancer-to-summon-the-ghost-of-the-2no5#comments",
+      "published_at": "2026-10-31T17:57:27Z",
+      "summary": "This is a submission for the Hacktoberfest Open-Source AI Challenge Week 4: Ghost in the Machine ...",
+      "tags": [
+        "ai"
+      ]
+    },
+    {
+      "title": "Work on GEFS (the Good Enough File System) for OpenBSD progresses",
+      "url": "https://www.undeadly.org/cgi?action=article;sid=20261101115637",
+      "source": "Lobsters",
+      "points": 20,
+      "comments": 1,
+      "comments_url": "https://lobste.rs/s/zjjvbo/work_on_gefs_good_enough_file_system_for",
+      "published_at": "2026-11-02T04:13:29+08:00",
+      "tags": [
+        "linux"
+      ]
+    },
+    {
+      "title": "The Kluever Maneuver",
+      "url": "https://jordi.inversethought.com/blog/the-kluever-maneuver/",
+      "source": "Lobsters",
+      "points": 53,
+      "comments": 34,
+      "comments_url": "https://lobste.rs/s/rpiu3w/kluever_maneuver",
+      "published_at": "2026-10-31T23:05:04+08:00",
+      "tags": [
+        "misc"
+      ]
+    },
+    {
+      "title": "Copper – A minimal low-level programming language with OOP and generics",
+      "url": "https://tibleiz.net/copper/",
+      "source": "Hacker News",
+      "points": 128,
+      "comments": 75,
+      "comments_url": "https://news.ycombinator.com/item?id=50308754",
+      "published_at": "2026-10-31T03:09:33+08:00",
+      "tags": [
+        "programming"
+      ]
+    },
+    {
+      "title": "XKCD and Fourier",
+      "url": "https://leancrew.com/all-this/2026/10/xkcd-and-fourier/",
+      "source": "Lobsters",
+      "points": 28,
+      "comments": 2,
+      "comments_url": "https://lobste.rs/s/mni8ri/xkcd_fourier",
+      "published_at": "2026-11-01T18:50:56+08:00",
+      "tags": [
+        "misc"
+      ]
+    },
+    {
+      "title": "My Local AI Invented 162 Python Packages. I Reran Everything From Scratch, and 161 Came Back.",
+      "url": "https://dev.to/soumyadeepdey/my-local-ai-invented-162-python-packages-i-reran-everything-from-scratch-and-161-came-back-4j73",
+      "source": "DEV.to",
+      "points": 26,
+      "comments": 13,
+      "comments_url": "https://dev.to/soumyadeepdey/my-local-ai-invented-162-python-packages-i-reran-everything-from-scratch-and-161-came-back-4j73#comments",
+      "published_at": "2026-11-01T02:22:52Z",
+      "summary": "This is a submission for the Hacktoberfest Open-Source AI Challenge Week 4: Ghost in the Machine I...",
+      "tags": [
+        "ai",
+        "programming"
+      ]
+    },
+    {
+      "title": "Show HN: I rebuilt my old canvas 3D library as a small WebGL 2 library – phoria2",
+      "url": "https://kevs3d.co.uk/phoria2/",
+      "source": "Hacker News",
+      "points": 75,
+      "comments": 11,
+      "comments_url": "https://news.ycombinator.com/item?id=50314508",
+      "published_at": "2026-10-31T17:49:42+08:00",
+      "tags": [
+        "programming"
+      ]
+    },
+    {
+      "title": "A Two-Line Function Caught AI Collusion Better Than the AI Did",
+      "url": "https://dev.to/ayush_singh_9b0d83152be5b/a-two-line-function-caught-ai-collusion-better-than-the-ai-did-3nmd",
+      "source": "DEV.to",
+      "points": 32,
+      "comments": 57,
+      "comments_url": "https://dev.to/ayush_singh_9b0d83152be5b/a-two-line-function-caught-ai-collusion-better-than-the-ai-did-3nmd#comments",
+      "published_at": "2026-10-31T04:17:26Z",
+      "summary": "A few days back, I took part in the Apart Research sprint where our team worked on the AI collusion...",
+      "tags": [
+        "ai",
+        "science"
+      ]
+    },
+    {
+      "title": "How We Took Over ChatGPT Accounts",
+      "url": "https://simonwillison.net/2026/Oct/31/how-we-took-over-chatgpt-accounts/",
+      "source": "Simon Willison",
+      "published_at": "2026-11-01T07:15:22+08:00",
+      "summary": "How We Took Over ChatGPT Accounts Parameter Labs describe an exploit they found against ChatGPT's implementation of the artifacts pattern (OpenAI used to call this \"Canvas\" but it looks like the latest revision is called HTML previews ), where interactive custom HTML apps are…",
+      "tags": [
+        "ai",
+        "security",
+        "web",
+        "programming"
+      ]
+    },
+    {
+      "title": "datasette-llm 0.1a9",
+      "url": "https://simonwillison.net/2026/Oct/31/datasette-llm/",
+      "source": "Simon Willison",
+      "published_at": "2026-11-01T06:10:01+08:00",
+      "summary": "Release: datasette-llm 0.1a9 I have some big upgrades to Datasette Agent in the pipeline, but in the meantime here's a tiny user experience improvement to the underlying datasette-llm plugin. It now picks up the default model used by LLM , which means you can start using…",
+      "tags": [
+        "ai"
+      ]
+    },
+    {
+      "title": "nemotron-halloween",
+      "url": "https://huggingface.co/blog/nvidia/nemotron-halloween",
+      "source": "Hugging Face",
+      "published_at": "2026-10-31T01:57:24+08:00",
+      "tags": [
+        "misc"
+      ]
+    }
+  ],
+  "news_highlights": [
+    {
+      "title": "The AI cost of JavaScript frameworks",
+      "url": "https://nolanlawson.com/2026/10/28/the-ai-cost-of-javascript-frameworks/",
+      "why_it_matters": "Nolan Lawson looks at what your choice of JavaScript framework costs once AI is writing the code. Directly relevant to how you pick stacks for agent-built web and mobile apps. 299 points on HN."
+    },
+    {
+      "title": "AI delivers 'zero financial payoff' to most companies, Apollo economist says",
+      "url": "https://techcrunch.com/2026/10/25/ai-delivers-zero-financial-payoff-to-most-companies-according-to-apollo-economist/",
+      "why_it_matters": "A skeptical take on enterprise AI returns. Useful context when pitching AI-powered features or agent workflows to clients. 169 points on HN."
+    },
+    {
+      "title": "Show HN: OmniDiff – Opensource, super fast, content aware Git difftool, in Rust",
+      "url": "https://github.com/ivankovic/omnidiff",
+      "why_it_matters": "A new open-source, content-aware git difftool. Could make reviewing large agent-generated diffs quicker. 163 points on HN."
+    },
+    {
+      "title": "If in doubt, delete the uv.lock file",
+      "url": "https://simonwillison.net/2026/Nov/1/delete-uv-lock-first/",
+      "why_it_matters": "A practical Python packaging tip from Simon Willison on uv lockfiles, handy when coding agents get stuck on dependency resolution."
+    },
+    {
+      "title": "My Local AI Invented 162 Python Packages. I Reran Everything From Scratch, and 161 Came Back.",
+      "url": "https://dev.to/soumyadeepdey/my-local-ai-invented-162-python-packages-i-reran-everything-from-scratch-and-161-came-back-4j73",
+      "why_it_matters": "An experiment on local models hallucinating package names repeatably. A reminder to verify any dependency an agent suggests before installing it."
+    }
+  ]
+}
