@@ -1,0 +1,528 @@
+{
+  "sample": false,
+  "generated_at": "2026-11-03T10:09:09+08:00",
+  "date": "2026-11-03",
+  "run": {
+    "trending_observed": 0,
+    "saved": 0,
+    "upgraded": 0,
+    "relocated": 0,
+    "unchanged": 0,
+    "incomplete": 0,
+    "eligible_not_archived": 0,
+    "rejected": 0,
+    "blockers": [
+      "Mac mini (maximas-Mac-mini.local) shell could not spawn processes (spawn /bin/zsh EAGAIN) for the fifth day running; SSD mount could not be verified, so the 2026-11-03 Trending archive did not run and is pending. News-only publish."
+    ],
+    "archive_folder": ""
+  },
+  "featured": [],
+  "archived": [],
+  "trending": [],
+  "news": [
+    {
+      "title": "Astra can read and write weights to improve Qwen",
+      "url": "https://rikiyat.github.io/blog/weight-space-programming/",
+      "source": "Hacker News",
+      "points": 1964,
+      "comments": 624,
+      "comments_url": "https://news.ycombinator.com/item?id=50341174",
+      "published_at": "2026-11-03T02:21:28+08:00",
+      "tags": [
+        "ai"
+      ]
+    },
+    {
+      "title": "WTF Ubuntu?",
+      "url": "https://chalmovsky.com/posts/wtf-ubuntu",
+      "source": "Hacker News",
+      "points": 1328,
+      "comments": 585,
+      "comments_url": "https://news.ycombinator.com/item?id=50337608",
+      "published_at": "2026-11-02T22:52:00+08:00",
+      "tags": [
+        "linux"
+      ]
+    },
+    {
+      "title": "Show HN: Subvocal – Talk to your computer without making noise",
+      "url": "https://news.ycombinator.com/item?id=50340088",
+      "source": "Hacker News",
+      "points": 560,
+      "comments": 304,
+      "comments_url": "https://news.ycombinator.com/item?id=50340088",
+      "published_at": "2026-11-03T01:16:17+08:00",
+      "tags": [
+        "misc"
+      ]
+    },
+    {
+      "title": "The SEC Should Block Anthropic's IPO to Protect the Public",
+      "url": "https://www.techpolicy.press/the-sec-should-block-anthropics-ipo-to-protect-the-public/",
+      "source": "Hacker News",
+      "points": 203,
+      "comments": 128,
+      "comments_url": "https://news.ycombinator.com/item?id=50344919",
+      "published_at": "2026-11-03T06:30:47+08:00",
+      "tags": [
+        "ai"
+      ]
+    },
+    {
+      "title": "Anthropic's growth just flattened",
+      "url": "https://www.regenerator1.com/p/anthropics-growth-just-flattened",
+      "source": "Hacker News",
+      "points": 164,
+      "comments": 196,
+      "comments_url": "https://news.ycombinator.com/item?id=50344958",
+      "published_at": "2026-11-03T06:33:20+08:00",
+      "tags": [
+        "ai"
+      ]
+    },
+    {
+      "title": "Ubuntu still has not released patch for Linux 0day RCE in almost 3 weeks",
+      "url": "https://freenode.net/article/ubuntu-lts-kernels-still-unfixed-for-critical-cve-2026-98432",
+      "source": "Hacker News",
+      "points": 341,
+      "comments": 82,
+      "comments_url": "https://news.ycombinator.com/item?id=50341462",
+      "published_at": "2026-11-03T02:39:38+08:00",
+      "tags": [
+        "linux"
+      ]
+    },
+    {
+      "title": "US boy names that became girl names and vice versa",
+      "url": "https://namedaisy.com/blog/boy-names-that-became-girl-names",
+      "source": "Hacker News",
+      "points": 296,
+      "comments": 316,
+      "comments_url": "https://news.ycombinator.com/item?id=50339397",
+      "published_at": "2026-11-03T00:34:36+08:00",
+      "tags": [
+        "misc"
+      ]
+    },
+    {
+      "title": "Oracle files to sell $20B in new stock, bonds to finance AI buildout",
+      "url": "https://www.cnbc.com/2026/11/02/oracle-files-to-sell-20-billion-in-new-stock-bonds-to-finance-ai-buildout.html",
+      "source": "Hacker News",
+      "points": 159,
+      "comments": 118,
+      "comments_url": "https://news.ycombinator.com/item?id=50342284",
+      "published_at": "2026-11-03T03:27:37+08:00",
+      "tags": [
+        "ai"
+      ]
+    },
+    {
+      "title": "If you love a website, back it up",
+      "url": "https://blog.mistys-internet.website/post/2026/10/29/if-you-love-a-website-back-it-up/",
+      "source": "Hacker News",
+      "points": 413,
+      "comments": 94,
+      "comments_url": "https://news.ycombinator.com/item?id=50336518",
+      "published_at": "2026-11-02T21:25:35+08:00",
+      "tags": [
+        "misc"
+      ]
+    },
+    {
+      "title": "Ask HN: Who is hiring? (November 2026)",
+      "url": "https://news.ycombinator.com/item?id=50338728",
+      "source": "Hacker News",
+      "points": 177,
+      "comments": 144,
+      "comments_url": "https://news.ycombinator.com/item?id=50338728",
+      "published_at": "2026-11-03T00:01:37+08:00",
+      "tags": [
+        "misc"
+      ]
+    },
+    {
+      "title": "Intel stock collapse worsens as $3.5T chip rout spreads",
+      "url": "https://finance.yahoo.com/markets/article/the-intel-stock-collapse-is-getting-worse--and-the-37-trillion-chip-rout-is-spreading-212154947.html",
+      "source": "Hacker News",
+      "points": 76,
+      "comments": 43,
+      "comments_url": "https://news.ycombinator.com/item?id=50346153",
+      "published_at": "2026-11-03T08:08:53+08:00",
+      "tags": [
+        "hardware"
+      ]
+    },
+    {
+      "title": "Egoless Mathematics in the AI Era",
+      "url": "https://terrytao.wordpress.com/2026/11/02/egoless-mathematics-in-the-ai-era/",
+      "source": "Hacker News",
+      "points": 118,
+      "comments": 82,
+      "comments_url": "https://news.ycombinator.com/item?id=50341736",
+      "published_at": "2026-11-03T02:54:44+08:00",
+      "tags": [
+        "ai",
+        "science"
+      ]
+    },
+    {
+      "title": "Moving our warehouse off DuckDB",
+      "url": "https://posthog.com/blog/moving-off-duckdb",
+      "source": "Hacker News",
+      "points": 162,
+      "comments": 107,
+      "comments_url": "https://news.ycombinator.com/item?id=50338747",
+      "published_at": "2026-11-03T00:02:26+08:00",
+      "tags": [
+        "misc"
+      ]
+    },
+    {
+      "title": "Show HN: Warsaw in voxels – An interactive 3D map of the city centre",
+      "url": "https://p.migdal.pl/warsaw-vibe-voxel/",
+      "source": "Hacker News",
+      "points": 219,
+      "comments": 36,
+      "comments_url": "https://news.ycombinator.com/item?id=50339221",
+      "published_at": "2026-11-03T00:25:26+08:00",
+      "tags": [
+        "misc"
+      ]
+    },
+    {
+      "title": "Launch HN: Momentic (YC W24) – Agents that catch bugs by using your app",
+      "url": "https://momentic.ai/",
+      "source": "Hacker News",
+      "points": 125,
+      "comments": 82,
+      "comments_url": "https://news.ycombinator.com/item?id=50339913",
+      "published_at": "2026-11-03T01:05:25+08:00",
+      "tags": [
+        "ai"
+      ]
+    },
+    {
+      "title": "Sneaking into the auditorium for the Windows 2000 launch rehearsal",
+      "url": "https://devblogs.microsoft.com/oldnewthing/20261102-00/?p=112818/",
+      "source": "Hacker News",
+      "points": 108,
+      "comments": 37,
+      "comments_url": "https://news.ycombinator.com/item?id=50341028",
+      "published_at": "2026-11-03T02:12:48+08:00",
+      "tags": [
+        "misc"
+      ]
+    },
+    {
+      "title": "We halved DNS build delay and cut memory use by 85%",
+      "url": "https://blog.cloudflare.com/dns-targeted-zone-builds/",
+      "source": "Hacker News",
+      "points": 142,
+      "comments": 48,
+      "comments_url": "https://news.ycombinator.com/item?id=50337558",
+      "published_at": "2026-11-02T22:47:28+08:00",
+      "tags": [
+        "misc"
+      ]
+    },
+    {
+      "title": "Self-Employed? Solopreneur? NIST Has a Cybersecurity Guide Just for You",
+      "url": "https://www.nist.gov/news-events/news/2026/11/self-employed-solopreneur-nist-has-cybersecurity-guide-just-you",
+      "source": "Hacker News",
+      "points": 103,
+      "comments": 28,
+      "comments_url": "https://news.ycombinator.com/item?id=50340619",
+      "published_at": "2026-11-03T01:47:40+08:00",
+      "tags": [
+        "misc"
+      ]
+    },
+    {
+      "title": "Polyend releases the Tracker firmware source code",
+      "url": "https://polyend.com/whats-up/tracker-the-biggest-update-yet/",
+      "source": "Hacker News",
+      "points": 84,
+      "comments": 19,
+      "comments_url": "https://news.ycombinator.com/item?id=50340159",
+      "published_at": "2026-11-03T01:20:13+08:00",
+      "tags": [
+        "security",
+        "release"
+      ]
+    },
+    {
+      "title": "Skill to Create Product Videos",
+      "url": "https://github.com/aaitor/skill-video-studio",
+      "source": "Hacker News",
+      "points": 69,
+      "comments": 22,
+      "comments_url": "https://news.ycombinator.com/item?id=50340992",
+      "published_at": "2026-11-03T02:10:39+08:00",
+      "tags": [
+        "misc"
+      ]
+    },
+    {
+      "title": "Jailbreaking my car's navigation system just so I can change the time",
+      "url": "https://blog.nns.ee/2026/11/02/renault-hack/",
+      "source": "Lobsters",
+      "points": 74,
+      "comments": 3,
+      "comments_url": "https://lobste.rs/s/qvdatp/jailbreaking_my_car_s_navigation_system",
+      "published_at": "2026-11-03T00:30:58+08:00",
+      "tags": [
+        "misc"
+      ]
+    },
+    {
+      "title": "llm 0.37",
+      "url": "https://simonwillison.net/2026/Nov/2/llm/",
+      "source": "Simon Willison",
+      "published_at": "2026-11-03T07:49:30+08:00",
+      "summary": "Release: llm 0.37 There's a lot of stuff in this new release of my LLM CLI tool and Python library, representing around two months of accumulated features and fixes. I added gpt-6.1-sol and gpt-6.1-terra , plus a new llm openai endpoint add command to make it easier to…",
+      "tags": [
+        "ai",
+        "programming",
+        "devtools"
+      ]
+    },
+    {
+      "title": "An outsider's perspective on Scion and Mononoke",
+      "url": "https://typesanitizer.com/blog/scion.html",
+      "source": "Lobsters",
+      "points": 138,
+      "comments": 20,
+      "comments_url": "https://lobste.rs/s/s2qeww/outsider_s_perspective_on_scion_mononoke",
+      "published_at": "2026-11-01T23:22:36+08:00",
+      "tags": [
+        "misc"
+      ]
+    },
+    {
+      "title": "A Decade of Kill Bugs",
+      "url": "https://alangrow.com/blog/a-decade-of-kill-bugs",
+      "source": "Lobsters",
+      "points": 22,
+      "comments": 2,
+      "comments_url": "https://lobste.rs/s/wgoato/decade_kill_bugs",
+      "published_at": "2026-11-03T05:23:24+08:00",
+      "tags": [
+        "misc"
+      ]
+    },
+    {
+      "title": "What are you doing this week?",
+      "url": "https://lobste.rs/s/maqsgl/what_are_you_doing_this_week",
+      "source": "Lobsters",
+      "points": 16,
+      "comments": 36,
+      "comments_url": "https://lobste.rs/s/maqsgl/what_are_you_doing_this_week",
+      "published_at": "2026-11-02T21:53:32+08:00",
+      "summary": "What are you doing this week? Feel free to share! Keep in mind it’s OK to do nothing at all, too.",
+      "tags": [
+        "misc"
+      ]
+    },
+    {
+      "title": "Work on GEFS (the Good Enough File System) for OpenBSD progresses",
+      "url": "https://www.undeadly.org/cgi?action=article;sid=20261101115637",
+      "source": "Lobsters",
+      "points": 89,
+      "comments": 10,
+      "comments_url": "https://lobste.rs/s/zjjvbo/work_on_gefs_good_enough_file_system_for",
+      "published_at": "2026-11-02T04:13:29+08:00",
+      "tags": [
+        "linux"
+      ]
+    },
+    {
+      "title": "Stop Hardcoding Your Timeouts",
+      "url": "https://alfy.blog/2026/04/23/stop-hardcoding-your-timeouts.html",
+      "source": "Lobsters",
+      "points": 22,
+      "comments": 2,
+      "comments_url": "https://lobste.rs/s/qa0owz/stop_hardcoding_your_timeouts",
+      "published_at": "2026-11-03T03:22:32+08:00",
+      "tags": [
+        "misc"
+      ]
+    },
+    {
+      "title": "Postgres 19 is late, and it's AI's fault",
+      "url": "http://rhaas.blogspot.com/2026/10/postgres-19-is-late-and-its-ais-fault.html",
+      "source": "Lobsters",
+      "points": 45,
+      "comments": 17,
+      "comments_url": "https://lobste.rs/s/0yxkvs/postgres_19_is_late_it_s_ai_s_fault",
+      "published_at": "2026-11-02T10:19:02+08:00",
+      "tags": [
+        "ai"
+      ]
+    },
+    {
+      "title": "My favourite laptop",
+      "url": "https://blog.jsbarretto.com/post/laptop",
+      "source": "Lobsters",
+      "points": 16,
+      "comments": 3,
+      "comments_url": "https://lobste.rs/s/ezg5mx/my_favourite_laptop",
+      "published_at": "2026-11-03T03:48:40+08:00",
+      "tags": [
+        "misc"
+      ]
+    },
+    {
+      "title": "My reflex of assuming our servers need ever-growing amounts of RAM",
+      "url": "https://utcc.utoronto.ca/~cks/space/blog/sysadmin/ServerRAMGrowthReflex",
+      "source": "Lobsters",
+      "points": 22,
+      "comments": 9,
+      "comments_url": "https://lobste.rs/s/saskzi/my_reflex_assuming_our_servers_need_ever",
+      "published_at": "2026-11-02T18:33:02+08:00",
+      "tags": [
+        "devtools"
+      ]
+    },
+    {
+      "title": "The U.S. Census Bureau and “Super Intelligence”",
+      "url": "https://simonwillison.net/2026/Nov/2/census-bureau-super-intelligence/",
+      "source": "Simon Willison",
+      "published_at": "2026-11-02T21:31:26+08:00",
+      "summary": "I was reminded today of AI Adoption Rate Trending Down for Large Companies , a chart produced by Apollo Global Management in September 2025, which appeared to show a slowdown in U.S. corporate AI adoption based on numbers collected by the U.S. Census Bureau. At the time I used…",
+      "tags": [
+        "ai"
+      ]
+    },
+    {
+      "title": "This background sound leaks your exact location",
+      "url": "https://youtu.be/UytYrhYLOKI",
+      "source": "Lobsters",
+      "points": 15,
+      "comments": 2,
+      "comments_url": "https://lobste.rs/s/s1btqo/this_background_sound_leaks_your_exact",
+      "published_at": "2026-11-03T03:42:32+08:00",
+      "tags": [
+        "misc"
+      ]
+    },
+    {
+      "title": "I shipped my biggest project ever and felt… nothing",
+      "url": "https://dev.to/dhananjay_mundhada_02c326/i-shipped-my-biggest-project-ever-and-felt-nothing-585f",
+      "source": "DEV.to",
+      "points": 13,
+      "comments": 10,
+      "comments_url": "https://dev.to/dhananjay_mundhada_02c326/i-shipped-my-biggest-project-ever-and-felt-nothing-585f#comments",
+      "published_at": "2026-11-02T03:44:26Z",
+      "summary": "Last month I finished one of the largest side project of my career — an open-source framework, docs,...",
+      "tags": [
+        "programming"
+      ]
+    },
+    {
+      "title": "If in doubt, delete the uv.lock file",
+      "url": "https://simonwillison.net/2026/Nov/1/delete-uv-lock-first/",
+      "source": "Simon Willison",
+      "published_at": "2026-11-02T07:24:22+08:00",
+      "summary": "I've been getting the occasional confusing Python dependency error since switching over to Python 3.15 and the rule I'm having to remember is: If in doubt, delete the uv.lock file Most of my projects are libraries which don't include a uv.lock file, since it's rude for a…",
+      "tags": [
+        "programming"
+      ]
+    },
+    {
+      "title": "Game Off 2026: The theme is SHIFT",
+      "url": "https://github.blog/open-source/gaming/game-off-2026-the-theme-is-shift/",
+      "source": "GitHub Blog",
+      "published_at": "2026-11-02T05:36:00+08:00",
+      "summary": "GitHub’s annual month-long game jam is back for its 14th year! This November, make a game inspired by the theme SHIFT. Change gears, swap perspectives, bend reality, or just press a certain key. The post Game Off 2026: The theme is SHIFT appeared first on The GitHub Blog .",
+      "tags": [
+        "devtools"
+      ]
+    },
+    {
+      "title": "My Local AI Invented 162 Python Packages. I Reran Everything From Scratch, and 161 Came Back.",
+      "url": "https://dev.to/soumyadeepdey/my-local-ai-invented-162-python-packages-i-reran-everything-from-scratch-and-161-came-back-4j73",
+      "source": "DEV.to",
+      "points": 31,
+      "comments": 17,
+      "comments_url": "https://dev.to/soumyadeepdey/my-local-ai-invented-162-python-packages-i-reran-everything-from-scratch-and-161-came-back-4j73#comments",
+      "published_at": "2026-11-01T02:22:52Z",
+      "summary": "This is a submission for the Hacktoberfest Open-Source AI Challenge Week 4: Ghost in the Machine I...",
+      "tags": [
+        "ai",
+        "programming"
+      ]
+    },
+    {
+      "title": "Quoting Kyle Kingsbury",
+      "url": "https://simonwillison.net/2026/Nov/1/kyle-kingsbury/",
+      "source": "Simon Willison",
+      "published_at": "2026-11-02T00:49:04+08:00",
+      "summary": "More broadly, the use of LLMs erodes trust in documentation, in software, and in the organizations which produce them. Perhaps engineers will begin to treat any new software project with suspicion—the signals we used to rely on as markers of a mature system are now easier to…",
+      "tags": [
+        "ai"
+      ]
+    },
+    {
+      "title": "I built a 3D game about my Nigerian childhood (and I'm not a game developer)",
+      "url": "https://dev.to/deborahemeni1/i-built-a-3d-game-about-my-nigerian-childhood-and-im-not-a-game-developer-281g",
+      "source": "DEV.to",
+      "points": 7,
+      "comments": 3,
+      "comments_url": "https://dev.to/deborahemeni1/i-built-a-3d-game-about-my-nigerian-childhood-and-im-not-a-game-developer-281g#comments",
+      "published_at": "2026-11-02T13:31:20Z",
+      "summary": "If you grew up in Nigeria, there is one sentence that can stop your heart in the middle of...",
+      "tags": [
+        "misc"
+      ]
+    },
+    {
+      "title": "I Built LLM Explained: 43 Interactive Pages That Take You From Tokens to AI Agents",
+      "url": "https://dev.to/amananandrai/i-built-llm-explained-43-interactive-pages-that-take-you-from-tokens-to-ai-agents-2n37",
+      "source": "DEV.to",
+      "points": 5,
+      "comments": 0,
+      "comments_url": "https://dev.to/amananandrai/i-built-llm-explained-43-interactive-pages-that-take-you-from-tokens-to-ai-agents-2n37#comments",
+      "published_at": "2026-11-02T21:03:27Z",
+      "summary": "I kept running into the same problem while learning about large language models. I'd read a blog...",
+      "tags": [
+        "ai"
+      ]
+    },
+    {
+      "title": "nemotron-halloween",
+      "url": "https://huggingface.co/blog/nvidia/nemotron-halloween",
+      "source": "Hugging Face",
+      "published_at": "2026-10-31T01:57:24+08:00",
+      "tags": [
+        "misc"
+      ]
+    }
+  ],
+  "news_highlights": [
+    {
+      "title": "Astra can read and write weights to improve Qwen",
+      "url": "https://rikiyat.github.io/blog/weight-space-programming/",
+      "why_it_matters": "A look at editing an open model's weights directly instead of fine-tuning, a possible new way to customize local models for agent work. The top HN story today with 1,964 points."
+    },
+    {
+      "title": "Ubuntu still has not released patch for Linux 0day RCE in almost 3 weeks",
+      "url": "https://freenode.net/article/ubuntu-lts-kernels-still-unfixed-for-critical-cve-2026-98432",
+      "why_it_matters": "Reports that Ubuntu LTS kernels are still unpatched for a critical remote code execution bug. Worth checking any Ubuntu servers or CI runners you rely on. 341 points on HN."
+    },
+    {
+      "title": "Launch HN: Momentic (YC W24) – Agents that catch bugs by using your app",
+      "url": "https://momentic.ai/",
+      "why_it_matters": "AI agents that test apps by clicking through them like a user. Relevant if you want automated QA for web and mobile client projects. 125 points on HN."
+    },
+    {
+      "title": "Skill to Create Product Videos",
+      "url": "https://github.com/aaitor/skill-video-studio",
+      "why_it_matters": "An agent skill for generating product videos, a ready-made add-on for coding agents that need to produce demo or marketing clips. 69 points on HN."
+    },
+    {
+      "title": "llm 0.37",
+      "url": "https://simonwillison.net/2026/Nov/2/llm/",
+      "why_it_matters": "A new release of Simon Willison's llm command-line tool, which is handy for scripting model calls in agent and automation workflows."
+    }
+  ]
+}

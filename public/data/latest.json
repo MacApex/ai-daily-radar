@@ -1,7 +1,7 @@
 {
   "sample": false,
-  "generated_at": "2026-11-03T10:08:38+08:00",
-  "date": "2026-11-02",
+  "generated_at": "2026-11-03T10:09:09+08:00",
+  "date": "2026-11-03",
   "run": {
     "trending_observed": 0,
     "saved": 0,
@@ -12,7 +12,7 @@
     "eligible_not_archived": 0,
     "rejected": 0,
     "blockers": [
-      "Mac mini (maximas-Mac-mini.local) shell could not spawn processes (spawn /bin/zsh EAGAIN) for the fourth day running; SSD mount could not be verified, so the 2026-11-02 Trending archive did not run and is pending. News-only publish."
+      "Mac mini (maximas-Mac-mini.local) shell could not spawn processes (spawn /bin/zsh EAGAIN) for the fifth day running; SSD mount could not be verified, so the 2026-11-03 Trending archive did not run and is pending. News-only publish."
     ],
     "archive_folder": ""
   },
@@ -500,29 +500,29 @@
   ],
   "news_highlights": [
     {
-      "title": "The AI cost of JavaScript frameworks",
-      "url": "https://nolanlawson.com/2026/10/28/the-ai-cost-of-javascript-frameworks/",
-      "why_it_matters": "Nolan Lawson looks at what your choice of JavaScript framework costs once AI is writing the code. Directly relevant to how you pick stacks for agent-built web and mobile apps. 299 points on HN."
+      "title": "Astra can read and write weights to improve Qwen",
+      "url": "https://rikiyat.github.io/blog/weight-space-programming/",
+      "why_it_matters": "A look at editing an open model's weights directly instead of fine-tuning, a possible new way to customize local models for agent work. The top HN story today with 1,964 points."
     },
     {
-      "title": "AI delivers 'zero financial payoff' to most companies, Apollo economist says",
-      "url": "https://techcrunch.com/2026/10/25/ai-delivers-zero-financial-payoff-to-most-companies-according-to-apollo-economist/",
-      "why_it_matters": "A skeptical take on enterprise AI returns. Useful context when pitching AI-powered features or agent workflows to clients. 169 points on HN."
+      "title": "Ubuntu still has not released patch for Linux 0day RCE in almost 3 weeks",
+      "url": "https://freenode.net/article/ubuntu-lts-kernels-still-unfixed-for-critical-cve-2026-98432",
+      "why_it_matters": "Reports that Ubuntu LTS kernels are still unpatched for a critical remote code execution bug. Worth checking any Ubuntu servers or CI runners you rely on. 341 points on HN."
     },
     {
-      "title": "Show HN: OmniDiff – Opensource, super fast, content aware Git difftool, in Rust",
-      "url": "https://github.com/ivankovic/omnidiff",
-      "why_it_matters": "A new open-source, content-aware git difftool. Could make reviewing large agent-generated diffs quicker. 163 points on HN."
+      "title": "Launch HN: Momentic (YC W24) – Agents that catch bugs by using your app",
+      "url": "https://momentic.ai/",
+      "why_it_matters": "AI agents that test apps by clicking through them like a user. Relevant if you want automated QA for web and mobile client projects. 125 points on HN."
     },
     {
-      "title": "If in doubt, delete the uv.lock file",
-      "url": "https://simonwillison.net/2026/Nov/1/delete-uv-lock-first/",
-      "why_it_matters": "A practical Python packaging tip from Simon Willison on uv lockfiles, handy when coding agents get stuck on dependency resolution."
+      "title": "Skill to Create Product Videos",
+      "url": "https://github.com/aaitor/skill-video-studio",
+      "why_it_matters": "An agent skill for generating product videos, a ready-made add-on for coding agents that need to produce demo or marketing clips. 69 points on HN."
     },
     {
-      "title": "My Local AI Invented 162 Python Packages. I Reran Everything From Scratch, and 161 Came Back.",
-      "url": "https://dev.to/soumyadeepdey/my-local-ai-invented-162-python-packages-i-reran-everything-from-scratch-and-161-came-back-4j73",
-      "why_it_matters": "An experiment on local models hallucinating package names repeatably. A reminder to verify any dependency an agent suggests before installing it."
+      "title": "llm 0.37",
+      "url": "https://simonwillison.net/2026/Nov/2/llm/",
+      "why_it_matters": "A new release of Simon Willison's llm command-line tool, which is handy for scripting model calls in agent and automation workflows."
     }
   ]
 }
