@@ -1,6 +1,6 @@
 {
   "sample": false,
-  "generated_at": "2026-11-02T10:00:57+08:00",
+  "generated_at": "2026-11-03T10:08:38+08:00",
   "date": "2026-11-02",
   "run": {
     "trending_observed": 0,
@@ -21,196 +21,268 @@
   "trending": [],
   "news": [
     {
-      "title": "Show HN: HackerBooks – HackerTube, but for books mentioned on HN",
-      "url": "https://hackerbooks.org",
+      "title": "Astra can read and write weights to improve Qwen",
+      "url": "https://rikiyat.github.io/blog/weight-space-programming/",
       "source": "Hacker News",
-      "points": 933,
-      "comments": 180,
-      "comments_url": "https://news.ycombinator.com/item?id=50326821",
-      "published_at": "2026-11-01T23:58:28+08:00",
-      "tags": [
-        "misc"
-      ]
-    },
-    {
-      "title": "Patrick Stewart taught us what good men do with power",
-      "url": "https://www.vox.com/politics/508526/patrick-stewart-jean-luc-picard-star-trek-liberalism",
-      "source": "Hacker News",
-      "points": 375,
-      "comments": 264,
-      "comments_url": "https://news.ycombinator.com/item?id=50327650",
-      "published_at": "2026-11-02T01:28:16+08:00",
-      "tags": [
-        "misc"
-      ]
-    },
-    {
-      "title": "AI delivers 'zero financial payoff' to most companies, Apollo economist says",
-      "url": "https://techcrunch.com/2026/10/25/ai-delivers-zero-financial-payoff-to-most-companies-according-to-apollo-economist/",
-      "source": "Hacker News",
-      "points": 169,
-      "comments": 136,
-      "comments_url": "https://news.ycombinator.com/item?id=50330456",
-      "published_at": "2026-11-02T06:10:45+08:00",
+      "points": 1964,
+      "comments": 624,
+      "comments_url": "https://news.ycombinator.com/item?id=50341174",
+      "published_at": "2026-11-03T02:21:28+08:00",
       "tags": [
         "ai"
       ]
     },
     {
-      "title": "Mathematics has changed. Let's act like it",
-      "url": "https://terrytao.wordpress.com/2026/11/01/mathematics-has-changed-lets-act-like-it/",
+      "title": "WTF Ubuntu?",
+      "url": "https://chalmovsky.com/posts/wtf-ubuntu",
       "source": "Hacker News",
-      "points": 226,
-      "comments": 249,
-      "comments_url": "https://news.ycombinator.com/item?id=50328251",
-      "published_at": "2026-11-02T02:28:42+08:00",
+      "points": 1328,
+      "comments": 585,
+      "comments_url": "https://news.ycombinator.com/item?id=50337608",
+      "published_at": "2026-11-02T22:52:00+08:00",
       "tags": [
+        "linux"
+      ]
+    },
+    {
+      "title": "Show HN: Subvocal – Talk to your computer without making noise",
+      "url": "https://news.ycombinator.com/item?id=50340088",
+      "source": "Hacker News",
+      "points": 560,
+      "comments": 304,
+      "comments_url": "https://news.ycombinator.com/item?id=50340088",
+      "published_at": "2026-11-03T01:16:17+08:00",
+      "tags": [
+        "misc"
+      ]
+    },
+    {
+      "title": "The SEC Should Block Anthropic's IPO to Protect the Public",
+      "url": "https://www.techpolicy.press/the-sec-should-block-anthropics-ipo-to-protect-the-public/",
+      "source": "Hacker News",
+      "points": 203,
+      "comments": 128,
+      "comments_url": "https://news.ycombinator.com/item?id=50344919",
+      "published_at": "2026-11-03T06:30:47+08:00",
+      "tags": [
+        "ai"
+      ]
+    },
+    {
+      "title": "Anthropic's growth just flattened",
+      "url": "https://www.regenerator1.com/p/anthropics-growth-just-flattened",
+      "source": "Hacker News",
+      "points": 164,
+      "comments": 196,
+      "comments_url": "https://news.ycombinator.com/item?id=50344958",
+      "published_at": "2026-11-03T06:33:20+08:00",
+      "tags": [
+        "ai"
+      ]
+    },
+    {
+      "title": "Ubuntu still has not released patch for Linux 0day RCE in almost 3 weeks",
+      "url": "https://freenode.net/article/ubuntu-lts-kernels-still-unfixed-for-critical-cve-2026-98432",
+      "source": "Hacker News",
+      "points": 341,
+      "comments": 82,
+      "comments_url": "https://news.ycombinator.com/item?id=50341462",
+      "published_at": "2026-11-03T02:39:38+08:00",
+      "tags": [
+        "linux"
+      ]
+    },
+    {
+      "title": "US boy names that became girl names and vice versa",
+      "url": "https://namedaisy.com/blog/boy-names-that-became-girl-names",
+      "source": "Hacker News",
+      "points": 296,
+      "comments": 316,
+      "comments_url": "https://news.ycombinator.com/item?id=50339397",
+      "published_at": "2026-11-03T00:34:36+08:00",
+      "tags": [
+        "misc"
+      ]
+    },
+    {
+      "title": "Oracle files to sell $20B in new stock, bonds to finance AI buildout",
+      "url": "https://www.cnbc.com/2026/11/02/oracle-files-to-sell-20-billion-in-new-stock-bonds-to-finance-ai-buildout.html",
+      "source": "Hacker News",
+      "points": 159,
+      "comments": 118,
+      "comments_url": "https://news.ycombinator.com/item?id=50342284",
+      "published_at": "2026-11-03T03:27:37+08:00",
+      "tags": [
+        "ai"
+      ]
+    },
+    {
+      "title": "If you love a website, back it up",
+      "url": "https://blog.mistys-internet.website/post/2026/10/29/if-you-love-a-website-back-it-up/",
+      "source": "Hacker News",
+      "points": 413,
+      "comments": 94,
+      "comments_url": "https://news.ycombinator.com/item?id=50336518",
+      "published_at": "2026-11-02T21:25:35+08:00",
+      "tags": [
+        "misc"
+      ]
+    },
+    {
+      "title": "Ask HN: Who is hiring? (November 2026)",
+      "url": "https://news.ycombinator.com/item?id=50338728",
+      "source": "Hacker News",
+      "points": 177,
+      "comments": 144,
+      "comments_url": "https://news.ycombinator.com/item?id=50338728",
+      "published_at": "2026-11-03T00:01:37+08:00",
+      "tags": [
+        "misc"
+      ]
+    },
+    {
+      "title": "Intel stock collapse worsens as $3.5T chip rout spreads",
+      "url": "https://finance.yahoo.com/markets/article/the-intel-stock-collapse-is-getting-worse--and-the-37-trillion-chip-rout-is-spreading-212154947.html",
+      "source": "Hacker News",
+      "points": 76,
+      "comments": 43,
+      "comments_url": "https://news.ycombinator.com/item?id=50346153",
+      "published_at": "2026-11-03T08:08:53+08:00",
+      "tags": [
+        "hardware"
+      ]
+    },
+    {
+      "title": "Egoless Mathematics in the AI Era",
+      "url": "https://terrytao.wordpress.com/2026/11/02/egoless-mathematics-in-the-ai-era/",
+      "source": "Hacker News",
+      "points": 118,
+      "comments": 82,
+      "comments_url": "https://news.ycombinator.com/item?id=50341736",
+      "published_at": "2026-11-03T02:54:44+08:00",
+      "tags": [
+        "ai",
         "science"
       ]
     },
     {
-      "title": "Lenovo's 'encrypted' fingerprint USB is just an unencrypted SD card in a case",
-      "url": "https://www.reddit.com/r/technology/comments/1xl2pr3/lenovos_encrypted_fingerprint_usb_drive_is_just/",
+      "title": "Moving our warehouse off DuckDB",
+      "url": "https://posthog.com/blog/moving-off-duckdb",
       "source": "Hacker News",
-      "points": 398,
-      "comments": 144,
-      "comments_url": "https://news.ycombinator.com/item?id=50326099",
-      "published_at": "2026-11-01T22:34:43+08:00",
+      "points": 162,
+      "comments": 107,
+      "comments_url": "https://news.ycombinator.com/item?id=50338747",
+      "published_at": "2026-11-03T00:02:26+08:00",
       "tags": [
         "misc"
       ]
     },
     {
-      "title": "Ask HN: Which TV do you recommend for privacy?",
-      "url": "https://news.ycombinator.com/item?id=50328896",
+      "title": "Show HN: Warsaw in voxels – An interactive 3D map of the city centre",
+      "url": "https://p.migdal.pl/warsaw-vibe-voxel/",
+      "source": "Hacker News",
+      "points": 219,
+      "comments": 36,
+      "comments_url": "https://news.ycombinator.com/item?id=50339221",
+      "published_at": "2026-11-03T00:25:26+08:00",
+      "tags": [
+        "misc"
+      ]
+    },
+    {
+      "title": "Launch HN: Momentic (YC W24) – Agents that catch bugs by using your app",
+      "url": "https://momentic.ai/",
+      "source": "Hacker News",
+      "points": 125,
+      "comments": 82,
+      "comments_url": "https://news.ycombinator.com/item?id=50339913",
+      "published_at": "2026-11-03T01:05:25+08:00",
+      "tags": [
+        "ai"
+      ]
+    },
+    {
+      "title": "Sneaking into the auditorium for the Windows 2000 launch rehearsal",
+      "url": "https://devblogs.microsoft.com/oldnewthing/20261102-00/?p=112818/",
+      "source": "Hacker News",
+      "points": 108,
+      "comments": 37,
+      "comments_url": "https://news.ycombinator.com/item?id=50341028",
+      "published_at": "2026-11-03T02:12:48+08:00",
+      "tags": [
+        "misc"
+      ]
+    },
+    {
+      "title": "We halved DNS build delay and cut memory use by 85%",
+      "url": "https://blog.cloudflare.com/dns-targeted-zone-builds/",
       "source": "Hacker News",
       "points": 142,
-      "comments": 266,
-      "comments_url": "https://news.ycombinator.com/item?id=50328896",
-      "published_at": "2026-11-02T03:35:27+08:00",
-      "tags": [
-        "security"
-      ]
-    },
-    {
-      "title": "HackerTube: YouTube built from videos recommended by HN",
-      "url": "https://karpathy.bearblog.dev/hacker-tube/",
-      "source": "Hacker News",
-      "points": 2295,
-      "comments": 540,
-      "comments_url": "https://news.ycombinator.com/item?id=50319510",
-      "published_at": "2026-11-01T03:56:53+08:00",
+      "comments": 48,
+      "comments_url": "https://news.ycombinator.com/item?id=50337558",
+      "published_at": "2026-11-02T22:47:28+08:00",
       "tags": [
         "misc"
       ]
     },
     {
-      "title": "Frontier Airlines Likely Breached",
-      "url": "https://www.reddit.com/r/frontierairlines/comments/1xl20e8/psa_email_scam/",
+      "title": "Self-Employed? Solopreneur? NIST Has a Cybersecurity Guide Just for You",
+      "url": "https://www.nist.gov/news-events/news/2026/11/self-employed-solopreneur-nist-has-cybersecurity-guide-just-you",
       "source": "Hacker News",
-      "points": 177,
-      "comments": 69,
-      "comments_url": "https://news.ycombinator.com/item?id=50327266",
-      "published_at": "2026-11-02T00:46:33+08:00",
+      "points": 103,
+      "comments": 28,
+      "comments_url": "https://news.ycombinator.com/item?id=50340619",
+      "published_at": "2026-11-03T01:47:40+08:00",
       "tags": [
         "misc"
       ]
     },
     {
-      "title": "The AI cost of JavaScript frameworks",
-      "url": "https://nolanlawson.com/2026/10/28/the-ai-cost-of-javascript-frameworks/",
+      "title": "Polyend releases the Tracker firmware source code",
+      "url": "https://polyend.com/whats-up/tracker-the-biggest-update-yet/",
       "source": "Hacker News",
-      "points": 299,
-      "comments": 230,
-      "comments_url": "https://news.ycombinator.com/item?id=50323088",
-      "published_at": "2026-11-01T14:06:19+08:00",
+      "points": 84,
+      "comments": 19,
+      "comments_url": "https://news.ycombinator.com/item?id=50340159",
+      "published_at": "2026-11-03T01:20:13+08:00",
+      "tags": [
+        "security",
+        "release"
+      ]
+    },
+    {
+      "title": "Skill to Create Product Videos",
+      "url": "https://github.com/aaitor/skill-video-studio",
+      "source": "Hacker News",
+      "points": 69,
+      "comments": 22,
+      "comments_url": "https://news.ycombinator.com/item?id=50340992",
+      "published_at": "2026-11-03T02:10:39+08:00",
+      "tags": [
+        "misc"
+      ]
+    },
+    {
+      "title": "Jailbreaking my car's navigation system just so I can change the time",
+      "url": "https://blog.nns.ee/2026/11/02/renault-hack/",
+      "source": "Lobsters",
+      "points": 74,
+      "comments": 3,
+      "comments_url": "https://lobste.rs/s/qvdatp/jailbreaking_my_car_s_navigation_system",
+      "published_at": "2026-11-03T00:30:58+08:00",
+      "tags": [
+        "misc"
+      ]
+    },
+    {
+      "title": "llm 0.37",
+      "url": "https://simonwillison.net/2026/Nov/2/llm/",
+      "source": "Simon Willison",
+      "published_at": "2026-11-03T07:49:30+08:00",
+      "summary": "Release: llm 0.37 There's a lot of stuff in this new release of my LLM CLI tool and Python library, representing around two months of accumulated features and fixes. I added gpt-6.1-sol and gpt-6.1-terra , plus a new llm openai endpoint add command to make it easier to…",
       "tags": [
         "ai",
-        "programming"
-      ]
-    },
-    {
-      "title": "An Italian farmer found some unknown seeds in his attic and planted them",
-      "url": "https://www.smithsonianmag.com/science-nature/italian-farmer-found-unknown-seeds-attic-with-nothing-lose-planted-them-result-biblical-180989644/",
-      "source": "Hacker News",
-      "points": 771,
-      "comments": 202,
-      "comments_url": "https://news.ycombinator.com/item?id=50320963",
-      "published_at": "2026-11-01T06:41:06+08:00",
-      "tags": [
-        "misc"
-      ]
-    },
-    {
-      "title": "Seoul Viosys begins production of rare-earth-free white light emitter",
-      "url": "https://www.semiconductor-today.com/news_items/2026/oct/seoul-291026.shtml",
-      "source": "Hacker News",
-      "points": 138,
-      "comments": 34,
-      "comments_url": "https://news.ycombinator.com/item?id=50327058",
-      "published_at": "2026-11-02T00:23:26+08:00",
-      "tags": [
-        "misc"
-      ]
-    },
-    {
-      "title": "Show HN: OmniDiff – Opensource, super fast, content aware Git difftool, in Rust",
-      "url": "https://github.com/ivankovic/omnidiff",
-      "source": "Hacker News",
-      "points": 163,
-      "comments": 41,
-      "comments_url": "https://news.ycombinator.com/item?id=50325253",
-      "published_at": "2026-11-01T21:02:30+08:00",
-      "tags": [
-        "programming"
-      ]
-    },
-    {
-      "title": "Proving and improving the Platonic Representation Hypothesis with JEPAs",
-      "url": "https://arxiv.org/abs/2610.39302",
-      "source": "Hacker News",
-      "points": 111,
-      "comments": 61,
-      "comments_url": "https://news.ycombinator.com/item?id=50325454",
-      "published_at": "2026-11-01T21:24:49+08:00",
-      "tags": [
-        "misc"
-      ]
-    },
-    {
-      "title": "Novellas with Groff",
-      "url": "https://movq.de/blog/postings/2026-10-31/0/POSTING-en.html",
-      "source": "Hacker News",
-      "points": 111,
-      "comments": 49,
-      "comments_url": "https://news.ycombinator.com/item?id=50325694",
-      "published_at": "2026-11-01T21:51:41+08:00",
-      "tags": [
-        "misc"
-      ]
-    },
-    {
-      "title": "Domain hacks with unusual Unicode characters (2018)",
-      "url": "https://shkspr.mobi/blog/2018/11/domain-hacks-with-unusual-unicode-characters/",
-      "source": "Hacker News",
-      "points": 55,
-      "comments": 47,
-      "comments_url": "https://news.ycombinator.com/item?id=50324371",
-      "published_at": "2026-11-01T18:44:20+08:00",
-      "tags": [
-        "misc"
-      ]
-    },
-    {
-      "title": "Introducing Kwi, a new KDE terminal emulator",
-      "url": "https://blogs.kde.org/2026/11/01/introducing-kwi/",
-      "source": "Lobsters",
-      "points": 101,
-      "comments": 26,
-      "comments_url": "https://lobste.rs/s/lt44rt/introducing_kwi_new_kde_terminal",
-      "published_at": "2026-11-01T10:56:29+08:00",
-      "tags": [
-        "linux",
+        "programming",
         "devtools"
       ]
     },
@@ -218,8 +290,8 @@
       "title": "An outsider's perspective on Scion and Mononoke",
       "url": "https://typesanitizer.com/blog/scion.html",
       "source": "Lobsters",
-      "points": 52,
-      "comments": 5,
+      "points": 138,
+      "comments": 20,
       "comments_url": "https://lobste.rs/s/s2qeww/outsider_s_perspective_on_scion_mononoke",
       "published_at": "2026-11-01T23:22:36+08:00",
       "tags": [
@@ -227,15 +299,123 @@
       ]
     },
     {
-      "title": "OccupySaaS",
-      "url": "https://occupysaas.com/",
-      "source": "Hacker News",
-      "points": 21,
-      "comments": 4,
-      "comments_url": "https://news.ycombinator.com/item?id=50331402",
-      "published_at": "2026-11-02T08:17:27+08:00",
+      "title": "A Decade of Kill Bugs",
+      "url": "https://alangrow.com/blog/a-decade-of-kill-bugs",
+      "source": "Lobsters",
+      "points": 22,
+      "comments": 2,
+      "comments_url": "https://lobste.rs/s/wgoato/decade_kill_bugs",
+      "published_at": "2026-11-03T05:23:24+08:00",
       "tags": [
         "misc"
+      ]
+    },
+    {
+      "title": "What are you doing this week?",
+      "url": "https://lobste.rs/s/maqsgl/what_are_you_doing_this_week",
+      "source": "Lobsters",
+      "points": 16,
+      "comments": 36,
+      "comments_url": "https://lobste.rs/s/maqsgl/what_are_you_doing_this_week",
+      "published_at": "2026-11-02T21:53:32+08:00",
+      "summary": "What are you doing this week? Feel free to share! Keep in mind it’s OK to do nothing at all, too.",
+      "tags": [
+        "misc"
+      ]
+    },
+    {
+      "title": "Work on GEFS (the Good Enough File System) for OpenBSD progresses",
+      "url": "https://www.undeadly.org/cgi?action=article;sid=20261101115637",
+      "source": "Lobsters",
+      "points": 89,
+      "comments": 10,
+      "comments_url": "https://lobste.rs/s/zjjvbo/work_on_gefs_good_enough_file_system_for",
+      "published_at": "2026-11-02T04:13:29+08:00",
+      "tags": [
+        "linux"
+      ]
+    },
+    {
+      "title": "Stop Hardcoding Your Timeouts",
+      "url": "https://alfy.blog/2026/04/23/stop-hardcoding-your-timeouts.html",
+      "source": "Lobsters",
+      "points": 22,
+      "comments": 2,
+      "comments_url": "https://lobste.rs/s/qa0owz/stop_hardcoding_your_timeouts",
+      "published_at": "2026-11-03T03:22:32+08:00",
+      "tags": [
+        "misc"
+      ]
+    },
+    {
+      "title": "Postgres 19 is late, and it's AI's fault",
+      "url": "http://rhaas.blogspot.com/2026/10/postgres-19-is-late-and-its-ais-fault.html",
+      "source": "Lobsters",
+      "points": 45,
+      "comments": 17,
+      "comments_url": "https://lobste.rs/s/0yxkvs/postgres_19_is_late_it_s_ai_s_fault",
+      "published_at": "2026-11-02T10:19:02+08:00",
+      "tags": [
+        "ai"
+      ]
+    },
+    {
+      "title": "My favourite laptop",
+      "url": "https://blog.jsbarretto.com/post/laptop",
+      "source": "Lobsters",
+      "points": 16,
+      "comments": 3,
+      "comments_url": "https://lobste.rs/s/ezg5mx/my_favourite_laptop",
+      "published_at": "2026-11-03T03:48:40+08:00",
+      "tags": [
+        "misc"
+      ]
+    },
+    {
+      "title": "My reflex of assuming our servers need ever-growing amounts of RAM",
+      "url": "https://utcc.utoronto.ca/~cks/space/blog/sysadmin/ServerRAMGrowthReflex",
+      "source": "Lobsters",
+      "points": 22,
+      "comments": 9,
+      "comments_url": "https://lobste.rs/s/saskzi/my_reflex_assuming_our_servers_need_ever",
+      "published_at": "2026-11-02T18:33:02+08:00",
+      "tags": [
+        "devtools"
+      ]
+    },
+    {
+      "title": "The U.S. Census Bureau and “Super Intelligence”",
+      "url": "https://simonwillison.net/2026/Nov/2/census-bureau-super-intelligence/",
+      "source": "Simon Willison",
+      "published_at": "2026-11-02T21:31:26+08:00",
+      "summary": "I was reminded today of AI Adoption Rate Trending Down for Large Companies , a chart produced by Apollo Global Management in September 2025, which appeared to show a slowdown in U.S. corporate AI adoption based on numbers collected by the U.S. Census Bureau. At the time I used…",
+      "tags": [
+        "ai"
+      ]
+    },
+    {
+      "title": "This background sound leaks your exact location",
+      "url": "https://youtu.be/UytYrhYLOKI",
+      "source": "Lobsters",
+      "points": 15,
+      "comments": 2,
+      "comments_url": "https://lobste.rs/s/s1btqo/this_background_sound_leaks_your_exact",
+      "published_at": "2026-11-03T03:42:32+08:00",
+      "tags": [
+        "misc"
+      ]
+    },
+    {
+      "title": "I shipped my biggest project ever and felt… nothing",
+      "url": "https://dev.to/dhananjay_mundhada_02c326/i-shipped-my-biggest-project-ever-and-felt-nothing-585f",
+      "source": "DEV.to",
+      "points": 13,
+      "comments": 10,
+      "comments_url": "https://dev.to/dhananjay_mundhada_02c326/i-shipped-my-biggest-project-ever-and-felt-nothing-585f#comments",
+      "published_at": "2026-11-02T03:44:26Z",
+      "summary": "Last month I finished one of the largest side project of my career — an open-source framework, docs,...",
+      "tags": [
+        "programming"
       ]
     },
     {
@@ -249,18 +429,6 @@
       ]
     },
     {
-      "title": "Bidirectional charging during grid outages",
-      "url": "https://www.jefftk.com/p/bidirectional-charging-during-grid-outages",
-      "source": "Hacker News",
-      "points": 85,
-      "comments": 125,
-      "comments_url": "https://news.ycombinator.com/item?id=50319749",
-      "published_at": "2026-11-01T04:21:55+08:00",
-      "tags": [
-        "misc"
-      ]
-    },
-    {
       "title": "Game Off 2026: The theme is SHIFT",
       "url": "https://github.blog/open-source/gaming/game-off-2026-the-theme-is-shift/",
       "source": "GitHub Blog",
@@ -271,76 +439,17 @@
       ]
     },
     {
-      "title": "Pratt parsing is a black box",
-      "url": "https://vinipsmaker.github.io/blog/article/pratt-parsing-is-a-black-box/",
-      "source": "Lobsters",
-      "points": 24,
-      "comments": 10,
-      "comments_url": "https://lobste.rs/s/bzazar/pratt_parsing_is_black_box",
-      "published_at": "2026-11-02T01:41:53+08:00",
+      "title": "My Local AI Invented 162 Python Packages. I Reran Everything From Scratch, and 161 Came Back.",
+      "url": "https://dev.to/soumyadeepdey/my-local-ai-invented-162-python-packages-i-reran-everything-from-scratch-and-161-came-back-4j73",
+      "source": "DEV.to",
+      "points": 31,
+      "comments": 17,
+      "comments_url": "https://dev.to/soumyadeepdey/my-local-ai-invented-162-python-packages-i-reran-everything-from-scratch-and-161-came-back-4j73#comments",
+      "published_at": "2026-11-01T02:22:52Z",
+      "summary": "This is a submission for the Hacktoberfest Open-Source AI Challenge Week 4: Ghost in the Machine I...",
       "tags": [
-        "misc"
-      ]
-    },
-    {
-      "title": "Jepsen: ParticleDB 1.1.4",
-      "url": "https://jepsen.io/analyses/particledb-1.1.4",
-      "source": "Lobsters",
-      "points": 142,
-      "comments": 38,
-      "comments_url": "https://lobste.rs/s/drwd4j/jepsen_particledb_1_1_4",
-      "published_at": "2026-10-31T21:39:52+08:00",
-      "tags": [
-        "misc"
-      ]
-    },
-    {
-      "title": "London Meetup - Nov 2026",
-      "url": "https://lobste.rs/s/cqzwwg/london_meetup_nov_2026",
-      "source": "Lobsters",
-      "points": 22,
-      "comments": 4,
-      "comments_url": "https://lobste.rs/s/cqzwwg/london_meetup_nov_2026",
-      "published_at": "2026-11-02T02:47:10+08:00",
-      "summary": "Pub Address: The Fellow, 24 York Way, London, N1 9AA. Date: Sunday, 15/11/2026 1pm The idea is to just meet and have a chat really. I have submitted a request to book a table. Hopefully they approve but if not we can just find an un-booked table. I am posting the meetup prior…",
-      "tags": [
-        "misc"
-      ]
-    },
-    {
-      "title": "One-minute frequency disturbances from synchronization in power systems",
-      "url": "https://www.nature.com/articles/s41560-026-02144-0",
-      "source": "Hacker News",
-      "points": 122,
-      "comments": 41,
-      "comments_url": "https://news.ycombinator.com/item?id=50314617",
-      "published_at": "2026-10-31T18:14:08+08:00",
-      "tags": [
-        "misc"
-      ]
-    },
-    {
-      "title": "Avoid Public Functions Calling Other Public Functions",
-      "url": "https://matklad.github.io/2026/10/29/pub-calls-pub.html",
-      "source": "Lobsters",
-      "points": 87,
-      "comments": 20,
-      "comments_url": "https://lobste.rs/s/k508we/avoid_public_functions_calling_other",
-      "published_at": "2026-11-01T02:05:03+08:00",
-      "tags": [
-        "misc"
-      ]
-    },
-    {
-      "title": "Mystery of 60-Second Fluctuations in Power Grids Solved",
-      "url": "https://www.fz-juelich.de/en/news/archive/press-release/2026/mystery-of-60-second-fluctuations-in-power-grids-solved",
-      "source": "Lobsters",
-      "points": 68,
-      "comments": 28,
-      "comments_url": "https://lobste.rs/s/qwou15/mystery_60_second_fluctuations_power",
-      "published_at": "2026-11-01T03:50:11+08:00",
-      "tags": [
-        "misc"
+        "ai",
+        "programming"
       ]
     },
     {
@@ -354,138 +463,27 @@
       ]
     },
     {
-      "title": "ESA's satellite is dead. Its ghost: 2,123 signals. TabPFN beat the published SOTA; 83¢ of Tinker stopped an LLM speaking for it",
-      "url": "https://dev.to/advikdivekar/esas-satellite-is-dead-its-ghost-2123-signals-tabpfn-beat-the-published-sota-83c-of-tinker-3ke1",
+      "title": "I built a 3D game about my Nigerian childhood (and I'm not a game developer)",
+      "url": "https://dev.to/deborahemeni1/i-built-a-3d-game-about-my-nigerian-childhood-and-im-not-a-game-developer-281g",
       "source": "DEV.to",
-      "points": 49,
-      "comments": 28,
-      "comments_url": "https://dev.to/advikdivekar/esas-satellite-is-dead-its-ghost-2123-signals-tabpfn-beat-the-published-sota-83c-of-tinker-3ke1#comments",
-      "published_at": "2026-10-31T22:18:15Z",
-      "summary": "This is a submission for the Hacktoberfest Open-Source AI Challenge Week 4: Ghost in the...",
-      "tags": [
-        "ai"
-      ]
-    },
-    {
-      "title": "Every Codebase Has a '// DO NOT TOUCH' File. I Built an AI Necromancer to Summon the Ghost of the Developer Who Wrote It 💀🔮",
-      "url": "https://dev.to/dj29/every-codebase-has-a-do-not-touch-file-i-built-an-ai-necromancer-to-summon-the-ghost-of-the-2no5",
-      "source": "DEV.to",
-      "points": 54,
-      "comments": 32,
-      "comments_url": "https://dev.to/dj29/every-codebase-has-a-do-not-touch-file-i-built-an-ai-necromancer-to-summon-the-ghost-of-the-2no5#comments",
-      "published_at": "2026-10-31T17:57:27Z",
-      "summary": "This is a submission for the Hacktoberfest Open-Source AI Challenge Week 4: Ghost in the Machine ...",
-      "tags": [
-        "ai"
-      ]
-    },
-    {
-      "title": "Work on GEFS (the Good Enough File System) for OpenBSD progresses",
-      "url": "https://www.undeadly.org/cgi?action=article;sid=20261101115637",
-      "source": "Lobsters",
-      "points": 20,
-      "comments": 1,
-      "comments_url": "https://lobste.rs/s/zjjvbo/work_on_gefs_good_enough_file_system_for",
-      "published_at": "2026-11-02T04:13:29+08:00",
-      "tags": [
-        "linux"
-      ]
-    },
-    {
-      "title": "The Kluever Maneuver",
-      "url": "https://jordi.inversethought.com/blog/the-kluever-maneuver/",
-      "source": "Lobsters",
-      "points": 53,
-      "comments": 34,
-      "comments_url": "https://lobste.rs/s/rpiu3w/kluever_maneuver",
-      "published_at": "2026-10-31T23:05:04+08:00",
+      "points": 7,
+      "comments": 3,
+      "comments_url": "https://dev.to/deborahemeni1/i-built-a-3d-game-about-my-nigerian-childhood-and-im-not-a-game-developer-281g#comments",
+      "published_at": "2026-11-02T13:31:20Z",
+      "summary": "If you grew up in Nigeria, there is one sentence that can stop your heart in the middle of...",
       "tags": [
         "misc"
       ]
     },
     {
-      "title": "Copper – A minimal low-level programming language with OOP and generics",
-      "url": "https://tibleiz.net/copper/",
-      "source": "Hacker News",
-      "points": 128,
-      "comments": 75,
-      "comments_url": "https://news.ycombinator.com/item?id=50308754",
-      "published_at": "2026-10-31T03:09:33+08:00",
-      "tags": [
-        "programming"
-      ]
-    },
-    {
-      "title": "XKCD and Fourier",
-      "url": "https://leancrew.com/all-this/2026/10/xkcd-and-fourier/",
-      "source": "Lobsters",
-      "points": 28,
-      "comments": 2,
-      "comments_url": "https://lobste.rs/s/mni8ri/xkcd_fourier",
-      "published_at": "2026-11-01T18:50:56+08:00",
-      "tags": [
-        "misc"
-      ]
-    },
-    {
-      "title": "My Local AI Invented 162 Python Packages. I Reran Everything From Scratch, and 161 Came Back.",
-      "url": "https://dev.to/soumyadeepdey/my-local-ai-invented-162-python-packages-i-reran-everything-from-scratch-and-161-came-back-4j73",
+      "title": "I Built LLM Explained: 43 Interactive Pages That Take You From Tokens to AI Agents",
+      "url": "https://dev.to/amananandrai/i-built-llm-explained-43-interactive-pages-that-take-you-from-tokens-to-ai-agents-2n37",
       "source": "DEV.to",
-      "points": 26,
-      "comments": 13,
-      "comments_url": "https://dev.to/soumyadeepdey/my-local-ai-invented-162-python-packages-i-reran-everything-from-scratch-and-161-came-back-4j73#comments",
-      "published_at": "2026-11-01T02:22:52Z",
-      "summary": "This is a submission for the Hacktoberfest Open-Source AI Challenge Week 4: Ghost in the Machine I...",
-      "tags": [
-        "ai",
-        "programming"
-      ]
-    },
-    {
-      "title": "Show HN: I rebuilt my old canvas 3D library as a small WebGL 2 library – phoria2",
-      "url": "https://kevs3d.co.uk/phoria2/",
-      "source": "Hacker News",
-      "points": 75,
-      "comments": 11,
-      "comments_url": "https://news.ycombinator.com/item?id=50314508",
-      "published_at": "2026-10-31T17:49:42+08:00",
-      "tags": [
-        "programming"
-      ]
-    },
-    {
-      "title": "A Two-Line Function Caught AI Collusion Better Than the AI Did",
-      "url": "https://dev.to/ayush_singh_9b0d83152be5b/a-two-line-function-caught-ai-collusion-better-than-the-ai-did-3nmd",
-      "source": "DEV.to",
-      "points": 32,
-      "comments": 57,
-      "comments_url": "https://dev.to/ayush_singh_9b0d83152be5b/a-two-line-function-caught-ai-collusion-better-than-the-ai-did-3nmd#comments",
-      "published_at": "2026-10-31T04:17:26Z",
-      "summary": "A few days back, I took part in the Apart Research sprint where our team worked on the AI collusion...",
-      "tags": [
-        "ai",
-        "science"
-      ]
-    },
-    {
-      "title": "How We Took Over ChatGPT Accounts",
-      "url": "https://simonwillison.net/2026/Oct/31/how-we-took-over-chatgpt-accounts/",
-      "source": "Simon Willison",
-      "published_at": "2026-11-01T07:15:22+08:00",
-      "summary": "How We Took Over ChatGPT Accounts Parameter Labs describe an exploit they found against ChatGPT's implementation of the artifacts pattern (OpenAI used to call this \"Canvas\" but it looks like the latest revision is called HTML previews ), where interactive custom HTML apps are…",
-      "tags": [
-        "ai",
-        "security",
-        "web",
-        "programming"
-      ]
-    },
-    {
-      "title": "datasette-llm 0.1a9",
-      "url": "https://simonwillison.net/2026/Oct/31/datasette-llm/",
-      "source": "Simon Willison",
-      "published_at": "2026-11-01T06:10:01+08:00",
-      "summary": "Release: datasette-llm 0.1a9 I have some big upgrades to Datasette Agent in the pipeline, but in the meantime here's a tiny user experience improvement to the underlying datasette-llm plugin. It now picks up the default model used by LLM , which means you can start using…",
+      "points": 5,
+      "comments": 0,
+      "comments_url": "https://dev.to/amananandrai/i-built-llm-explained-43-interactive-pages-that-take-you-from-tokens-to-ai-agents-2n37#comments",
+      "published_at": "2026-11-02T21:03:27Z",
+      "summary": "I kept running into the same problem while learning about large language models. I'd read a blog...",
       "tags": [
         "ai"
       ]
