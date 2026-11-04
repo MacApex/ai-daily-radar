@@ -1,0 +1,530 @@
+{
+  "sample": false,
+  "generated_at": "2026-11-04T10:08:52+08:00",
+  "date": "2026-11-04",
+  "run": {
+    "trending_observed": 0,
+    "saved": 0,
+    "upgraded": 0,
+    "relocated": 0,
+    "unchanged": 0,
+    "incomplete": 0,
+    "eligible_not_archived": 0,
+    "rejected": 0,
+    "blockers": [
+      "Mac mini (maximas-Mac-mini.local) is offline (not connected to Grok Bot), after five days of shell spawn failures (10-30 to 11-03); SSD mount could not be verified, so the 2026-11-04 Trending archive did not run and is pending. News-only publish."
+    ],
+    "archive_folder": ""
+  },
+  "featured": [],
+  "archived": [],
+  "trending": [],
+  "news": [
+    {
+      "title": "Postman silently auto-installs AI plugins and attempts to share all API data",
+      "url": "https://github.com/postmanlabs/postman-app-support/issues/14370",
+      "source": "Hacker News",
+      "points": 1037,
+      "comments": 345,
+      "comments_url": "https://news.ycombinator.com/item?id=50354960",
+      "published_at": "2026-11-04T01:22:37+08:00",
+      "tags": [
+        "ai",
+        "programming"
+      ]
+    },
+    {
+      "title": "Safari introduces Adaptive Dark Mode in 27.3",
+      "url": "https://webkit.org/blog/18541/introducing-adaptive-dark-mode/",
+      "source": "Hacker News",
+      "points": 299,
+      "comments": 187,
+      "comments_url": "https://news.ycombinator.com/item?id=50358562",
+      "published_at": "2026-11-04T05:39:05+08:00",
+      "tags": [
+        "misc"
+      ]
+    },
+    {
+      "title": "Qwen 3.8 27B on my laptop can interpret model weights, too",
+      "url": "https://simonwillison.net/2026/Nov/3/qwen-can-interpret-model-weights/",
+      "source": "Hacker News",
+      "points": 492,
+      "comments": 153,
+      "comments_url": "https://news.ycombinator.com/item?id=50355251",
+      "published_at": "2026-11-04T01:40:00+08:00",
+      "summary": "Yesterday's hot paper was Sparks of Weight-Space Programming: LLMs can natively read & write neural network weights by Rikiya Takehi, Jayden Teoh, Alex Zhang, and Omar Khattab. The paper (OK, the authors classify is as a \"blog post\", but it's paper-shaped) found that frontier…",
+      "tags": [
+        "ai",
+        "security",
+        "programming",
+        "science"
+      ]
+    },
+    {
+      "title": "US tech giants' hidden AI debt swells 90% to $3.2T in 6 months",
+      "url": "https://asia.nikkei.com/business/technology/artificial-intelligence/us-tech-giants-hidden-ai-debt-swells-90-to-3.2tn-in-6-months",
+      "source": "Hacker News",
+      "points": 250,
+      "comments": 113,
+      "comments_url": "https://news.ycombinator.com/item?id=50358422",
+      "published_at": "2026-11-04T05:26:44+08:00",
+      "tags": [
+        "ai"
+      ]
+    },
+    {
+      "title": "The 'Astra can read and write weights to improve Qwen' post is misleading",
+      "url": "https://honnibal.dev/blog/astra-read-write-misleading",
+      "source": "Hacker News",
+      "points": 910,
+      "comments": 191,
+      "comments_url": "https://news.ycombinator.com/item?id=50351111",
+      "published_at": "2026-11-03T20:21:17+08:00",
+      "tags": [
+        "ai"
+      ]
+    },
+    {
+      "title": "Stringman, an $800 open-source room scale gripper robot",
+      "url": "https://neufangled.com/",
+      "source": "Hacker News",
+      "points": 391,
+      "comments": 145,
+      "comments_url": "https://news.ycombinator.com/item?id=50354358",
+      "published_at": "2026-11-04T00:47:29+08:00",
+      "tags": [
+        "hardware"
+      ]
+    },
+    {
+      "title": "The Little Book of Generative AI Foundations: An Intuitive Mathematical Primer",
+      "url": "https://arxiv.org/abs/2605.29713",
+      "source": "Hacker News",
+      "points": 238,
+      "comments": 38,
+      "comments_url": "https://news.ycombinator.com/item?id=50358582",
+      "published_at": "2026-11-04T05:40:53+08:00",
+      "tags": [
+        "ai",
+        "science"
+      ]
+    },
+    {
+      "title": "Mac at Any Scale",
+      "url": "https://namespace.so/blog/mac-at-any-scale",
+      "source": "Hacker News",
+      "points": 319,
+      "comments": 186,
+      "comments_url": "https://news.ycombinator.com/item?id=50352758",
+      "published_at": "2026-11-03T22:53:42+08:00",
+      "tags": [
+        "misc"
+      ]
+    },
+    {
+      "title": "Preparing for the Flipper One Kickstarter and opening pre-orders",
+      "url": "https://flipper.net/pages/flipper-one",
+      "source": "Hacker News",
+      "points": 171,
+      "comments": 79,
+      "comments_url": "https://news.ycombinator.com/item?id=50356994",
+      "published_at": "2026-11-04T03:32:13+08:00",
+      "tags": [
+        "misc"
+      ]
+    },
+    {
+      "title": "Could a modern chess engine on a Pentium have defeated Kasparov in 1996?",
+      "url": "https://nicholas.carlini.com/writing/2026/algorithmic-improvements-chess.html",
+      "source": "Hacker News",
+      "points": 453,
+      "comments": 214,
+      "comments_url": "https://news.ycombinator.com/item?id=50349276",
+      "published_at": "2026-11-03T15:56:21+08:00",
+      "tags": [
+        "misc"
+      ]
+    },
+    {
+      "title": "macOS 27 does not support CoreStorage volumes",
+      "url": "https://wadetregaskis.com/macos-27-golden-gate-does-not-actually-support-corestorage-or-hfs-volumes/",
+      "source": "Hacker News",
+      "points": 113,
+      "comments": 73,
+      "comments_url": "https://news.ycombinator.com/item?id=50356944",
+      "published_at": "2026-11-04T03:27:53+08:00",
+      "tags": [
+        "misc"
+      ]
+    },
+    {
+      "title": "How I use AI (Oct 2026)",
+      "url": "https://ben.stolovitz.com/posts/how-use-ai-oct-2026/",
+      "source": "Hacker News",
+      "points": 88,
+      "comments": 81,
+      "comments_url": "https://news.ycombinator.com/item?id=50355767",
+      "published_at": "2026-11-04T02:11:11+08:00",
+      "tags": [
+        "ai"
+      ]
+    },
+    {
+      "title": "The Internals of PostgreSQL",
+      "url": "https://www.interdb.jp/pg/index.html",
+      "source": "Hacker News",
+      "points": 121,
+      "comments": 3,
+      "comments_url": "https://news.ycombinator.com/item?id=50358702",
+      "published_at": "2026-11-04T05:51:06+08:00",
+      "tags": [
+        "misc"
+      ]
+    },
+    {
+      "title": "Jailbreaking my car's navigation system just so I can change the time",
+      "url": "https://blog.nns.ee/2026/11/02/renault-hack/",
+      "source": "Hacker News",
+      "points": 621,
+      "comments": 253,
+      "comments_url": "https://news.ycombinator.com/item?id=50339288",
+      "published_at": "2026-11-03T00:29:19+08:00",
+      "tags": [
+        "misc"
+      ]
+    },
+    {
+      "title": "Practice speaking Japanese with real YouTube videos, graded line by line",
+      "url": "https://jivx.com/yt",
+      "source": "Hacker News",
+      "points": 88,
+      "comments": 32,
+      "comments_url": "https://news.ycombinator.com/item?id=50352577",
+      "published_at": "2026-11-03T22:41:02+08:00",
+      "tags": [
+        "misc"
+      ]
+    },
+    {
+      "title": "Death comes for XSLT",
+      "url": "https://dbushell.com/2026/11/03/xslt-rip/",
+      "source": "Lobsters",
+      "points": 63,
+      "comments": 59,
+      "comments_url": "https://lobste.rs/s/chypzr/death_comes_for_xslt",
+      "published_at": "2026-11-03T23:19:50+08:00",
+      "tags": [
+        "misc"
+      ]
+    },
+    {
+      "title": "Show HN: Kairos – Open-source risk and fraud decisioning platform",
+      "url": "https://github.com/finic-ai/kairos",
+      "source": "Hacker News",
+      "points": 61,
+      "comments": 7,
+      "comments_url": "https://news.ycombinator.com/item?id=50358314",
+      "published_at": "2026-11-04T05:16:48+08:00",
+      "tags": [
+        "misc"
+      ]
+    },
+    {
+      "title": "Pratt parsing is a black box",
+      "url": "https://vinipsmaker.github.io/blog/article/pratt-parsing-is-a-black-box/",
+      "source": "Hacker News",
+      "points": 41,
+      "comments": 17,
+      "comments_url": "https://news.ycombinator.com/item?id=50357457",
+      "published_at": "2026-11-04T04:07:41+08:00",
+      "tags": [
+        "misc"
+      ]
+    },
+    {
+      "title": "Introduction to Programming in ATS",
+      "url": "https://ats-lang.sourceforge.net/DOCUMENT/INT2PROGINATS/HTML/book1.html",
+      "source": "Hacker News",
+      "points": 58,
+      "comments": 7,
+      "comments_url": "https://news.ycombinator.com/item?id=50356913",
+      "published_at": "2026-11-04T03:25:18+08:00",
+      "tags": [
+        "programming"
+      ]
+    },
+    {
+      "title": "Fujifilm to boost tape production 5x as AI fuels archiving demand",
+      "url": "https://arstechnica.com/gadgets/2026/10/fujifilm-to-boost-tape-production-5x-as-ai-fuels-archiving-demand/",
+      "source": "Hacker News",
+      "points": 382,
+      "comments": 168,
+      "comments_url": "https://news.ycombinator.com/item?id=50336918",
+      "published_at": "2026-11-02T22:02:42+08:00",
+      "tags": [
+        "ai"
+      ]
+    },
+    {
+      "title": "The Ubuntu 26.04 Rust sudo is not compatible with standard sudo",
+      "url": "https://utcc.utoronto.ca/~cks/space/blog/linux/Ubuntu2604RustSudoNotCompatible",
+      "source": "Lobsters",
+      "points": 50,
+      "comments": 29,
+      "comments_url": "https://lobste.rs/s/e201eb/ubuntu_26_04_rust_sudo_is_not_compatible",
+      "published_at": "2026-11-03T23:23:21+08:00",
+      "tags": [
+        "programming",
+        "linux"
+      ]
+    },
+    {
+      "title": "Show HN: HackerTV – HN's most-recommended Youtube videos as 24/7 TV channels",
+      "url": "https://hackertv.org",
+      "source": "Hacker News",
+      "points": 174,
+      "comments": 38,
+      "comments_url": "https://news.ycombinator.com/item?id=50346755",
+      "published_at": "2026-11-03T09:18:09+08:00",
+      "tags": [
+        "misc"
+      ]
+    },
+    {
+      "title": "A Decade of Kill Bugs",
+      "url": "https://alangrow.com/blog/a-decade-of-kill-bugs",
+      "source": "Lobsters",
+      "points": 103,
+      "comments": 17,
+      "comments_url": "https://lobste.rs/s/wgoato/decade_kill_bugs",
+      "published_at": "2026-11-03T05:23:24+08:00",
+      "tags": [
+        "misc"
+      ]
+    },
+    {
+      "title": "That's a Wrap on Hacktoberfest 2026! 🎃👻",
+      "url": "https://dev.to/devteam/thats-a-wrap-on-hacktoberfest-2026-148k",
+      "source": "DEV.to",
+      "points": 19,
+      "comments": 3,
+      "comments_url": "https://dev.to/devteam/thats-a-wrap-on-hacktoberfest-2026-148k#comments",
+      "published_at": "2026-11-03T22:28:08Z",
+      "summary": "Hacktoberfest 2026 wrapped up on October 31st! Thank you to everyone who built, hosted, mentored,...",
+      "tags": [
+        "misc"
+      ]
+    },
+    {
+      "title": "Why did you choose the nix you nix?",
+      "url": "https://lobste.rs/s/7fcuxz/why_did_you_choose_nix_you_nix",
+      "source": "Lobsters",
+      "points": 39,
+      "comments": 36,
+      "comments_url": "https://lobste.rs/s/7fcuxz/why_did_you_choose_nix_you_nix",
+      "published_at": "2026-11-03T11:58:06+08:00",
+      "summary": "I don't which nix is good and at this point I'm afraid I need to ask. - (Cpp)[Nix](https://nixos.org/) - [Determinate Nix](https://determinate.systems/) - [Lix](https://lix.systems/) Or, you know, [Guix](https://guix.gnu.org/)? (I _suspect_ that [Snix](https://snix.dev/),…",
+      "tags": [
+        "misc"
+      ]
+    },
+    {
+      "title": "I Let AI Build a Feature Without Giving It the Full Context",
+      "url": "https://dev.to/harsh2644/i-let-ai-build-a-feature-without-giving-it-the-full-context-6h",
+      "source": "DEV.to",
+      "points": 25,
+      "comments": 12,
+      "comments_url": "https://dev.to/harsh2644/i-let-ai-build-a-feature-without-giving-it-the-full-context-6h#comments",
+      "published_at": "2026-11-03T13:36:07Z",
+      "summary": "If you give an AI a vague prompt, it will give you a confident answer. And that confidence will cost...",
+      "tags": [
+        "ai"
+      ]
+    },
+    {
+      "title": "StateBench: Testing how language models track state changes over long documents",
+      "url": "https://huggingface.co/blog/allenai/statebench",
+      "source": "Hugging Face",
+      "published_at": "2026-11-04T01:15:21+08:00",
+      "tags": [
+        "ai",
+        "programming"
+      ]
+    },
+    {
+      "title": "Palette: teaching a small model to build decks in your design language",
+      "url": "https://huggingface.co/blog/ibm-research/palette-deck-building",
+      "source": "Hugging Face",
+      "published_at": "2026-11-04T00:35:36+08:00",
+      "tags": [
+        "ai"
+      ]
+    },
+    {
+      "title": "This background sound leaks your exact location",
+      "url": "https://youtu.be/UytYrhYLOKI",
+      "source": "Lobsters",
+      "points": 94,
+      "comments": 7,
+      "comments_url": "https://lobste.rs/s/s1btqo/this_background_sound_leaks_your_exact",
+      "published_at": "2026-11-03T03:42:32+08:00",
+      "tags": [
+        "misc"
+      ]
+    },
+    {
+      "title": "Stop Hardcoding Your Timeouts",
+      "url": "https://alfy.blog/2026/04/23/stop-hardcoding-your-timeouts.html",
+      "source": "Lobsters",
+      "points": 63,
+      "comments": 24,
+      "comments_url": "https://lobste.rs/s/qa0owz/stop_hardcoding_your_timeouts",
+      "published_at": "2026-11-03T03:22:32+08:00",
+      "tags": [
+        "misc"
+      ]
+    },
+    {
+      "title": "Arnis turns any place on Earth into a Minecraft world",
+      "url": "https://github.blog/open-source/maintainers/arnis-turns-any-place-on-earth-into-a-minecraft-world/",
+      "source": "GitHub Blog",
+      "published_at": "2026-11-04T00:00:00+08:00",
+      "summary": "Louis Erbkamm built the first prototype in his free time. Now GitHub Copilot helps him maintain it alone. The post Arnis turns any place on Earth into a Minecraft world appeared first on The GitHub Blog .",
+      "tags": [
+        "ai",
+        "devtools"
+      ]
+    },
+    {
+      "title": "My favourite laptop",
+      "url": "https://blog.jsbarretto.com/post/laptop",
+      "source": "Lobsters",
+      "points": 42,
+      "comments": 35,
+      "comments_url": "https://lobste.rs/s/ezg5mx/my_favourite_laptop",
+      "published_at": "2026-11-03T03:48:40+08:00",
+      "tags": [
+        "misc"
+      ]
+    },
+    {
+      "title": "Announcing NetBSD 11.1",
+      "url": "https://www.netbsd.org/releases/formal-11/NetBSD-11.1.html",
+      "source": "Lobsters",
+      "points": 16,
+      "comments": 1,
+      "comments_url": "https://lobste.rs/s/siqsg7/announcing_netbsd_11_1",
+      "published_at": "2026-11-04T06:00:17+08:00",
+      "tags": [
+        "release"
+      ]
+    },
+    {
+      "title": "Sparks of Weight-Space Programming: LLMs can natively read & write neural network weights",
+      "url": "https://rikiyat.github.io/blog/weight-space-programming/",
+      "source": "Lobsters",
+      "points": 50,
+      "comments": 15,
+      "comments_url": "https://lobste.rs/s/u7wdqj/sparks_weight_space_programming_llms_can",
+      "published_at": "2026-11-03T03:24:33+08:00",
+      "tags": [
+        "ai",
+        "programming",
+        "science"
+      ]
+    },
+    {
+      "title": "Would you believe it's jank?",
+      "url": "https://www.youtube.com/watch?v=tHgApFhevrQ",
+      "source": "Lobsters",
+      "points": 11,
+      "comments": 3,
+      "comments_url": "https://lobste.rs/s/xbmjlj/would_you_believe_it_s_jank",
+      "published_at": "2026-11-04T04:03:16+08:00",
+      "tags": [
+        "misc"
+      ]
+    },
+    {
+      "title": "I discovered a sound that leaks your exact location (and it's everywhere) - YouTube",
+      "url": "https://simonwillison.net/2026/Nov/3/a-sound-that-leaks-your-exact-location/",
+      "source": "Simon Willison",
+      "published_at": "2026-11-03T13:32:25+08:00",
+      "summary": "I discovered a sound that leaks your exact location (and it's everywhere) - YouTube Genius piece of OSINT by Colsto, who demonstrates how you can take almost imperceptible background noise of planes from a video soundtrack, figure out their Doppler curves, then cross reference…",
+      "tags": [
+        "misc"
+      ]
+    },
+    {
+      "title": "October sponsors-only newsletter",
+      "url": "https://simonwillison.net/2026/Nov/3/october-newsletter/",
+      "source": "Simon Willison",
+      "published_at": "2026-11-03T13:28:59+08:00",
+      "summary": "I sent out the October edition of my sponsors-only monthly newsletter . If you are a sponsor (or start a sponsorship now) you can access it here . This month: The October inflection point for vibe game development The vulnerability apocalypse gets hot LLM releases API credits…",
+      "tags": [
+        "ai",
+        "security",
+        "programming"
+      ]
+    },
+    {
+      "title": "Use it, or lose it 🧠",
+      "url": "https://dev.to/fm/use-it-or-lose-it-42l",
+      "source": "DEV.to",
+      "points": 27,
+      "comments": 4,
+      "comments_url": "https://dev.to/fm/use-it-or-lose-it-42l#comments",
+      "published_at": "2026-11-02T22:11:07Z",
+      "summary": "Fayaz reminds everyone why we should keep doing deep intellectual and creative works.",
+      "tags": [
+        "misc"
+      ]
+    },
+    {
+      "title": "CWE-bench v2: More coverage, quality, and transparency",
+      "url": "https://huggingface.co/blog/cwe-bench",
+      "source": "Hugging Face",
+      "published_at": "2026-11-03T08:00:00+08:00",
+      "tags": [
+        "misc"
+      ]
+    },
+    {
+      "title": "Transformers Model Integration Contracts",
+      "url": "https://huggingface.co/blog/transformers-mic",
+      "source": "Hugging Face",
+      "published_at": "2026-11-03T08:00:00+08:00",
+      "tags": [
+        "ai"
+      ]
+    }
+  ],
+  "news_highlights": [
+    {
+      "title": "Postman silently auto-installs AI plugins and attempts to share all API data",
+      "url": "https://github.com/postmanlabs/postman-app-support/issues/14370",
+      "why_it_matters": "Dev tools that quietly add AI features can leak API keys and payloads; worth auditing what your own toolchain sends out (1037 points on Hacker News)."
+    },
+    {
+      "title": "Sparks of Weight-Space Programming: LLMs can natively read & write neural network weights",
+      "url": "https://rikiyat.github.io/blog/weight-space-programming/",
+      "why_it_matters": "The paper behind today's biggest AI debate: if models can edit weights directly, it opens a new way for agents to modify other models."
+    },
+    {
+      "title": "The 'Astra can read and write weights to improve Qwen' post is misleading",
+      "url": "https://honnibal.dev/blog/astra-read-write-misleading",
+      "why_it_matters": "A sharp pushback on that weight-editing claim (910 points); read it alongside the paper before taking the hype at face value."
+    },
+    {
+      "title": "Qwen 3.8 27B on my laptop can interpret model weights, too",
+      "url": "https://simonwillison.net/2026/Nov/3/qwen-can-interpret-model-weights/",
+      "why_it_matters": "Simon Willison reproduces part of the idea with a local 27B model, a hint of what laptop-sized open models can already do."
+    },
+    {
+      "title": "StateBench: Testing how language models track state changes over long documents",
+      "url": "https://huggingface.co/blog/allenai/statebench",
+      "why_it_matters": "Tracking state over long contexts is exactly where coding agents slip up, so this benchmark is useful for picking models for long sessions."
+    }
+  ]
+}
