@@ -1,0 +1,523 @@
+{
+  "sample": false,
+  "generated_at": "2026-11-05T10:01:40+08:00",
+  "date": "2026-11-05",
+  "run": {
+    "trending_observed": 0,
+    "saved": 0,
+    "upgraded": 0,
+    "relocated": 0,
+    "unchanged": 0,
+    "incomplete": 0,
+    "eligible_not_archived": 0,
+    "rejected": 0,
+    "blockers": [
+      "Mac mini (maximas-Mac-mini.local) is still offline (not connected to Grok Bot); after shell spawn failures from 10-30 to 11-03 and being offline on 11-04, the SSD mount could not be verified, so the 2026-11-05 Trending archive did not run and is pending. News-only publish."
+    ],
+    "archive_folder": ""
+  },
+  "featured": [],
+  "archived": [],
+  "trending": [],
+  "news": [
+    {
+      "title": "Residential proxies detected on White House network",
+      "url": "https://layer3intel.com/blog/residential-proxies-white-house-network",
+      "source": "Hacker News",
+      "points": 651,
+      "comments": 211,
+      "comments_url": "https://news.ycombinator.com/item?id=50371246",
+      "published_at": "2026-11-05T04:45:18+08:00",
+      "tags": [
+        "misc"
+      ]
+    },
+    {
+      "title": "AI is forcing us to pay off 40 years of technical debt",
+      "url": "https://spectrum.ieee.org/ai-in-cybersecurity-php2shell-vulnerability",
+      "source": "Hacker News",
+      "points": 1070,
+      "comments": 638,
+      "comments_url": "https://news.ycombinator.com/item?id=50364336",
+      "published_at": "2026-11-04T19:52:17+08:00",
+      "tags": [
+        "ai"
+      ]
+    },
+    {
+      "title": "AMD expects to outsell Intel in Q4 for the first time in history",
+      "url": "https://www.tomshardware.com/pc-components/cpus/amd-expects-to-outsell-intel-in-q4-for-the-first-time-in-history-usd17b-guidance-would-exceed-intels-projections",
+      "source": "Hacker News",
+      "points": 475,
+      "comments": 174,
+      "comments_url": "https://news.ycombinator.com/item?id=50367125",
+      "published_at": "2026-11-04T23:38:34+08:00",
+      "tags": [
+        "misc"
+      ]
+    },
+    {
+      "title": "Kimi K3.1 Pro model weights are out",
+      "url": "https://huggingface.co/moonshotai/Kimi-K3.1-Pro",
+      "source": "Hacker News",
+      "points": 379,
+      "comments": 102,
+      "comments_url": "https://news.ycombinator.com/item?id=50366999",
+      "published_at": "2026-11-04T23:30:30+08:00",
+      "tags": [
+        "ai"
+      ]
+    },
+    {
+      "title": "Ripple-65B Preview: U.S. Open-Weight SOTA on Agentic Coding",
+      "url": "https://www.ricursive.com/ripple",
+      "source": "Hacker News",
+      "points": 224,
+      "comments": 79,
+      "comments_url": "https://news.ycombinator.com/item?id=50369925",
+      "published_at": "2026-11-05T02:53:29+08:00",
+      "tags": [
+        "ai"
+      ]
+    },
+    {
+      "title": "A new Go API for JSON",
+      "url": "https://go.dev/blog/jsonv2",
+      "source": "Hacker News",
+      "points": 230,
+      "comments": 96,
+      "comments_url": "https://news.ycombinator.com/item?id=50369106",
+      "published_at": "2026-11-05T01:52:11+08:00",
+      "tags": [
+        "programming"
+      ]
+    },
+    {
+      "title": "Images 2.6",
+      "url": "https://openai.com/index/introducing-images-2-6/",
+      "source": "Hacker News",
+      "points": 96,
+      "comments": 82,
+      "comments_url": "https://news.ycombinator.com/item?id=50372945",
+      "published_at": "2026-11-05T07:35:44+08:00",
+      "tags": [
+        "misc"
+      ]
+    },
+    {
+      "title": "Insects don't swarm at LED lights",
+      "url": "https://www.birdsoutsidemywindow.org/2026/11/03/insects-dont-swarm-at-led-lights/",
+      "source": "Hacker News",
+      "points": 165,
+      "comments": 94,
+      "comments_url": "https://news.ycombinator.com/item?id=50370610",
+      "published_at": "2026-11-05T03:50:23+08:00",
+      "tags": [
+        "misc"
+      ]
+    },
+    {
+      "title": "A thousand fewer paths to root",
+      "url": "https://openai.com/index/a-thousand-fewer-paths-to-root/",
+      "source": "Hacker News",
+      "points": 103,
+      "comments": 64,
+      "comments_url": "https://news.ycombinator.com/item?id=50372929",
+      "published_at": "2026-11-05T07:33:14+08:00",
+      "tags": [
+        "misc"
+      ]
+    },
+    {
+      "title": "Guerrilla bike lanes: San Francisco makes illicit infrastructure permanent (2016)",
+      "url": "https://99percentinvisible.org/article/guerrilla-bike-lanes-san-francisco-makes-illicit-infrastructure-permanent/",
+      "source": "Hacker News",
+      "points": 259,
+      "comments": 190,
+      "comments_url": "https://news.ycombinator.com/item?id=50366522",
+      "published_at": "2026-11-04T23:01:44+08:00",
+      "tags": [
+        "misc"
+      ]
+    },
+    {
+      "title": "Progress on provable inference for large language models",
+      "url": "https://www.anthropic.com/research/provable-inference",
+      "source": "Hacker News",
+      "points": 174,
+      "comments": 84,
+      "comments_url": "https://news.ycombinator.com/item?id=50368626",
+      "published_at": "2026-11-05T01:17:46+08:00",
+      "tags": [
+        "ai"
+      ]
+    },
+    {
+      "title": "Conductor is joining Meta",
+      "url": "https://www.conductor.build/announcement",
+      "source": "Hacker News",
+      "points": 106,
+      "comments": 143,
+      "comments_url": "https://news.ycombinator.com/item?id=50369503",
+      "published_at": "2026-11-05T02:22:40+08:00",
+      "tags": [
+        "misc"
+      ]
+    },
+    {
+      "title": "OpenAI to acquire Pierre Computer Company",
+      "url": "https://openai.com/index/openai-to-acquire-pierre/",
+      "source": "Hacker News",
+      "points": 185,
+      "comments": 61,
+      "comments_url": "https://news.ycombinator.com/item?id=50366863",
+      "published_at": "2026-11-04T23:21:21+08:00",
+      "tags": [
+        "ai"
+      ]
+    },
+    {
+      "title": "Have I befriended a murderer?",
+      "url": "https://longreads.com/2026/11/03/murder-friendship-doubt/",
+      "source": "Hacker News",
+      "points": 112,
+      "comments": 60,
+      "comments_url": "https://news.ycombinator.com/item?id=50369754",
+      "published_at": "2026-11-05T02:40:54+08:00",
+      "tags": [
+        "misc"
+      ]
+    },
+    {
+      "title": "Starfall – Affordable, routine access to microgravity",
+      "url": "https://www.spacex.com/starfall",
+      "source": "Hacker News",
+      "points": 65,
+      "comments": 26,
+      "comments_url": "https://news.ycombinator.com/item?id=50373308",
+      "published_at": "2026-11-05T08:18:18+08:00",
+      "tags": [
+        "misc"
+      ]
+    },
+    {
+      "title": "Qualcomm Cloud AI 100 Ultra – 150W AI Accelerator Card with 128GB at 548GB/s",
+      "url": "https://www.qualcomm.com/data-center/products/cloud-ai-100-ultra",
+      "source": "Hacker News",
+      "points": 100,
+      "comments": 43,
+      "comments_url": "https://news.ycombinator.com/item?id=50370654",
+      "published_at": "2026-11-05T03:55:14+08:00",
+      "tags": [
+        "ai"
+      ]
+    },
+    {
+      "title": "Tencent Hy4",
+      "url": "https://hy.tencent.ai/research/hy4",
+      "source": "Hacker News",
+      "points": 187,
+      "comments": 61,
+      "comments_url": "https://news.ycombinator.com/item?id=50365780",
+      "published_at": "2026-11-04T22:11:26+08:00",
+      "tags": [
+        "misc"
+      ]
+    },
+    {
+      "title": "Ask HN: What's your current AI agentic setup?",
+      "url": "https://news.ycombinator.com/item?id=50366117",
+      "source": "Hacker News",
+      "points": 122,
+      "comments": 145,
+      "comments_url": "https://news.ycombinator.com/item?id=50366117",
+      "published_at": "2026-11-04T22:37:22+08:00",
+      "tags": [
+        "ai"
+      ]
+    },
+    {
+      "title": "Show HN: After a decade of reversing, I got co-op working in DOS Wing Commander",
+      "url": "https://fireflyk64.github.io/wcmulti/",
+      "source": "Hacker News",
+      "points": 105,
+      "comments": 15,
+      "comments_url": "https://news.ycombinator.com/item?id=50369895",
+      "published_at": "2026-11-05T02:51:27+08:00",
+      "tags": [
+        "misc"
+      ]
+    },
+    {
+      "title": "'It's just vape, nail, charity shops': Can anything save UK high street?",
+      "url": "https://www.theguardian.com/business/2026/nov/04/what-can-save-the-british-high-street-rotherham",
+      "source": "Hacker News",
+      "points": 64,
+      "comments": 147,
+      "comments_url": "https://news.ycombinator.com/item?id=50367653",
+      "published_at": "2026-11-05T00:11:33+08:00",
+      "tags": [
+        "misc"
+      ]
+    },
+    {
+      "title": "We're Building AI to Replace Ourselves. What's the Plan?",
+      "url": "https://dev.to/sylwia-lask/were-building-ai-to-replace-ourselves-whats-the-plan-4oll",
+      "source": "DEV.to",
+      "points": 100,
+      "comments": 67,
+      "comments_url": "https://dev.to/sylwia-lask/were-building-ai-to-replace-ourselves-whats-the-plan-4oll#comments",
+      "published_at": "2026-11-04T08:06:25Z",
+      "summary": "Weren't we supposed to be replaced by AI by now? Or at least work less? AI agents were supposed to...",
+      "tags": [
+        "ai"
+      ]
+    },
+    {
+      "title": "Shlemiel the Painter Is Back: How Zig’s libc Rewrite Made SQLite Slower",
+      "url": "https://dennisforbes.ca/blog/microblog/2026/10/the_accidental_12000x_sqlite_slowdown/",
+      "source": "Lobsters",
+      "points": 61,
+      "comments": 8,
+      "comments_url": "https://lobste.rs/s/lh1j0e/shlemiel_painter_is_back_how_zig_s_libc",
+      "published_at": "2026-11-04T23:23:09+08:00",
+      "tags": [
+        "programming"
+      ]
+    },
+    {
+      "title": "So my ISP was hijacking my DNS",
+      "url": "https://karthihegde.dev/posts/dns_tampering",
+      "source": "Lobsters",
+      "points": 74,
+      "comments": 8,
+      "comments_url": "https://lobste.rs/s/cozhtg/so_my_isp_was_hijacking_my_dns",
+      "published_at": "2026-11-04T20:06:23+08:00",
+      "tags": [
+        "misc"
+      ]
+    },
+    {
+      "title": "Your Cryptography Conspiracy Theory Is Wrong",
+      "url": "https://soatok.blog/2026/10/29/your-cryptography-conspiracy-theory-is-wrong/",
+      "source": "Lobsters",
+      "points": 48,
+      "comments": 6,
+      "comments_url": "https://lobste.rs/s/bqllfe/your_cryptography_conspiracy_theory_is",
+      "published_at": "2026-11-04T22:58:11+08:00",
+      "tags": [
+        "security"
+      ]
+    },
+    {
+      "title": "C++26 Disapproved",
+      "url": "https://andreasfertig.com/blog/2026/11/cpp26-dis-failed-how-does-cpp-survive/",
+      "source": "Lobsters",
+      "points": 31,
+      "comments": 29,
+      "comments_url": "https://lobste.rs/s/xvtufg/c_26_disapproved",
+      "published_at": "2026-11-04T16:56:24+08:00",
+      "tags": [
+        "programming"
+      ]
+    },
+    {
+      "title": "Introducing Adaptive Dark Mode",
+      "url": "https://webkit.org/blog/18541/introducing-adaptive-dark-mode/",
+      "source": "Lobsters",
+      "points": 34,
+      "comments": 10,
+      "comments_url": "https://lobste.rs/s/yba0yg/introducing_adaptive_dark_mode",
+      "published_at": "2026-11-04T19:04:40+08:00",
+      "tags": [
+        "misc"
+      ]
+    },
+    {
+      "title": "The Ubuntu 26.04 Rust sudo is not compatible with standard sudo",
+      "url": "https://utcc.utoronto.ca/~cks/space/blog/linux/Ubuntu2604RustSudoNotCompatible",
+      "source": "Lobsters",
+      "points": 79,
+      "comments": 63,
+      "comments_url": "https://lobste.rs/s/e201eb/ubuntu_26_04_rust_sudo_is_not_compatible",
+      "published_at": "2026-11-03T23:23:21+08:00",
+      "tags": [
+        "programming",
+        "linux"
+      ]
+    },
+    {
+      "title": "Dharma Field Extractor: Any Document In, Structured Fields in JSON Out",
+      "url": "https://huggingface.co/blog/Dharma-AI/dharma-field-extractor",
+      "source": "Hugging Face",
+      "published_at": "2026-11-05T01:50:10+08:00",
+      "tags": [
+        "misc"
+      ]
+    },
+    {
+      "title": "Observations from Running stealmybitcoin.com",
+      "url": "https://pavursec.com/blog/stealmybitcoin/",
+      "source": "Lobsters",
+      "points": 110,
+      "comments": 2,
+      "comments_url": "https://lobste.rs/s/fgucra/observations_from_running",
+      "published_at": "2026-11-04T07:45:21+08:00",
+      "tags": [
+        "misc"
+      ]
+    },
+    {
+      "title": "datasette-llm 0.1a10",
+      "url": "https://simonwillison.net/2026/Nov/4/datasette-llm/",
+      "source": "Simon Willison",
+      "published_at": "2026-11-04T23:26:02+08:00",
+      "summary": "Release: datasette-llm 0.1a10 Fixes a bug that affected my agent.datasette.io demo site, where the set of available LLM models was not correctly restricted to just those in the configuration. Tags: datasette , llm",
+      "tags": [
+        "ai"
+      ]
+    },
+    {
+      "title": "Man-in-the-middle arbitrary code execution in Debian’s apt",
+      "url": "https://lists.debian.org/debian-security-announce/2026/msg00526.html",
+      "source": "Lobsters",
+      "points": 28,
+      "comments": 3,
+      "comments_url": "https://lobste.rs/s/h7bvma/man_middle_arbitrary_code_execution",
+      "published_at": "2026-11-04T21:36:43+08:00",
+      "tags": [
+        "linux"
+      ]
+    },
+    {
+      "title": "That's a Wrap on Hacktoberfest 2026! 🎃👻",
+      "url": "https://dev.to/devteam/thats-a-wrap-on-hacktoberfest-2026-148k",
+      "source": "DEV.to",
+      "points": 53,
+      "comments": 13,
+      "comments_url": "https://dev.to/devteam/thats-a-wrap-on-hacktoberfest-2026-148k#comments",
+      "published_at": "2026-11-03T22:28:08Z",
+      "summary": "Hacktoberfest 2026 wrapped up on October 31st! Thank you to everyone who built, hosted, mentored,...",
+      "tags": [
+        "misc"
+      ]
+    },
+    {
+      "title": "Zig 0.17.1 Released",
+      "url": "https://ziglang.org/news/0.17.1-released/",
+      "source": "Lobsters",
+      "points": 42,
+      "comments": 0,
+      "comments_url": "https://lobste.rs/s/pa1411/zig_0_17_1_released",
+      "published_at": "2026-11-04T18:57:35+08:00",
+      "tags": [
+        "programming",
+        "release"
+      ]
+    },
+    {
+      "title": "How to speed up the Rust compiler in November 2026",
+      "url": "https://nnethercote.github.io/2026/11/04/how-to-speed-up-the-rust-compiler-in-november-2026.html",
+      "source": "Lobsters",
+      "points": 32,
+      "comments": 0,
+      "comments_url": "https://lobste.rs/s/ecrqpy/how_speed_up_rust_compiler_november_2026",
+      "published_at": "2026-11-04T22:05:16+08:00",
+      "tags": [
+        "programming"
+      ]
+    },
+    {
+      "title": "Nuxt CLI v4 Is Great for AI Coding Agents",
+      "url": "https://dev.to/erikch/nuxt-cli-v4-is-great-for-ai-coding-agents-5dhg",
+      "source": "DEV.to",
+      "points": 11,
+      "comments": 3,
+      "comments_url": "https://dev.to/erikch/nuxt-cli-v4-is-great-for-ai-coding-agents-5dhg#comments",
+      "published_at": "2026-11-04T18:59:04Z",
+      "summary": "Have you ever had a dev server running, and then asked your coding agent to test something in that...",
+      "tags": [
+        "ai",
+        "programming",
+        "devtools"
+      ]
+    },
+    {
+      "title": "datasette-apps 0.3a0",
+      "url": "https://simonwillison.net/2026/Nov/4/datasette-apps/",
+      "source": "Simon Willison",
+      "published_at": "2026-11-04T08:29:36+08:00",
+      "summary": "Release: datasette-apps 0.3a0 Datasette Apps adds support for hosting and editing custom HTML applications inside of Datasette. These can be created by hand, but it's easier to create them using LLMs via Datasette Agent . This release improves that integration: Apps can now be…",
+      "tags": [
+        "ai",
+        "web"
+      ]
+    },
+    {
+      "title": "datasette-agent 0.5a0",
+      "url": "https://simonwillison.net/2026/Nov/3/datasette-agent/",
+      "source": "Simon Willison",
+      "published_at": "2026-11-04T07:13:45+08:00",
+      "summary": "Release: datasette-agent 0.5a0 This is a significant release of Datasette Agent . The most notable new feature is called the panel - it lets the agent chat open and then sit next to pages from Datasette, for example a table or query page. When combined with datasette-apps this…",
+      "tags": [
+        "ai"
+      ]
+    },
+    {
+      "title": "llm 0.37.1",
+      "url": "https://simonwillison.net/2026/Nov/3/llm/",
+      "source": "Simon Willison",
+      "published_at": "2026-11-04T05:41:42+08:00",
+      "summary": "Release: llm 0.37.1 A bugfix release for LLM , with contributions from Steven Huang , Tao An , Arjan Mossel , and XQ . Tags: llm",
+      "tags": [
+        "ai"
+      ]
+    },
+    {
+      "title": "StateBench: Testing how language models track state changes over long documents",
+      "url": "https://huggingface.co/blog/allenai/statebench",
+      "source": "Hugging Face",
+      "published_at": "2026-11-04T01:15:21+08:00",
+      "tags": [
+        "ai",
+        "programming"
+      ]
+    },
+    {
+      "title": "Palette: teaching a small model to build decks in your design language",
+      "url": "https://huggingface.co/blog/ibm-research/palette-deck-building",
+      "source": "Hugging Face",
+      "published_at": "2026-11-04T00:35:36+08:00",
+      "tags": [
+        "ai"
+      ]
+    }
+  ],
+  "news_highlights": [
+    {
+      "title": "Ripple-65B Preview: U.S. Open-Weight SOTA on Agentic Coding",
+      "url": "https://www.ricursive.com/ripple",
+      "why_it_matters": "A new open-weight model pitched specifically at agentic coding, so it's a candidate to test as a local or self-hosted backend for coding agents."
+    },
+    {
+      "title": "Kimi K3.1 Pro model weights are out",
+      "url": "https://huggingface.co/moonshotai/Kimi-K3.1-Pro",
+      "why_it_matters": "Another major open-weight release on Hugging Face, which widens the choice of models you can run and fine-tune without a closed API."
+    },
+    {
+      "title": "AI is forcing us to pay off 40 years of technical debt",
+      "url": "https://spectrum.ieee.org/ai-in-cybersecurity-php2shell-vulnerability",
+      "why_it_matters": "AI-driven vulnerability discovery is surfacing old bugs in legacy code, so keeping dependencies and old services patched matters more than ever."
+    },
+    {
+      "title": "Conductor is joining Meta",
+      "url": "https://www.conductor.build/announcement",
+      "why_it_matters": "Consolidation is hitting the coding-agent tool space; if you rely on Conductor, keep an eye on what happens to the product."
+    },
+    {
+      "title": "A new Go API for JSON",
+      "url": "https://go.dev/blog/jsonv2",
+      "why_it_matters": "Go's official JSON v2 work affects nearly every Go web service and API client, so it's worth reading before your next Go upgrade."
+    }
+  ]
+}

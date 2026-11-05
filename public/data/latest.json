@@ -1,7 +1,7 @@
 {
   "sample": false,
-  "generated_at": "2026-11-05T10:01:06+08:00",
-  "date": "2026-11-04",
+  "generated_at": "2026-11-05T10:01:40+08:00",
+  "date": "2026-11-05",
   "run": {
     "trending_observed": 0,
     "saved": 0,
@@ -12,7 +12,7 @@
     "eligible_not_archived": 0,
     "rejected": 0,
     "blockers": [
-      "Mac mini (maximas-Mac-mini.local) is offline (not connected to Grok Bot), after five days of shell spawn failures (10-30 to 11-03); SSD mount could not be verified, so the 2026-11-04 Trending archive did not run and is pending. News-only publish."
+      "Mac mini (maximas-Mac-mini.local) is still offline (not connected to Grok Bot); after shell spawn failures from 10-30 to 11-03 and being offline on 11-04, the SSD mount could not be verified, so the 2026-11-05 Trending archive did not run and is pending. News-only publish."
     ],
     "archive_folder": ""
   },
@@ -24,7 +24,7 @@
       "title": "Residential proxies detected on White House network",
       "url": "https://layer3intel.com/blog/residential-proxies-white-house-network",
       "source": "Hacker News",
-      "points": 650,
+      "points": 651,
       "comments": 211,
       "comments_url": "https://news.ycombinator.com/item?id=50371246",
       "published_at": "2026-11-05T04:45:18+08:00",
@@ -60,7 +60,7 @@
       "title": "Kimi K3.1 Pro model weights are out",
       "url": "https://huggingface.co/moonshotai/Kimi-K3.1-Pro",
       "source": "Hacker News",
-      "points": 378,
+      "points": 379,
       "comments": 102,
       "comments_url": "https://news.ycombinator.com/item?id=50366999",
       "published_at": "2026-11-04T23:30:30+08:00",
@@ -120,7 +120,7 @@
       "title": "A thousand fewer paths to root",
       "url": "https://openai.com/index/a-thousand-fewer-paths-to-root/",
       "source": "Hacker News",
-      "points": 102,
+      "points": 103,
       "comments": 64,
       "comments_url": "https://news.ycombinator.com/item?id=50372929",
       "published_at": "2026-11-05T07:33:14+08:00",
@@ -132,7 +132,7 @@
       "title": "Guerrilla bike lanes: San Francisco makes illicit infrastructure permanent (2016)",
       "url": "https://99percentinvisible.org/article/guerrilla-bike-lanes-san-francisco-makes-illicit-infrastructure-permanent/",
       "source": "Hacker News",
-      "points": 258,
+      "points": 259,
       "comments": 190,
       "comments_url": "https://news.ycombinator.com/item?id=50366522",
       "published_at": "2026-11-04T23:01:44+08:00",
@@ -253,7 +253,7 @@
       "url": "https://www.theguardian.com/business/2026/nov/04/what-can-save-the-british-high-street-rotherham",
       "source": "Hacker News",
       "points": 64,
-      "comments": 145,
+      "comments": 147,
       "comments_url": "https://news.ycombinator.com/item?id=50367653",
       "published_at": "2026-11-05T00:11:33+08:00",
       "tags": [
@@ -495,29 +495,29 @@
   ],
   "news_highlights": [
     {
-      "title": "Postman silently auto-installs AI plugins and attempts to share all API data",
-      "url": "https://github.com/postmanlabs/postman-app-support/issues/14370",
-      "why_it_matters": "Dev tools that quietly add AI features can leak API keys and payloads; worth auditing what your own toolchain sends out (1037 points on Hacker News)."
+      "title": "Ripple-65B Preview: U.S. Open-Weight SOTA on Agentic Coding",
+      "url": "https://www.ricursive.com/ripple",
+      "why_it_matters": "A new open-weight model pitched specifically at agentic coding, so it's a candidate to test as a local or self-hosted backend for coding agents."
     },
     {
-      "title": "Sparks of Weight-Space Programming: LLMs can natively read & write neural network weights",
-      "url": "https://rikiyat.github.io/blog/weight-space-programming/",
-      "why_it_matters": "The paper behind today's biggest AI debate: if models can edit weights directly, it opens a new way for agents to modify other models."
+      "title": "Kimi K3.1 Pro model weights are out",
+      "url": "https://huggingface.co/moonshotai/Kimi-K3.1-Pro",
+      "why_it_matters": "Another major open-weight release on Hugging Face, which widens the choice of models you can run and fine-tune without a closed API."
     },
     {
-      "title": "The 'Astra can read and write weights to improve Qwen' post is misleading",
-      "url": "https://honnibal.dev/blog/astra-read-write-misleading",
-      "why_it_matters": "A sharp pushback on that weight-editing claim (910 points); read it alongside the paper before taking the hype at face value."
+      "title": "AI is forcing us to pay off 40 years of technical debt",
+      "url": "https://spectrum.ieee.org/ai-in-cybersecurity-php2shell-vulnerability",
+      "why_it_matters": "AI-driven vulnerability discovery is surfacing old bugs in legacy code, so keeping dependencies and old services patched matters more than ever."
     },
     {
-      "title": "Qwen 3.8 27B on my laptop can interpret model weights, too",
-      "url": "https://simonwillison.net/2026/Nov/3/qwen-can-interpret-model-weights/",
-      "why_it_matters": "Simon Willison reproduces part of the idea with a local 27B model, a hint of what laptop-sized open models can already do."
+      "title": "Conductor is joining Meta",
+      "url": "https://www.conductor.build/announcement",
+      "why_it_matters": "Consolidation is hitting the coding-agent tool space; if you rely on Conductor, keep an eye on what happens to the product."
     },
     {
-      "title": "StateBench: Testing how language models track state changes over long documents",
-      "url": "https://huggingface.co/blog/allenai/statebench",
-      "why_it_matters": "Tracking state over long contexts is exactly where coding agents slip up, so this benchmark is useful for picking models for long sessions."
+      "title": "A new Go API for JSON",
+      "url": "https://go.dev/blog/jsonv2",
+      "why_it_matters": "Go's official JSON v2 work affects nearly every Go web service and API client, so it's worth reading before your next Go upgrade."
     }
   ]
 }
