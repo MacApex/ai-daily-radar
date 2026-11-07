@@ -1,5 +1,10 @@
 [
   {
+    "date": "2026-11-07",
+    "featured": [],
+    "archived_count": 4
+  },
+  {
     "date": "2026-11-06",
     "featured": [
       "vercel-labs/agent-browser",
