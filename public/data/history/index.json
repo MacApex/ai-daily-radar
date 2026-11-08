@@ -1,5 +1,12 @@
 [
   {
+    "date": "2026-11-08",
+    "featured": [
+      "anthropics/skills"
+    ],
+    "archived_count": 5
+  },
+  {
     "date": "2026-11-07",
     "featured": [],
     "archived_count": 4

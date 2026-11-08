@@ -1,42 +1,58 @@
 {
   "sample": false,
-  "generated_at": "2026-11-07T10:18:17+08:00",
-  "date": "2026-11-07",
+  "generated_at": "2026-11-08T10:18:27+08:00",
+  "date": "2026-11-08",
   "run": {
-    "trending_observed": 17,
-    "saved": 2,
-    "upgraded": 0,
+    "trending_observed": 15,
+    "saved": 1,
+    "upgraded": 2,
     "relocated": 2,
     "unchanged": 0,
     "incomplete": 0,
-    "eligible_not_archived": 0,
-    "rejected": 13,
+    "eligible_not_archived": 1,
+    "rejected": 9,
     "blockers": [
-      "Normal daily run for 2026-11-07; dates 2026-10-30 through 2026-11-04 were deliberately not backfilled.",
-      "Only 4 coding-agent-eligible repos (>=3000 stars) on today's Trending list: mattpocock/skills (5), cloudflare/security-audit-skill (5), google/skills (4), NVIDIA/auto-ontology (3). All four archived under the 5-per-day cap (2 relocated unchanged, 2 new saves). Remaining 13 entries rejected as general languages/frameworks/editors/infra/tooling.",
-      "Never re-clone rule applied for the two already-archived skills; both were check_unmodified → same-volume move into today's folder. Nothing moved to Trash.",
+      "Normal daily run for 2026-11-08; dates 2026-10-30 through 2026-11-04 were deliberately not backfilled.",
+      "Six coding-agent-eligible repos (>=3000 stars) on today's Trending list: mattpocock/skills (5), cloudflare/security-audit-skill (5), vercel-labs/agent-browser (5), anthropics/skills (5), google/skills (4), ranxianglei/billion-context (3). The five highest-rated were archived under the 5-per-day cap (2 relocated unchanged, 2 upgraded in place, 1 new save). billion-context logged as eligible, not archived (daily cap). Remaining 9 entries rejected as a general design-system library, end-user agent-host app, frameworks/editors/infra/OSINT/tooling, or below the 3,000-star floor (mbillow/localthings 1,070; dsx-ai-factory/nvke 571).",
+      "Never re-clone rule applied for the four already-archived skills/CLIs; all were check_unmodified → same-volume move into today's folder. Two were then upgraded in place (agent-browser; google/skills, whose single-file upstream change did not touch its 16 submodules). Nothing moved to Trash.",
       "git-lfs is still not installed on this Mac; none of today's archived trees contain LFS pointers. Repository code, hooks, installers and dependencies were never run.",
-      "No new featured recommendations today: the only never-featured eligible archive (NVIDIA/auto-ontology, rating 3) is not strong enough for a genuine recommendation; google/skills and the two rating-5 skills were already featured on earlier days."
+      "One new featured recommendation: anthropics/skills (never featured; distinct from anthropics/claude-plugins-official, featured 2026-10-17). The other archived repos were already featured. billion-context (rating 3, not archived today) is not strong enough for a genuine recommendation given its cert-MITM proxy paths and the daily-cap miss."
     ],
-    "archive_folder": "2026-11-07_101310_Asia-Shanghai"
+    "archive_folder": "2026-11-08_101005_Asia-Shanghai"
   },
-  "featured": [],
+  "featured": [
+    {
+      "full_name": "anthropics/skills",
+      "url": "https://github.com/anthropics/skills",
+      "stars": 188829,
+      "rating": 5,
+      "license": "",
+      "reason": "Official Anthropic public Agent Skills repository: a Claude Code plugin marketplace with document skills (docx/pdf/pptx/xlsx), example skills (mcp-builder, webapp-testing, skill-creator, frontend-design, canvas-design) plus the Agent Skills spec and a template. Distinct from the earlier anthropics/claude-plugins-official archive. Many skills are Apache-2.0; GitHub records no root license.",
+      "ideas": [
+        "Register the marketplace in Claude Code (`/plugin marketplace add anthropics/skills`) and install document-skills, then use the PDF skill to turn today's Github Trending RUN_REPORT.md into a one-page briefing you can open on your Android phone.",
+        "Install example-skills and point the webapp-testing skill at https://macapex.github.io/ai-daily-radar/ to check that the original (non-glass) layout still shows today's date banner after the Pages deploy.",
+        "Use the mcp-builder example as a pattern the next time you archive an MCP server, so the agent writes a small SKILL.md that documents how to drive that server without executing the archived repo.",
+        "Copy template/SKILL.md (or run skill-creator) to encode your archive rules — 3,000 stars, 5 per day, never re-clone, relocate-and-upgrade — as a project-local skill so future agents stop inventing process.",
+        "Compare Anthropic's frontend-design and canvas-design skills with elayadesign/ai-design-skills and pbakaus/impeccable on a small ai-daily-radar UI tweak; keep the skill whose output stays closest to the original design you asked to preserve."
+      ]
+    }
+  ],
   "archived": [
     {
-      "full_name": "mattpocock/skills",
-      "url": "https://github.com/mattpocock/skills",
-      "stars": 316772,
+      "full_name": "vercel-labs/agent-browser",
+      "url": "https://github.com/vercel-labs/agent-browser",
+      "stars": 46873,
       "rating": 5,
-      "license": "MIT",
-      "commit_sha": "4ae2317ddb22b046e26455e4f9c9b3aaaf62212d",
-      "status": "relocated",
-      "size_mb": 0.8,
-      "description": "Skills for Real Engineers. Straight from my .agents directory."
+      "license": "Apache-2.0",
+      "commit_sha": "4b0e9f01fa8d214d39bbfe5391257640634fb9a0",
+      "status": "upgraded",
+      "size_mb": 11.6,
+      "description": "Browser automation CLI for AI agents"
     },
     {
       "full_name": "cloudflare/security-audit-skill",
       "url": "https://github.com/cloudflare/security-audit-skill",
-      "stars": 64124,
+      "stars": 65801,
       "rating": 5,
       "license": "MIT",
       "commit_sha": "c1c8a8c1471069fb0e188eeaff69b8e8db6564a8",
@@ -45,480 +61,517 @@
       "description": "A coding-agent skill for multi-phase security audits with independently verified, machine-readable findings"
     },
     {
-      "full_name": "google/skills",
-      "url": "https://github.com/google/skills",
-      "stars": 22857,
-      "rating": 4,
-      "license": "Apache-2.0",
-      "commit_sha": "993b979cf055de97dd15d4d5751d2672de561679",
-      "status": "saved",
-      "size_mb": 23.3,
-      "description": "Agent Skills for Google products and technologies"
+      "full_name": "mattpocock/skills",
+      "url": "https://github.com/mattpocock/skills",
+      "stars": 317762,
+      "rating": 5,
+      "license": "MIT",
+      "commit_sha": "4ae2317ddb22b046e26455e4f9c9b3aaaf62212d",
+      "status": "relocated",
+      "size_mb": 0.8,
+      "description": "Skills for Real Engineers. Straight from my .agents directory."
     },
     {
-      "full_name": "NVIDIA/auto-ontology",
-      "url": "https://github.com/NVIDIA/auto-ontology",
-      "stars": 9105,
-      "rating": 3,
-      "license": "Apache-2.0",
-      "commit_sha": "c447003f72a822301e927196a4ecb5b597c308d5",
+      "full_name": "anthropics/skills",
+      "url": "https://github.com/anthropics/skills",
+      "stars": 188829,
+      "rating": 5,
+      "license": "",
+      "commit_sha": "2c5958ecac7cee2b583967a2c4981d0f4a75c579",
       "status": "saved",
-      "size_mb": 19.3,
-      "description": "Auto Ontology is a Python framework for building semantic, graph-based reasoning layers over data. It enables deterministic query generation, better context retrieval, and more explainable AI for LLM and agent workflows."
+      "size_mb": 11.4,
+      "description": "Public repository for Agent Skills"
+    },
+    {
+      "full_name": "google/skills",
+      "url": "https://github.com/google/skills",
+      "stars": 23440,
+      "rating": 4,
+      "license": "Apache-2.0",
+      "commit_sha": "2194d3b8b1f31975fef2f1a0ae6b9ab55bd7ceee",
+      "status": "upgraded",
+      "size_mb": 23.3,
+      "description": "Agent Skills for Google products and technologies"
     }
   ],
   "trending": [
     {
       "rank": 1,
-      "full_name": "zed-industries/zed",
-      "url": "https://github.com/zed-industries/zed",
-      "stars": 93671,
-      "stars_today": 306,
+      "full_name": "vercel-labs/agent-browser",
+      "url": "https://github.com/vercel-labs/agent-browser",
+      "stars": 46873,
+      "stars_today": 190,
       "language": "Rust",
-      "description": "Code at the speed of thought – Zed is a high-performance, multiplayer code editor from the creators of Atom and Tree-sitter.",
-      "decision": "rejected",
-      "decision_reason": "Not selected: high-performance multiplayer code editor with built-in AI agent panel; an IDE product for humans, not a coding-agent skill, MCP server, library or workflow that Codex/Claude Code can install and drive."
+      "description": "Browser automation CLI for AI agents",
+      "decision": "archived",
+      "decision_reason": "Upgraded: Vercel Labs browser-automation CLI for AI agents (Apache-2.0): snapshot pages as an accessibility tree with refs, act via shell, plus version-matched skills and an MCP server. Already featured; upstream moved to a new commit, so the folder was moved into today's run and upgraded in place with an incremental fetch (no re-clone)."
     },
     {
       "rank": 2,
-      "full_name": "NVIDIA/auto-ontology",
-      "url": "https://github.com/NVIDIA/auto-ontology",
-      "stars": 9105,
-      "stars_today": 2015,
-      "language": "Python",
-      "description": "Auto Ontology is a Python framework for building semantic, graph-based reasoning layers over data. It enables deterministic query generation, better context retrieval, and more explainable AI for LLM and agent workflows.",
-      "decision": "archived",
-      "decision_reason": "Saved: NVIDIA open library that builds a semantic ontology/context layer over enterprise metadata and exposes it to agent harnesses via MCP, CLI and API (Apache-2.0). Useful for grounded analytics agents; previously logged as eligible-not-archived, now archived into today's run under the daily cap (alongside two rating-5 relocations and google/skills)."
-    },
-    {
-      "rank": 3,
-      "full_name": "rails/rails",
-      "url": "https://github.com/rails/rails",
-      "stars": 59032,
-      "stars_today": 142,
-      "language": "Ruby",
-      "description": "Ruby on Rails",
-      "decision": "rejected",
-      "decision_reason": "Not selected: Ruby on Rails web framework; general application framework, not a coding-agent tool, skill or workflow."
-    },
-    {
-      "rank": 4,
-      "full_name": "mpv-player/mpv",
-      "url": "https://github.com/mpv-player/mpv",
-      "stars": 37887,
-      "stars_today": 37,
-      "language": "C",
-      "description": "🎥 Command line media player",
-      "decision": "rejected",
-      "decision_reason": "Not selected: command-line media player; end-user media software, not a coding-agent tool, skill or workflow."
-    },
-    {
-      "rank": 5,
-      "full_name": "rust-lang/rust",
-      "url": "https://github.com/rust-lang/rust",
-      "stars": 121465,
-      "stars_today": 192,
-      "language": "Rust",
-      "description": "Empowering everyone to build reliable and efficient software.",
-      "decision": "rejected",
-      "decision_reason": "Not selected: Rust programming language compiler and standard library; language toolchain, not a coding-agent tool, skill or workflow."
-    },
-    {
-      "rank": 6,
-      "full_name": "react/react",
-      "url": "https://github.com/react/react",
-      "stars": 252265,
-      "stars_today": 248,
-      "language": "JavaScript",
-      "description": "The library for web and native user interfaces.",
-      "decision": "rejected",
-      "decision_reason": "Not selected: React UI library for web and native interfaces; general frontend library, not a coding-agent tool, skill or workflow."
-    },
-    {
-      "rank": 7,
-      "full_name": "angular/angular",
-      "url": "https://github.com/angular/angular",
-      "stars": 101374,
-      "stars_today": 135,
-      "language": "TypeScript",
-      "description": "Deliver web apps with confidence 🚀",
-      "decision": "rejected",
-      "decision_reason": "Not selected: Angular web application framework; general frontend framework, not a coding-agent tool, skill or workflow."
-    },
-    {
-      "rank": 8,
-      "full_name": "symfony/symfony",
-      "url": "https://github.com/symfony/symfony",
-      "stars": 31440,
-      "stars_today": 128,
-      "language": "PHP",
-      "description": "The Symfony PHP framework",
-      "decision": "rejected",
-      "decision_reason": "Not selected: Symfony PHP framework; general application framework, not a coding-agent tool, skill or workflow."
-    },
-    {
-      "rank": 9,
-      "full_name": "prometheus/prometheus",
-      "url": "https://github.com/prometheus/prometheus",
-      "stars": 67197,
-      "stars_today": 148,
-      "language": "Go",
-      "description": "The Prometheus monitoring system and time series database.",
-      "decision": "rejected",
-      "decision_reason": "Not selected: Prometheus monitoring system and time-series database; infrastructure observability, not a coding-agent tool, skill or workflow."
-    },
-    {
-      "rank": 10,
-      "full_name": "google/skills",
-      "url": "https://github.com/google/skills",
-      "stars": 22857,
-      "stars_today": 534,
-      "language": "Python",
-      "description": "Agent Skills for Google products and technologies",
-      "decision": "archived",
-      "decision_reason": "Saved: Official Google Agent Skills (Apache-2.0) for Google Cloud and related products (IAM, foundation builder, solution architecture, RAG, GKE inference, multi-agent security). Install via npx skills add. Featured on 2026-11-06 while still eligible-not-archived; upstream advanced, so archived today as a new pinned snapshot under the daily cap."
-    },
-    {
-      "rank": 11,
-      "full_name": "microsoft/vscode",
-      "url": "https://github.com/microsoft/vscode",
-      "stars": 195035,
-      "stars_today": 301,
-      "language": "TypeScript",
-      "description": "Visual Studio Code",
-      "decision": "rejected",
-      "decision_reason": "Not selected: Visual Studio Code editor; IDE product for humans, not a coding-agent skill, MCP server or workflow that coding agents install."
-    },
-    {
-      "rank": 12,
-      "full_name": "nushell/nushell",
-      "url": "https://github.com/nushell/nushell",
-      "stars": 40994,
-      "stars_today": 131,
-      "language": "Rust",
-      "description": "A new type of shell",
-      "decision": "rejected",
-      "decision_reason": "Not selected: structured-data shell; general developer tooling, not a coding-agent skill, MCP server or agent workflow."
-    },
-    {
-      "rank": 13,
-      "full_name": "etcd-io/etcd",
-      "url": "https://github.com/etcd-io/etcd",
-      "stars": 52618,
-      "stars_today": 128,
-      "language": "Go",
-      "description": "Distributed reliable key-value store for the most critical data of a distributed system",
-      "decision": "rejected",
-      "decision_reason": "Not selected: distributed key-value store; infrastructure component, not a coding-agent tool, skill or workflow."
-    },
-    {
-      "rank": 14,
-      "full_name": "openssl/openssl",
-      "url": "https://github.com/openssl/openssl",
-      "stars": 31298,
-      "stars_today": 26,
-      "language": "C",
-      "description": "General purpose TLS and crypto library",
-      "decision": "rejected",
-      "decision_reason": "Not selected: general-purpose TLS/crypto library; systems library, not a coding-agent tool, skill or workflow."
-    },
-    {
-      "rank": 15,
-      "full_name": "mattpocock/skills",
-      "url": "https://github.com/mattpocock/skills",
-      "stars": 316772,
-      "stars_today": 2070,
-      "language": "Shell",
-      "description": "Skills for Real Engineers. Straight from my .agents directory.",
-      "decision": "archived",
-      "decision_reason": "Relocated: Matt Pocock's composable engineering agent skills (MIT) for Claude Code, Codex, Copilot and Gemini: small, editable skills from a real engineering practice (software-factory, planning, review). Already featured; upstream commit unchanged, so the folder was moved into today's run and marked unchanged, relocated (no download)."
-    },
-    {
-      "rank": 16,
       "full_name": "cloudflare/security-audit-skill",
       "url": "https://github.com/cloudflare/security-audit-skill",
-      "stars": 64124,
-      "stars_today": 2548,
+      "stars": 65801,
+      "stars_today": 2085,
       "language": "JavaScript",
       "description": "A coding-agent skill for multi-phase security audits with independently verified, machine-readable findings",
       "decision": "archived",
       "decision_reason": "Relocated: Cloudflare's six-phase security-audit skill for coding agents: isolated hunters, adversarial verifiers, schema-validated findings.json and coverage ledger. Already archived and featured; upstream still at the archived commit, so the folder was moved into today's run and marked unchanged, relocated (no download)."
     },
     {
-      "rank": 17,
+      "rank": 3,
+      "full_name": "google/skills",
+      "url": "https://github.com/google/skills",
+      "stars": 23440,
+      "stars_today": 443,
+      "language": "Python",
+      "description": "Agent Skills for Google products and technologies",
+      "decision": "archived",
+      "decision_reason": "Upgraded: Official Google Agent Skills (Apache-2.0) for Google Cloud and related products (IAM, foundation builder, solution architecture, RAG, GKE inference, multi-agent security). Install via npx skills add. Already featured; upstream advanced by one commit (a Gemini Interactions API skill, no submodule change), so the folder was moved into today's run and upgraded in place with an incremental fetch (no re-clone)."
+    },
+    {
+      "rank": 4,
+      "full_name": "mattpocock/skills",
+      "url": "https://github.com/mattpocock/skills",
+      "stars": 317762,
+      "stars_today": 1100,
+      "language": "Shell",
+      "description": "Skills for Real Engineers. Straight from my .agents directory.",
+      "decision": "archived",
+      "decision_reason": "Relocated: Matt Pocock's composable engineering agent skills (MIT) for Claude Code, Codex, Copilot and Gemini: small, editable skills from a real engineering practice (software-factory, planning, review). Already featured; upstream commit unchanged, so the folder was moved into today's run and marked unchanged, relocated (no download)."
+    },
+    {
+      "rank": 5,
+      "full_name": "anthropics/skills",
+      "url": "https://github.com/anthropics/skills",
+      "stars": 188829,
+      "stars_today": 390,
+      "language": "Python",
+      "description": "Public repository for Agent Skills",
+      "decision": "archived",
+      "decision_reason": "Saved: Official Anthropic public Agent Skills repository: a Claude Code plugin marketplace with document skills (docx/pdf/pptx/xlsx), example skills (mcp-builder, webapp-testing, skill-creator, frontend-design, canvas-design) plus the Agent Skills spec and a template. Distinct from the earlier anthropics/claude-plugins-official archive. Many skills are Apache-2.0; GitHub records no root license."
+    },
+    {
+      "rank": 6,
+      "full_name": "meta/astryx",
+      "url": "https://github.com/meta/astryx",
+      "stars": 14584,
+      "stars_today": 96,
+      "language": "TypeScript",
+      "description": "An open source design system that's fully customizable and agent ready",
+      "decision": "rejected",
+      "decision_reason": "Not selected: Meta's open-source React 19 + StyleX design system (150+ components, theming, CLI), marketed as agent-ready; a general UI component library, not a coding-agent skill, MCP server or workflow that Codex/Claude Code install and drive."
+    },
+    {
+      "rank": 7,
+      "full_name": "prometheus/prometheus",
+      "url": "https://github.com/prometheus/prometheus",
+      "stars": 67452,
+      "stars_today": 322,
+      "language": "Go",
+      "description": "The Prometheus monitoring system and time series database.",
+      "decision": "rejected",
+      "decision_reason": "Not selected: Prometheus monitoring system and time-series database; infrastructure observability, not a coding-agent tool, skill or workflow."
+    },
+    {
+      "rank": 8,
+      "full_name": "sherlock-project/sherlock",
+      "url": "https://github.com/sherlock-project/sherlock",
+      "stars": 100589,
+      "stars_today": 1766,
+      "language": "Python",
+      "description": "Hunt down social media accounts by username across social networks",
+      "decision": "rejected",
+      "decision_reason": "Not selected: OSINT username-search CLI across social networks; general security/recon tooling, not a coding-agent skill, MCP server or agent workflow."
+    },
+    {
+      "rank": 9,
+      "full_name": "milind-soni/OpenMausBot",
+      "url": "https://github.com/milind-soni/OpenMausBot",
+      "stars": 17054,
+      "stars_today": 1955,
+      "language": "TypeScript",
+      "description": "Open-source Grok Bot alternative with a virtual machine that bots can use",
+      "decision": "rejected",
+      "decision_reason": "Not selected: open-source Grok Bot alternative — an Electron chat app that hosts Claude/Codex/Grok CLIs as contacts with optional VMs; an end-user personal-agent product, not a coding-agent skill, MCP server, library or workflow that Codex/Claude Code can install and drive."
+    },
+    {
+      "rank": 10,
       "full_name": "astral-sh/ruff",
       "url": "https://github.com/astral-sh/ruff",
-      "stars": 50707,
-      "stars_today": 169,
+      "stars": 50987,
+      "stars_today": 350,
       "language": "Rust",
       "description": "An extremely fast Python linter and code formatter, written in Rust.",
       "decision": "rejected",
       "decision_reason": "Not selected: extremely fast Python linter and formatter; general developer tooling, not a coding-agent skill, MCP server or agent workflow."
+    },
+    {
+      "rank": 11,
+      "full_name": "tailwindlabs/tailwindcss",
+      "url": "https://github.com/tailwindlabs/tailwindcss",
+      "stars": 98495,
+      "stars_today": 122,
+      "language": "TypeScript",
+      "description": "A utility-first CSS framework for rapid UI development.",
+      "decision": "rejected",
+      "decision_reason": "Not selected: utility-first CSS framework; general frontend library, not a coding-agent tool, skill or workflow."
+    },
+    {
+      "rank": 12,
+      "full_name": "mbillow/localthings",
+      "url": "https://github.com/mbillow/localthings",
+      "stars": 1070,
+      "stars_today": 186,
+      "language": "Python",
+      "description": "Control your Samsung appliances from Home Assistant over your home network, with no cloud account.",
+      "decision": "rejected",
+      "decision_reason": "Not selected: Home Assistant integration for Samsung appliances over the local network (1,070 verified stars, below the 3,000-star floor); not a coding-agent tool, skill or workflow."
+    },
+    {
+      "rank": 13,
+      "full_name": "zed-industries/zed",
+      "url": "https://github.com/zed-industries/zed",
+      "stars": 94300,
+      "stars_today": 1114,
+      "language": "Rust",
+      "description": "Code at the speed of thought – Zed is a high-performance, multiplayer code editor from the creators of Atom and Tree-sitter.",
+      "decision": "rejected",
+      "decision_reason": "Not selected: high-performance multiplayer code editor with built-in AI agent panel; an IDE product for humans, not a coding-agent skill, MCP server, library or workflow that Codex/Claude Code can install and drive."
+    },
+    {
+      "rank": 14,
+      "full_name": "ranxianglei/billion-context",
+      "url": "https://github.com/ranxianglei/billion-context",
+      "stars": 4640,
+      "stars_today": 191,
+      "language": "TypeScript",
+      "description": "A context-compression plugin for month-long single sessions (billions of tokens) ,small context windows (a 100K context is enough) and token savings (5x fewer tokens) .上下文压缩插件，月级长会话会话， 兼顾小窗口(100k上下文足矣)省token(省5倍token) . billion-context is all you need",
+      "decision": "eligible_not_archived",
+      "decision_reason": "Context-compression plugin (MIT plus an attribution term) for Claude Code, Codex and other coding-agent CLIs: a bili proxy/plugin aimed at long-session context savings. In-scope for coding-agent workflows, but ranks below today's four rating-5 picks and the already-archived google/skills (4); several client paths also rely on a cert-MITM proxy. Logged without downloading (daily cap)."
+    },
+    {
+      "rank": 15,
+      "full_name": "dsx-ai-factory/nvke",
+      "url": "https://github.com/dsx-ai-factory/nvke",
+      "stars": 571,
+      "stars_today": 123,
+      "language": "Go",
+      "description": "NVIDIA Kubernetes Engine (NVKE). A management plane for GPU Kubernetes on bare metal.",
+      "decision": "rejected",
+      "decision_reason": "Not selected: NVIDIA Kubernetes Engine management plane for GPU clusters on bare metal (571 verified stars, below the 3,000-star floor); infrastructure tooling, not a coding-agent skill, MCP server or workflow."
     }
   ],
   "news": [
     {
-      "title": "Tesla to wind down Cybertruck production",
-      "url": "https://www.nbcnews.com/tech/tech-news/tesla-wind-cybertruck-production-years-poor-sales-markets-rcna607817",
+      "title": "The end of Microsoft Research's AI Frontiers group",
+      "url": "https://hunch.net/?p=13764006",
       "source": "Hacker News",
-      "points": 858,
-      "comments": 1718,
-      "comments_url": "https://news.ycombinator.com/item?id=50391456",
-      "published_at": "2026-11-06T20:13:51+08:00",
-      "tags": [
-        "hardware"
-      ]
-    },
-    {
-      "title": "A Jev that can ask Opus for help gives Opus accuracy at 4x lower cost",
-      "url": "https://hightouch.com/blog/llm-judges-identity-resolution",
-      "source": "Hacker News",
-      "points": 340,
-      "comments": 76,
-      "comments_url": "https://news.ycombinator.com/item?id=50397429",
-      "published_at": "2026-11-07T03:48:51+08:00",
-      "tags": [
-        "misc"
-      ]
-    },
-    {
-      "title": "AI is dramatically accelerating AI research",
-      "url": "https://www.planned-obsolescence.org/p/ai-is-dramatically-accelerating-ai",
-      "source": "Hacker News",
-      "points": 207,
-      "comments": 158,
-      "comments_url": "https://news.ycombinator.com/item?id=50397994",
-      "published_at": "2026-11-07T04:27:23+08:00",
+      "points": 395,
+      "comments": 231,
+      "comments_url": "https://news.ycombinator.com/item?id=50406563",
+      "published_at": "2026-11-08T02:02:17+08:00",
       "tags": [
         "ai",
         "science"
       ]
     },
     {
-      "title": "Anthropic IPO buyers see valuation as low as $1.1T",
-      "url": "https://www.bloomberg.com/news/articles/2026-11-06/anthropic-ipo-valuation-expectations-pressured-after-ai-rout",
+      "title": "Apple’s grey list: Words and phrases your iPhone won’t help you spell",
+      "url": "https://www.theguardian.com/technology/2026/nov/06/struggling-to-spell-male-chauvinist-pig-apple-grey-list-means-your-iphone-wont-help-you",
       "source": "Hacker News",
-      "points": 234,
-      "comments": 492,
-      "comments_url": "https://news.ycombinator.com/item?id=50394906",
-      "published_at": "2026-11-07T00:54:36+08:00",
+      "points": 370,
+      "comments": 247,
+      "comments_url": "https://news.ycombinator.com/item?id=50406111",
+      "published_at": "2026-11-08T01:06:36+08:00",
       "tags": [
-        "ai"
+        "hardware"
+      ]
+    },
+    {
+      "title": "What I run on my $10 USD OpenStick homelab",
+      "url": "https://blog.bosscher.ch/posts/openstick/",
+      "source": "Hacker News",
+      "points": 350,
+      "comments": 85,
+      "comments_url": "https://news.ycombinator.com/item?id=50406670",
+      "published_at": "2026-11-08T02:12:12+08:00",
+      "tags": [
+        "misc"
+      ]
+    },
+    {
+      "title": "Claude Code's \"Don't Ask Again\" exposes passwords in 1,122 public GitHub files",
+      "url": "https://apiiro.com/blog/coding-agents-leaking-secrets-github-dont-ask-again",
+      "source": "Hacker News",
+      "points": 190,
+      "comments": 130,
+      "comments_url": "https://news.ycombinator.com/item?id=50407882",
+      "published_at": "2026-11-08T04:45:32+08:00",
+      "tags": [
+        "ai",
+        "devtools"
+      ]
+    },
+    {
+      "title": "Need for Speed Underground 2 online in the browser",
+      "url": "https://nfsu2.xyz/",
+      "source": "Hacker News",
+      "points": 829,
+      "comments": 228,
+      "comments_url": "https://news.ycombinator.com/item?id=50403052",
+      "published_at": "2026-11-07T17:36:36+08:00",
+      "tags": [
+        "web"
+      ]
+    },
+    {
+      "title": "Every Mac comes with an (undocumented) family member classifier",
+      "url": "https://8rank.ai/game/apple-intelligence-personal-knowledge-graph",
+      "source": "Hacker News",
+      "points": 607,
+      "comments": 349,
+      "comments_url": "https://news.ycombinator.com/item?id=50403097",
+      "published_at": "2026-11-07T17:46:03+08:00",
+      "tags": [
+        "misc"
+      ]
+    },
+    {
+      "title": "MaxxBench – \"Nice DeepSWE score. But is it true?\"",
+      "url": "https://maxxbench.unlap.ai/research/why-maxxbench/",
+      "source": "Hacker News",
+      "points": 206,
+      "comments": 63,
+      "comments_url": "https://news.ycombinator.com/item?id=50406222",
+      "published_at": "2026-11-08T01:19:00+08:00",
+      "tags": [
+        "misc"
+      ]
+    },
+    {
+      "title": "Show HN: Coldframe, a honeypot that poses as a supermarket fridge controller",
+      "url": "https://github.com/hedgerow-dev/coldframe",
+      "source": "Hacker News",
+      "points": 193,
+      "comments": 40,
+      "comments_url": "https://news.ycombinator.com/item?id=50406292",
+      "published_at": "2026-11-08T01:27:30+08:00",
+      "tags": [
+        "misc"
+      ]
+    },
+    {
+      "title": "Every Windows 11 app should kill Electron, and Discord just showed why",
+      "url": "https://www.windowslatest.com/2026/11/06/every-windows-11-app-should-kill-electron-and-discord-just-showed-why-no-starting-screen-and-70-less-ram-even-with-two-accounts-signed-in/",
+      "source": "Hacker News",
+      "points": 221,
+      "comments": 213,
+      "comments_url": "https://news.ycombinator.com/item?id=50403507",
+      "published_at": "2026-11-07T19:11:15+08:00",
+      "tags": [
+        "misc"
+      ]
+    },
+    {
+      "title": "GitHub New pull request overview page in public preview",
+      "url": "https://github.blog/changelog/2026-11-05-new-pull-request-overview-page-in-public-preview/",
+      "source": "Hacker News",
+      "points": 67,
+      "comments": 51,
+      "comments_url": "https://news.ycombinator.com/item?id=50408931",
+      "published_at": "2026-11-08T07:09:40+08:00",
+      "tags": [
+        "devtools"
+      ]
+    },
+    {
+      "title": "The $8 Linux Computer (2022)",
+      "url": "http://thelittleengineerthatcould.blogspot.com/2022/12/the-8-linux-computer.html",
+      "source": "Hacker News",
+      "points": 201,
+      "comments": 85,
+      "comments_url": "https://news.ycombinator.com/item?id=50404599",
+      "published_at": "2026-11-07T22:00:20+08:00",
+      "tags": [
+        "linux"
+      ]
+    },
+    {
+      "title": "Asahi Linux Progress Linux 7.3",
+      "url": "https://asahilinux.org/2026/11/progress-report-7-3/",
+      "source": "Hacker News",
+      "points": 325,
+      "comments": 261,
+      "comments_url": "https://news.ycombinator.com/item?id=50401867",
+      "published_at": "2026-11-07T13:20:18+08:00",
+      "tags": [
+        "linux"
+      ]
+    },
+    {
+      "title": "Running a law firm on Free software",
+      "url": "https://decoded.legal/blog/2026/11/running-a-law-firm-on-free-software-2026-edition/",
+      "source": "Hacker News",
+      "points": 237,
+      "comments": 118,
+      "comments_url": "https://news.ycombinator.com/item?id=50403066",
+      "published_at": "2026-11-07T17:39:06+08:00",
+      "tags": [
+        "misc"
+      ]
+    },
+    {
+      "title": "Five memorable books about programming (2008)",
+      "url": "https://prog21.dadgum.com/19.html",
+      "source": "Hacker News",
+      "points": 87,
+      "comments": 55,
+      "comments_url": "https://news.ycombinator.com/item?id=50406319",
+      "published_at": "2026-11-08T01:30:49+08:00",
+      "tags": [
+        "programming"
+      ]
+    },
+    {
+      "title": "Making any integer with four 2s (2025)",
+      "url": "https://eli.thegreenplace.net/2025/making-any-integer-with-four-2s/",
+      "source": "Hacker News",
+      "points": 64,
+      "comments": 14,
+      "comments_url": "https://news.ycombinator.com/item?id=50408713",
+      "published_at": "2026-11-08T06:38:58+08:00",
+      "tags": [
+        "misc"
+      ]
+    },
+    {
+      "title": "A barbarian tribe's mythic origin story is true, ancient DNA reveals",
+      "url": "https://www.science.org/content/article/barbarian-tribe-s-mythic-origin-story-true-ancient-dna-reveals",
+      "source": "Hacker News",
+      "points": 210,
+      "comments": 188,
+      "comments_url": "https://news.ycombinator.com/item?id=50401740",
+      "published_at": "2026-11-07T12:54:36+08:00",
+      "tags": [
+        "misc"
+      ]
+    },
+    {
+      "title": "Terry Pratchett's Study",
+      "url": "https://www.sussi.dk/terry-pratchetts-study",
+      "source": "Hacker News",
+      "points": 106,
+      "comments": 28,
+      "comments_url": "https://news.ycombinator.com/item?id=50405674",
+      "published_at": "2026-11-08T00:05:45+08:00",
+      "tags": [
+        "misc"
+      ]
+    },
+    {
+      "title": "Every processor die anyone has photographed and given away",
+      "url": "https://sheets.works/data-viz/cpu-dies",
+      "source": "Hacker News",
+      "points": 80,
+      "comments": 17,
+      "comments_url": "https://news.ycombinator.com/item?id=50405782",
+      "published_at": "2026-11-08T00:21:36+08:00",
+      "tags": [
+        "misc"
+      ]
+    },
+    {
+      "title": "GeoWorks, Microsoft Windows' Upstart '90s Competitor (2016)",
+      "url": "https://www.atlasobscura.com/articles/the-history-of-geoworks-microsoft-windows-upstart-90s-competitor",
+      "source": "Hacker News",
+      "points": 43,
+      "comments": 17,
+      "comments_url": "https://news.ycombinator.com/item?id=50406502",
+      "published_at": "2026-11-08T01:54:56+08:00",
+      "tags": [
+        "misc"
+      ]
+    },
+    {
+      "title": "*sshole, or when are we finally going to get rid of C?",
+      "url": "https://sunshowers.io/posts/sshole/",
+      "source": "Lobsters",
+      "points": 22,
+      "comments": 35,
+      "comments_url": "https://lobste.rs/s/owsnms/sshole_when_are_we_finally_going_get_rid_c",
+      "published_at": "2026-11-08T05:05:35+08:00",
+      "tags": [
+        "misc"
+      ]
+    },
+    {
+      "title": "How are you dealing with all the negative side effects of AI on the web?",
+      "url": "https://lobste.rs/s/ipplhe/how_are_you_dealing_with_all_negative_side",
+      "source": "Lobsters",
+      "points": 60,
+      "comments": 54,
+      "comments_url": "https://lobste.rs/s/ipplhe/how_are_you_dealing_with_all_negative_side",
+      "published_at": "2026-11-07T17:47:24+08:00",
+      "summary": "It seems to me that the AI hype killed the web for good, but not for the reasons we immediately associate with it. Search engines now rank links full of slop at the top, which ironically make LLM summaries acceptable, not because they are better than what we had before (they…",
+      "tags": [
+        "ai",
+        "web"
+      ]
+    },
+    {
+      "title": "Show HN: An offline desktop companion to help maintain a healthy blink rhythm",
+      "url": "https://eyesrhythm.com/",
+      "source": "Hacker News",
+      "points": 27,
+      "comments": 12,
+      "comments_url": "https://news.ycombinator.com/item?id=50408350",
+      "published_at": "2026-11-08T05:47:47+08:00",
+      "tags": [
+        "misc"
+      ]
+    },
+    {
+      "title": "datasette #3046: Don't serve link: rel=next HTTP headers to Firefox for HTML pages",
+      "url": "https://simonwillison.net/2026/Nov/7/link-rel-next/",
+      "source": "Simon Willison",
+      "published_at": "2026-11-08T07:57:46+08:00",
+      "summary": "datasette #3046: Don't serve link: rel=next HTTP headers to Firefox for HTML pages I was looking at the Firefox network panel today when I noticed that requests to a Datasette table page were triggering an HTTP prefetch to the next page of rows in that table. This was happening…",
+      "tags": [
+        "web"
       ]
     },
     {
       "title": "Libghostty 1.0",
       "url": "https://mitchellh.com/writing/libghostty-1-0",
-      "source": "Hacker News",
-      "points": 208,
-      "comments": 26,
-      "comments_url": "https://news.ycombinator.com/item?id=50399933",
-      "published_at": "2026-11-07T07:30:52+08:00",
+      "source": "Lobsters",
+      "points": 155,
+      "comments": 7,
+      "comments_url": "https://lobste.rs/s/0ouxwf/libghostty_1_0",
+      "published_at": "2026-11-07T07:48:03+08:00",
       "tags": [
         "programming",
         "release"
       ]
     },
     {
-      "title": "Sodium-ion batteries approach cost parity with LFP",
-      "url": "https://www.pv-magazine.com/2026/11/06/sodium-ion-batteries-approach-cost-parity-with-lfp-with-70-gwh-covered-by-supply-agreements/",
-      "source": "Hacker News",
-      "points": 129,
-      "comments": 55,
-      "comments_url": "https://news.ycombinator.com/item?id=50399657",
-      "published_at": "2026-11-07T07:00:46+08:00",
+      "title": "Meridian — an experimental web browser built on Servo and GPUI",
+      "url": "https://op.tngl.io/meridian/",
+      "source": "Lobsters",
+      "points": 48,
+      "comments": 6,
+      "comments_url": "https://lobste.rs/s/j63dme/meridian_experimental_web_browser_built",
+      "published_at": "2026-11-07T17:21:55+08:00",
       "tags": [
-        "misc"
-      ]
-    },
-    {
-      "title": "Firecracker VM Escape: PwnEscape Part 2",
-      "url": "https://pwn.ai/blog/firecracker-escape",
-      "source": "Hacker News",
-      "points": 177,
-      "comments": 77,
-      "comments_url": "https://news.ycombinator.com/item?id=50397219",
-      "published_at": "2026-11-07T03:33:38+08:00",
-      "tags": [
-        "misc"
-      ]
-    },
-    {
-      "title": "Gemini Omni 1.2 Flash",
-      "url": "https://blog.google/innovation-and-ai/technology/developers-tools/introducing-gemini-omni-1-2-flash/",
-      "source": "Hacker News",
-      "points": 297,
-      "comments": 220,
-      "comments_url": "https://news.ycombinator.com/item?id=50392118",
-      "published_at": "2026-11-06T21:35:27+08:00",
-      "tags": [
-        "ai"
-      ]
-    },
-    {
-      "title": "First steps in bare-metal programming using UEFI",
-      "url": "https://kevinboone.me/efitest_index.html",
-      "source": "Hacker News",
-      "points": 192,
-      "comments": 33,
-      "comments_url": "https://news.ycombinator.com/item?id=50394855",
-      "published_at": "2026-11-07T00:50:29+08:00",
-      "tags": [
+        "web",
         "programming"
-      ]
-    },
-    {
-      "title": "ChatGPT silently passes data between connectors and the bounty wants an ID card",
-      "url": "https://community.openai.com/t/security-follow-up-tool-call-silently-routed-to-a-different-connector/1413053",
-      "source": "Hacker News",
-      "points": 73,
-      "comments": 33,
-      "comments_url": "https://news.ycombinator.com/item?id=50399569",
-      "published_at": "2026-11-07T06:50:43+08:00",
-      "tags": [
-        "ai"
-      ]
-    },
-    {
-      "title": "Devvm.dev: One VM for every project",
-      "url": "https://devvm.dev/",
-      "source": "Hacker News",
-      "points": 121,
-      "comments": 51,
-      "comments_url": "https://news.ycombinator.com/item?id=50395450",
-      "published_at": "2026-11-07T01:30:22+08:00",
-      "tags": [
-        "misc"
-      ]
-    },
-    {
-      "title": "Restaurant Delivery Payment-Skimming Campaign",
-      "url": "https://www.infohawk.com/news/2026-11-05-scamwich-restaurant-skimming",
-      "source": "Hacker News",
-      "points": 97,
-      "comments": 43,
-      "comments_url": "https://news.ycombinator.com/item?id=50397017",
-      "published_at": "2026-11-07T03:19:27+08:00",
-      "tags": [
-        "misc"
-      ]
-    },
-    {
-      "title": "US FAA says it will phase out floppy disks from air traffic control by 2028",
-      "url": "https://www.reuters.com/world/us/us-faa-says-it-will-phase-out-floppy-disks-air-traffic-control-by-2028-2026-11-05/",
-      "source": "Hacker News",
-      "points": 286,
-      "comments": 225,
-      "comments_url": "https://news.ycombinator.com/item?id=50388001",
-      "published_at": "2026-11-06T12:00:28+08:00",
-      "tags": [
-        "misc"
-      ]
-    },
-    {
-      "title": "Outbound SIP calling is now available to all organizations",
-      "url": "https://developers.openai.com/api/docs/guides/voice-sip",
-      "source": "Hacker News",
-      "points": 43,
-      "comments": 28,
-      "comments_url": "https://news.ycombinator.com/item?id=50399695",
-      "published_at": "2026-11-07T07:03:55+08:00",
-      "tags": [
-        "misc"
-      ]
-    },
-    {
-      "title": "Size-It-Up (Game)",
-      "url": "https://magnitudle.com/size-it-up",
-      "source": "Hacker News",
-      "points": 72,
-      "comments": 25,
-      "comments_url": "https://news.ycombinator.com/item?id=50395869",
-      "published_at": "2026-11-07T01:59:59+08:00",
-      "tags": [
-        "misc"
-      ]
-    },
-    {
-      "title": "Replit rebuilt its sandbox engine with microVMs",
-      "url": "https://frontier.replit.com/sandbox-engine-microvms-part-1/",
-      "source": "Hacker News",
-      "points": 68,
-      "comments": 19,
-      "comments_url": "https://news.ycombinator.com/item?id=50396834",
-      "published_at": "2026-11-07T03:06:10+08:00",
-      "tags": [
-        "misc"
-      ]
-    },
-    {
-      "title": "GitHub's new Git storage architecture",
-      "url": "https://github.blog/engineering/architecture-optimization/inside-githubs-new-git-storage-architecture/",
-      "source": "Hacker News",
-      "points": 68,
-      "comments": 9,
-      "comments_url": "https://news.ycombinator.com/item?id=50397099",
-      "published_at": "2026-11-07T03:24:21+08:00",
-      "tags": [
-        "programming",
-        "devtools"
-      ]
-    },
-    {
-      "title": "Memorilla: Latent Semantic Memory for LLMs",
-      "url": "https://arxiv.org/abs/2610.21375",
-      "source": "Hacker News",
-      "points": 86,
-      "comments": 7,
-      "comments_url": "https://news.ycombinator.com/item?id=50395919",
-      "published_at": "2026-11-07T02:03:33+08:00",
-      "tags": [
-        "ai"
-      ]
-    },
-    {
-      "title": "Chomsky and the two cultures of statistical learning (2011)",
-      "url": "https://www.norvig.com/chomsky.html",
-      "source": "Hacker News",
-      "points": 101,
-      "comments": 84,
-      "comments_url": "https://news.ycombinator.com/item?id=50389570",
-      "published_at": "2026-11-06T16:18:36+08:00",
-      "tags": [
-        "misc"
-      ]
-    },
-    {
-      "title": "An Update on the Hacktoberfest Open-Source AI Challenge: Ghost in the Machine Winners",
-      "url": "https://dev.to/devteam/an-update-on-the-hacktoberfest-open-source-ai-challenge-ghost-in-the-machine-winners-44bp",
-      "source": "DEV.to",
-      "points": 37,
-      "comments": 5,
-      "comments_url": "https://dev.to/devteam/an-update-on-the-hacktoberfest-open-source-ai-challenge-ghost-in-the-machine-winners-44bp#comments",
-      "published_at": "2026-11-06T22:28:31Z",
-      "summary": "Hey all, we have a quick update for everyone who participated in the Hacktoberfest Open-Source AI...",
-      "tags": [
-        "ai"
-      ]
-    },
-    {
-      "title": "Google has acquired Crusoe's data center site in southeast Wyoming",
-      "url": "https://www.crusoe.ai/resources/newsroom/crusoe-wyoming-data-center-campus-update",
-      "source": "Hacker News",
-      "points": 41,
-      "comments": 7,
-      "comments_url": "https://news.ycombinator.com/item?id=50397711",
-      "published_at": "2026-11-07T04:09:14+08:00",
-      "tags": [
-        "misc"
       ]
     },
     {
       "title": "An AI Testing Presentation Became the Final Push for Organizational Change at My Company",
       "url": "https://dev.to/xulingfeng/an-ai-testing-presentation-became-the-final-push-for-organizational-change-at-my-company-12ag",
       "source": "DEV.to",
-      "points": 114,
-      "comments": 61,
+      "points": 119,
+      "comments": 65,
       "comments_url": "https://dev.to/xulingfeng/an-ai-testing-presentation-became-the-final-push-for-organizational-change-at-my-company-12ag#comments",
       "published_at": "2026-11-06T01:27:32Z",
       "summary": "From a multi-agent testing experiment to a broader discussion about how engineering teams should...",
@@ -528,15 +581,118 @@
       ]
     },
     {
+      "title": "The Port That Does Not Exist",
+      "url": "https://acid.vegas/blog/the-port-that-does-not-exist/",
+      "source": "Lobsters",
+      "points": 58,
+      "comments": 6,
+      "comments_url": "https://lobste.rs/s/osqswf/port_does_not_exist",
+      "published_at": "2026-11-07T07:03:12+08:00",
+      "tags": [
+        "misc"
+      ]
+    },
+    {
+      "title": "Scriptable GeoDNS: leaving AWS for Bunny",
+      "url": "https://vincent.bernat.ch/en/blog/2026-bunny-geodns",
+      "source": "Lobsters",
+      "points": 24,
+      "comments": 11,
+      "comments_url": "https://lobste.rs/s/jsvlfm/scriptable_geodns_leaving_aws_for_bunny",
+      "published_at": "2026-11-07T15:46:35+08:00",
+      "tags": [
+        "misc"
+      ]
+    },
+    {
+      "title": "Building RailPulse AI: Deploying an Open-Source Railway Dispatch Agent with Gemma and Google Cloud Run",
+      "url": "https://dev.to/gde/building-railpulse-ai-deploying-an-open-source-railway-dispatch-agent-with-gemma-and-google-cloud-2b9g",
+      "source": "DEV.to",
+      "points": 22,
+      "comments": 11,
+      "comments_url": "https://dev.to/gde/building-railpulse-ai-deploying-an-open-source-railway-dispatch-agent-with-gemma-and-google-cloud-2b9g#comments",
+      "published_at": "2026-11-07T07:35:33Z",
+      "summary": "Author: Robina Mirbahar AI/ML Google Developer Expert (GDE) | Google Cloud Champion Innovator GitHub...",
+      "tags": [
+        "ai",
+        "security",
+        "devtools",
+        "programming"
+      ]
+    },
+    {
+      "title": "UploadYourRam.org",
+      "url": "https://uploadyourram.org/",
+      "source": "Lobsters",
+      "points": 51,
+      "comments": 4,
+      "comments_url": "https://lobste.rs/s/miazwz/uploadyourram_org",
+      "published_at": "2026-11-07T08:00:06+08:00",
+      "tags": [
+        "misc"
+      ]
+    },
+    {
+      "title": "Congrats to the Kaggle Benchmarking Challenge Winners!",
+      "url": "https://dev.to/devteam/congrats-to-the-kaggle-benchmarking-challenge-winners-2moh",
+      "source": "DEV.to",
+      "points": 126,
+      "comments": 25,
+      "comments_url": "https://dev.to/devteam/congrats-to-the-kaggle-benchmarking-challenge-winners-2moh#comments",
+      "published_at": "2026-11-05T21:12:11Z",
+      "summary": "A few weeks ago we teamed up with Kaggle to ask a deceptively simple question: how do you actually...",
+      "tags": [
+        "ai"
+      ]
+    },
+    {
+      "title": "OpenBSD top(1) adds flag to show chroot, pledge and unveil status",
+      "url": "https://undeadly.org/cgi?action=article;sid=20261106104957",
+      "source": "Lobsters",
+      "points": 16,
+      "comments": 1,
+      "comments_url": "https://lobste.rs/s/tfywf1/openbsd_top_1_adds_flag_show_chroot_pledge",
+      "published_at": "2026-11-08T02:41:33+08:00",
+      "tags": [
+        "linux"
+      ]
+    },
+    {
       "title": "Making musl and proprietary NVIDIA drivers work together",
       "url": "https://chimera-linux.org/news/2026/11/musl-nvidia.html",
       "source": "Lobsters",
-      "points": 49,
+      "points": 62,
       "comments": 9,
       "comments_url": "https://lobste.rs/s/hvxjbb/making_musl_proprietary_nvidia_drivers",
       "published_at": "2026-11-06T21:23:14+08:00",
       "tags": [
         "hardware"
+      ]
+    },
+    {
+      "title": "Two Dimensional Version Control",
+      "url": "https://www.redblobgames.com/blog/2026-09-27-jujutsu-experience/",
+      "source": "Lobsters",
+      "points": 30,
+      "comments": 1,
+      "comments_url": "https://lobste.rs/s/49o9f3/two_dimensional_version_control",
+      "published_at": "2026-11-07T16:21:50+08:00",
+      "tags": [
+        "misc"
+      ]
+    },
+    {
+      "title": "Exhale: A Breathing Guide That Reads Your Breath While Claude Code Works",
+      "url": "https://dev.to/gabrielanhaia/exhale-a-breathing-guide-that-reads-your-breath-while-claude-code-works-244a",
+      "source": "DEV.to",
+      "points": 20,
+      "comments": 2,
+      "comments_url": "https://dev.to/gabrielanhaia/exhale-a-breathing-guide-that-reads-your-breath-while-claude-code-works-244a#comments",
+      "published_at": "2026-11-07T11:27:26Z",
+      "summary": "This is a submission for the Presage SmartSpectra SDK Challenge. You hand Claude Code a task. It...",
+      "tags": [
+        "ai",
+        "programming"
       ]
     },
     {
@@ -551,56 +707,6 @@
       ]
     },
     {
-      "title": "Congrats to the Kaggle Benchmarking Challenge Winners!",
-      "url": "https://dev.to/devteam/congrats-to-the-kaggle-benchmarking-challenge-winners-2moh",
-      "source": "DEV.to",
-      "points": 111,
-      "comments": 24,
-      "comments_url": "https://dev.to/devteam/congrats-to-the-kaggle-benchmarking-challenge-winners-2moh#comments",
-      "published_at": "2026-11-05T21:12:11Z",
-      "summary": "A few weeks ago we teamed up with Kaggle to ask a deceptively simple question: how do you actually...",
-      "tags": [
-        "ai"
-      ]
-    },
-    {
-      "title": "sshhole",
-      "url": "https://sshhole.com/",
-      "source": "Lobsters",
-      "points": 168,
-      "comments": 41,
-      "comments_url": "https://lobste.rs/s/oq5pem/sshhole",
-      "published_at": "2026-11-05T20:24:42+08:00",
-      "tags": [
-        "misc"
-      ]
-    },
-    {
-      "title": "What are you doing this weekend?",
-      "url": "https://lobste.rs/s/jmdchp/what_are_you_doing_this_weekend",
-      "source": "Lobsters",
-      "points": 23,
-      "comments": 43,
-      "comments_url": "https://lobste.rs/s/jmdchp/what_are_you_doing_this_weekend",
-      "published_at": "2026-11-06T17:15:23+08:00",
-      "summary": "Feel free to tell what you plan on doing this weekend and even ask for help or feedback. Please keep in mind it’s more than OK to do nothing at all too!",
-      "tags": [
-        "misc"
-      ]
-    },
-    {
-      "title": "The MustCreate Pattern for Go Tests",
-      "url": "https://mtlynch.io/notes/go-must-create-pattern/",
-      "source": "Lobsters",
-      "points": 16,
-      "comments": 21,
-      "comments_url": "https://lobste.rs/s/i96uyr/mustcreate_pattern_for_go_tests",
-      "published_at": "2026-11-06T23:37:00+08:00",
-      "tags": [
-        "programming"
-      ]
-    },
-    {
       "title": "Quoting Nilay Patel",
       "url": "https://simonwillison.net/2026/Nov/6/nilay-patel/",
       "source": "Simon Willison",
@@ -611,99 +717,12 @@
       ]
     },
     {
-      "title": "Software Line Specialist",
-      "url": "https://lovro-bikic.github.io/software-line-specialist/",
-      "source": "Lobsters",
-      "points": 110,
-      "comments": 9,
-      "comments_url": "https://lobste.rs/s/yoywed/software_line_specialist",
-      "published_at": "2026-11-06T00:32:29+08:00",
-      "tags": [
-        "misc"
-      ]
-    },
-    {
       "title": "ToyBlocks: A controlled world for robot learning and evaluation",
       "url": "https://huggingface.co/blog/allenai/toyblocks",
       "source": "Hugging Face",
       "published_at": "2026-11-06T22:00:48+08:00",
       "tags": [
         "hardware"
-      ]
-    },
-    {
-      "title": "WebMCP Attack Lab: Can an E-Shop Hijack Your AI Agent?",
-      "url": "https://dev.to/gramli/webmcp-attack-lab-can-an-e-shop-hijack-your-ai-agent-4oe5",
-      "source": "DEV.to",
-      "points": 75,
-      "comments": 49,
-      "comments_url": "https://dev.to/gramli/webmcp-attack-lab-can-an-e-shop-hijack-your-ai-agent-4oe5#comments",
-      "published_at": "2026-11-05T07:29:16Z",
-      "summary": "WebMCP is a proposed web standard that, at least to me, looks very promising. I already played around...",
-      "tags": [
-        "ai",
-        "security",
-        "web"
-      ]
-    },
-    {
-      "title": "September in Servo: progress, rounded rectangles, and more",
-      "url": "https://servo.org/blog/2026/11/05/september-in-servo/",
-      "source": "Lobsters",
-      "points": 78,
-      "comments": 12,
-      "comments_url": "https://lobste.rs/s/u26wki/september_servo_progress_rounded",
-      "published_at": "2026-11-05T21:47:56+08:00",
-      "tags": [
-        "release"
-      ]
-    },
-    {
-      "title": "Upgrading NetBSD from 11.0 to 11.1",
-      "url": "https://www.dwarmstrong.org/netbsd-upgrade/",
-      "source": "Lobsters",
-      "points": 15,
-      "comments": 3,
-      "comments_url": "https://lobste.rs/s/0agusd/upgrading_netbsd_from_11_0_11_1",
-      "published_at": "2026-11-06T23:22:55+08:00",
-      "tags": [
-        "misc"
-      ]
-    },
-    {
-      "title": "X-87 - DOS 256 bytes",
-      "url": "https://www.onirom.fr/wiki/codegolf/x-87/",
-      "source": "Lobsters",
-      "points": 44,
-      "comments": 2,
-      "comments_url": "https://lobste.rs/s/q0ld7f/x_87_dos_256_bytes",
-      "published_at": "2026-11-06T08:16:07+08:00",
-      "tags": [
-        "misc"
-      ]
-    },
-    {
-      "title": "Clojure Distilled",
-      "url": "https://yogthos.net/ClojureDistilled.html",
-      "source": "Lobsters",
-      "points": 43,
-      "comments": 0,
-      "comments_url": "https://lobste.rs/s/dxno99/clojure_distilled",
-      "published_at": "2026-11-06T12:20:58+08:00",
-      "tags": [
-        "misc"
-      ]
-    },
-    {
-      "title": "SourceHut disabled registration bypass | CVE-2026-121728",
-      "url": "https://blog.arusekk.pl/posts/srht-disabled-registration-bypass/",
-      "source": "Lobsters",
-      "points": 60,
-      "comments": 1,
-      "comments_url": "https://lobste.rs/s/x2hcss/sourcehut_disabled_registration_bypass",
-      "published_at": "2026-11-06T02:34:41+08:00",
-      "tags": [
-        "security"
       ]
     },
     {
@@ -724,43 +743,33 @@
         "ai",
         "hardware"
       ]
-    },
-    {
-      "title": "Quoting Paul Ford",
-      "url": "https://simonwillison.net/2026/Nov/5/paul-ford/",
-      "source": "Simon Willison",
-      "published_at": "2026-11-06T01:34:03+08:00",
-      "summary": "The web browser is very, very, very powerful software for applications, and the cost of accessing that power is going down seemingly every day . — Paul Ford , The Web Is More Than Enough Tags: browsers , paul-ford , web-development",
-      "tags": [
-        "web"
-      ]
     }
   ],
   "news_highlights": [
     {
-      "title": "Gemini Omni 1.2 Flash",
-      "url": "https://blog.google/innovation-and-ai/technology/developers-tools/introducing-gemini-omni-1-2-flash/",
-      "why_it_matters": "Google's new Flash-tier Omni model targets builder workflows—worth watching for agent latency/cost tradeoffs vs Claude and GPT."
+      "title": "The end of Microsoft Research's AI Frontiers group",
+      "url": "https://hunch.net/?p=13764006",
+      "why_it_matters": "A widely discussed Hacker News thread (395 points, 231 comments) about the end of Microsoft Research's AI Frontiers group — useful context for how big-lab teams around frontier and agent research are being reshuffled."
     },
     {
-      "title": "Anthropic IPO buyers see valuation as low as $1.1T",
-      "url": "https://www.bloomberg.com/news/articles/2026-11-06/anthropic-ipo-valuation-expectations-pressured-after-ai-rout",
-      "why_it_matters": "Public-market pricing pressure on Anthropic signals how investors are repricing frontier AI labs after the recent AI rout."
+      "title": "Claude Code's \"Don't Ask Again\" exposes passwords in 1,122 public GitHub files",
+      "url": "https://apiiro.com/blog/coding-agents-leaking-secrets-github-dont-ask-again",
+      "why_it_matters": "A coding-agent security write-up on Hacker News (190 points, 130 comments): Claude Code's \"Don't Ask Again\" permission path is reported to have left secrets in public GitHub files. Relevant if you let agents write or commit against real repos."
     },
     {
-      "title": "AI is dramatically accelerating AI research",
-      "url": "https://www.planned-obsolescence.org/p/ai-is-dramatically-accelerating-ai",
-      "why_it_matters": "Documents a feedback loop where AI tools compress research cycles—useful context for how fast agent and model tooling will keep shifting."
+      "title": "GitHub New pull request overview page in public preview",
+      "url": "https://github.blog/changelog/2026-11-05-new-pull-request-overview-page-in-public-preview/",
+      "why_it_matters": "GitHub's changelog says a new pull request overview page is now in public preview — a practical review-UI change if you handle a lot of agent-generated PRs."
     },
     {
-      "title": "ChatGPT silently passes data between connectors and the bounty wants an ID card",
-      "url": "https://community.openai.com/t/security-follow-up-tool-call-silently-routed-to-a-different-connector/1413053",
-      "why_it_matters": "Connector/tool-routing bugs matter for anyone wiring agents to real apps—silent cross-connector data paths are a practical security risk."
+      "title": "MaxxBench – \"Nice DeepSWE score. But is it true?\"",
+      "url": "https://maxxbench.unlap.ai/research/why-maxxbench/",
+      "why_it_matters": "A Hacker News discussion (206 points, 63 comments) questioning whether SWE-style benchmark scores match real coding-agent performance — useful skepticism when comparing eval leaderboards."
     },
     {
-      "title": "Libghostty 1.0",
-      "url": "https://mitchellh.com/writing/libghostty-1-0",
-      "why_it_matters": "Mitchell Hashimoto ships Ghostty's terminal core as a reusable library—useful if you build CLI/agent UIs that need a solid terminal embed."
+      "title": "Asahi Linux Progress Linux 7.3",
+      "url": "https://asahilinux.org/2026/11/progress-report-7-3/",
+      "why_it_matters": "Asahi's Linux 7.3 progress report is circulating on Hacker News (325 points, 261 comments) — a snapshot of Apple Silicon Linux support if you care how far the Mac-hardware stack has come."
     }
   ]
 }
