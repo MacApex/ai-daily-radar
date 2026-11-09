@@ -1,0 +1,689 @@
+{
+  "sample": false,
+  "generated_at": "2026-11-09T10:15:16+08:00",
+  "date": "2026-11-09",
+  "run": {
+    "trending_observed": 9,
+    "saved": 2,
+    "upgraded": 0,
+    "relocated": 2,
+    "unchanged": 0,
+    "incomplete": 0,
+    "eligible_not_archived": 0,
+    "rejected": 5,
+    "blockers": [
+      "Normal daily run for 2026-11-09. GitHub Trending rendered only 9 entries today (fewer than usual); all 9 were reviewed.",
+      "Four coding-agent-eligible repos (>=3000 stars) on today's list: vercel-labs/agent-browser (5), anthropics/skills (5), anthropics/claude-quickstarts (4), ranxianglei/billion-context (3). All four fit under the 5-per-day cap (2 relocated unchanged, 2 new saves). The other 5 entries were rejected as OSINT tooling, an end-user agent-host app, a design-system library, a physics simulator, or below the 3,000-star floor (dsx-ai-factory/nvke 876).",
+      "Never re-clone rule applied for agent-browser and anthropics/skills: check_unmodified -> git ls-remote showed upstream = archived commit -> same-volume move into today's folder, manifests re-verified. Nothing moved to Trash; no user-edited copies found.",
+      "git-lfs is still not installed on this Mac; none of today's archived trees contain LFS pointers. Repository code, hooks, installers and dependencies were never run.",
+      "One new featured recommendation: anthropics/claude-quickstarts (never featured). billion-context was saved but not featured: rating 3, and it rewrites provider API streams (some paths via a cert-MITM proxy), so it is not a clean recommendation."
+    ],
+    "archive_folder": "2026-11-09_101014_Asia-Shanghai"
+  },
+  "featured": [
+    {
+      "full_name": "anthropics/claude-quickstarts",
+      "url": "https://github.com/anthropics/claude-quickstarts",
+      "stars": 19467,
+      "rating": 4,
+      "license": "MIT",
+      "reason": "Anthropic's official Claude API quickstarts (MIT): reference agent builds including an autonomous-coding two-agent harness on the Claude Agent SDK (initializer + coding agent, git-persisted progress, feature list), minimal browser_toolset/computer_toolset drivers over CDP and VNC, a Playwright browser-use demo, macOS computer-use best practices, and managed-agents examples (MCP server, Sentry autofix, Slack, Linear). Patterns to copy into your own agents; not a drop-in skill.",
+      "ideas": [
+        "Read autonomous-coding/ (agent.py, progress.py, prompts/) and borrow its initializer + coding-agent split and git-persisted feature list to make your daily Trending archive routine resumable when the Mac drops offline mid-run.",
+        "Use browser-toolset/ as a minimal reference for driving one Chromium tab over CDP, then write a small checker that loads macapex.github.io/ai-daily-radar and confirms the date banner and animated background render after each Pages deploy.",
+        "Study autonomous-coding/security.py (command allowlist) and test_security.py as a template for sandboxing any agent you let run shell commands on the Mac mini, and compare it with your current never-run-repo-code rules.",
+        "Pick one managed-agents example (mcp-server-typescript or daily-brief) and adapt it into a Claude-backed brief that summarizes the day's run-summary.json, as a possible upgrade to the site's news_highlights.",
+        "Work through computer-use-best-practices (image sizing, prompt caching, compaction, trajectory recording) in a macOS VM to learn how to cut cost and flakiness before building a computer-use feature into an Android or web project."
+      ]
+    }
+  ],
+  "archived": [
+    {
+      "full_name": "vercel-labs/agent-browser",
+      "url": "https://github.com/vercel-labs/agent-browser",
+      "stars": 47677,
+      "rating": 5,
+      "license": "Apache-2.0",
+      "commit_sha": "4b0e9f01fa8d214d39bbfe5391257640634fb9a0",
+      "status": "relocated",
+      "size_mb": 11.6,
+      "description": "Browser automation CLI for AI agents"
+    },
+    {
+      "full_name": "anthropics/skills",
+      "url": "https://github.com/anthropics/skills",
+      "stars": 189714,
+      "rating": 5,
+      "license": "",
+      "commit_sha": "2c5958ecac7cee2b583967a2c4981d0f4a75c579",
+      "status": "relocated",
+      "size_mb": 11.4,
+      "description": "Public repository for Agent Skills"
+    },
+    {
+      "full_name": "anthropics/claude-quickstarts",
+      "url": "https://github.com/anthropics/claude-quickstarts",
+      "stars": 19467,
+      "rating": 4,
+      "license": "MIT",
+      "commit_sha": "4a4224bdf0e9cfb3332167b69c90457403813625",
+      "status": "saved",
+      "size_mb": 9.7,
+      "description": "A collection of projects designed to help developers quickly get started with building deployable applications using the Claude API"
+    },
+    {
+      "full_name": "ranxianglei/billion-context",
+      "url": "https://github.com/ranxianglei/billion-context",
+      "stars": 5206,
+      "rating": 3,
+      "license": "",
+      "commit_sha": "1f311dd8d578d22fb0b593eef577374b4752fe7b",
+      "status": "saved",
+      "size_mb": 48.5,
+      "description": "A context-compression plugin for month-long single sessions (billions of tokens) ,small context windows (a 100K context is enough) and token savings (5x fewer tokens) .上下文压缩插件，月级长会话会话， 兼顾小窗口(100k上下文足矣)省token(省5倍token) . billion-context is all you need"
+    }
+  ],
+  "trending": [
+    {
+      "rank": 1,
+      "full_name": "sherlock-project/sherlock",
+      "url": "https://github.com/sherlock-project/sherlock",
+      "stars": 103804,
+      "stars_today": 2373,
+      "language": "Python",
+      "description": "Hunt down social media accounts by username across social networks",
+      "decision": "rejected",
+      "decision_reason": "Not selected: OSINT username-search CLI across social networks; general security/recon tooling, not a coding-agent skill, MCP server or agent workflow."
+    },
+    {
+      "rank": 2,
+      "full_name": "dsx-ai-factory/nvke",
+      "url": "https://github.com/dsx-ai-factory/nvke",
+      "stars": 876,
+      "stars_today": 345,
+      "language": "Go",
+      "description": "NVIDIA Kubernetes Engine (NVKE). A management plane for GPU Kubernetes on bare metal.",
+      "decision": "rejected",
+      "decision_reason": "Not selected: NVIDIA Kubernetes Engine management plane for GPU clusters on bare metal (876 verified stars, below the 3,000-star floor); infrastructure tooling, not a coding-agent skill, MCP server or workflow."
+    },
+    {
+      "rank": 3,
+      "full_name": "milind-soni/OpenMausBot",
+      "url": "https://github.com/milind-soni/OpenMausBot",
+      "stars": 18364,
+      "stars_today": 1439,
+      "language": "TypeScript",
+      "description": "Open-source Grok Bot alternative with a virtual machine that bots can use",
+      "decision": "rejected",
+      "decision_reason": "Not selected: open-source Grok Bot alternative — an Electron chat app that hosts Claude/Codex/Grok CLIs as contacts with optional VMs; an end-user personal-agent product, not a coding-agent skill, MCP server, library or workflow that Codex/Claude Code can install and drive."
+    },
+    {
+      "rank": 4,
+      "full_name": "anthropics/claude-quickstarts",
+      "url": "https://github.com/anthropics/claude-quickstarts",
+      "stars": 19467,
+      "stars_today": 32,
+      "language": "Python",
+      "description": "A collection of projects designed to help developers quickly get started with building deployable applications using the Claude API",
+      "decision": "archived",
+      "decision_reason": "Saved: Anthropic's official Claude API quickstarts (MIT): reference agent builds including an autonomous-coding two-agent harness on the Claude Agent SDK (initializer + coding agent, git-persisted progress, feature list), minimal browser_toolset/computer_toolset drivers over CDP and VNC, a Playwright browser-use demo, macOS computer-use best practices, and managed-agents examples (MCP server, Sentry autofix, Slack, Linear). Patterns to copy into your own agents; not a drop-in skill."
+    },
+    {
+      "rank": 5,
+      "full_name": "vercel-labs/agent-browser",
+      "url": "https://github.com/vercel-labs/agent-browser",
+      "stars": 47677,
+      "stars_today": 815,
+      "language": "Rust",
+      "description": "Browser automation CLI for AI agents",
+      "decision": "archived",
+      "decision_reason": "Relocated: Vercel Labs browser-automation CLI for AI agents (Apache-2.0): accessibility-tree snapshots with refs, shell-driven actions, version-matched skills and an MCP server. Already archived and featured; upstream still at the archived commit, so the folder was moved into today's run and marked unchanged, relocated (no download)."
+    },
+    {
+      "rank": 6,
+      "full_name": "meta/astryx",
+      "url": "https://github.com/meta/astryx",
+      "stars": 16994,
+      "stars_today": 875,
+      "language": "TypeScript",
+      "description": "An open source design system that's fully customizable and agent ready",
+      "decision": "rejected",
+      "decision_reason": "Not selected: Meta's open-source React 19 + StyleX design system (150+ components, theming, CLI), marketed as agent-ready; a general UI component library, not a coding-agent skill, MCP server or workflow that Codex/Claude Code install and drive."
+    },
+    {
+      "rank": 7,
+      "full_name": "anthropics/skills",
+      "url": "https://github.com/anthropics/skills",
+      "stars": 189714,
+      "stars_today": 792,
+      "language": "Python",
+      "description": "Public repository for Agent Skills",
+      "decision": "archived",
+      "decision_reason": "Relocated: Official Anthropic public Agent Skills repository: Claude Code plugin marketplace with document skills (docx/pdf/pptx/xlsx), example skills (mcp-builder, webapp-testing, skill-creator, frontend-design) plus the Agent Skills spec and template. Already archived and featured (2026-11-08); upstream still at the archived commit, so the folder was moved into today's run and marked unchanged, relocated (no download)."
+    },
+    {
+      "rank": 8,
+      "full_name": "google-deepmind/mujoco",
+      "url": "https://github.com/google-deepmind/mujoco",
+      "stars": 16452,
+      "stars_today": 41,
+      "language": "C++",
+      "description": "Multi-Joint dynamics with Contact. A general purpose physics simulator.",
+      "decision": "rejected",
+      "decision_reason": "Not selected: MuJoCo general-purpose physics simulator for robotics/RL research; a simulation engine, not a coding-agent skill, MCP server or workflow."
+    },
+    {
+      "rank": 9,
+      "full_name": "ranxianglei/billion-context",
+      "url": "https://github.com/ranxianglei/billion-context",
+      "stars": 5206,
+      "stars_today": 460,
+      "language": "TypeScript",
+      "description": "A context-compression plugin for month-long single sessions (billions of tokens) ,small context windows (a 100K context is enough) and token savings (5x fewer tokens) .上下文压缩插件，月级长会话会话， 兼顾小窗口(100k上下文足矣)省token(省5倍token) . billion-context is all you need",
+      "decision": "archived",
+      "decision_reason": "Saved: Context-compression proxy/plugin (MIT plus an attribution term; GitHub reports NOASSERTION) that sits between Claude Code, Codex and other agent CLIs and the model API, folding consumed conversation into incremental, reversible, prefix-cache-friendly summaries for very long sessions. Logged under the daily cap on 2026-11-08; today's list had free slots, so a pinned snapshot was saved. Rating stays 3: it rewrites provider streams and some client paths rely on a cert-MITM proxy, so it needs careful vetting before use."
+    }
+  ],
+  "news": [
+    {
+      "title": "Nvidia CEO Jensen Huang's letter to staff about affair",
+      "url": "https://www.axios.com/2026/11/08/nvidia-ceo-jensen-huang-affair-email-to-company",
+      "source": "Hacker News",
+      "points": 363,
+      "comments": 382,
+      "comments_url": "https://news.ycombinator.com/item?id=50418016",
+      "published_at": "2026-11-09T06:20:09+08:00",
+      "tags": [
+        "hardware"
+      ]
+    },
+    {
+      "title": "Goldman Sachs is pulling Claude Code from its bankers and traders",
+      "url": "https://www.thestateofai.com/news/goldman-sachs-claude-code-traders-bankers",
+      "source": "Hacker News",
+      "points": 614,
+      "comments": 361,
+      "comments_url": "https://news.ycombinator.com/item?id=50415628",
+      "published_at": "2026-11-09T02:16:07+08:00",
+      "tags": [
+        "ai"
+      ]
+    },
+    {
+      "title": "Nvidia Board of Directors Is Investigating Jensen Huang",
+      "url": "https://nvidianews.nvidia.com/news/statement-from-nvidia-board-of-directors",
+      "source": "Hacker News",
+      "points": 391,
+      "comments": 297,
+      "comments_url": "https://news.ycombinator.com/item?id=50416801",
+      "published_at": "2026-11-09T04:26:43+08:00",
+      "tags": [
+        "hardware"
+      ]
+    },
+    {
+      "title": "Ask HN: What are you working on? (November 2026)",
+      "url": "https://news.ycombinator.com/item?id=50417407",
+      "source": "Hacker News",
+      "points": 130,
+      "comments": 479,
+      "comments_url": "https://news.ycombinator.com/item?id=50417407",
+      "published_at": "2026-11-09T05:20:20+08:00",
+      "tags": [
+        "misc"
+      ]
+    },
+    {
+      "title": "Outlook.com Is Quietly Rejecting Email from Domains Without DMARC",
+      "url": "https://mailroute.net/blog/outlook-rejecting-email-without-dmarc",
+      "source": "Hacker News",
+      "points": 252,
+      "comments": 188,
+      "comments_url": "https://news.ycombinator.com/item?id=50416158",
+      "published_at": "2026-11-09T03:20:32+08:00",
+      "tags": [
+        "misc"
+      ]
+    },
+    {
+      "title": "KetchUp – Open-source SketchUp alternative built with Rust and WebGPU",
+      "url": "https://ketchup3d.github.io/app/",
+      "source": "Hacker News",
+      "points": 209,
+      "comments": 55,
+      "comments_url": "https://news.ycombinator.com/item?id=50418176",
+      "published_at": "2026-11-09T06:35:35+08:00",
+      "tags": [
+        "programming"
+      ]
+    },
+    {
+      "title": "How I Fight AI Brain Fry",
+      "url": "https://sergeykuhne.com/blog/fighting-ai-brain-fry",
+      "source": "Hacker News",
+      "points": 157,
+      "comments": 130,
+      "comments_url": "https://news.ycombinator.com/item?id=50416363",
+      "published_at": "2026-11-09T03:37:42+08:00",
+      "tags": [
+        "ai"
+      ]
+    },
+    {
+      "title": "Dux: Free, open-source Wayland desktop shell with file manager and theming",
+      "url": "https://duxlabs.dev/",
+      "source": "Hacker News",
+      "points": 204,
+      "comments": 61,
+      "comments_url": "https://news.ycombinator.com/item?id=50416053",
+      "published_at": "2026-11-09T03:08:51+08:00",
+      "tags": [
+        "misc"
+      ]
+    },
+    {
+      "title": "Goodbye Claude, hello Pi",
+      "url": "https://caleb.software/posts/claude-to-pi.html",
+      "source": "Hacker News",
+      "points": 703,
+      "comments": 435,
+      "comments_url": "https://news.ycombinator.com/item?id=50410107",
+      "published_at": "2026-11-08T11:11:48+08:00",
+      "tags": [
+        "ai"
+      ]
+    },
+    {
+      "title": "Llama-modchip: 284B DeepSeek on 64GB RAM, no GPU",
+      "url": "https://github.com/synchopate/llama-modchip",
+      "source": "Hacker News",
+      "points": 368,
+      "comments": 159,
+      "comments_url": "https://news.ycombinator.com/item?id=50411961",
+      "published_at": "2026-11-08T18:22:04+08:00",
+      "tags": [
+        "ai",
+        "hardware"
+      ]
+    },
+    {
+      "title": "Herb Sutter: When a language's creator and its owners strongly disagree [pdf]",
+      "url": "https://isocpp.org/files/papers/P4454R0.pdf",
+      "source": "Hacker News",
+      "points": 68,
+      "comments": 43,
+      "comments_url": "https://news.ycombinator.com/item?id=50418818",
+      "published_at": "2026-11-09T07:28:01+08:00",
+      "tags": [
+        "misc"
+      ]
+    },
+    {
+      "title": "Writing as a thinking tool",
+      "url": "http://muratbuffalo.blogspot.com/2026/11/writing-as-thinking-tool.html",
+      "source": "Hacker News",
+      "points": 284,
+      "comments": 83,
+      "comments_url": "https://news.ycombinator.com/item?id=50412067",
+      "published_at": "2026-11-08T18:41:52+08:00",
+      "tags": [
+        "misc"
+      ]
+    },
+    {
+      "title": "Starship Flight 15 on 11/13 plans to catch both booster and ship",
+      "url": "https://www.spacex.com/launches/starship-flight-15",
+      "source": "Hacker News",
+      "points": 93,
+      "comments": 57,
+      "comments_url": "https://news.ycombinator.com/item?id=50416471",
+      "published_at": "2026-11-09T03:49:46+08:00",
+      "tags": [
+        "misc"
+      ]
+    },
+    {
+      "title": "Unlocking any car from X brand in most of the world",
+      "url": "https://shubs.io/unlocking-any-car-from-x-brand-in-most-of-the-world/",
+      "source": "Hacker News",
+      "points": 63,
+      "comments": 23,
+      "comments_url": "https://news.ycombinator.com/item?id=50419215",
+      "published_at": "2026-11-09T08:10:50+08:00",
+      "tags": [
+        "misc"
+      ]
+    },
+    {
+      "title": "Chimera Vocal Synth",
+      "url": "https://chimera-vocal-synth.vercel.app/",
+      "source": "Hacker News",
+      "points": 88,
+      "comments": 14,
+      "comments_url": "https://news.ycombinator.com/item?id=50418182",
+      "published_at": "2026-11-09T06:36:03+08:00",
+      "tags": [
+        "misc"
+      ]
+    },
+    {
+      "title": "The Web Is More Than Enough, by Paul Ford",
+      "url": "https://ftrain.com/aboard-the-web-is-more-than-enough",
+      "source": "Hacker News",
+      "points": 81,
+      "comments": 41,
+      "comments_url": "https://news.ycombinator.com/item?id=50416456",
+      "published_at": "2026-11-09T03:48:32+08:00",
+      "tags": [
+        "web"
+      ]
+    },
+    {
+      "title": "Claude Code's \"Don't Ask Again\" exposes passwords in 1,122 public GitHub files",
+      "url": "https://apiiro.com/blog/coding-agents-leaking-secrets-github-dont-ask-again",
+      "source": "Hacker News",
+      "points": 591,
+      "comments": 399,
+      "comments_url": "https://news.ycombinator.com/item?id=50407882",
+      "published_at": "2026-11-08T04:45:32+08:00",
+      "tags": [
+        "ai",
+        "devtools"
+      ]
+    },
+    {
+      "title": "A Little Snitch for Windows",
+      "url": "https://packethound.app/",
+      "source": "Hacker News",
+      "points": 96,
+      "comments": 47,
+      "comments_url": "https://news.ycombinator.com/item?id=50415135",
+      "published_at": "2026-11-09T01:16:07+08:00",
+      "tags": [
+        "misc"
+      ]
+    },
+    {
+      "title": "I'm not a fan of Deno's security model (2024)",
+      "url": "https://goldstein.lol/posts/deno-security/",
+      "source": "Hacker News",
+      "points": 86,
+      "comments": 43,
+      "comments_url": "https://news.ycombinator.com/item?id=50413769",
+      "published_at": "2026-11-08T22:42:38+08:00",
+      "tags": [
+        "ai",
+        "security"
+      ]
+    },
+    {
+      "title": "Playing with the STM32MP2",
+      "url": "https://serd.es/2026/11/08/playing-with-stm32mp2.html",
+      "source": "Hacker News",
+      "points": 39,
+      "comments": 28,
+      "comments_url": "https://news.ycombinator.com/item?id=50416014",
+      "published_at": "2026-11-09T03:04:07+08:00",
+      "tags": [
+        "misc"
+      ]
+    },
+    {
+      "title": "parse_number() as a SQLite extension: C vs Rust",
+      "url": "https://simonwillison.net/2026/Nov/8/sqlite-parse-number-c-vs-rust/",
+      "source": "Simon Willison",
+      "published_at": "2026-11-09T06:26:00+08:00",
+      "summary": "Research: parse_number() as a SQLite extension: C vs Rust I was out walking the dog when I got curious about how easy/difficult it would be to write a SQLite C extension that adds a parse_number() function for turning strings like -$1,234.56 or '12.5%' into numeric values that…",
+      "tags": [
+        "programming",
+        "science"
+      ]
+    },
+    {
+      "title": "systemd loves Rust",
+      "url": "https://amutable.com/blog/systemd-loves-rust",
+      "source": "Lobsters",
+      "points": 33,
+      "comments": 17,
+      "comments_url": "https://lobste.rs/s/62loik/systemd_loves_rust",
+      "published_at": "2026-11-08T20:55:05+08:00",
+      "tags": [
+        "programming"
+      ]
+    },
+    {
+      "title": "Who wants to crowdsource LLM scans of articles submitted to Lobste.rs?",
+      "url": "https://lobste.rs/s/jbdtim/who_wants_crowdsource_llm_scans_articles",
+      "source": "Lobsters",
+      "points": 18,
+      "comments": 27,
+      "comments_url": "https://lobste.rs/s/jbdtim/who_wants_crowdsource_llm_scans_articles",
+      "published_at": "2026-11-09T00:36:17+08:00",
+      "summary": "Like many of us who value the human side of the web, I am looking for ways to keep slop at bay. It seems like LLM detection technology works reasonably well nowadays, with Pangram as the main provider. It is expensive, though! Assuming pangram scans are trustworthy, and it…",
+      "tags": [
+        "ai",
+        "web"
+      ]
+    },
+    {
+      "title": "*sshole, or when are we finally going to get rid of C?",
+      "url": "https://sunshowers.io/posts/sshole/",
+      "source": "Lobsters",
+      "points": 56,
+      "comments": 79,
+      "comments_url": "https://lobste.rs/s/owsnms/sshole_when_are_we_finally_going_get_rid_c",
+      "published_at": "2026-11-08T05:05:35+08:00",
+      "tags": [
+        "misc"
+      ]
+    },
+    {
+      "title": "A bit about email",
+      "url": "https://maurycyz.com/misc/email/",
+      "source": "Lobsters",
+      "points": 35,
+      "comments": 6,
+      "comments_url": "https://lobste.rs/s/jnz4v5/bit_about_email",
+      "published_at": "2026-11-08T20:53:34+08:00",
+      "tags": [
+        "misc"
+      ]
+    },
+    {
+      "title": "How are you dealing with all the negative side effects of AI on the web?",
+      "url": "https://lobste.rs/s/ipplhe/how_are_you_dealing_with_all_negative_side",
+      "source": "Lobsters",
+      "points": 94,
+      "comments": 82,
+      "comments_url": "https://lobste.rs/s/ipplhe/how_are_you_dealing_with_all_negative_side",
+      "published_at": "2026-11-07T17:47:24+08:00",
+      "summary": "It seems to me that the AI hype killed the web for good, but not for the reasons we immediately associate with it. Search engines now rank links full of slop at the top, which ironically make LLM summaries acceptable, not because they are better than what we had before (they…",
+      "tags": [
+        "ai",
+        "web"
+      ]
+    },
+    {
+      "title": "Libghostty 1.0",
+      "url": "https://mitchellh.com/writing/libghostty-1-0",
+      "source": "Lobsters",
+      "points": 172,
+      "comments": 13,
+      "comments_url": "https://lobste.rs/s/0ouxwf/libghostty_1_0",
+      "published_at": "2026-11-07T07:48:03+08:00",
+      "tags": [
+        "programming",
+        "release"
+      ]
+    },
+    {
+      "title": "What can I realistically do with local AI on a Mac mini M5 Pro (48GB)?",
+      "url": "https://lobste.rs/s/umsitb/what_can_i_realistically_do_with_local_ai",
+      "source": "Lobsters",
+      "points": 11,
+      "comments": 5,
+      "comments_url": "https://lobste.rs/s/umsitb/what_can_i_realistically_do_with_local_ai",
+      "published_at": "2026-11-09T01:07:51+08:00",
+      "summary": "I just got a Mac mini with an M5 Pro (base CPU config) and 48GB of unified memory. I want to run as much AI locally as makes sense, but it's hard to separate what actually works day to day from benchmark hype. What I'd like to do: - Coding: autocomplete and agentic workflows…",
+      "tags": [
+        "ai",
+        "hardware"
+      ]
+    },
+    {
+      "title": "Unattended reboots with encrypted disks",
+      "url": "https://jmmv.dev/2026/11/zkeys-intro.html",
+      "source": "Lobsters",
+      "points": 9,
+      "comments": 9,
+      "comments_url": "https://lobste.rs/s/urg4yu/unattended_reboots_with_encrypted_disks",
+      "published_at": "2026-11-09T00:58:03+08:00",
+      "tags": [
+        "misc"
+      ]
+    },
+    {
+      "title": "Meridian — an experimental web browser built on Servo and GPUI",
+      "url": "https://op.tngl.io/meridian/",
+      "source": "Lobsters",
+      "points": 61,
+      "comments": 11,
+      "comments_url": "https://lobste.rs/s/j63dme/meridian_experimental_web_browser_built",
+      "published_at": "2026-11-07T17:21:55+08:00",
+      "tags": [
+        "web",
+        "programming"
+      ]
+    },
+    {
+      "title": "NetBSD 11 desktop on a Raspberry Pi 4",
+      "url": "https://neongd.com/articles/netbsd11-rpi4.gmi",
+      "source": "Lobsters",
+      "points": 20,
+      "comments": 1,
+      "comments_url": "https://lobste.rs/s/rv1icj/netbsd_11_desktop_on_raspberry_pi_4",
+      "published_at": "2026-11-08T20:07:39+08:00",
+      "tags": [
+        "hardware"
+      ]
+    },
+    {
+      "title": "datasette #3046: Don't serve link: rel=next HTTP headers to Firefox for HTML pages",
+      "url": "https://simonwillison.net/2026/Nov/7/link-rel-next/",
+      "source": "Simon Willison",
+      "published_at": "2026-11-08T07:57:46+08:00",
+      "summary": "datasette #3046: Don't serve link: rel=next HTTP headers to Firefox for HTML pages I was looking at the Firefox network panel today when I noticed that requests to a Datasette table page were triggering an HTTP prefetch to the next page of rows in that table. This was happening…",
+      "tags": [
+        "web"
+      ]
+    },
+    {
+      "title": "Beyond code generation: A developer’s guide to agentic engineering",
+      "url": "https://github.blog/ai-and-ml/github-copilot/beyond-code-generation-a-developers-guide-to-agentic-engineering/",
+      "source": "GitHub Blog",
+      "published_at": "2026-11-07T06:15:59+08:00",
+      "summary": "Writing code got faster. The work around it didn't. See how you can plan, write code, review changes, and investigate production issues with GitHub Copilot, and what work still needs your judgment. The post Beyond code generation: A developer’s guide to agentic engineering…",
+      "tags": [
+        "ai",
+        "devtools"
+      ]
+    },
+    {
+      "title": "Quoting Nilay Patel",
+      "url": "https://simonwillison.net/2026/Nov/6/nilay-patel/",
+      "source": "Simon Willison",
+      "published_at": "2026-11-07T01:13:12+08:00",
+      "summary": "The products aren't good enough to sell people on the costs. You cannot tell people that you have to listen to the whine of a data center in their backyard for AI overviews and some of the most hilarious deep fake slop in history. It's not worth it. It just isn't worth it to…",
+      "tags": [
+        "ai"
+      ]
+    },
+    {
+      "title": "ToyBlocks: A controlled world for robot learning and evaluation",
+      "url": "https://huggingface.co/blog/allenai/toyblocks",
+      "source": "Hugging Face",
+      "published_at": "2026-11-06T22:00:48+08:00",
+      "tags": [
+        "hardware"
+      ]
+    },
+    {
+      "title": "Egyptian and Nigerian English join the Open ASR Leaderboard",
+      "url": "https://huggingface.co/blog/open-asr-leaderboard-liva",
+      "source": "Hugging Face",
+      "published_at": "2026-11-06T08:00:00+08:00",
+      "tags": [
+        "misc"
+      ]
+    },
+    {
+      "title": "Inside GitHub’s new Git storage architecture",
+      "url": "https://github.blog/engineering/architecture-optimization/inside-githubs-new-git-storage-architecture/",
+      "source": "GitHub Blog",
+      "published_at": "2026-11-06T04:23:21+08:00",
+      "summary": "GitHub's new Git storage architecture is built so thousands of agents can push to a single repository at once. Here's how it works. The post Inside GitHub’s new Git storage architecture appeared first on The GitHub Blog .",
+      "tags": [
+        "ai",
+        "programming",
+        "devtools"
+      ]
+    },
+    {
+      "title": "New NVIDIA Cosmos 3 Open Models for Interactive World Simulation",
+      "url": "https://huggingface.co/blog/nvidia/cosmos-interactive-world-simulation",
+      "source": "Hugging Face",
+      "published_at": "2026-11-06T03:35:16+08:00",
+      "tags": [
+        "ai",
+        "hardware"
+      ]
+    },
+    {
+      "title": "Quoting Paul Ford",
+      "url": "https://simonwillison.net/2026/Nov/5/paul-ford/",
+      "source": "Simon Willison",
+      "published_at": "2026-11-06T01:34:03+08:00",
+      "summary": "The web browser is very, very, very powerful software for applications, and the cost of accessing that power is going down seemingly every day . — Paul Ford , The Web Is More Than Enough Tags: browsers , paul-ford , web-development",
+      "tags": [
+        "web"
+      ]
+    },
+    {
+      "title": "Accessibility statements now have a home on GitHub",
+      "url": "https://github.blog/open-source/maintainers/accessibility-statements-now-have-a-home-on-github/",
+      "source": "GitHub Blog",
+      "published_at": "2026-11-06T00:00:00+08:00",
+      "summary": "GitHub now highlights ACCESSIBILITY.md files and helps maintainers document accessibility goals, known barriers, supported environments, contributor expectations, and reporting processes. The post Accessibility statements now have a home on GitHub appeared first on The GitHub…",
+      "tags": [
+        "devtools"
+      ]
+    }
+  ],
+  "news_highlights": [
+    {
+      "title": "Claude Code's \"Don't Ask Again\" exposes passwords in 1,122 public GitHub files",
+      "url": "https://apiiro.com/blog/coding-agents-leaking-secrets-github-dont-ask-again",
+      "why_it_matters": "Permission settings saved by coding agents can end up committed with secrets inside. Check your repos' agent config files and .gitignore before you push."
+    },
+    {
+      "title": "Goldman Sachs is pulling Claude Code from its bankers and traders",
+      "url": "https://www.thestateofai.com/news/goldman-sachs-claude-code-traders-bankers",
+      "why_it_matters": "A big regulated firm is pulling back on coding agents for non-engineers. Expect more enterprise rules on who can use these tools and where."
+    },
+    {
+      "title": "Goodbye Claude, hello Pi",
+      "url": "https://caleb.software/posts/claude-to-pi.html",
+      "why_it_matters": "A first-hand account of moving from Claude Code to the Pi agent harness. Worth reading if you're weighing lighter, more hackable coding-agent CLIs."
+    },
+    {
+      "title": "Llama-modchip: 284B DeepSeek on 64GB RAM, no GPU",
+      "url": "https://github.com/synchopate/llama-modchip",
+      "why_it_matters": "Claims to run a very large open model on CPU with 64 GB of RAM. If it holds up, local inference on machines like a Mac mini gets much more realistic."
+    },
+    {
+      "title": "Outlook.com Is Quietly Rejecting Email from Domains Without DMARC",
+      "url": "https://mailroute.net/blog/outlook-rejecting-email-without-dmarc",
+      "why_it_matters": "Sites and apps that send transactional email need DMARC set up, or messages to Outlook users may silently disappear."
+    }
+  ]
+}
