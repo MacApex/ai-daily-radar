@@ -1,0 +1,719 @@
+{
+  "sample": false,
+  "generated_at": "2026-11-10T10:16:14+08:00",
+  "date": "2026-11-10",
+  "run": {
+    "trending_observed": 11,
+    "saved": 2,
+    "upgraded": 1,
+    "relocated": 2,
+    "unchanged": 0,
+    "incomplete": 0,
+    "eligible_not_archived": 0,
+    "rejected": 6,
+    "blockers": [
+      "Normal daily run for 2026-11-10. GitHub Trending rendered 11 entries; all 11 were reviewed and star counts verified via the GitHub API.",
+      "Five coding-agent-eligible repos (>=3000 stars) on today's list: anthropics/skills (5), vercel-labs/agent-browser (5), anthropics/claude-quickstarts (4), garrytan/gbrain (4), homeassistant-ai/ha-mcp (3). Exactly 5, so the 5-per-day cap was used fully with nothing left over. The other 6 entries were rejected (OSINT tool, design-system library, physics simulator, WiFi sensing, stock-analysis app, end-user agent-host app).",
+      "Never re-clone rule applied: check_unmodified passed for all three already-archived repos before the same-volume move. anthropics/skills and claude-quickstarts were unchanged; agent-browser was upgraded 4b0e9f0 -> e751995 by incremental git fetch, previous manifests kept as previous-*.json. Nothing moved to Trash; no user-edited copies found.",
+      "git-lfs is still not installed on this Mac; none of today's archived trees contain LFS pointers. ha-mcp's one submodule (src/ha_mcp/resources/skills-vendor) was fetched at its pinned commit. Repository code, hooks, installers and dependencies were never run.",
+      "One new featured recommendation: garrytan/gbrain (never featured). ha-mcp was saved but not featured: it is only useful with a Home Assistant install."
+    ],
+    "archive_folder": "2026-11-10_100930_Asia-Shanghai"
+  },
+  "featured": [
+    {
+      "full_name": "garrytan/gbrain",
+      "url": "https://github.com/garrytan/gbrain",
+      "stars": 32188,
+      "rating": 4,
+      "license": "MIT",
+      "reason": "GBrain (MIT, Bun/TypeScript): self-hosted agent memory with provenance, corrections and withdrawal, exposed through one CLI and an MCP server; keyless local start on PGLite (no server or Docker), keyword search first, optional embeddings, synthesis and a typed knowledge graph. Ships a guide for adding memory to Claude Code/Codex and a shared skills catalog. Useful as a portable memory layer across coding agents; heavy optional features (enrichment daemons, cloud providers) need careful scoping.",
+      "ideas": [
+        "Start keyless on the Mac mini (`gbrain init --pglite --no-embedding`), then `gbrain import` only the archive's MEMORY.md and run reports with `--no-embed`, so any agent can ask `gbrain search` which repos were already featured instead of grepping a 200 KB file.",
+        "Follow docs/tutorials/connect-coding-agent.md to give Claude Code and Codex the same memory, and test it with one `gbrain remember` / `gbrain recall` round trip in two different sessions.",
+        "Store durable project facts for ai-daily-radar (keep the original non-glass design, WebView app loads the live site, daily 10 AM publish) with provenance, so new agents stop re-asking or undoing past decisions.",
+        "Read docs/architecture (PGLite vs Postgres + pgvector, one BrainEngine contract shared by CLI and MCP) to learn a clean pattern for a local-first data layer you could reuse in a web or mobile app with offline sync.",
+        "Try `gbrain mcp expose` on your Tailscale network in a sandboxed test brain and see whether your Android phone or a cloud agent can query notes safely; read the sharing-boundaries doc first and keep enrichment and paid providers off."
+      ]
+    }
+  ],
+  "archived": [
+    {
+      "full_name": "anthropics/skills",
+      "url": "https://github.com/anthropics/skills",
+      "stars": 191070,
+      "rating": 5,
+      "license": "",
+      "commit_sha": "2c5958ecac7cee2b583967a2c4981d0f4a75c579",
+      "status": "relocated",
+      "size_mb": 11.4,
+      "description": "Public repository for Agent Skills"
+    },
+    {
+      "full_name": "vercel-labs/agent-browser",
+      "url": "https://github.com/vercel-labs/agent-browser",
+      "stars": 48532,
+      "rating": 5,
+      "license": "Apache-2.0",
+      "commit_sha": "e7519957b9067c541825afa21a792fbe1f483047",
+      "status": "upgraded",
+      "size_mb": 11.8,
+      "description": "Browser automation CLI for AI agents"
+    },
+    {
+      "full_name": "anthropics/claude-quickstarts",
+      "url": "https://github.com/anthropics/claude-quickstarts",
+      "stars": 20047,
+      "rating": 4,
+      "license": "MIT",
+      "commit_sha": "4a4224bdf0e9cfb3332167b69c90457403813625",
+      "status": "relocated",
+      "size_mb": 9.7,
+      "description": "A collection of projects designed to help developers quickly get started with building deployable applications using the Claude API"
+    },
+    {
+      "full_name": "garrytan/gbrain",
+      "url": "https://github.com/garrytan/gbrain",
+      "stars": 32188,
+      "rating": 4,
+      "license": "MIT",
+      "commit_sha": "5ad4345f56a13e275ba5d1ca3e7faabcd890cf13",
+      "status": "saved",
+      "size_mb": 224.9,
+      "description": "Garry's Opinionated OpenClaw/Hermes Agent Brain"
+    },
+    {
+      "full_name": "homeassistant-ai/ha-mcp",
+      "url": "https://github.com/homeassistant-ai/ha-mcp",
+      "stars": 6028,
+      "rating": 3,
+      "license": "MIT",
+      "commit_sha": "6b14aca76d115d62da223174a0f776729f54afa6",
+      "status": "saved",
+      "size_mb": 52.0,
+      "description": "Configure and automate Home Assistant with Claude, ChatGPT, and other AI assistants."
+    }
+  ],
+  "trending": [
+    {
+      "rank": 1,
+      "full_name": "anthropics/skills",
+      "url": "https://github.com/anthropics/skills",
+      "stars": 191070,
+      "stars_today": 1038,
+      "language": "Python",
+      "description": "Public repository for Agent Skills",
+      "decision": "archived",
+      "decision_reason": "Relocated: Official Anthropic public Agent Skills repository: Claude Code plugin marketplace with document skills (docx/pdf/pptx/xlsx), example skills (mcp-builder, webapp-testing, skill-creator, frontend-design) plus the Agent Skills spec and template. Already archived and featured (2026-11-08); upstream still at the archived commit, so the folder was moved into today's run and marked unchanged, relocated (no download)."
+    },
+    {
+      "rank": 2,
+      "full_name": "meta/astryx",
+      "url": "https://github.com/meta/astryx",
+      "stars": 20228,
+      "stars_today": 3278,
+      "language": "TypeScript",
+      "description": "An open source design system that's fully customizable and agent ready",
+      "decision": "rejected",
+      "decision_reason": "Not selected: Meta's open-source React 19 + StyleX design system (150+ components, theming, CLI), marketed as agent-ready; a general UI component library, not a coding-agent skill, MCP server or workflow that Codex/Claude Code install and drive."
+    },
+    {
+      "rank": 3,
+      "full_name": "sherlock-project/sherlock",
+      "url": "https://github.com/sherlock-project/sherlock",
+      "stars": 107193,
+      "stars_today": 4267,
+      "language": "Python",
+      "description": "Hunt down social media accounts by username across social networks",
+      "decision": "rejected",
+      "decision_reason": "Not selected: OSINT username-search CLI across social networks; general security/recon tooling, not a coding-agent skill, MCP server or agent workflow."
+    },
+    {
+      "rank": 4,
+      "full_name": "google-deepmind/mujoco",
+      "url": "https://github.com/google-deepmind/mujoco",
+      "stars": 16939,
+      "stars_today": 574,
+      "language": "C++",
+      "description": "Multi-Joint dynamics with Contact. A general purpose physics simulator.",
+      "decision": "rejected",
+      "decision_reason": "Not selected: MuJoCo general-purpose physics simulator for robotics/RL research; a simulation engine, not a coding-agent skill, MCP server or workflow."
+    },
+    {
+      "rank": 5,
+      "full_name": "anthropics/claude-quickstarts",
+      "url": "https://github.com/anthropics/claude-quickstarts",
+      "stars": 20047,
+      "stars_today": 551,
+      "language": "Python",
+      "description": "A collection of projects designed to help developers quickly get started with building deployable applications using the Claude API",
+      "decision": "archived",
+      "decision_reason": "Relocated: Anthropic's official Claude API quickstarts (MIT): autonomous-coding two-agent harness on the Claude Agent SDK, minimal browser/computer-use toolsets, and managed-agents examples (MCP server, Sentry autofix, Slack, Linear). Already archived and featured (2026-11-09); upstream still at the archived commit, so the folder was moved into today's run and marked unchanged, relocated (no download)."
+    },
+    {
+      "rank": 6,
+      "full_name": "garrytan/gbrain",
+      "url": "https://github.com/garrytan/gbrain",
+      "stars": 32188,
+      "stars_today": 216,
+      "language": "TypeScript",
+      "description": "Garry's Opinionated OpenClaw/Hermes Agent Brain",
+      "decision": "archived",
+      "decision_reason": "Saved: GBrain (MIT, Bun/TypeScript): self-hosted agent memory with provenance, corrections and withdrawal, exposed through one CLI and an MCP server; keyless local start on PGLite (no server or Docker), keyword search first, optional embeddings, synthesis and a typed knowledge graph. Ships a guide for adding memory to Claude Code/Codex and a shared skills catalog. Useful as a portable memory layer across coding agents; heavy optional features (enrichment daemons, cloud providers) need careful scoping."
+    },
+    {
+      "rank": 7,
+      "full_name": "vercel-labs/agent-browser",
+      "url": "https://github.com/vercel-labs/agent-browser",
+      "stars": 48532,
+      "stars_today": 916,
+      "language": "Rust",
+      "description": "Browser automation CLI for AI agents",
+      "decision": "archived",
+      "decision_reason": "Upgraded: Vercel Labs browser-automation CLI for AI agents (Apache-2.0): accessibility-tree snapshots with refs, shell-driven actions, version-matched skills and an MCP server. Already archived and featured; upstream moved from 4b0e9f0 to e751995, so the folder was moved into today's run and upgraded in place by incremental git fetch (no re-clone), then re-verified."
+    },
+    {
+      "rank": 8,
+      "full_name": "ruvnet/RuView",
+      "url": "https://github.com/ruvnet/RuView",
+      "stars": 103502,
+      "stars_today": 172,
+      "language": "Rust",
+      "description": "π RuView turns commodity WiFi signals into real-time spatial intelligence, vital sign monitoring, and presence detection — all without a single pixel of video.",
+      "decision": "rejected",
+      "decision_reason": "Not selected: WiFi-signal sensing system (presence, vital signs, spatial mapping) in Rust; not a tool, skill or workflow for coding agents."
+    },
+    {
+      "rank": 9,
+      "full_name": "ZhuLinsen/daily_stock_analysis",
+      "url": "https://github.com/ZhuLinsen/daily_stock_analysis",
+      "stars": 68923,
+      "stars_today": 506,
+      "language": "Python",
+      "description": "LLM 驱动的多市场股票智能分析系统：多源行情、实时新闻、决策看板与自动推送，支持零成本定时运行。  LLM-powered multi-market stock analysis system with multi-source market data, real-time news, decision dashboard, automated notifications, and cost-free scheduled runs.",
+      "decision": "rejected",
+      "decision_reason": "Not selected: LLM-driven multi-market stock analysis app (A-share/HK/US etc.) with dashboards and scheduled push notifications; an end-user finance product, not a coding-agent skill, MCP server, library or workflow."
+    },
+    {
+      "rank": 10,
+      "full_name": "homeassistant-ai/ha-mcp",
+      "url": "https://github.com/homeassistant-ai/ha-mcp",
+      "stars": 6028,
+      "stars_today": 31,
+      "language": "Python",
+      "description": "Configure and automate Home Assistant with Claude, ChatGPT, and other AI assistants.",
+      "decision": "archived",
+      "decision_reason": "Saved: HA-MCP (MIT, Python/FastMCP): an 87-tool MCP server that lets Claude, ChatGPT and other MCP clients inspect and configure Home Assistant (entities, automations, dashboards), with E2E tests and a vendored skills submodule. A well-built MCP server and a good FastMCP reference, but only directly useful if you run Home Assistant, so rated 3."
+    },
+    {
+      "rank": 11,
+      "full_name": "milind-soni/OpenMausBot",
+      "url": "https://github.com/milind-soni/OpenMausBot",
+      "stars": 19762,
+      "stars_today": 1587,
+      "language": "TypeScript",
+      "description": "Open-source Grok Bot alternative with a virtual machine that bots can use",
+      "decision": "rejected",
+      "decision_reason": "Not selected: open-source Grok Bot alternative — an Electron chat app that hosts Claude/Codex/Grok CLIs as contacts with optional VMs; an end-user personal-agent product, not a coding-agent skill, MCP server, library or workflow that Codex/Claude Code can install and drive."
+    }
+  ],
+  "news": [
+    {
+      "title": "Claude Fable 5.2 and Mythos 5.2",
+      "url": "https://www.anthropic.com/claude-fable-and-mythos-5-2",
+      "source": "Hacker News",
+      "points": 960,
+      "comments": 586,
+      "comments_url": "https://news.ycombinator.com/item?id=50429906",
+      "published_at": "2026-11-10T02:56:29+08:00",
+      "tags": [
+        "ai"
+      ]
+    },
+    {
+      "title": "USPS now offers official ZIP Code boundary polygons",
+      "url": "https://postalpro.usps.com/zcb",
+      "source": "Hacker News",
+      "points": 490,
+      "comments": 252,
+      "comments_url": "https://news.ycombinator.com/item?id=50431058",
+      "published_at": "2026-11-10T03:58:59+08:00",
+      "tags": [
+        "misc"
+      ]
+    },
+    {
+      "title": "Claude Fable 5.2 scores 65 on artificial analysis, highest so far",
+      "url": "https://artificialanalysis.ai/models/claude-fable-5-2",
+      "source": "Hacker News",
+      "points": 292,
+      "comments": 208,
+      "comments_url": "https://news.ycombinator.com/item?id=50431144",
+      "published_at": "2026-11-10T04:04:55+08:00",
+      "tags": [
+        "ai"
+      ]
+    },
+    {
+      "title": "Payments Canada announces launch of Canada's Real-Time Rail (RTR) payment system",
+      "url": "https://www.payments.ca/canada-launches-real-time-rail-bringing-247-payment-infrastructure-national-economy",
+      "source": "Hacker News",
+      "points": 471,
+      "comments": 261,
+      "comments_url": "https://news.ycombinator.com/item?id=50427362",
+      "published_at": "2026-11-10T00:00:45+08:00",
+      "tags": [
+        "misc"
+      ]
+    },
+    {
+      "title": "Google Gemini routes personal Drive files and emails to human annotators",
+      "url": "https://github.com/thisisme6598/gemini_files/",
+      "source": "Hacker News",
+      "points": 434,
+      "comments": 99,
+      "comments_url": "https://news.ycombinator.com/item?id=50429426",
+      "published_at": "2026-11-10T02:24:38+08:00",
+      "tags": [
+        "ai"
+      ]
+    },
+    {
+      "title": "Foldable Flight: The Best Paper Airplanes",
+      "url": "https://www.foldableflight.com",
+      "source": "Hacker News",
+      "points": 857,
+      "comments": 139,
+      "comments_url": "https://news.ycombinator.com/item?id=50424581",
+      "published_at": "2026-11-09T20:19:22+08:00",
+      "tags": [
+        "misc"
+      ]
+    },
+    {
+      "title": "Fable 5.2 one-shotted my nephew's dream game",
+      "url": "https://notesbylex.com/fable-5-2-one-shotted-my-nephews-dream-game",
+      "source": "Hacker News",
+      "points": 151,
+      "comments": 111,
+      "comments_url": "https://news.ycombinator.com/item?id=50433659",
+      "published_at": "2026-11-10T07:08:13+08:00",
+      "tags": [
+        "misc"
+      ]
+    },
+    {
+      "title": "TPU 8tx and TPU 8i Max",
+      "url": "https://blog.google/innovation-and-ai/infrastructure-and-cloud/global-network/tpu-8i-max-and-8tx/",
+      "source": "Hacker News",
+      "points": 209,
+      "comments": 55,
+      "comments_url": "https://news.ycombinator.com/item?id=50432831",
+      "published_at": "2026-11-10T05:56:57+08:00",
+      "tags": [
+        "misc"
+      ]
+    },
+    {
+      "title": "Our Smallest, Most Efficient Model: Muse Ember",
+      "url": "https://research.meta.ai/blog/muse-ember",
+      "source": "Hacker News",
+      "points": 250,
+      "comments": 105,
+      "comments_url": "https://news.ycombinator.com/item?id=50429024",
+      "published_at": "2026-11-10T01:58:46+08:00",
+      "tags": [
+        "ai"
+      ]
+    },
+    {
+      "title": "Semi-transparent, colored cadmium telluride photovoltaic panels in agrivoltaics",
+      "url": "https://www.anthropocenemagazine.org/2026/10/magenta-solar-panels-may-be-agrivoltaics-cleverest-trick-yet/",
+      "source": "Hacker News",
+      "points": 281,
+      "comments": 179,
+      "comments_url": "https://news.ycombinator.com/item?id=50426175",
+      "published_at": "2026-11-09T22:31:39+08:00",
+      "tags": [
+        "misc"
+      ]
+    },
+    {
+      "title": "CUI – Native UI components for C",
+      "url": "https://yappologistic.github.io/CUI/",
+      "source": "Hacker News",
+      "points": 151,
+      "comments": 81,
+      "comments_url": "https://news.ycombinator.com/item?id=50430621",
+      "published_at": "2026-11-10T03:35:16+08:00",
+      "tags": [
+        "misc"
+      ]
+    },
+    {
+      "title": "E-means: Outperforming k-means in one-tenth the epochs",
+      "url": "https://e-means.github.io/",
+      "source": "Hacker News",
+      "points": 276,
+      "comments": 20,
+      "comments_url": "https://news.ycombinator.com/item?id=50429734",
+      "published_at": "2026-11-10T02:45:43+08:00",
+      "tags": [
+        "misc"
+      ]
+    },
+    {
+      "title": "Show HN: Every satellite that passed over any place this week, and its photos",
+      "url": "https://www.watched.earth",
+      "source": "Hacker News",
+      "points": 233,
+      "comments": 43,
+      "comments_url": "https://news.ycombinator.com/item?id=50428907",
+      "published_at": "2026-11-10T01:51:31+08:00",
+      "tags": [
+        "misc"
+      ]
+    },
+    {
+      "title": "Infineon marks innovation milestone with 300mm power silicon carbide wafer",
+      "url": "https://www.infineon.com/press-release/2026/infpr202611-028",
+      "source": "Hacker News",
+      "points": 103,
+      "comments": 62,
+      "comments_url": "https://news.ycombinator.com/item?id=50429430",
+      "published_at": "2026-11-10T02:25:01+08:00",
+      "tags": [
+        "misc"
+      ]
+    },
+    {
+      "title": "What is malloc doing, anyway?",
+      "url": "https://benmandrew.com/articles/what-is-malloc-doing-anyway",
+      "source": "Hacker News",
+      "points": 226,
+      "comments": 62,
+      "comments_url": "https://news.ycombinator.com/item?id=50424157",
+      "published_at": "2026-11-09T19:31:05+08:00",
+      "tags": [
+        "programming"
+      ]
+    },
+    {
+      "title": "Show HN: MeowDisplay Is iPhone Mirroring, but in Reverse",
+      "url": "https://meowdisplay.app/",
+      "source": "Hacker News",
+      "points": 76,
+      "comments": 29,
+      "comments_url": "https://news.ycombinator.com/item?id=50429636",
+      "published_at": "2026-11-10T02:39:22+08:00",
+      "tags": [
+        "hardware"
+      ]
+    },
+    {
+      "title": "Parking-app convenience fees in 312 U.S. cities (median $0.35 per session)",
+      "url": "https://parkgraph.com/parking-app-fees",
+      "source": "Hacker News",
+      "points": 59,
+      "comments": 33,
+      "comments_url": "https://news.ycombinator.com/item?id=50430991",
+      "published_at": "2026-11-10T03:55:53+08:00",
+      "tags": [
+        "misc"
+      ]
+    },
+    {
+      "title": "Exact – a new cross platform UI framework by the Expo team",
+      "url": "https://github.com/expo/exact",
+      "source": "Hacker News",
+      "points": 45,
+      "comments": 23,
+      "comments_url": "https://news.ycombinator.com/item?id=50433541",
+      "published_at": "2026-11-10T06:59:13+08:00",
+      "tags": [
+        "programming"
+      ]
+    },
+    {
+      "title": "Show HN: Someone Was Here – Find out who used your Mac while you were away",
+      "url": "https://someonewashere.app/",
+      "source": "Hacker News",
+      "points": 62,
+      "comments": 25,
+      "comments_url": "https://news.ycombinator.com/item?id=50429812",
+      "published_at": "2026-11-10T02:50:56+08:00",
+      "tags": [
+        "misc"
+      ]
+    },
+    {
+      "title": "Terminal2Shell: Critical flaw grants instant shell access on every major OS",
+      "url": "https://terminal2shell.com/",
+      "source": "Lobsters",
+      "points": 79,
+      "comments": 23,
+      "comments_url": "https://lobste.rs/s/vghqe8/terminal2shell_critical_flaw_grants",
+      "published_at": "2026-11-09T23:41:50+08:00",
+      "tags": [
+        "misc"
+      ]
+    },
+    {
+      "title": "Show HN: STE80 Humanizer – de-AI text by writing 80% of the way to ASD-STE100",
+      "url": "https://github.com/Dodaios/ste80-humanizer",
+      "source": "Hacker News",
+      "points": 59,
+      "comments": 16,
+      "comments_url": "https://news.ycombinator.com/item?id=50429144",
+      "published_at": "2026-11-10T02:05:44+08:00",
+      "tags": [
+        "ai"
+      ]
+    },
+    {
+      "title": "Our Looping Factory Cut DEV Page Load Time by 75% and Counting",
+      "url": "https://dev.to/dailycontext/our-looping-factory-cut-dev-page-load-time-by-75-and-counting-1hnf",
+      "source": "DEV.to",
+      "points": 72,
+      "comments": 12,
+      "comments_url": "https://dev.to/dailycontext/our-looping-factory-cut-dev-page-load-time-by-75-and-counting-1hnf#comments",
+      "published_at": "2026-11-09T16:12:25Z",
+      "summary": "A month ago, an average web request on DEV took about 70 milliseconds inside Rails, with P99 response...",
+      "tags": [
+        "web"
+      ]
+    },
+    {
+      "title": "Everyone Is Building AI to Replace Developers. Nobody Is Building the Plan for What Comes After.",
+      "url": "https://dev.to/thebitforge/everyone-is-building-ai-to-replace-developers-nobody-is-building-the-plan-for-what-comes-after-4a5o",
+      "source": "DEV.to",
+      "points": 67,
+      "comments": 10,
+      "comments_url": "https://dev.to/thebitforge/everyone-is-building-ai-to-replace-developers-nobody-is-building-the-plan-for-what-comes-after-4a5o#comments",
+      "published_at": "2026-11-09T13:57:43Z",
+      "summary": "Quick game. Open the launch post for any AI coding tool and count the verbs. Generates. Refactors....",
+      "tags": [
+        "ai",
+        "programming"
+      ]
+    },
+    {
+      "title": "Microsoft are rejecting your mail",
+      "url": "https://www.mythic-beasts.com/blog/2026/11/09/microsoft-are-rejecting-your-mail/",
+      "source": "Lobsters",
+      "points": 41,
+      "comments": 5,
+      "comments_url": "https://lobste.rs/s/ynik5s/microsoft_are_rejecting_your_mail",
+      "published_at": "2026-11-10T02:36:47+08:00",
+      "tags": [
+        "misc"
+      ]
+    },
+    {
+      "title": "How Much Energy Does Building Distro Packages Use",
+      "url": "https://www.wezm.net/v2/posts/2026/distro-energy-use/",
+      "source": "Lobsters",
+      "points": 87,
+      "comments": 15,
+      "comments_url": "https://lobste.rs/s/ezjewj/how_much_energy_does_building_distro",
+      "published_at": "2026-11-09T14:44:59+08:00",
+      "tags": [
+        "misc"
+      ]
+    },
+    {
+      "title": "unlocking any car from X brand in most of the world",
+      "url": "https://shubs.io/unlocking-any-car-from-x-brand-in-most-of-the-world/",
+      "source": "Lobsters",
+      "points": 79,
+      "comments": 25,
+      "comments_url": "https://lobste.rs/s/kbrpx3/unlocking_any_car_from_x_brand_most_world",
+      "published_at": "2026-11-09T12:43:15+08:00",
+      "tags": [
+        "misc"
+      ]
+    },
+    {
+      "title": "llm-anthropic 0.31",
+      "url": "https://simonwillison.net/2026/Nov/9/llm-anthropic/",
+      "source": "Simon Willison",
+      "published_at": "2026-11-10T07:58:46+08:00",
+      "summary": "Release: llm-anthropic 0.31 Anthropic released Fable 5.2 and Mythos 5.2 today. I've added them to llm-anthropic , so you can now run prompts through Fable 5.2 like this: uv tool install llm llm install llm-anthropic llm keys set anthropic # paste key here llm -m…",
+      "tags": [
+        "ai"
+      ]
+    },
+    {
+      "title": "Let’s Talk About Why all This OT Stuff is Connected",
+      "url": "https://tisiphone.net/2026/11/08/lets-talk-about-why-all-this-ot-stuff-is-connected/",
+      "source": "Lobsters",
+      "points": 36,
+      "comments": 20,
+      "comments_url": "https://lobste.rs/s/jxigk6/let_s_talk_about_why_all_this_ot_stuff_is",
+      "published_at": "2026-11-09T20:22:39+08:00",
+      "tags": [
+        "misc"
+      ]
+    },
+    {
+      "title": "Sure mate, buy me a bloody coffee",
+      "url": "https://peateasea.de/sure-mate-buy-me-a-bloody-coffee/",
+      "source": "Lobsters",
+      "points": 36,
+      "comments": 3,
+      "comments_url": "https://lobste.rs/s/eeclwg/sure_mate_buy_me_bloody_coffee",
+      "published_at": "2026-11-10T02:35:57+08:00",
+      "tags": [
+        "misc"
+      ]
+    },
+    {
+      "title": "Herb Sutter: When a language’s creator and its owners strongly disagree: C++26 post-DIS, historical experience, and paths forward",
+      "url": "https://isocpp.org/files/papers/P4454R0.pdf",
+      "source": "Lobsters",
+      "points": 56,
+      "comments": 19,
+      "comments_url": "https://lobste.rs/s/vlagyq/herb_sutter_when_language_s_creator_its",
+      "published_at": "2026-11-09T05:59:26+08:00",
+      "tags": [
+        "programming"
+      ]
+    },
+    {
+      "title": "Nemotron-Personas-Finance-Japan: A Synthetic Dataset Capturing Japan's Demographics and Financial Context",
+      "url": "https://huggingface.co/blog/nvidia/nemotron-personas-finance-japan",
+      "source": "Hugging Face",
+      "published_at": "2026-11-09T23:05:57+08:00",
+      "tags": [
+        "misc"
+      ]
+    },
+    {
+      "title": "What are you doing this week?",
+      "url": "https://lobste.rs/s/tt42jc/what_are_you_doing_this_week",
+      "source": "Lobsters",
+      "points": 19,
+      "comments": 23,
+      "comments_url": "https://lobste.rs/s/tt42jc/what_are_you_doing_this_week",
+      "published_at": "2026-11-09T17:32:52+08:00",
+      "summary": "What are you doing this week? Feel free to share! Keep in mind it’s OK to do nothing at all, too.",
+      "tags": [
+        "misc"
+      ]
+    },
+    {
+      "title": "Your Experts Have Partners. There's HOPE for Keeping Them Together",
+      "url": "https://huggingface.co/blog/amazon/higher-order-pruning-experts",
+      "source": "Hugging Face",
+      "published_at": "2026-11-09T20:34:29+08:00",
+      "tags": [
+        "misc"
+      ]
+    },
+    {
+      "title": "systemd loves Rust",
+      "url": "https://amutable.com/blog/systemd-loves-rust",
+      "source": "Lobsters",
+      "points": 54,
+      "comments": 24,
+      "comments_url": "https://lobste.rs/s/62loik/systemd_loves_rust",
+      "published_at": "2026-11-08T20:55:05+08:00",
+      "tags": [
+        "programming"
+      ]
+    },
+    {
+      "title": "What's new in Node.js 27",
+      "url": "https://nodejsdesignpatterns.com/blog/whats-new-in-nodejs-27/",
+      "source": "Lobsters",
+      "points": 18,
+      "comments": 6,
+      "comments_url": "https://lobste.rs/s/vtjjbc/what_s_new_node_js_27",
+      "published_at": "2026-11-09T19:48:55+08:00",
+      "tags": [
+        "programming"
+      ]
+    },
+    {
+      "title": "How much does it cost to run a text game with LLMs",
+      "url": "https://dev.to/hiper2d/how-much-does-it-cost-to-run-a-text-game-with-llms-57o7",
+      "source": "DEV.to",
+      "points": 26,
+      "comments": 27,
+      "comments_url": "https://dev.to/hiper2d/how-much-does-it-cost-to-run-a-text-game-with-llms-57o7#comments",
+      "published_at": "2026-11-08T18:46:19Z",
+      "summary": "AI costs are confusing. Providers give you a lot of numbers and nothing to actually know how much you are going to pay in the long run. There is no point in these input/cached/output token prices if you have no idea how many reasoning tokens you'll spend on your tasks. How much…",
+      "tags": [
+        "ai"
+      ]
+    },
+    {
+      "title": "The Web Is More Than Enough, by Paul Ford",
+      "url": "https://simonwillison.net/2026/Nov/9/hn-50421091/",
+      "source": "Simon Willison",
+      "published_at": "2026-11-09T12:32:33+08:00",
+      "summary": "My comment on The Web Is More Than Enough, by Paul Ford — Hacker News. OK, this comment convinced me to give that a shot. Here's a thing I made in Three.js this morning - a Nudibranch themed Faberge Egg: https://static.simonwillison.net/static/2026/Hidden-Reef-Egg... (77KB) I…",
+      "tags": [
+        "web",
+        "programming",
+        "ai"
+      ]
+    },
+    {
+      "title": "Hide your slop PR descriptions behind <details><summary>",
+      "url": "https://simonwillison.net/2026/Nov/9/details-summary/",
+      "source": "Simon Willison",
+      "published_at": "2026-11-09T12:25:05+08:00",
+      "summary": "Most of the changes I make to my projects these days come in the form of PRs opened for me by Claude Code or Codex. The PR is my unit of work - I use them to bundle commits together, iterating on them until a feature is complete, document decisions and then merge the finished…",
+      "tags": [
+        "ai"
+      ]
+    },
+    {
+      "title": "Take Claude Code Above Average: Let Antigravity Review It",
+      "url": "https://dev.to/gde/take-claude-code-above-average-let-antigravity-review-it-1f3g",
+      "source": "DEV.to",
+      "points": 14,
+      "comments": 8,
+      "comments_url": "https://dev.to/gde/take-claude-code-above-average-let-antigravity-review-it-1f3g#comments",
+      "published_at": "2026-11-09T08:18:56Z",
+      "summary": "In November 2026, I spent a day building a small tool with Claude Code: a bridge that lets a second...",
+      "tags": [
+        "ai"
+      ]
+    },
+    {
+      "title": "Beyond code generation: A developer’s guide to agentic engineering",
+      "url": "https://github.blog/ai-and-ml/github-copilot/beyond-code-generation-a-developers-guide-to-agentic-engineering/",
+      "source": "GitHub Blog",
+      "published_at": "2026-11-07T06:15:59+08:00",
+      "summary": "Writing code got faster. The work around it didn't. See how you can plan, write code, review changes, and investigate production issues with GitHub Copilot, and what work still needs your judgment. The post Beyond code generation: A developer’s guide to agentic engineering…",
+      "tags": [
+        "ai",
+        "devtools"
+      ]
+    }
+  ],
+  "news_highlights": [
+    {
+      "title": "Claude Fable 5.2 and Mythos 5.2",
+      "url": "https://www.anthropic.com/claude-fable-and-mythos-5-2",
+      "why_it_matters": "Anthropic's new top model is cheaper ($8/$40 per million tokens), up to 30% faster, and leads its agentic-coding benchmarks. Anthropic still suggests Opus 5.5 as the daily driver and Fable for the hardest jobs, so pick models per task."
+    },
+    {
+      "title": "Claude Fable 5.2 scores 65 on artificial analysis, highest so far",
+      "url": "https://artificialanalysis.ai/models/claude-fable-5-2",
+      "why_it_matters": "An independent leaderboard puts Fable 5.2 first, which backs up Anthropic's own numbers. Worth checking its cost per task before switching your coding agent over."
+    },
+    {
+      "title": "Beyond code generation: A developer's guide to agentic engineering",
+      "url": "https://github.blog/ai-and-ml/github-copilot/beyond-code-generation-a-developers-guide-to-agentic-engineering/",
+      "why_it_matters": "GitHub says commits are up over 400% in a year while AI-heavy PRs wait much longer in review. The fix it suggests: smaller stacked PRs, automated checks, and agents across plan, build, verify and observe."
+    },
+    {
+      "title": "What's new in Node.js 27",
+      "url": "https://nodejsdesignpatterns.com/blog/whats-new-in-nodejs-27/",
+      "why_it_matters": "Node now ships one major a year and every release becomes LTS. The 27 alpha adds Iterator.zip, Math.sumPrecise, an unflagged node:vfs and --allow-env, and makes req.headers null-prototype, so add it to CI early."
+    }
+  ]
+}
