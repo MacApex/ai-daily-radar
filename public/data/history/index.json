@@ -1,5 +1,12 @@
 [
   {
+    "date": "2026-11-11",
+    "featured": [
+      "addyosmani/agent-skills"
+    ],
+    "archived_count": 5
+  },
+  {
     "date": "2026-11-10",
     "featured": [
       "garrytan/gbrain"
