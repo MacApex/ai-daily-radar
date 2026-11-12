@@ -1,97 +1,112 @@
 {
   "sample": false,
-  "generated_at": "2026-11-11T10:02:11+08:00",
-  "date": "2026-11-11",
+  "generated_at": "2026-11-12T09:57:10+08:00",
+  "date": "2026-11-12",
   "run": {
-    "trending_observed": 12,
-    "saved": 1,
-    "upgraded": 1,
-    "relocated": 3,
+    "trending_observed": 10,
+    "saved": 2,
+    "upgraded": 2,
+    "relocated": 1,
     "unchanged": 0,
     "incomplete": 0,
-    "eligible_not_archived": 2,
+    "eligible_not_archived": 0,
     "rejected": 5,
     "blockers": [
-      "Normal daily run for 2026-11-11. GitHub Trending rendered 12 entries; all 12 were reviewed and star counts verified via the GitHub API.",
-      "Seven coding-agent-eligible repos (>=3000 stars): anthropics/skills (5), vercel-labs/agent-browser (5), mattpocock/skills (5), addyosmani/agent-skills (5), anthropics/claude-quickstarts (4), homeassistant-ai/ha-mcp (3), ranxianglei/billion-context (3). The top 5 used the full 5-per-day cap; ha-mcp and billion-context were logged as eligible, not archived (daily cap) without downloading or upgrading, and their existing archives stay in the 2026-11-10 and 2026-11-09 folders. The other 5 entries were rejected (design-system library, physics simulator, finance app, OSINT tool, Rust web framework).",
-      "Never re-clone rule applied: check_unmodified passed for all four already-archived repos before the same-volume move. anthropics/skills, mattpocock/skills and claude-quickstarts were unchanged; agent-browser was upgraded e751995 -> d129226 by incremental git fetch, previous manifests kept as previous-*.json. Nothing moved to Trash; no user-edited copies found.",
-      "git-lfs is still not installed on this Mac; none of today's archived trees contain LFS pointers or submodules. Repository code, hooks, installers and dependencies were never run.",
-      "One new featured recommendation: addyosmani/agent-skills (never featured). The other archived repos were featured on earlier days."
+      "Normal daily run for 2026-11-12. GitHub Trending rendered 10 entries; all 10 were reviewed and star counts verified via the GitHub API.",
+      "Five coding-agent-eligible repos (>=3000 stars): shadcn/improve (5), addyosmani/agent-skills (5), vercel-labs/agent-browser (5), openai/codex-security (4), homeassistant-ai/ha-mcp (3). All five were archived (cap 5 of 5); none was eligible-not-archived. The other 5 entries were rejected (design-system library, stock-analysis app, finance app, Java algorithms collection, and GoogleChrome/modern-web-guidance-src at 1,800 stars, below the 3,000 threshold).",
+      "Never re-clone rule applied: check_unmodified passed for all three already-archived repos before the same-volume move. addyosmani/agent-skills was unchanged; agent-browser was upgraded d129226 -> 51b6f8a and ha-mcp 6b14aca -> 59cec3e (with its pinned submodule) by incremental git fetch, previous manifests kept as previous-*.json. Nothing moved to Trash; no user-edited copies found.",
+      "git-lfs is still not installed on this Mac; none of today's archived trees contain LFS pointers. Repository code, hooks, installers and dependencies were never run.",
+      "Two new featured recommendations: shadcn/improve and openai/codex-security (never featured). The other archived repos were featured earlier or are not featured (ha-mcp, rated 3)."
     ],
-    "archive_folder": "2026-11-11_095541_Asia-Shanghai"
+    "archive_folder": "2026-11-12_095037_Asia-Shanghai"
   },
   "featured": [
     {
-      "full_name": "addyosmani/agent-skills",
-      "url": "https://github.com/addyosmani/agent-skills",
-      "stars": 115204,
+      "full_name": "shadcn/improve",
+      "url": "https://github.com/shadcn/improve",
+      "stars": 10928,
       "rating": 5,
       "license": "MIT",
-      "reason": "Addy Osmani's Agent Skills (MIT): 25 SKILL.md engineering workflows (spec-driven development, planning, TDD, code review, debugging, security hardening, browser testing via Chrome DevTools MCP, shipping) plus 9 lifecycle slash commands (/spec, /plan, /build, /test, /review, /ship...), 4 reviewer personas and shared checklists. Ships native plugin manifests for Claude Code and Codex (.claude-plugin, .codex-plugin) and setup guides for Cursor, Gemini CLI, Copilot and others, with a three-tier eval suite for skill routing. Directly installable process discipline for coding agents.",
+      "reason": "shadcn's improve (MIT): a single Agent Skill (Claude Code plugin manifest included; installs with `npx skills add shadcn/improve`) that maps a repo, fans out parallel audit subagents across nine categories, re-vets every file:line finding, and writes self-contained plans in plans/ with verification-gate commands, out-of-scope lists and STOP conditions so a cheaper model can execute them. Includes /improve branch, next, execute (isolated worktree + review) and reconcile. Directly useful advisor/executor workflow for coding agents.",
       "ideas": [
-        "Install it in Codex with `codex plugin marketplace add addyosmani/agent-skills` and `codex plugin add agent-skills@agent-skills`, then run `@spec-driven-development` before your next ai-daily-radar change so the agent writes a spec and task plan before touching code.",
-        "Pair skills/browser-testing-with-devtools with the Chrome DevTools MCP to have Claude Code check the live dashboard after each deploy: console errors, layout shifts and whether the animated background renders on a mobile-sized viewport.",
-        "Use the /webperf command and references/performance-checklist.md to audit the site's Core Web Vitals on mobile, then turn the findings into small, test-backed commits with /build.",
-        "Study evals/ (structural checks, TF-IDF trigger routing, behavioral expectations[]) and copy the pattern to test your own shared skills, such as CLI-Anything or MoneyPrinterTurbo, so agents pick the right skill for the right prompt.",
-        "Read docs/skill-anatomy.md and the .claude-plugin / .codex-plugin manifests, then package one of your Android or iOS build routines as a cross-agent plugin that installs the same way in Claude Code and Codex."
+        "Install it with `npx skills add shadcn/improve`, run `/improve quick` on ai-daily-radar with your strongest model, then hand the top plan to a cheaper model with `/improve execute 001`, which works in an isolated git worktree and reviews the diff before you merge.",
+        "Run `/improve branch` before merging changes to the v1 WebView Android app so the audit only covers what the branch changed, with file:line evidence for each finding.",
+        "Point `/improve next` at the daily routine and publish scripts to get feature ideas backed by evidence from the repo; rejected ideas are recorded with reasons so they don't come back next run.",
+        "Study skills/improve/references/plan-template.md (inlined context, verification-gate commands, STOP conditions, commit drift stamp) and use the same format when you hand tasks between your bots.",
+        "Add a DESIGN.md describing the site's original pre-glass design: improve's recon reads DESIGN.md/PRODUCT.md, so decided tradeoffs aren't re-flagged and the agent's suggestions stay within your design rules."
+      ]
+    },
+    {
+      "full_name": "openai/codex-security",
+      "url": "https://github.com/openai/codex-security",
+      "stars": 11773,
+      "rating": 4,
+      "license": "Apache-2.0",
+      "reason": "OpenAI's Codex Security (Apache-2.0): a Codex plugin with 20 security skills (security-scan, security-diff-scan, deep-security-scan, threat-model, threat-model-visualize, triage, fix-finding, verify-fix, define-security-policy and more) plus the `cs` CLI, TypeScript SDK, GitHub Action, SARIF/JSON/CSV export and scanner-import guides. Rated 4 rather than 5 because scans need an OpenAI/Codex sign-in or API key and paid model usage (Node 22.13+/24/26 and Python 3.10+).",
+      "ideas": [
+        "Enable the Codex Security plugin in Codex (`/plugins`) and run `$security-diff-scan` (or `cs scan . --diff origin/main`) on ai-daily-radar before merging changes to the publish pipeline.",
+        "Run `$threat-model` and `$threat-model-visualize` on the Android WebView app to map risks such as JavaScript bridges, URL loading and mixed content, then use `$fix-finding` and `$verify-fix` on what it confirms.",
+        "Use `cs policy .` to draft a SECURITY.md for the portfolio and client repos you show employers; it writes the draft outside the repo so you review it before copying it in.",
+        "Copy github-action/examples/repository.yml into a MacApex repo as a weekly scan with the CODEX_SECURITY_API_KEY secret and the example's ~$5 per-scan limit, and export SARIF so findings appear in GitHub code scanning.",
+        "Read plugins/codex-security/skills/ together with evals/check-skills to learn how a 20-skill plugin is organized and tested, and use that layout for your own shared skills such as CLI-Anything."
       ]
     }
   ],
   "archived": [
     {
-      "full_name": "anthropics/skills",
-      "url": "https://github.com/anthropics/skills",
-      "stars": 192378,
+      "full_name": "shadcn/improve",
+      "url": "https://github.com/shadcn/improve",
+      "stars": 10928,
       "rating": 5,
-      "license": "",
-      "commit_sha": "2c5958ecac7cee2b583967a2c4981d0f4a75c579",
-      "status": "relocated",
-      "size_mb": 11.4,
-      "description": "Public repository for Agent Skills"
+      "license": "MIT",
+      "commit_sha": "cac56e1ebd3c279aa9153616cfeac7b174ab90f9",
+      "status": "saved",
+      "size_mb": 0.1,
+      "description": "Use your most capable model to audit your codebase and write plans for cheaper models to execute."
     },
     {
       "full_name": "addyosmani/agent-skills",
       "url": "https://github.com/addyosmani/agent-skills",
-      "stars": 115204,
+      "stars": 115983,
       "rating": 5,
       "license": "MIT",
       "commit_sha": "301b02b12bff98e4688e6984af6556802322bbde",
-      "status": "saved",
+      "status": "relocated",
       "size_mb": 1.1,
       "description": "Production-grade engineering skills for AI coding agents."
     },
     {
       "full_name": "vercel-labs/agent-browser",
       "url": "https://github.com/vercel-labs/agent-browser",
-      "stars": 49253,
+      "stars": 49900,
       "rating": 5,
       "license": "Apache-2.0",
-      "commit_sha": "d129226078e0fc8ee5dec48fbc96a46df5d0aafd",
+      "commit_sha": "51b6f8a40c6f1b330f4f2021b1af154ebc6be464",
       "status": "upgraded",
       "size_mb": 11.9,
       "description": "Browser automation CLI for AI agents"
     },
     {
-      "full_name": "mattpocock/skills",
-      "url": "https://github.com/mattpocock/skills",
-      "stars": 320984,
-      "rating": 5,
-      "license": "MIT",
-      "commit_sha": "4ae2317ddb22b046e26455e4f9c9b3aaaf62212d",
-      "status": "relocated",
-      "size_mb": 0.8,
-      "description": "Skills for Real Engineers. Straight from my .agents directory."
+      "full_name": "openai/codex-security",
+      "url": "https://github.com/openai/codex-security",
+      "stars": 11773,
+      "rating": 4,
+      "license": "Apache-2.0",
+      "commit_sha": "2911786f243f08fd61ad854f5c527e7b0c404ccc",
+      "status": "saved",
+      "size_mb": 25.4,
+      "description": "OpenAI's Codex Security CLI and TypeScript SDK for finding, validating, and fixing security vulnerabilities. npm: https://www.npmjs.com/package/@openai/codex-security"
     },
     {
-      "full_name": "anthropics/claude-quickstarts",
-      "url": "https://github.com/anthropics/claude-quickstarts",
-      "stars": 20522,
-      "rating": 4,
+      "full_name": "homeassistant-ai/ha-mcp",
+      "url": "https://github.com/homeassistant-ai/ha-mcp",
+      "stars": 7392,
+      "rating": 3,
       "license": "MIT",
-      "commit_sha": "4a4224bdf0e9cfb3332167b69c90457403813625",
-      "status": "relocated",
-      "size_mb": 9.7,
-      "description": "A collection of projects designed to help developers quickly get started with building deployable applications using the Claude API"
+      "commit_sha": "59cec3e9faa54019fbf4ac6815826f6cdfc84208",
+      "status": "upgraded",
+      "size_mb": 52.1,
+      "description": "Configure and automate Home Assistant with Claude, ChatGPT, and other AI assistants."
     }
   ],
   "trending": [
@@ -99,8 +114,8 @@
       "rank": 1,
       "full_name": "meta/astryx",
       "url": "https://github.com/meta/astryx",
-      "stars": 22978,
-      "stars_today": 3108,
+      "stars": 25078,
+      "stars_today": 2776,
       "language": "TypeScript",
       "description": "An open source design system that's fully customizable and agent ready",
       "decision": "rejected",
@@ -108,351 +123,432 @@
     },
     {
       "rank": 2,
-      "full_name": "anthropics/skills",
-      "url": "https://github.com/anthropics/skills",
-      "stars": 192378,
-      "stars_today": 1679,
+      "full_name": "ZhuLinsen/daily_stock_analysis",
+      "url": "https://github.com/ZhuLinsen/daily_stock_analysis",
+      "stars": 70311,
+      "stars_today": 278,
       "language": "Python",
-      "description": "Public repository for Agent Skills",
-      "decision": "archived",
-      "decision_reason": "Relocated: Official Anthropic public Agent Skills repository: Claude Code plugin marketplace with document skills (docx/pdf/pptx/xlsx), example skills (mcp-builder, webapp-testing, skill-creator, frontend-design) plus the Agent Skills spec and template. Already archived and featured (2026-11-08); upstream still at the archived commit, so the folder was moved into today's run and marked unchanged, relocated (no download)."
+      "description": "LLM 驱动的多市场股票智能分析系统：多源行情、实时新闻、决策看板与自动推送，支持零成本定时运行。  LLM-powered multi-market stock analysis system with multi-source market data, real-time news, decision dashboard, automated notifications, and cost-free scheduled runs.",
+      "decision": "rejected",
+      "decision_reason": "Not selected: LLM-driven multi-market stock analysis system (market data, news, decision dashboard, scheduled notifications); an end-user finance application, not a coding-agent skill, MCP server or workflow."
     },
     {
       "rank": 3,
-      "full_name": "addyosmani/agent-skills",
-      "url": "https://github.com/addyosmani/agent-skills",
-      "stars": 115204,
-      "stars_today": 465,
-      "language": "JavaScript",
-      "description": "Production-grade engineering skills for AI coding agents.",
-      "decision": "archived",
-      "decision_reason": "Saved: Addy Osmani's Agent Skills (MIT): 25 SKILL.md engineering workflows (spec-driven development, planning, TDD, code review, debugging, security hardening, browser testing via Chrome DevTools MCP, shipping) plus 9 lifecycle slash commands (/spec, /plan, /build, /test, /review, /ship...), 4 reviewer personas and shared checklists. Ships native plugin manifests for Claude Code and Codex (.claude-plugin, .codex-plugin) and setup guides for Cursor, Gemini CLI, Copilot and others, with a three-tier eval suite for skill routing. Directly installable process discipline for coding agents."
+      "full_name": "GoogleChrome/modern-web-guidance-src",
+      "url": "https://github.com/GoogleChrome/modern-web-guidance-src",
+      "stars": 1800,
+      "stars_today": 159,
+      "language": "TypeScript",
+      "description": "",
+      "decision": "rejected",
+      "decision_reason": "Not eligible: 1,800 verified GitHub stars, below the 3,000-star threshold, so it was not reviewed for archiving or featuring regardless of topic."
     },
     {
       "rank": 4,
-      "full_name": "anthropics/claude-quickstarts",
-      "url": "https://github.com/anthropics/claude-quickstarts",
-      "stars": 20522,
-      "stars_today": 531,
-      "language": "Python",
-      "description": "A collection of projects designed to help developers quickly get started with building deployable applications using the Claude API",
+      "full_name": "shadcn/improve",
+      "url": "https://github.com/shadcn/improve",
+      "stars": 10928,
+      "stars_today": 361,
+      "language": null,
+      "description": "Use your most capable model to audit your codebase and write plans for cheaper models to execute.",
       "decision": "archived",
-      "decision_reason": "Relocated: Anthropic's official Claude API quickstarts (MIT): autonomous-coding two-agent harness on the Claude Agent SDK, minimal browser/computer-use toolsets, and managed-agents examples (MCP server, Sentry autofix, Slack, Linear). Already archived and featured (2026-11-09); upstream still at the archived commit, so the folder was moved into today's run and marked unchanged, relocated (no download)."
+      "decision_reason": "Saved: shadcn's improve (MIT): a single Agent Skill (Claude Code plugin manifest included; installs with `npx skills add shadcn/improve`) that maps a repo, fans out parallel audit subagents across nine categories, re-vets every file:line finding, and writes self-contained plans in plans/ with verification-gate commands, out-of-scope lists and STOP conditions so a cheaper model can execute them. Includes /improve branch, next, execute (isolated worktree + review) and reconcile. Directly useful advisor/executor workflow for coding agents."
     },
     {
       "rank": 5,
-      "full_name": "google-deepmind/mujoco",
-      "url": "https://github.com/google-deepmind/mujoco",
-      "stars": 17388,
-      "stars_today": 456,
-      "language": "C++",
-      "description": "Multi-Joint dynamics with Contact. A general purpose physics simulator.",
-      "decision": "rejected",
-      "decision_reason": "Not selected: MuJoCo general-purpose physics simulator for robotics/RL research; a simulation engine, not a coding-agent skill, MCP server or workflow."
+      "full_name": "addyosmani/agent-skills",
+      "url": "https://github.com/addyosmani/agent-skills",
+      "stars": 115983,
+      "stars_today": 787,
+      "language": "JavaScript",
+      "description": "Production-grade engineering skills for AI coding agents.",
+      "decision": "archived",
+      "decision_reason": "Relocated: Addy Osmani's Agent Skills (MIT): SKILL.md engineering workflows, lifecycle slash commands and Claude Code / Codex plugin manifests. Already archived and featured (2026-11-11); upstream still at the archived commit, so the folder was moved into today's run and marked unchanged, relocated (no download)."
     },
     {
       "rank": 6,
+      "full_name": "vercel-labs/agent-browser",
+      "url": "https://github.com/vercel-labs/agent-browser",
+      "stars": 49900,
+      "stars_today": 708,
+      "language": "Rust",
+      "description": "Browser automation CLI for AI agents",
+      "decision": "archived",
+      "decision_reason": "Upgraded: Vercel Labs browser-automation CLI for AI agents (Apache-2.0): accessibility-tree snapshots with refs, shell-driven actions, version-matched skills and an MCP server. Already archived and featured; upstream moved from d129226 to 51b6f8a, so the folder was moved into today's run and upgraded in place by incremental git fetch (no re-clone), then re-verified."
+    },
+    {
+      "rank": 7,
       "full_name": "we-promise/sure",
       "url": "https://github.com/we-promise/sure",
-      "stars": 12008,
-      "stars_today": 159,
+      "stars": 12995,
+      "stars_today": 1078,
       "language": "Ruby",
       "description": "The personal finance app for everyone (by everyone)",
       "decision": "rejected",
       "decision_reason": "Not selected: Sure, a community-maintained self-hosted personal finance app (Rails, AGPL-3.0); an end-user product, not a coding-agent skill, MCP server, library or workflow."
     },
     {
-      "rank": 7,
+      "rank": 8,
       "full_name": "homeassistant-ai/ha-mcp",
       "url": "https://github.com/homeassistant-ai/ha-mcp",
-      "stars": 6699,
-      "stars_today": 790,
+      "stars": 7392,
+      "stars_today": 645,
       "language": "Python",
       "description": "Configure and automate Home Assistant with Claude, ChatGPT, and other AI assistants.",
-      "decision": "eligible_not_archived",
-      "decision_reason": "HA-MCP (MIT, Python/FastMCP): an MCP server that lets Claude, ChatGPT and other MCP clients inspect and configure Home Assistant. Eligible (6,699 stars) but rated 3 because it only helps with a Home Assistant install; outside today's top 5, so not upgraded today (upstream moved 6b14aca -> fabdea6). The 2026-11-10 archive stays in place."
-    },
-    {
-      "rank": 8,
-      "full_name": "vercel-labs/agent-browser",
-      "url": "https://github.com/vercel-labs/agent-browser",
-      "stars": 49253,
-      "stars_today": 780,
-      "language": "Rust",
-      "description": "Browser automation CLI for AI agents",
       "decision": "archived",
-      "decision_reason": "Upgraded: Vercel Labs browser-automation CLI for AI agents (Apache-2.0): accessibility-tree snapshots with refs, shell-driven actions, version-matched skills and an MCP server. Already archived and featured; upstream moved from e751995 to d129226, so the folder was moved into today's run and upgraded in place by incremental git fetch (no re-clone), then re-verified."
+      "decision_reason": "Upgraded: HA-MCP (MIT, Python/FastMCP): an MCP server that lets Claude, ChatGPT and other MCP clients inspect and configure Home Assistant. Rated 3 because it only helps with a Home Assistant install, but only five repos were eligible today so it fit within the cap. Already archived (2026-11-10); upstream moved 6b14aca -> 59cec3e, so the folder was moved into today's run and upgraded in place (superproject + pinned skills-vendor submodule) by incremental git fetch, then re-verified."
     },
     {
       "rank": 9,
-      "full_name": "sherlock-project/sherlock",
-      "url": "https://github.com/sherlock-project/sherlock",
-      "stars": 109050,
-      "stars_today": 2393,
-      "language": "Python",
-      "description": "Hunt down social media accounts by username across social networks",
-      "decision": "rejected",
-      "decision_reason": "Not selected: OSINT username-search CLI across social networks; general security/recon tooling, not a coding-agent skill, MCP server or agent workflow."
+      "full_name": "openai/codex-security",
+      "url": "https://github.com/openai/codex-security",
+      "stars": 11773,
+      "stars_today": 52,
+      "language": "TypeScript",
+      "description": "OpenAI's Codex Security CLI and TypeScript SDK for finding, validating, and fixing security vulnerabilities. npm: https://www.npmjs.com/package/@openai/codex-security",
+      "decision": "archived",
+      "decision_reason": "Saved: OpenAI's Codex Security (Apache-2.0): a Codex plugin with 20 security skills (security-scan, security-diff-scan, deep-security-scan, threat-model, threat-model-visualize, triage, fix-finding, verify-fix, define-security-policy and more) plus the `cs` CLI, TypeScript SDK, GitHub Action, SARIF/JSON/CSV export and scanner-import guides. Rated 4 rather than 5 because scans need an OpenAI/Codex sign-in or API key and paid model usage (Node 22.13+/24/26 and Python 3.10+)."
     },
     {
       "rank": 10,
-      "full_name": "tokio-rs/topcoat",
-      "url": "https://github.com/tokio-rs/topcoat",
-      "stars": 6847,
-      "stars_today": 192,
-      "language": "Rust",
-      "description": "A batteries-included framework for building web apps",
+      "full_name": "TheAlgorithms/Java",
+      "url": "https://github.com/TheAlgorithms/Java",
+      "stars": 67047,
+      "stars_today": 51,
+      "language": "Java",
+      "description": "All Algorithms implemented in Java",
       "decision": "rejected",
-      "decision_reason": "Not selected: Topcoat, a batteries-included Rust web-app framework from the Tokio project; a general application framework, not a coding-agent skill, MCP server or agent workflow."
-    },
-    {
-      "rank": 11,
-      "full_name": "ranxianglei/billion-context",
-      "url": "https://github.com/ranxianglei/billion-context",
-      "stars": 6352,
-      "stars_today": 375,
-      "language": "TypeScript",
-      "description": "A context-compression plugin for month-long single sessions (billions of tokens) ,small context windows (a 100K context is enough) and token savings (5x fewer tokens) .上下文压缩插件，月级长会话会话， 兼顾小窗口(100k上下文足矣)省token(省5倍token) . billion-context is all you need",
-      "decision": "eligible_not_archived",
-      "decision_reason": "billion-context: a context-compression plugin for very long single agent sessions with small context windows. Eligible (6,352 stars) and already archived (2026-11-09), rated 3; outside today's top 5, so not upgraded today (upstream moved 1f311dd -> 58a8796). The 2026-11-09 archive stays in place."
-    },
-    {
-      "rank": 12,
-      "full_name": "mattpocock/skills",
-      "url": "https://github.com/mattpocock/skills",
-      "stars": 320984,
-      "stars_today": 1225,
-      "language": "Shell",
-      "description": "Skills for Real Engineers. Straight from my .agents directory.",
-      "decision": "archived",
-      "decision_reason": "Relocated: Matt Pocock's skills (MIT): practical engineering skills straight from his .agents directory (TDD, PRD/issue writing, refactor planning, codebase design) for Claude Code and other agents. Already archived and featured (2026-11-05); upstream still at the archived commit, so the folder was moved from 2026-11-08 into today's run and marked unchanged, relocated (no download)."
+      "decision_reason": "Not selected: educational collection of algorithms implemented in Java; reference material, not a coding-agent skill, MCP server or workflow."
     }
   ],
   "news": [
     {
-      "title": ".name Grandfathered",
-      "url": "https://neil.fraser.name/news/2026/11/10/",
+      "title": "Nvidia is preparing to oust Jensen Huang",
+      "url": "https://www.wsj.com/business/nvidia-is-preparing-to-oust-nvidia-ceo-jensen-huang-30f421ad",
       "source": "Hacker News",
-      "points": 691,
-      "comments": 159,
-      "comments_url": "https://news.ycombinator.com/item?id=50442736",
-      "published_at": "2026-11-11T00:37:44+08:00",
+      "points": 521,
+      "comments": 761,
+      "comments_url": "https://news.ycombinator.com/item?id=50459703",
+      "published_at": "2026-11-12T06:31:06+08:00",
       "tags": [
-        "misc"
+        "hardware"
       ]
     },
     {
-      "title": "Scion is back and is going to sell a kei truck in America",
-      "url": "https://www.theautopian.com/scion-is-back-and-its-going-to-sell-a-freaking-kei-truck-in-america/",
+      "title": "United Airlines bans AI agents from booking flights on behalf of travelers",
+      "url": "https://www.cbsnews.com/news/united-airlines-bans-ai-agents-booking-flights/",
       "source": "Hacker News",
-      "points": 328,
-      "comments": 249,
-      "comments_url": "https://news.ycombinator.com/item?id=50445401",
-      "published_at": "2026-11-11T03:50:46+08:00",
-      "tags": [
-        "misc"
-      ]
-    },
-    {
-      "title": "Smart home devices should work without the internet",
-      "url": "https://docodethatmatters.com/home-automation-overnight-success/",
-      "source": "Hacker News",
-      "points": 717,
-      "comments": 254,
-      "comments_url": "https://news.ycombinator.com/item?id=50441707",
-      "published_at": "2026-11-10T23:25:20+08:00",
-      "tags": [
-        "misc"
-      ]
-    },
-    {
-      "title": "After 7 months, Glasswing overwelms maintainers with underwhelming findings",
-      "url": "https://www.vulncheck.com/blog/anthropic-glasswing-november-update",
-      "source": "Hacker News",
-      "points": 231,
-      "comments": 88,
-      "comments_url": "https://news.ycombinator.com/item?id=50447074",
-      "published_at": "2026-11-11T06:17:56+08:00",
-      "tags": [
-        "misc"
-      ]
-    },
-    {
-      "title": "Starlink Mini 2",
-      "url": "https://starlink.com/mini-2",
-      "source": "Hacker News",
-      "points": 238,
-      "comments": 254,
-      "comments_url": "https://news.ycombinator.com/item?id=50444129",
-      "published_at": "2026-11-11T02:22:32+08:00",
-      "tags": [
-        "misc"
-      ]
-    },
-    {
-      "title": "Synaptics patent claims stop work on DisplayLink drivers",
-      "url": "https://lwn.net/SubscriberLink/1102549/acbc92e00cee3a3f/",
-      "source": "Hacker News",
-      "points": 293,
-      "comments": 163,
-      "comments_url": "https://news.ycombinator.com/item?id=50443824",
-      "published_at": "2026-11-11T02:02:02+08:00",
-      "tags": [
-        "misc"
-      ]
-    },
-    {
-      "title": "AlphaProof Code",
-      "url": "https://deepmind.google/blog/introducing-alphaproof-code/",
-      "source": "Hacker News",
-      "points": 578,
-      "comments": 177,
-      "comments_url": "https://news.ycombinator.com/item?id=50439193",
-      "published_at": "2026-11-10T20:11:12+08:00",
-      "tags": [
-        "misc"
-      ]
-    },
-    {
-      "title": "Val Town is winding down",
-      "url": "https://blog.val.town/winding-down",
-      "source": "Hacker News",
-      "points": 306,
-      "comments": 82,
-      "comments_url": "https://news.ycombinator.com/item?id=50443427",
-      "published_at": "2026-11-11T01:31:14+08:00",
-      "tags": [
-        "misc"
-      ]
-    },
-    {
-      "title": "Show HN: Get your coding agent off ~2019 JavaScript, onto modern web primitives",
-      "url": "https://github.com/GoogleChrome/modern-web-guidance",
-      "source": "Hacker News",
-      "points": 263,
-      "comments": 77,
-      "comments_url": "https://news.ycombinator.com/item?id=50443812",
-      "published_at": "2026-11-11T02:01:15+08:00",
-      "tags": [
-        "ai",
-        "programming",
-        "web"
-      ]
-    },
-    {
-      "title": "AI usage generates a fragile codebase",
-      "url": "https://evanxmerz.com/post/ai-usage-generates-a-fragile-codebase/",
-      "source": "Hacker News",
-      "points": 381,
-      "comments": 406,
-      "comments_url": "https://news.ycombinator.com/item?id=50438318",
-      "published_at": "2026-11-10T18:25:58+08:00",
+      "points": 376,
+      "comments": 357,
+      "comments_url": "https://news.ycombinator.com/item?id=50458900",
+      "published_at": "2026-11-12T05:24:35+08:00",
       "tags": [
         "ai"
       ]
     },
     {
-      "title": "Ableton Live 13",
-      "url": "https://www.ableton.com/en/live/",
+      "title": "AWS emulator",
+      "url": "https://github.com/aws/aws-emulator",
+      "source": "Hacker News",
+      "points": 671,
+      "comments": 217,
+      "comments_url": "https://news.ycombinator.com/item?id=50456631",
+      "published_at": "2026-11-12T02:21:38+08:00",
+      "summary": "aws-emulator Finally, an official emulator from AWS to run tests against a local clone of their many different services without having to provision a paid API key to do so. It's written in Rust by a huge swarm of agents - 29,684 commits in the first three weeks of the project.…",
+      "tags": [
+        "ai",
+        "programming"
+      ]
+    },
+    {
+      "title": "Jensen Huang said to have had relationship with executive who reports to him",
+      "url": "https://www.nytimes.com/2026/11/11/technology/jensen-huang-nvidia-affair.html",
+      "source": "Hacker News",
+      "points": 204,
+      "comments": 187,
+      "comments_url": "https://news.ycombinator.com/item?id=50459321",
+      "published_at": "2026-11-12T06:03:58+08:00",
+      "tags": [
+        "misc"
+      ]
+    },
+    {
+      "title": "My AI agents found an unmapped Maya site?",
+      "url": "https://pietromiotti.com/latest/maya-site",
+      "source": "Hacker News",
+      "points": 928,
+      "comments": 338,
+      "comments_url": "https://news.ycombinator.com/item?id=50452455",
+      "published_at": "2026-11-11T20:05:22+08:00",
+      "tags": [
+        "ai"
+      ]
+    },
+    {
+      "title": "A false smoke alarm almost drowned Jane Street's only NYC datacenter",
+      "url": "https://michael.bacarella.com/2026/11/10/false-smoke-alarm-jane-street-datacenter/",
+      "source": "Hacker News",
+      "points": 411,
+      "comments": 210,
+      "comments_url": "https://news.ycombinator.com/item?id=50455394",
+      "published_at": "2026-11-12T00:38:44+08:00",
+      "tags": [
+        "devtools",
+        "ai"
+      ]
+    },
+    {
+      "title": "Gemini Decisions API",
+      "url": "https://blog.google/innovation-and-ai/technology/developers-tools/gemini-decisions-api/",
       "source": "Hacker News",
       "points": 274,
-      "comments": 299,
-      "comments_url": "https://news.ycombinator.com/item?id=50439695",
-      "published_at": "2026-11-10T20:58:04+08:00",
+      "comments": 85,
+      "comments_url": "https://news.ycombinator.com/item?id=50456791",
+      "published_at": "2026-11-12T02:32:42+08:00",
+      "summary": "Gemini Decisions API Google join Jev and OpenAI in the decision model category with \"Gemini Decision 1\". This new model API is almost identical to Jev: it supports the same three types of questions (yes/no, choice, and rubric-scoring) and even reuses Jev's term \"Noul\" for a…",
+      "tags": [
+        "ai",
+        "programming"
+      ]
+    },
+    {
+      "title": "Show HN: I recreated Papers Please but you're deciding which YC startups to fund",
+      "url": "https://termsheetplease.com/",
+      "source": "Hacker News",
+      "points": 172,
+      "comments": 76,
+      "comments_url": "https://news.ycombinator.com/item?id=50457230",
+      "published_at": "2026-11-12T03:12:16+08:00",
       "tags": [
         "misc"
       ]
     },
     {
-      "title": "AMD's Zen 6 Family: Feeding the Beast",
-      "url": "https://chipsandcheese.com/p/amds-zen-6-family-feeding-the-beast",
+      "title": "93% of Paint Splatters Are Valid Perl Programs (2019)",
+      "url": "https://www.mcmillen.dev/sigbovik/",
       "source": "Hacker News",
-      "points": 184,
-      "comments": 69,
-      "comments_url": "https://news.ycombinator.com/item?id=50443090",
-      "published_at": "2026-11-11T01:02:32+08:00",
+      "points": 149,
+      "comments": 23,
+      "comments_url": "https://news.ycombinator.com/item?id=50459745",
+      "published_at": "2026-11-12T06:34:23+08:00",
       "tags": [
         "misc"
       ]
     },
     {
-      "title": "What's new in the .NET 11 runtime",
-      "url": "https://learn.microsoft.com/en-us/dotnet/core/whats-new/dotnet-11/runtime",
+      "title": "Tim Peters has died",
+      "url": "https://discuss.python.org/t/in-memoriam-tim-peters-1952-2026/110028",
       "source": "Hacker News",
-      "points": 241,
-      "comments": 176,
-      "comments_url": "https://news.ycombinator.com/item?id=50439284",
-      "published_at": "2026-11-10T20:20:07+08:00",
+      "points": 873,
+      "comments": 94,
+      "comments_url": "https://news.ycombinator.com/item?id=50450488",
+      "published_at": "2026-11-11T15:03:17+08:00",
+      "tags": [
+        "programming"
+      ]
+    },
+    {
+      "title": "Emacs in the Age of Magic",
+      "url": "https://commandlinesystems.com/magic.txt",
+      "source": "Hacker News",
+      "points": 145,
+      "comments": 52,
+      "comments_url": "https://news.ycombinator.com/item?id=50458208",
+      "published_at": "2026-11-12T04:26:32+08:00",
       "tags": [
         "misc"
       ]
     },
     {
-      "title": "Six Math Essentials by Terence Tao",
-      "url": "https://teorth.github.io/tao-web/six-math-essentials.html",
+      "title": "Hyper-Realistic Sand with WebGL2",
+      "url": "https://av.github.io/safe-sand/",
       "source": "Hacker News",
-      "points": 130,
-      "comments": 25,
-      "comments_url": "https://news.ycombinator.com/item?id=50446246",
-      "published_at": "2026-11-11T04:58:44+08:00",
+      "points": 311,
+      "comments": 64,
+      "comments_url": "https://news.ycombinator.com/item?id=50453288",
+      "published_at": "2026-11-11T21:39:29+08:00",
       "tags": [
+        "misc"
+      ]
+    },
+    {
+      "title": "Lock Your GitHub Actions",
+      "url": "https://hugovk.dev/blog/2026/lock-github-actions/",
+      "source": "Hacker News",
+      "points": 121,
+      "comments": 22,
+      "comments_url": "https://news.ycombinator.com/item?id=50459485",
+      "published_at": "2026-11-12T06:16:41+08:00",
+      "tags": [
+        "devtools"
+      ]
+    },
+    {
+      "title": "Show HN: Yogurt – Free, private, open-source alternative to Granola",
+      "url": "https://github.com/FrigadeHQ/yogurt",
+      "source": "Hacker News",
+      "points": 169,
+      "comments": 76,
+      "comments_url": "https://news.ycombinator.com/item?id=50454625",
+      "published_at": "2026-11-11T23:33:06+08:00",
+      "tags": [
+        "misc"
+      ]
+    },
+    {
+      "title": "Atuin Threads: All your agent sessions on every machine",
+      "url": "https://blog.atuin.sh/threads-agent-sessions/",
+      "source": "Hacker News",
+      "points": 191,
+      "comments": 73,
+      "comments_url": "https://news.ycombinator.com/item?id=50453637",
+      "published_at": "2026-11-11T22:10:46+08:00",
+      "tags": [
+        "ai"
+      ]
+    },
+    {
+      "title": "Using voltage glitching to unleash the A100 in my mining card",
+      "url": "https://blog.kate.land/posts/using-voltage-glitching-to-unlock-the-a100/",
+      "source": "Hacker News",
+      "points": 263,
+      "comments": 107,
+      "comments_url": "https://news.ycombinator.com/item?id=50451903",
+      "published_at": "2026-11-11T18:48:40+08:00",
+      "tags": [
+        "misc"
+      ]
+    },
+    {
+      "title": "Faster Retrieval for Better, More Efficient RAG",
+      "url": "https://machinelearning.apple.com/research/faster-retrieval",
+      "source": "Hacker News",
+      "points": 153,
+      "comments": 28,
+      "comments_url": "https://news.ycombinator.com/item?id=50455633",
+      "published_at": "2026-11-12T00:57:45+08:00",
+      "tags": [
+        "ai"
+      ]
+    },
+    {
+      "title": "Can a Linear Program Do Weight-Space Programming?",
+      "url": "https://nathan.rs/posts/weight-space-lp/",
+      "source": "Hacker News",
+      "points": 242,
+      "comments": 36,
+      "comments_url": "https://news.ycombinator.com/item?id=50452655",
+      "published_at": "2026-11-11T20:30:17+08:00",
+      "tags": [
+        "programming",
         "science"
       ]
     },
     {
-      "title": "Show HN: Valencia, Spain in Sim City/Isometric View",
-      "url": "https://tinyvalencia.com/",
+      "title": "The Utah Teapot",
+      "url": "https://graphics.cs.utah.edu/teapot/",
       "source": "Hacker News",
-      "points": 196,
-      "comments": 50,
-      "comments_url": "https://news.ycombinator.com/item?id=50441518",
-      "published_at": "2026-11-10T23:12:16+08:00",
+      "points": 77,
+      "comments": 18,
+      "comments_url": "https://news.ycombinator.com/item?id=50457618",
+      "published_at": "2026-11-12T03:45:10+08:00",
       "tags": [
         "misc"
       ]
     },
     {
-      "title": "What objective is reasoning solving?",
-      "url": "https://alexwang.ai/posts/reasoning-as-pathfinding/",
+      "title": "A general purpose Apple Silicon layer for x86-64 PCs",
+      "url": "https://github.com/tylertms/Stela",
       "source": "Hacker News",
-      "points": 104,
-      "comments": 46,
-      "comments_url": "https://news.ycombinator.com/item?id=50445013",
-      "published_at": "2026-11-11T03:25:14+08:00",
+      "points": 51,
+      "comments": 16,
+      "comments_url": "https://news.ycombinator.com/item?id=50460154",
+      "published_at": "2026-11-12T07:02:38+08:00",
       "tags": [
         "misc"
       ]
     },
     {
-      "title": "Sherman Anti-Trust Act (1890)",
-      "url": "https://www.archives.gov/milestone-documents/sherman-anti-trust-act",
-      "source": "Hacker News",
-      "points": 72,
-      "comments": 45,
-      "comments_url": "https://news.ycombinator.com/item?id=50446219",
-      "published_at": "2026-11-11T04:56:16+08:00",
+      "title": "How do you actually self-host securely?",
+      "url": "https://lobste.rs/s/m43bas/how_do_you_actually_self_host_securely",
+      "source": "Lobsters",
+      "points": 93,
+      "comments": 56,
+      "comments_url": "https://lobste.rs/s/m43bas/how_do_you_actually_self_host_securely",
+      "published_at": "2026-11-11T20:01:19+08:00",
+      "summary": "I recognize that the title is rather vague, but I'm completely green when it comes to self-hosting, so I figured here would be a good place to ask for some pointers given the discussions I sometimes see happening in the comments. I tried researching first through DDG and…",
+      "tags": [
+        "devtools"
+      ]
+    },
+    {
+      "title": "What are some \"No AI\" apps/companies/resources you know of?",
+      "url": "https://lobste.rs/s/nld6x3/what_are_some_no_ai_apps_companies",
+      "source": "Lobsters",
+      "points": 69,
+      "comments": 29,
+      "comments_url": "https://lobste.rs/s/nld6x3/what_are_some_no_ai_apps_companies",
+      "published_at": "2026-11-11T21:13:51+08:00",
+      "summary": "Hey everyone I'm wondering if there's any useful/helpful list of apps, companies, or resources in general that avoid AI (they don't have to be vocally or openly \"anti\", but at least explicitly avoid it) that you know of? I'm not looking to start a discussion on what's good/bad…",
+      "tags": [
+        "ai"
+      ]
+    },
+    {
+      "title": "We Keep Hearing About AI Productivity. The QA Group Chat Told a Different Story.",
+      "url": "https://dev.to/xulingfeng/we-keep-hearing-about-ai-productivity-the-qa-group-chat-told-a-different-story-2nma",
+      "source": "DEV.to",
+      "points": 79,
+      "comments": 47,
+      "comments_url": "https://dev.to/xulingfeng/we-keep-hearing-about-ai-productivity-the-qa-group-chat-told-a-different-story-2nma#comments",
+      "published_at": "2026-11-11T08:35:15Z",
+      "summary": "An anonymous poll, a debate about multimodal testing, and some uncomfortable questions about who...",
+      "tags": [
+        "ai",
+        "programming"
+      ]
+    },
+    {
+      "title": "How I accidentally became a millionaire",
+      "url": "https://lyra.horse/blog/2026/11/disinformation-machine/",
+      "source": "Lobsters",
+      "points": 30,
+      "comments": 5,
+      "comments_url": "https://lobste.rs/s/lnau2d/how_i_accidentally_became_millionaire",
+      "published_at": "2026-11-12T05:53:24+08:00",
       "tags": [
         "misc"
       ]
     },
     {
-      "title": "A comprehensive study of how fingerprintable users are",
-      "url": "https://fingerprinting.study/",
-      "source": "Hacker News",
-      "points": 73,
-      "comments": 34,
-      "comments_url": "https://news.ycombinator.com/item?id=50444684",
-      "published_at": "2026-11-11T03:03:54+08:00",
+      "title": ".name grandfathered",
+      "url": "https://neil.fraser.name/news/2026/11/10/",
+      "source": "Lobsters",
+      "points": 182,
+      "comments": 27,
+      "comments_url": "https://lobste.rs/s/vkkbwo/name_grandfathered",
+      "published_at": "2026-11-11T00:52:12+08:00",
       "tags": [
         "misc"
+      ]
+    },
+    {
+      "title": "Browse tools.simonwillison.net by tag",
+      "url": "https://simonwillison.net/2026/Nov/11/tools-tags/",
+      "source": "Simon Willison",
+      "published_at": "2026-11-12T02:42:50+08:00",
+      "summary": "Browse tools.simonwillison.net by tag I've been wanting a better way to browse my collection of vibe-coded tools (244 and counting) for a while. I had a few Fable 5.2 credits left over before my weekly reset so I set it to work using tree-sitter to analyze the code for…",
+      "tags": [
+        "programming",
+        "ai"
       ]
     },
     {
       "title": "Detecting Flaky Tests and Finding Their Root Causes with Strands Agents and Gemini",
       "url": "https://dev.to/m4rri4nne/detecting-flaky-tests-and-finding-their-root-causes-with-strands-agents-and-gemini-4kan",
       "source": "DEV.to",
-      "points": 47,
-      "comments": 4,
+      "points": 68,
+      "comments": 15,
       "comments_url": "https://dev.to/m4rri4nne/detecting-flaky-tests-and-finding-their-root-causes-with-strands-agents-and-gemini-4kan#comments",
       "published_at": "2026-11-10T22:52:28Z",
       "summary": "A few years ago (three years at most), one of the biggest challenges QA Engineers faced was: how do...",
@@ -462,25 +558,73 @@
       ]
     },
     {
-      "title": "$30M Raised to Redo the CPU",
-      "url": "https://tendrils.co/blog/2026-11-10/30m-raised",
-      "source": "Hacker News",
-      "points": 31,
-      "comments": 17,
-      "comments_url": "https://news.ycombinator.com/item?id=50447036",
-      "published_at": "2026-11-11T06:14:03+08:00",
+      "title": "llm 0.37.2",
+      "url": "https://simonwillison.net/2026/Nov/11/llm/",
+      "source": "Simon Willison",
+      "published_at": "2026-11-12T01:19:52+08:00",
+      "summary": "Release: llm 0.37.2 Fixes a security issue reported by Daniel de Araujo in GHSA-v9h7-jj4g-f862 and GHSA-r639-rr7r-x72w . LLM has a mechanism called extra-openai-models.yaml - now managed by the new-in-0.37 llm openai endpoint add command - for using LLM with OpenAI-compatible…",
       "tags": [
-        "hardware"
+        "ai",
+        "security"
       ]
     },
     {
-      "title": "Process Explorer for macOS",
-      "url": "https://github.com/microsoft/Procexp-Mac",
-      "source": "Hacker News",
-      "points": 138,
-      "comments": 48,
-      "comments_url": "https://news.ycombinator.com/item?id=50433216",
-      "published_at": "2026-11-10T06:30:41+08:00",
+      "title": "I deleted all my SSH keys",
+      "url": "https://blog.infected.systems/posts/2026-11-03-i-deleted-all-my-ssh-keys/",
+      "source": "Lobsters",
+      "points": 60,
+      "comments": 20,
+      "comments_url": "https://lobste.rs/s/sdtcvv/i_deleted_all_my_ssh_keys",
+      "published_at": "2026-11-11T04:49:23+08:00",
+      "tags": [
+        "misc"
+      ]
+    },
+    {
+      "title": "Synaptics patent claims stop work on DisplayLink drivers",
+      "url": "https://lwn.net/SubscriberLink/1102549/acbc92e00cee3a3f/",
+      "source": "Lobsters",
+      "points": 59,
+      "comments": 18,
+      "comments_url": "https://lobste.rs/s/fdnic2/synaptics_patent_claims_stop_work_on",
+      "published_at": "2026-11-11T00:57:25+08:00",
+      "tags": [
+        "misc"
+      ]
+    },
+    {
+      "title": "Go Turns 17",
+      "url": "https://go.dev/blog/17years",
+      "source": "Lobsters",
+      "points": 43,
+      "comments": 9,
+      "comments_url": "https://lobste.rs/s/idktfu/go_turns_17",
+      "published_at": "2026-11-11T06:47:26+08:00",
+      "tags": [
+        "programming"
+      ]
+    },
+    {
+      "title": "About the downtime and security incident",
+      "url": "https://danbooru.donmai.us/forum_topics/38685.html",
+      "source": "Lobsters",
+      "points": 13,
+      "comments": 6,
+      "comments_url": "https://lobste.rs/s/wfr0b4/about_downtime_security_incident",
+      "published_at": "2026-11-12T00:58:45+08:00",
+      "tags": [
+        "security"
+      ]
+    },
+    {
+      "title": "Ask More of Your UI",
+      "url": "https://dev.to/dailycontext/ask-more-of-your-ui-2nf7",
+      "source": "DEV.to",
+      "points": 42,
+      "comments": 4,
+      "comments_url": "https://dev.to/dailycontext/ask-more-of-your-ui-2nf7#comments",
+      "published_at": "2026-11-11T01:39:15Z",
+      "summary": "In my last post, I wrote about moving Forem’s performance and maintenance work into autonomous loops...",
       "tags": [
         "misc"
       ]
@@ -489,8 +633,8 @@
       "title": "The hardest tarball",
       "url": "https://stoppels.ch/2026/11/07/the-hardest-tarball.html",
       "source": "Lobsters",
-      "points": 54,
-      "comments": 4,
+      "points": 82,
+      "comments": 5,
       "comments_url": "https://lobste.rs/s/t7qkjb/hardest_tarball",
       "published_at": "2026-11-10T21:47:03+08:00",
       "tags": [
@@ -498,35 +642,13 @@
       ]
     },
     {
-      "title": "Terminal2Shell: Critical flaw grants instant shell access on every major OS",
-      "url": "https://terminal2shell.com/",
+      "title": "30 years of Internet transfers with curl",
+      "url": "https://daniel.haxx.se/blog/2026/11/11/30-years-of-internet-transfers-with-curl/",
       "source": "Lobsters",
-      "points": 145,
-      "comments": 35,
-      "comments_url": "https://lobste.rs/s/vghqe8/terminal2shell_critical_flaw_grants",
-      "published_at": "2026-11-09T23:41:50+08:00",
-      "tags": [
-        "misc"
-      ]
-    },
-    {
-      "title": "llm-gemini 0.36",
-      "url": "https://simonwillison.net/2026/Nov/10/llm-gemini/",
-      "source": "Simon Willison",
-      "published_at": "2026-11-11T04:09:44+08:00",
-      "summary": "Release: llm-gemini 0.36 Gemini 4 Carbon was announced two weeks ago for \"a subset of cyber defenders\", but today it's available to everyone else . This is Google's best ever Gemini, priced at $2/million input and $10/million output at launch (that's GPT-6.1 Sol / Claude Sonnet…",
-      "tags": [
-        "ai"
-      ]
-    },
-    {
-      "title": "Open Graph images with Astro and Typst",
-      "url": "https://eaj.no/posts/open-graph-images-with-typst/",
-      "source": "Lobsters",
-      "points": 36,
-      "comments": 7,
-      "comments_url": "https://lobste.rs/s/gj5obq/open_graph_images_with_astro_typst",
-      "published_at": "2026-11-10T19:42:48+08:00",
+      "points": 35,
+      "comments": 5,
+      "comments_url": "https://lobste.rs/s/x4kaac/30_years_internet_transfers_with_curl",
+      "published_at": "2026-11-11T07:42:39+08:00",
       "tags": [
         "misc"
       ]
@@ -535,13 +657,31 @@
       "title": "Our Looping Factory Cut DEV Page Load Time by 75% and Counting",
       "url": "https://dev.to/dailycontext/our-looping-factory-cut-dev-page-load-time-by-75-and-counting-1hnf",
       "source": "DEV.to",
-      "points": 111,
-      "comments": 25,
+      "points": 122,
+      "comments": 29,
       "comments_url": "https://dev.to/dailycontext/our-looping-factory-cut-dev-page-load-time-by-75-and-counting-1hnf#comments",
       "published_at": "2026-11-09T16:12:25Z",
       "summary": "A month ago, an average web request on DEV took about 70 milliseconds inside Rails, with P99 response...",
       "tags": [
         "web"
+      ]
+    },
+    {
+      "title": "BotPsy: On-Device Personal Assistant with a Sub-Billion-Parameter Agentic Language Model",
+      "url": "https://huggingface.co/blog/qvac/botpsy",
+      "source": "Hugging Face",
+      "published_at": "2026-11-11T13:01:16+08:00",
+      "tags": [
+        "ai"
+      ]
+    },
+    {
+      "title": "Token Pooling-Aware Training for Multi-Vector Embedding Models",
+      "url": "https://huggingface.co/blog/token-pooling",
+      "source": "Hugging Face",
+      "published_at": "2026-11-11T08:00:00+08:00",
+      "tags": [
+        "ai"
       ]
     },
     {
@@ -557,121 +697,6 @@
       ]
     },
     {
-      "title": "Microsoft are rejecting your mail",
-      "url": "https://www.mythic-beasts.com/blog/2026/11/09/microsoft-are-rejecting-your-mail/",
-      "source": "Lobsters",
-      "points": 78,
-      "comments": 21,
-      "comments_url": "https://lobste.rs/s/ynik5s/microsoft_are_rejecting_your_mail",
-      "published_at": "2026-11-10T02:36:47+08:00",
-      "tags": [
-        "misc"
-      ]
-    },
-    {
-      "title": "Weird licenses and the new open source",
-      "url": "https://dustri.org/b/weird-licenses-and-the-new-open-source.html",
-      "source": "Lobsters",
-      "points": 13,
-      "comments": 21,
-      "comments_url": "https://lobste.rs/s/kqjcnb/weird_licenses_new_open_source",
-      "published_at": "2026-11-11T00:49:51+08:00",
-      "tags": [
-        "programming"
-      ]
-    },
-    {
-      "title": "You should try Gleam",
-      "url": "https://nchagnet.eu/blog/you-should-try-gleam",
-      "source": "Lobsters",
-      "points": 49,
-      "comments": 9,
-      "comments_url": "https://lobste.rs/s/4yqgpu/you_should_try_gleam",
-      "published_at": "2026-11-10T11:33:27+08:00",
-      "tags": [
-        "misc"
-      ]
-    },
-    {
-      "title": "Horrible public key tricks",
-      "url": "https://maurycyz.com/projects/badcert/",
-      "source": "Lobsters",
-      "points": 115,
-      "comments": 12,
-      "comments_url": "https://lobste.rs/s/txkq8s/horrible_public_key_tricks",
-      "published_at": "2026-11-09T20:55:11+08:00",
-      "tags": [
-        "security"
-      ]
-    },
-    {
-      "title": "I deleted all my SSH keys",
-      "url": "https://blog.infected.systems/posts/2026-11-03-i-deleted-all-my-ssh-keys/",
-      "source": "Lobsters",
-      "points": 14,
-      "comments": 2,
-      "comments_url": "https://lobste.rs/s/sdtcvv/i_deleted_all_my_ssh_keys",
-      "published_at": "2026-11-11T04:49:23+08:00",
-      "tags": [
-        "misc"
-      ]
-    },
-    {
-      "title": "Let’s Talk About Why all This OT Stuff is Connected",
-      "url": "https://tisiphone.net/2026/11/08/lets-talk-about-why-all-this-ot-stuff-is-connected/",
-      "source": "Lobsters",
-      "points": 58,
-      "comments": 35,
-      "comments_url": "https://lobste.rs/s/jxigk6/let_s_talk_about_why_all_this_ot_stuff_is",
-      "published_at": "2026-11-09T20:22:39+08:00",
-      "tags": [
-        "misc"
-      ]
-    },
-    {
-      "title": "How Much Energy Does Building Distro Packages Use",
-      "url": "https://www.wezm.net/v2/posts/2026/distro-energy-use/",
-      "source": "Lobsters",
-      "points": 98,
-      "comments": 17,
-      "comments_url": "https://lobste.rs/s/ezjewj/how_much_energy_does_building_distro",
-      "published_at": "2026-11-09T14:44:59+08:00",
-      "tags": [
-        "misc"
-      ]
-    },
-    {
-      "title": "Introducing Our Smallest, Most Efficient Model: Muse Ember",
-      "url": "https://simonwillison.net/2026/Nov/10/muse-ember/",
-      "source": "Simon Willison",
-      "published_at": "2026-11-10T15:28:21+08:00",
-      "summary": "Introducing Our Smallest, Most Efficient Model: Muse Ember Meta AI just launched their entry in the Claude Haiku/GPT Luna category: Muse Ember, which they describe as: [...] our smallest and most efficient model designed for complex reasoning execution and the work agents…",
-      "tags": [
-        "ai"
-      ]
-    },
-    {
-      "title": "Quoting Prompting Claude Fable 5.2",
-      "url": "https://simonwillison.net/2026/Nov/10/prompting-claude-fable-52/",
-      "source": "Simon Willison",
-      "published_at": "2026-11-10T13:34:14+08:00",
-      "summary": "Claude Fable 5.2 responds closely to what the prompt says about who owns the code it works on. In Anthropic’s testing on small coding tasks, when a prompt said nothing about ownership or presented the code base as someone else’s, the model tended to add to the existing…",
-      "tags": [
-        "ai",
-        "programming"
-      ]
-    },
-    {
-      "title": "Yonkers Rises",
-      "url": "https://simonwillison.net/2026/Nov/10/yonkers-rises/",
-      "source": "Simon Willison",
-      "published_at": "2026-11-10T11:53:04+08:00",
-      "summary": "Tool: Yonkers Rises I realized I didn't know where Yonkers was, so I looked it up on Google Maps and then, to help embed its location and shape in my head (and to try out Claude Fable 5.2's 3D modeling and animation skills), I prompted Fable 5.2 Medium to: Make a three js…",
-      "tags": [
-        "ai"
-      ]
-    },
-    {
       "title": "Pay for Hugging Face Hub with your Google Cloud Account",
       "url": "https://huggingface.co/blog/hub-gcp-marketplace",
       "source": "Hugging Face",
@@ -679,56 +704,33 @@
       "tags": [
         "ai"
       ]
-    },
-    {
-      "title": "Decision Models in Hugging Face",
-      "url": "https://huggingface.co/blog/decision",
-      "source": "Hugging Face",
-      "published_at": "2026-11-10T08:00:00+08:00",
-      "tags": [
-        "ai"
-      ]
-    },
-    {
-      "title": "Cheapest AI API: 6 Options Compared for Real Workloads",
-      "url": "https://dev.to/bearerclub/cheapest-ai-api-6-options-compared-for-real-workloads-18ol",
-      "source": "DEV.to",
-      "points": 10,
-      "comments": 2,
-      "comments_url": "https://dev.to/bearerclub/cheapest-ai-api-6-options-compared-for-real-workloads-18ol#comments",
-      "published_at": "2026-11-10T13:20:47Z",
-      "summary": "When an application relies on a language model, the token bill looks straightforward at first glance....",
-      "tags": [
-        "ai",
-        "programming"
-      ]
     }
   ],
   "news_highlights": [
     {
-      "title": "Show HN: Get your coding agent off ~2019 JavaScript, onto modern web primitives",
-      "url": "https://github.com/GoogleChrome/modern-web-guidance",
-      "why_it_matters": "Chrome, Edge, Firefox and MDN now ship a skill that feeds coding agents vetted guides for 250 modern web features, searched offline with no API keys. It installs in Claude Code and Codex, and its legacy-scan command can flag old patterns in an existing site."
+      "title": "AWS emulator",
+      "url": "https://github.com/aws/aws-emulator",
+      "why_it_matters": "An official local emulator of AWS APIs: coding agents can run integration tests against AWS services offline, with no paid account or live credentials in the loop."
     },
     {
-      "title": "Git security vulnerabilities announced",
-      "url": "https://github.blog/open-source/git/git-security-vulnerabilities-announced-7/",
-      "why_it_matters": "Git 2.56.1 fixes six bugs, including code execution during a recursive clone of a malicious repo. Any agent or script that clones untrusted repos with submodules should update Git now or avoid recursive clones until it does."
+      "title": "Atuin Threads: All your agent sessions on every machine",
+      "url": "https://blog.atuin.sh/threads-agent-sessions/",
+      "why_it_matters": "One searchable, synced history for agent sessions across machines, so you can start a task in Claude Code and resume it in Codex. Handy if you work across a Mac mini, a MacBook and the box."
     },
     {
-      "title": "AlphaProof Code",
-      "url": "https://deepmind.google/blog/introducing-alphaproof-code/",
-      "why_it_matters": "DeepMind agents wrote over six million lines of Lean to prove security properties of Signal's actual protocol code in four weeks, with humans reviewing about 1%. It shows a practical pattern: humans write the spec, agents do the proofs, and a checker verifies them."
+      "title": "United Airlines bans AI agents from booking flights on behalf of travelers",
+      "url": "https://www.cbsnews.com/news/united-airlines-bans-ai-agents-booking-flights/",
+      "why_it_matters": "A major consumer brand is pushing back on browser agents, citing security and federal rules. Expect more sites to block agent traffic, which affects anyone building agent-driven web automation."
     },
     {
-      "title": "After 7 months, Glasswing overwelms maintainers with underwhelming findings",
-      "url": "https://www.vulncheck.com/blog/anthropic-glasswing-november-update",
-      "why_it_matters": "VulnCheck counts 37,966 AI-reported findings but only 217 fixes, and curl rejected 19 of its first 34 scanner reports. AI bug reports still need human triage, so budget for that before pointing a scanner at your own projects."
+      "title": "Gemini Decisions API",
+      "url": "https://blog.google/innovation-and-ai/technology/developers-tools/gemini-decisions-api/",
+      "why_it_matters": "Google is offering fast, calibrated multimodal yes/no style decisions in bulk (1,000 questions in one pass), useful as a cheap classification step in agent pipelines."
     },
     {
-      "title": "AI usage generates a fragile codebase",
-      "url": "https://evanxmerz.com/post/ai-usage-generates-a-fragile-codebase/",
-      "why_it_matters": "An engineer who writes nearly all his code with AI lists the costs he sees: shallow tests, over-complex helpers, and reviews too rushed to keep up. It's a useful checklist for reviewing what your coding agents ship."
+      "title": "Lock Your GitHub Actions",
+      "url": "https://hugovk.dev/blog/2026/lock-github-actions/",
+      "why_it_matters": "Pinning workflow actions protects CI from supply-chain attacks. Worth applying to the ai-daily-radar Pages workflow, which deploys to GitHub Pages every day."
     }
   ]
 }
