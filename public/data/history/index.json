@@ -1,5 +1,13 @@
 [
   {
+    "date": "2026-11-13",
+    "featured": [
+      "GoogleChrome/modern-web-guidance-src",
+      "QwenLM/qwen-code"
+    ],
+    "archived_count": 5
+  },
+  {
     "date": "2026-11-12",
     "featured": [
       "shadcn/improve",
