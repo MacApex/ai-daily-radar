@@ -1,166 +1,181 @@
 {
   "sample": false,
-  "generated_at": "2026-11-13T10:06:34+08:00",
-  "date": "2026-11-13",
+  "generated_at": "2026-11-14T10:18:18+08:00",
+  "date": "2026-11-14",
   "run": {
-    "trending_observed": 13,
-    "saved": 2,
+    "trending_observed": 12,
+    "saved": 3,
     "upgraded": 2,
-    "relocated": 1,
+    "relocated": 0,
     "unchanged": 0,
     "incomplete": 0,
-    "eligible_not_archived": 1,
-    "rejected": 7,
+    "eligible_not_archived": 2,
+    "rejected": 5,
     "blockers": [
-      "Normal daily run for 2026-11-13. GitHub Trending rendered 13 entries; all 13 were reviewed and star counts and default-branch commits verified via the GitHub API.",
-      "Six coding-agent-eligible repos (>=3000 stars): addyosmani/agent-skills (5), GoogleChrome/modern-web-guidance-src (4), openai/codex-security (4), QwenLM/qwen-code (4), Alishahryar1/free-claude-code (3), CopilotKit/OpenBot (3). The top five were archived (cap 5 of 5); OpenBot was logged as eligible, not archived (daily cap), without downloading. The other 7 entries were rejected (nvm, Node.js, llama.cpp, a finance app, a design-system library, and two repos below 3,000 stars: pookjw/HermesEnabler 1,548 and ashhart/TensorFold 1,948).",
-      "Never re-clone rule applied: unmodified checks passed for all three already-archived repos before the same-volume move. addyosmani/agent-skills was unchanged; codex-security was upgraded 2911786 -> 4822a9c and free-claude-code 4e99dda -> 5662101 by incremental git fetch, previous manifests kept as previous-*.json. free-claude-code was in the legacy 2026-10-13 format (bare object store without refs/origin remote, no archive-result.json), so it was checked with check_unmodified_legacy.py and upgraded with upgrade_legacy.py (same method, fetch from its public HTTPS URL). No user-edited copies found.",
-      "Two partial clones of GoogleChrome/modern-web-guidance-src started with a mistyped (non-API) commit SHA were stopped before completing and moved to the volume Trash via NSFileManager (recoverable; not permanently deleted); the final snapshot was cloned with the API-verified SHA 3bb177a and fully verified. GitHub now reports free-claude-code's license as NOASSERTION (was AGPL-3.0-only on 2026-10-13).",
+      "Normal daily run for 2026-11-14. GitHub Trending rendered 12 entries; all 12 were reviewed and star counts and default-branch commits verified via the GitHub API and git ls-remote.",
+      "Seven coding-agent-eligible repos (>=3000 stars): ChromeDevTools/chrome-devtools-mcp (5), alibaba/open-code-review (5), backnotprop/plannotator (5), GoogleChrome/modern-web-guidance-src (4), openai/codex-security (4), tradermonty/claude-trading-skills (4), block/buzz (3). The three 5s plus the two already-archived 4s were archived (cap 5 of 5). claude-trading-skills lost the tie at 4 on general usefulness to coding agents; buzz was rated 3. Both were logged as eligible, not archived (daily cap), without downloading. The other 5 entries were rejected (a stock-analysis app, a personal finance app, an uptime monitor, a Tailscale netcat utility, and one repo below 3,000 stars: Likely7/Veyra-NRVideo 1,637).",
+      "Never re-clone rule applied: unmodified checks passed for both already-archived repos before the same-volume move. GoogleChrome/modern-web-guidance-src was upgraded 3bb177a -> 5e5cd33 and openai/codex-security 4822a9c -> f26b669 by incremental git fetch; previous manifests kept as previous-*.json. No user-edited copies found.",
+      "ChromeDevTools/chrome-devtools-mcp has a pinned direct submodule third_party/devtools-frontend (https://github.com/ChromeDevTools/devtools-frontend.git @ ab6a630, parent .gitmodules sets fetchRecurseSubmodules=false). archive_repo.py's recursive submodule update began fetching nested optional Chromium/llvm toolchain gitlinks (including llvm-project). That recursive fetch was stopped; the superproject and the pinned direct submodule were kept and fully re-verified (9,337 tracked files). Seven nested optional submodules were not fetched and the archive is labeled incomplete for that reason. Incomplete nested leftovers (empty --no-checkout worktrees and partial module stores that did not match the gitlink SHAs) were moved to the volume Trash via NSFileManager (recoverable; not permanently deleted). Listing .Trashes from this session is TCC-restricted (Operation not permitted), so the resulting Trash paths could not be re-listed here.",
       "git-lfs is still not installed on this Mac; none of today's archived trees contain LFS pointers. Repository code, hooks, installers and dependencies were never run.",
-      "Two new featured recommendations: GoogleChrome/modern-web-guidance-src and QwenLM/qwen-code (never featured). The other archived repos were featured earlier (agent-skills, codex-security, free-claude-code)."
+      "Three new featured recommendations: ChromeDevTools/chrome-devtools-mcp, alibaba/open-code-review and backnotprop/plannotator (none was featured before; checked against WEBRO_ROUTINE.md, MEMORY.md and archive-index.json reported_repositories). The two upgraded archives were featured earlier (modern-web-guidance-src on 2026-11-13, codex-security on 2026-11-12)."
     ],
-    "archive_folder": "2026-11-13_095141_Asia-Shanghai"
+    "archive_folder": "2026-11-14_095326_Asia-Shanghai"
   },
   "featured": [
     {
-      "full_name": "GoogleChrome/modern-web-guidance-src",
-      "url": "https://github.com/GoogleChrome/modern-web-guidance-src",
-      "stars": 3075,
-      "rating": 4,
+      "full_name": "ChromeDevTools/chrome-devtools-mcp",
+      "url": "https://github.com/ChromeDevTools/chrome-devtools-mcp",
+      "stars": 55476,
+      "rating": 5,
       "license": "Apache-2.0",
-      "reason": "Modern Web Guidance (Apache-2.0), stewarded by the Chrome, Edge, Firefox and MDN teams: the source repo for an Agent Skill and CLI (`npx modern-web-guidance search / retrieve / legacy-scan`) that feeds coding agents token-efficient guides on ~250 modern web features (CSS layout, View Transitions, Popover/anchor positioning, INP and loading performance, accessibility, built-in AI, WebMCP), plus the Playwright-based eval harness that measures Claude Code and other agents. Rated 4 rather than 5 because this is the authoring/eval source; the installable skill is published from GoogleChrome/modern-web-guidance. Now 3,075 verified stars (was 1,800 and below the threshold yesterday).",
+      "reason": "Official Chrome DevTools MCP server, CLI and skills (Apache-2.0) that let coding agents such as Claude Code, Cursor, Copilot and Gemini control and inspect a live Chrome browser for reliable automation, in-depth debugging and performance analysis. A Claude Code plugin installs the MCP server and all skills (chrome-devtools, chrome-devtools-cli, a11y-debugging, cookie-debugging, debug-optimize-lcp, memory-leak-debugging, troubleshooting). Rated 5. Caveats: usage statistics are enabled by default (opt out with `--no-usage-statistics` or CHROME_DEVTOOLS_MCP_NO_USAGE_STATISTICS); requires Node.js LTS and current Google Chrome; the MCP client can see browser content. Archive completeness: tracked source and the pinned direct submodule third_party/devtools-frontend @ ab6a630 were verified; 7 nested optional submodules of devtools-frontend (llvm-project and Chromium build tooling) were not fetched because the parent .gitmodules sets fetchRecurseSubmodules=false.",
       "ideas": [
-        "Run `npx modern-web-guidance@latest legacy-scan .` on ai-daily-radar to list legacy patterns, then have your agent fix them in small commits while keeping the site's original design.",
-        "Install the skill in Claude Code or Codex (`npx skills add GoogleChrome/modern-web-guidance` or `gh skill install GoogleChrome/modern-web-guidance`) and point it at the performance guides (break-up-long-tasks, identify-inp-causes, defer-rendering-heavy-content) to keep the animated background smooth on your phone and in the Android WebView.",
-        "Before touching UI controls such as the top-right language switch, `search` the ui-components and forms guides (Popover API, anchor positioning, dialogs) so the agent uses native, keyboard-accessible patterns instead of extra JavaScript.",
-        "Read guides/webmcp (agentic-forms, agentic-javascript-tools) to explore exposing the site's daily data and filters as WebMCP tools that browser agents can call directly.",
-        "Study docs/EVALS.md and src/harness: it runs Claude Code and other agents against Playwright outcome checks. Copy the approach to test whether your shared skills, such as CLI-Anything, actually change what agents produce."
+        "Install the official Claude Code plugin (`/plugin marketplace add ChromeDevTools/chrome-devtools-mcp`, then `/plugin install chrome-devtools-mcp@chrome-devtools-plugins`) with `--no-usage-statistics`, and have the agent open the live ai-daily-radar GitHub Pages site and record a performance trace (INP, LCP) at a mobile viewport to check the animated background.",
+        "Use the a11y-debugging skill on the site's Chinese/English language switch and filter controls so the agent reports accessibility issues from a live Chrome session, not guesses from the HTML.",
+        "Point the agent at a failing UI change and have it use the network and console tools (source-mapped stacks) to find the regression, then apply the fix.",
+        "Use the CLI (`chrome-devtools navigate_page` / `take_screenshot`) in a headless script after each site publish to keep a visual regression log.",
+        "Follow the Advanced Usage guide to connect to Chrome on the Android phone for on-device debugging of the WebView app, or run the MCP as a browser subagent alongside Claude Code or Codex."
       ]
     },
     {
-      "full_name": "QwenLM/qwen-code",
-      "url": "https://github.com/QwenLM/qwen-code",
-      "stars": 29839,
-      "rating": 4,
+      "full_name": "alibaba/open-code-review",
+      "url": "https://github.com/alibaba/open-code-review",
+      "stars": 50654,
+      "rating": 5,
       "license": "Apache-2.0",
-      "reason": "Qwen Code (Apache-2.0): an open-source terminal coding agent (Qwen Code 1.0 Preview) with skills, subagents, agent teams, hooks, MCP, plan mode and LSP; works with OpenAI, Anthropic, Gemini and Qwen APIs or local models (Ollama/vLLM); headless `qwen -p`, TypeScript/Python/Java SDKs, `qwen serve` daemon (HTTP+SSE/ACP, Web UI), IDE plugins and Telegram/DingTalk/WeChat/Feishu channels. Rated 4: a full alternative/companion harness to Claude Code and Codex, but it needs a provider account or local model, and the daemon has no auth by default unless QWEN_SERVER_TOKEN is set.",
+      "reason": "Alibaba's Open Code Review CLI (Apache-2.0), battle-tested internally: a hybrid of deterministic review pipelines and an LLM agent that writes precise line-level comments, with official plugins/skills for Claude Code, Codex, Cursor, Kimi Code and OpenCode, plus an MCP server and a delegation mode that uses the host agent's model (no separate OCR API key). Rated 5. Caveat: default `ocr review` needs a configured OpenAI/Anthropic-compatible model endpoint; the published benchmark trades some recall for higher precision and about 1/9 the tokens of a general-purpose agent.",
       "ideas": [
-        "Point Qwen Code at an OpenAI-compatible endpoint or a local Ollama/vLLM model and give it the same small ai-daily-radar task as Claude Code and Codex to compare quality, speed and cost.",
-        "Use headless `qwen -p \"...\"` in a script or CI job for cheap, repeatable chores such as checking the publish output or drafting changelog notes, keeping your main agents for harder work.",
-        "Run `qwen serve --open` on the Mac mini with QWEN_SERVER_TOKEN set (the daemon has no auth by default) and use the Web UI from your Android phone to start and review coding sessions.",
-        "Connect one of the chat channels (Telegram, WeChat, DingTalk or Feishu) so you can send a coding task from your phone and get the result back in chat.",
-        "Explore the TypeScript/Python SDKs and the ACP route (the qwen-code-claw skill via acpx) to let Claude Code or Codex hand sub-tasks to Qwen Code as a second worker; packages/cua-driver also shows how its computer-use MCP tools are wired."
+        "Install the Claude Code plugin and run `/open-code-review:delegate-review` on the next ai-daily-radar change so the review uses the already-signed-in Claude Code model (no separate OCR credentials).",
+        "Install the Codex plugin skills and have Codex run a review on a feature branch before you publish, saving the structured comments to a file.",
+        "Use `ocr scan --path ...` to audit an unfamiliar directory in a local project or a newly archived repo when there is no useful git diff.",
+        "Add a CI step that runs `ocr review` on the commit range for ai-daily-radar or other repos, writing comments you can triage without a long general-agent pass (the published benchmark uses about 1/9 the tokens of Claude Code for this task).",
+        "Connect the documented MCP server so the review agent can call external tools (for example an existing security or browser skill) during a review."
+      ]
+    },
+    {
+      "full_name": "backnotprop/plannotator",
+      "url": "https://github.com/backnotprop/plannotator",
+      "stars": 10477,
+      "rating": 5,
+      "license": "Apache-2.0",
+      "reason": "Plannotator (Apache-2.0) is a local browser-based review surface for Claude Code, Codex, Copilot CLI, Gemini CLI, OpenCode and other coding agents: annotate plans, specs, HTML artifacts and diffs, then send the comments back to the agent in one click. Includes Plannotator Inbox (plugins for Claude Code, Pi and OpenCode; MCP for other agents) and Codex skills (`$plannotator-review`, `$plannotator-annotate`, `$plannotator-last`). Rated 5. Caveat: the default installer auto-configures hooks/skills for detected agents and contacts GitHub Releases (and optionally npm); use `--minimal` if you only want the binary.",
+      "ideas": [
+        "After a `--minimal` or full install, add the Claude Code plugin (`/plugin marketplace add backnotprop/plannotator`, then `/plugin install plannotator@plannotator`) and review the next site-change plan in the annotation UI before letting the agent implement it.",
+        "Use `/plannotator-review` (or Codex `$plannotator-review`) on the local diff of ai-daily-radar so you can comment on the language-switch or mobile-background changes and send the markup back to the agent.",
+        "Run `plannotator inbox` so Claude Code, Codex and other agents can leave questions and HTML prototypes in one local window; reply when you are free without holding the session open.",
+        "Annotate a rendered HTML preview (for example a GitHub Pages build) with the visual review surface and send layout feedback to the agent instead of describing pixels in chat.",
+        "On the Mac mini terminal, try Herdr Annotate or `plannotator-tui` to review Markdown plans and agent replies without leaving the terminal; annotations are stored in the same Plannotator data directory."
       ]
     }
   ],
   "archived": [
     {
-      "full_name": "addyosmani/agent-skills",
-      "url": "https://github.com/addyosmani/agent-skills",
-      "stars": 116698,
+      "full_name": "alibaba/open-code-review",
+      "url": "https://github.com/alibaba/open-code-review",
+      "stars": 50654,
       "rating": 5,
-      "license": "MIT",
-      "commit_sha": "301b02b12bff98e4688e6984af6556802322bbde",
-      "status": "relocated",
-      "size_mb": 1.1,
-      "description": "Production-grade engineering skills for AI coding agents."
+      "license": "Apache-2.0",
+      "commit_sha": "0e9060da66af36a96a15516e76a001953095318b",
+      "status": "saved",
+      "size_mb": 15.8,
+      "description": "Secure, fast, efficient, battle-tested at Alibaba's scale. Hybrid architecture code review tool: deterministic pipelines + LLM Agent, precise line-level comments, built-in multi-language ruleset (NPE, thread-safety, XSS, SQL injection), OpenAI & Anthropic compatible."
+    },
+    {
+      "full_name": "backnotprop/plannotator",
+      "url": "https://github.com/backnotprop/plannotator",
+      "stars": 10477,
+      "rating": 5,
+      "license": "Apache-2.0",
+      "commit_sha": "f1a0aabd405eec3573136c00ed6a00a32b6de4ac",
+      "status": "saved",
+      "size_mb": 97.8,
+      "description": "The workspace to stay in the loop and on top of agents - shape, decide, plan, annotate, review code, share with team, and send all feedback to agents with one click. "
+    },
+    {
+      "full_name": "ChromeDevTools/chrome-devtools-mcp",
+      "url": "https://github.com/ChromeDevTools/chrome-devtools-mcp",
+      "stars": 55476,
+      "rating": 5,
+      "license": "Apache-2.0",
+      "commit_sha": "8ba2ac945ebaf1adb92208c29f3a30e73a920956",
+      "status": "saved",
+      "size_mb": 394.3,
+      "description": "Chrome DevTools for coding agents"
     },
     {
       "full_name": "GoogleChrome/modern-web-guidance-src",
       "url": "https://github.com/GoogleChrome/modern-web-guidance-src",
-      "stars": 3075,
+      "stars": 4901,
       "rating": 4,
       "license": "Apache-2.0",
-      "commit_sha": "3bb177a6de62b7fd8cd0432c33756e6f3c9ece9d",
-      "status": "saved",
-      "size_mb": 96.2,
+      "commit_sha": "5e5cd33a7738f21281e3027732bcbd58cfa82bf1",
+      "status": "upgraded",
+      "size_mb": 96.7,
       "description": "Keep your coding agent up to date with the latest web best practices"
     },
     {
       "full_name": "openai/codex-security",
       "url": "https://github.com/openai/codex-security",
-      "stars": 12453,
+      "stars": 13154,
       "rating": 4,
       "license": "Apache-2.0",
-      "commit_sha": "4822a9cbc4c4976b6f81ba5afd50787af923ba91",
+      "commit_sha": "f26b669b56a4423abd773c81f6c6c9c2ebadc42a",
       "status": "upgraded",
       "size_mb": 25.5,
       "description": "OpenAI's Codex Security CLI and TypeScript SDK for finding, validating, and fixing security vulnerabilities. npm: https://www.npmjs.com/package/@openai/codex-security"
-    },
-    {
-      "full_name": "QwenLM/qwen-code",
-      "url": "https://github.com/QwenLM/qwen-code",
-      "stars": 29839,
-      "rating": 4,
-      "license": "Apache-2.0",
-      "commit_sha": "66db27f01fcaeb1efbe87c49fbbdcc3554298eb5",
-      "status": "saved",
-      "size_mb": 307.0,
-      "description": "An open-source AI coding agent that lives in your terminal."
-    },
-    {
-      "full_name": "Alishahryar1/free-claude-code",
-      "url": "https://github.com/Alishahryar1/free-claude-code",
-      "stars": 69334,
-      "rating": 3,
-      "license": "",
-      "commit_sha": "56621010ada15b633d76ab19178764bb3e81bcc5",
-      "status": "upgraded",
-      "size_mb": 13.3,
-      "description": "Use Claude Code, Codex, Antigravity, VSCode, Pi, and OpenCode (and 6 other harnesses) for free (1.3B+ free tokens) from your terminal, app, IDE, or phone, and now from the browser with native browser sessions (multi-harness + multi-model) like OpenClaw (voice supported + ToS friendly)"
     }
   ],
   "trending": [
     {
       "rank": 1,
-      "full_name": "GoogleChrome/modern-web-guidance-src",
-      "url": "https://github.com/GoogleChrome/modern-web-guidance-src",
-      "stars": 3075,
-      "stars_today": 739,
-      "language": "TypeScript",
-      "description": "Keep your coding agent up to date with the latest web best practices",
+      "full_name": "alibaba/open-code-review",
+      "url": "https://github.com/alibaba/open-code-review",
+      "stars": 50654,
+      "stars_today": 215,
+      "language": "Go",
+      "description": "Secure, fast, efficient, battle-tested at Alibaba's scale. Hybrid architecture code review tool: deterministic pipelines + LLM Agent, precise line-level comments, built-in multi-language ruleset (NPE, thread-safety, XSS, SQL injection), OpenAI & Anthropic compatible.",
       "decision": "archived",
-      "decision_reason": "Saved: Modern Web Guidance (Apache-2.0), stewarded by the Chrome, Edge, Firefox and MDN teams: the source repo for an Agent Skill and CLI (`npx modern-web-guidance search / retrieve / legacy-scan`) that feeds coding agents token-efficient guides on ~250 modern web features (CSS layout, View Transitions, Popover/anchor positioning, INP and loading performance, accessibility, built-in AI, WebMCP), plus the Playwright-based eval harness that measures Claude Code and other agents. Rated 4 rather than 5 because this is the authoring/eval source; the installable skill is published from GoogleChrome/modern-web-guidance. Now 3,075 verified stars (was 1,800 and below the threshold yesterday)."
+      "decision_reason": "Saved: Alibaba's Open Code Review CLI (Apache-2.0), battle-tested internally: a hybrid of deterministic review pipelines and an LLM agent that writes precise line-level comments, with official plugins/skills for Claude Code, Codex, Cursor, Kimi Code and OpenCode, plus an MCP server and a delegation mode that uses the host agent's model (no separate OCR API key). Rated 5. Caveat: default `ocr review` needs a configured OpenAI/Anthropic-compatible model endpoint; the published benchmark trades some recall for higher precision and about 1/9 the tokens of a general-purpose agent."
     },
     {
       "rank": 2,
-      "full_name": "openai/codex-security",
-      "url": "https://github.com/openai/codex-security",
-      "stars": 12453,
-      "stars_today": 643,
+      "full_name": "GoogleChrome/modern-web-guidance-src",
+      "url": "https://github.com/GoogleChrome/modern-web-guidance-src",
+      "stars": 4901,
+      "stars_today": 1925,
       "language": "TypeScript",
-      "description": "OpenAI's Codex Security CLI and TypeScript SDK for finding, validating, and fixing security vulnerabilities. npm: https://www.npmjs.com/package/@openai/codex-security",
+      "description": "Keep your coding agent up to date with the latest web best practices",
       "decision": "archived",
-      "decision_reason": "Upgraded: OpenAI's Codex Security (Apache-2.0): Codex plugin with security-scan, diff-scan, threat-model, triage and fix/verify skills plus the `cs` CLI, TypeScript SDK and GitHub Action. Already archived and featured (2026-11-12); upstream moved 2911786 -> 4822a9c, so the folder was moved into today's run and upgraded in place by incremental git fetch (no re-clone), then re-verified. Rated 4 because scans need an OpenAI/Codex sign-in or API key and paid model usage."
+      "decision_reason": "Upgraded: Modern Web Guidance (Apache-2.0), stewarded by the Chrome, Edge, Firefox and MDN teams: the source repo for an Agent Skill and CLI (`npx modern-web-guidance search / retrieve / legacy-scan`) that feeds coding agents token-efficient guides on ~250 modern web features (CSS layout, View Transitions, Popover/anchor positioning, INP and loading performance, accessibility, built-in AI, WebMCP), plus the Playwright-based eval harness that measures Claude Code and other agents. Already archived and featured (2026-11-13); upstream moved 3bb177a -> 5e5cd33, so the folder was moved into today's run and upgraded in place by incremental git fetch (no re-clone), then re-verified. Rated 4 rather than 5 because this is the authoring/eval source; the installable skill is published from GoogleChrome/modern-web-guidance. Now 4,901 verified stars."
     },
     {
       "rank": 3,
-      "full_name": "nvm-sh/nvm",
-      "url": "https://github.com/nvm-sh/nvm",
-      "stars": 96021,
-      "stars_today": 63,
-      "language": "Shell",
-      "description": "Node Version Manager - POSIX-compliant bash script to manage multiple active node.js versions.",
-      "decision": "rejected",
-      "decision_reason": "Not selected: Node Version Manager, a general developer shell tool; not a coding-agent skill, MCP server, library or workflow."
+      "full_name": "openai/codex-security",
+      "url": "https://github.com/openai/codex-security",
+      "stars": 13154,
+      "stars_today": 751,
+      "language": "TypeScript",
+      "description": "OpenAI's Codex Security CLI and TypeScript SDK for finding, validating, and fixing security vulnerabilities. npm: https://www.npmjs.com/package/@openai/codex-security",
+      "decision": "archived",
+      "decision_reason": "Upgraded: OpenAI's Codex Security (Apache-2.0): Codex plugin with security-scan, diff-scan, threat-model, triage and fix/verify skills plus the `cs` CLI, TypeScript SDK and GitHub Action. Already archived and featured (2026-11-12); upstream moved 4822a9c -> f26b669, so the folder was moved into today's run and upgraded in place by incremental git fetch (no re-clone), then re-verified. Rated 4 because scans need an OpenAI/Codex sign-in or API key and paid model usage."
     },
     {
       "rank": 4,
-      "full_name": "pookjw/HermesEnabler",
-      "url": "https://github.com/pookjw/HermesEnabler",
-      "stars": 1548,
-      "stars_today": 218,
-      "language": "Objective-C",
-      "description": "Enable Hermès Watch Faces on any Apple Watch devices",
+      "full_name": "ZhuLinsen/daily_stock_analysis",
+      "url": "https://github.com/ZhuLinsen/daily_stock_analysis",
+      "stars": 71648,
+      "stars_today": 256,
+      "language": "Python",
+      "description": "LLM 驱动的多市场股票智能分析系统：多源行情、实时新闻、决策看板与自动推送，支持零成本定时运行。  LLM-powered multi-market stock analysis system with multi-source market data, real-time news, decision dashboard, automated notifications, and cost-free scheduled runs.",
       "decision": "rejected",
-      "decision_reason": "Not eligible: 1,548 verified GitHub stars, below the 3,000-star threshold (Apple Watch face tweak; also off-topic)."
+      "decision_reason": "Not selected: LLM-driven multi-market stock analysis system (market data, news, decision dashboard, scheduled notifications); an end-user finance application, not a coding-agent skill, MCP server or workflow."
     },
     {
       "rank": 5,
       "full_name": "we-promise/sure",
       "url": "https://github.com/we-promise/sure",
-      "stars": 13949,
-      "stars_today": 967,
+      "stars": 14773,
+      "stars_today": 925,
       "language": "Ruby",
       "description": "The personal finance app for everyone (by everyone)",
       "decision": "rejected",
@@ -168,345 +183,415 @@
     },
     {
       "rank": 6,
-      "full_name": "QwenLM/qwen-code",
-      "url": "https://github.com/QwenLM/qwen-code",
-      "stars": 29839,
-      "stars_today": 151,
+      "full_name": "backnotprop/plannotator",
+      "url": "https://github.com/backnotprop/plannotator",
+      "stars": 10477,
+      "stars_today": 108,
       "language": "TypeScript",
-      "description": "An open-source AI coding agent that lives in your terminal.",
+      "description": "The workspace to stay in the loop and on top of agents - shape, decide, plan, annotate, review code, share with team, and send all feedback to agents with one click. ",
       "decision": "archived",
-      "decision_reason": "Saved: Qwen Code (Apache-2.0): an open-source terminal coding agent (Qwen Code 1.0 Preview) with skills, subagents, agent teams, hooks, MCP, plan mode and LSP; works with OpenAI, Anthropic, Gemini and Qwen APIs or local models (Ollama/vLLM); headless `qwen -p`, TypeScript/Python/Java SDKs, `qwen serve` daemon (HTTP+SSE/ACP, Web UI), IDE plugins and Telegram/DingTalk/WeChat/Feishu channels. Rated 4: a full alternative/companion harness to Claude Code and Codex, but it needs a provider account or local model, and the daemon has no auth by default unless QWEN_SERVER_TOKEN is set."
+      "decision_reason": "Saved: Plannotator (Apache-2.0) is a local browser-based review surface for Claude Code, Codex, Copilot CLI, Gemini CLI, OpenCode and other coding agents: annotate plans, specs, HTML artifacts and diffs, then send the comments back to the agent in one click. Includes Plannotator Inbox (plugins for Claude Code, Pi and OpenCode; MCP for other agents) and Codex skills (`$plannotator-review`, `$plannotator-annotate`, `$plannotator-last`). Rated 5. Caveat: the default installer auto-configures hooks/skills for detected agents and contacts GitHub Releases (and optionally npm); use `--minimal` if you only want the binary."
     },
     {
       "rank": 7,
-      "full_name": "ashhart/TensorFold",
-      "url": "https://github.com/ashhart/TensorFold",
-      "stars": 1948,
-      "stars_today": 54,
-      "language": "Zig",
-      "description": "LLM Inference Engine for Metal, CUDA and Vulkan.",
+      "full_name": "louislam/uptime-kuma",
+      "url": "https://github.com/louislam/uptime-kuma",
+      "stars": 93874,
+      "stars_today": 71,
+      "language": "JavaScript",
+      "description": "A fancy self-hosted monitoring tool",
       "decision": "rejected",
-      "decision_reason": "Not eligible: 1,948 verified GitHub stars, below the 3,000-star threshold (LLM inference engine for Metal/CUDA/Vulkan)."
+      "decision_reason": "Not selected: Uptime Kuma, a self-hosted uptime monitoring product; an end-user operations app, not a coding-agent skill, MCP server, library or workflow."
     },
     {
       "rank": 8,
-      "full_name": "nodejs/node",
-      "url": "https://github.com/nodejs/node",
-      "stars": 123604,
-      "stars_today": 62,
-      "language": "JavaScript",
-      "description": "Node.js JavaScript runtime ✨🐢🚀✨",
-      "decision": "rejected",
-      "decision_reason": "Not selected: the Node.js runtime itself; a language runtime, not a coding-agent tool, skill or workflow."
+      "full_name": "block/buzz",
+      "url": "https://github.com/block/buzz",
+      "stars": 37308,
+      "stars_today": 97,
+      "language": "Rust",
+      "description": "A hive mind communication platform",
+      "decision": "eligible_not_archived",
+      "decision_reason": "Buzz by Block (Apache-2.0, 37,308 stars): a self-hostable workspace where humans and AI agents share rooms on a Nostr relay you own. This repo holds the relay and the mobile client; the desktop app lives in block/buzz-app. Includes buzz-cli (JSON in/out), an ACP harness for Goose, Codex and Claude Code, and buzz-dev-mcp. Eligible (>=3,000 stars, agent tooling) but rated 3: a heavy self-hosted collaboration platform rather than a drop-in coding-agent skill or MCP, and the desktop app is a different repository. Logged without downloading (daily cap 5 of 5)."
     },
     {
       "rank": 9,
-      "full_name": "addyosmani/agent-skills",
-      "url": "https://github.com/addyosmani/agent-skills",
-      "stars": 116698,
-      "stars_today": 816,
-      "language": "JavaScript",
-      "description": "Production-grade engineering skills for AI coding agents.",
-      "decision": "archived",
-      "decision_reason": "Relocated: Addy Osmani's Agent Skills (MIT): SKILL.md engineering workflows, lifecycle slash commands and Claude Code / Codex plugin manifests. Already archived and featured (2026-11-11); upstream still at the archived commit 301b02b, so the folder was moved into today's run and marked unchanged, relocated (no download)."
+      "full_name": "tradermonty/claude-trading-skills",
+      "url": "https://github.com/tradermonty/claude-trading-skills",
+      "stars": 4195,
+      "stars_today": 69,
+      "language": "Python",
+      "description": "Claude Code skills for equity investors and traders — market analysis, technical charting, economic calendars, screeners, and trading strategy development.",
+      "decision": "eligible_not_archived",
+      "decision_reason": "Claude Trading Skills (MIT, 4,195 stars): a Claude Skills / Claude Code toolkit for individual investors and traders (market-regime checks, portfolio review, swing screening, trade journaling and performance review), with workflow manifests and a no-API starter path. Eligible (>=3,000 stars, genuine Claude Code skills) and rated 4, but it lost the tie at 4 to modern-web-guidance-src and openai/codex-security on general usefulness to coding agents (this toolkit is domain-specific, and some workflows need paid market-data APIs such as Alpaca or FMP). Logged without downloading (daily cap 5 of 5). Not financial advice."
     },
     {
       "rank": 10,
-      "full_name": "meta/astryx",
-      "url": "https://github.com/meta/astryx",
-      "stars": 26599,
-      "stars_today": 1830,
-      "language": "TypeScript",
-      "description": "An open source design system that's fully customizable and agent ready",
+      "full_name": "tailscale/tailcat",
+      "url": "https://github.com/tailscale/tailcat",
+      "stars": 9474,
+      "stars_today": 256,
+      "language": "Go",
+      "description": "like netcat, but over Tailscale's data plane, without Tailscale's control plane",
       "decision": "rejected",
-      "decision_reason": "Not selected: Meta's open-source React 19 + StyleX design system (150+ components, theming, CLI), marketed as agent-ready; a general UI component library, not a coding-agent skill, MCP server or workflow that Codex/Claude Code install and drive."
+      "decision_reason": "Not selected: tailcat, a netcat-like networking utility over Tailscale's data plane; a general networking tool, not a coding-agent skill, MCP server, library or workflow."
     },
     {
       "rank": 11,
-      "full_name": "CopilotKit/OpenBot",
-      "url": "https://github.com/CopilotKit/OpenBot",
-      "stars": 11643,
-      "stars_today": 298,
-      "language": "TypeScript",
-      "description": "Open-source AI coworkers that each get a computer of their own: a browser, files and tools, with every action decided before it happens and recorded after. Bring any AG-UI agent.",
-      "decision": "eligible_not_archived",
-      "decision_reason": "OpenBot by CopilotKit (MIT, 11,643 stars): self-hostable workspace for AI coworkers, each with its own browser, files and tools, approvals and audit; connects AG-UI agents (incl. Claude Agent SDK, LangGraph, Mastra) and MCP tools; desktop app runs a Docker backend. Eligible (>=3,000 stars, agent tooling) but rated 3 as a general team-agent platform rather than a coding-agent skill/workflow; tied at 3 with free-claude-code, which won the tie on direct usefulness to coding agents, so it was logged without downloading (daily cap 5 of 5)."
+      "full_name": "Likely7/Veyra-NRVideo",
+      "url": "https://github.com/Likely7/Veyra-NRVideo",
+      "stars": 1637,
+      "stars_today": 256,
+      "language": "C++",
+      "description": "Bring PS5 GTA6 to 120FPS with DLSS 5. An advanced Windows video player and capture enhancement tool featuring real-time preview for videos, images, and capture card sources. Combine AI-powered Super Resolution, DLSS5 image enhancement, and Frame Generation to deliver a next-generation visual experience.",
+      "decision": "rejected",
+      "decision_reason": "Not eligible: 1,637 verified GitHub stars, below the 3,000-star threshold (Windows video player and capture enhancement tool; also off-topic)."
     },
     {
       "rank": 12,
-      "full_name": "Alishahryar1/free-claude-code",
-      "url": "https://github.com/Alishahryar1/free-claude-code",
-      "stars": 69334,
-      "stars_today": 415,
-      "language": "Python",
-      "description": "Use Claude Code, Codex, Antigravity, VSCode, Pi, and OpenCode (and 6 other harnesses) for free (1.3B+ free tokens) from your terminal, app, IDE, or phone, and now from the browser with native browser sessions (multi-harness + multi-model) like OpenClaw (voice supported + ToS friendly)",
+      "full_name": "ChromeDevTools/chrome-devtools-mcp",
+      "url": "https://github.com/ChromeDevTools/chrome-devtools-mcp",
+      "stars": 55476,
+      "stars_today": 67,
+      "language": "TypeScript",
+      "description": "Chrome DevTools for coding agents",
       "decision": "archived",
-      "decision_reason": "Upgraded: free-claude-code: a local proxy that routes Claude Code, Codex, OpenCode and other coding-agent harnesses to alternative model providers, now with browser sessions and voice. Already archived 2026-10-13 (featured that day); upstream moved 4e99dda -> 5662101, so the legacy-format folder was moved from 2026-10-13 into today's run and upgraded in place by incremental git fetch into its stored object store (no re-clone), then re-verified. Rated 3: provider credentials, quotas and terms still apply; GitHub now reports the license as NOASSERTION (was AGPL-3.0-only on 2026-10-13)."
-    },
-    {
-      "rank": 13,
-      "full_name": "ggml-org/llama.cpp",
-      "url": "https://github.com/ggml-org/llama.cpp",
-      "stars": 134577,
-      "stars_today": 176,
-      "language": "C++",
-      "description": "LLM inference in C/C++",
-      "decision": "rejected",
-      "decision_reason": "Not selected: llama.cpp, a general LLM inference engine in C/C++; model-serving infrastructure, not a coding-agent skill, MCP server or workflow."
+      "decision_reason": "Saved: Official Chrome DevTools MCP server, CLI and skills (Apache-2.0) that let coding agents such as Claude Code, Cursor, Copilot and Gemini control and inspect a live Chrome browser for reliable automation, in-depth debugging and performance analysis. A Claude Code plugin installs the MCP server and all skills (chrome-devtools, chrome-devtools-cli, a11y-debugging, cookie-debugging, debug-optimize-lcp, memory-leak-debugging, troubleshooting). Rated 5. Caveats: usage statistics are enabled by default (opt out with `--no-usage-statistics` or CHROME_DEVTOOLS_MCP_NO_USAGE_STATISTICS); requires Node.js LTS and current Google Chrome; the MCP client can see browser content. Archive completeness: tracked source and the pinned direct submodule third_party/devtools-frontend @ ab6a630 were verified; 7 nested optional submodules of devtools-frontend (llvm-project and Chromium build tooling) were not fetched because the parent .gitmodules sets fetchRecurseSubmodules=false."
     }
   ],
   "news": [
     {
-      "title": "Jensen Huang resigns",
-      "url": "https://apnews.com/article/nvidia-megaspeed-china-singapore-huang-5403f152a601cf82ce939f1d24fffa0f",
+      "title": "FAA issues national ground stop",
+      "url": "https://www.nbcnews.com/news/us-news/faa-orders-nationwide-ground-stop-departing-flights-reasons-safety-rcna609247",
       "source": "Hacker News",
-      "points": 2983,
-      "comments": 2811,
-      "comments_url": "https://news.ycombinator.com/item?id=50467087",
-      "published_at": "2026-11-12T21:52:29+08:00",
+      "points": 1338,
+      "comments": 824,
+      "comments_url": "https://news.ycombinator.com/item?id=50489641",
+      "published_at": "2026-11-14T05:05:53+08:00",
       "tags": [
         "misc"
       ]
     },
     {
-      "title": "Service degradation on Microsoft 365",
-      "url": "https://status.cloud.microsoft/",
+      "title": "$11.4M in Nvidia hardware vanishes during shipment from CA to TX",
+      "url": "https://www.freightwaves.com/news/11-4-million-in-nvidia-hardware-vanishes-during-shipment-from-california-to-texas",
       "source": "Hacker News",
-      "points": 520,
-      "comments": 474,
-      "comments_url": "https://news.ycombinator.com/item?id=50471731",
-      "published_at": "2026-11-13T02:20:48+08:00",
+      "points": 298,
+      "comments": 164,
+      "comments_url": "https://news.ycombinator.com/item?id=50487864",
+      "published_at": "2026-11-14T02:40:44+08:00",
+      "tags": [
+        "hardware"
+      ]
+    },
+    {
+      "title": "It Takes 16 Clicks for a Student to Open a PowerPoint on an iPad",
+      "url": "https://www.reddit.com/r/Teachers/comments/1xuup7a/technology_sucks_it_literally_takes_16_clicks_for/",
+      "source": "Hacker News",
+      "points": 299,
+      "comments": 155,
+      "comments_url": "https://news.ycombinator.com/item?id=50487522",
+      "published_at": "2026-11-14T02:18:37+08:00",
       "tags": [
         "misc"
       ]
     },
     {
-      "title": "Gemini 4 Hydrogen",
-      "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-hydrogen/",
+      "title": "Live airband on all frequencies from KORS. Victoria, CA also ground stopped",
+      "url": "https://orcasairband.com/",
       "source": "Hacker News",
-      "points": 469,
-      "comments": 299,
-      "comments_url": "https://news.ycombinator.com/item?id=50471431",
-      "published_at": "2026-11-13T02:01:48+08:00",
+      "points": 208,
+      "comments": 47,
+      "comments_url": "https://news.ycombinator.com/item?id=50490593",
+      "published_at": "2026-11-14T06:04:24+08:00",
+      "tags": [
+        "misc"
+      ]
+    },
+    {
+      "title": "AI unlocks Gödel's notebooks, said to contain hundreds of proved theorems",
+      "url": "https://www.theguardian.com/science/2026/nov/13/kurt-godel-notebooks-ai-helps-unlock-hidden-discoveries-man-who-transformed-maths",
+      "source": "Hacker News",
+      "points": 336,
+      "comments": 93,
+      "comments_url": "https://news.ycombinator.com/item?id=50486748",
+      "published_at": "2026-11-14T01:30:10+08:00",
       "tags": [
         "ai"
       ]
     },
     {
-      "title": "Rust 1.100",
-      "url": "https://blog.rust-lang.org/2026/11/12/Rust-1.100.0/",
+      "title": "FAA lifted National Ground Stop at 0119Z",
+      "url": "https://www.fly.faa.gov/adv/adv_otherdis?adv_date=11142026&advn=5",
       "source": "Hacker News",
-      "points": 437,
-      "comments": 177,
-      "comments_url": "https://news.ycombinator.com/item?id=50472038",
-      "published_at": "2026-11-13T02:39:05+08:00",
+      "points": 98,
+      "comments": 59,
+      "comments_url": "https://news.ycombinator.com/item?id=50492601",
+      "published_at": "2026-11-14T09:30:01+08:00",
+      "tags": [
+        "misc"
+      ]
+    },
+    {
+      "title": "Doomsday: Friday, 13 November, A.D. 2026 (1960)",
+      "url": "https://www.science.org/doi/10.1126/science.132.3436.1291",
+      "source": "Hacker News",
+      "points": 456,
+      "comments": 313,
+      "comments_url": "https://news.ycombinator.com/item?id=50482379",
+      "published_at": "2026-11-13T20:10:24+08:00",
+      "tags": [
+        "misc"
+      ]
+    },
+    {
+      "title": "FM-1 Workbench",
+      "url": "https://open.m-vave.com/fm1-workbench",
+      "source": "Hacker News",
+      "points": 183,
+      "comments": 112,
+      "comments_url": "https://news.ycombinator.com/item?id=50488325",
+      "published_at": "2026-11-14T03:14:02+08:00",
+      "tags": [
+        "misc"
+      ]
+    },
+    {
+      "title": "Amtrak booking system experiencing major issues amid nationwide FAA ground stop",
+      "url": "https://www.fox5dc.com/news/amtrak-outage-ticket-booking-faa-ground-stop-november-13-2026",
+      "source": "Hacker News",
+      "points": 113,
+      "comments": 31,
+      "comments_url": "https://news.ycombinator.com/item?id=50492315",
+      "published_at": "2026-11-14T08:52:29+08:00",
+      "tags": [
+        "misc"
+      ]
+    },
+    {
+      "title": "All US airports are currently ground stopped",
+      "url": "https://twitter.com/flightradar24/status/2121347654714077605",
+      "source": "Hacker News",
+      "points": 169,
+      "comments": 33,
+      "comments_url": "https://news.ycombinator.com/item?id=50489652",
+      "published_at": "2026-11-14T05:06:52+08:00",
+      "tags": [
+        "misc"
+      ]
+    },
+    {
+      "title": "Ukraine knocks out 36% of Russia's oil refining capacity in under two weeks",
+      "url": "https://english.nv.ua/nation/thirteen-day-drone-blitz-paralyzes-36-of-moscow-s-oil-50658616.html",
+      "source": "Hacker News",
+      "points": 101,
+      "comments": 20,
+      "comments_url": "https://news.ycombinator.com/item?id=50492456",
+      "published_at": "2026-11-14T09:10:22+08:00",
+      "tags": [
+        "misc"
+      ]
+    },
+    {
+      "title": "After 600 experiments, here's what I discovered about JEPA world models",
+      "url": "https://haddyalchaer.com/jepa",
+      "source": "Hacker News",
+      "points": 217,
+      "comments": 36,
+      "comments_url": "https://news.ycombinator.com/item?id=50487185",
+      "published_at": "2026-11-14T01:55:28+08:00",
+      "tags": [
+        "ai"
+      ]
+    },
+    {
+      "title": "Show HN: Isometric SF – A pixel-art map of the SF Bay Area",
+      "url": "https://isometricsf.com/",
+      "source": "Hacker News",
+      "points": 156,
+      "comments": 58,
+      "comments_url": "https://news.ycombinator.com/item?id=50487228",
+      "published_at": "2026-11-14T01:58:37+08:00",
+      "tags": [
+        "misc"
+      ]
+    },
+    {
+      "title": "Terminal borders that don't cost a cell",
+      "url": "https://www.joshka.net/cell-borders/",
+      "source": "Hacker News",
+      "points": 74,
+      "comments": 41,
+      "comments_url": "https://news.ycombinator.com/item?id=50491423",
+      "published_at": "2026-11-14T07:06:40+08:00",
+      "tags": [
+        "devtools"
+      ]
+    },
+    {
+      "title": "Weight Space Misfolding",
+      "url": "https://www.alphaxiv.org/abs/2611.weight-space-misfolding",
+      "source": "Hacker News",
+      "points": 134,
+      "comments": 47,
+      "comments_url": "https://news.ycombinator.com/item?id=50487762",
+      "published_at": "2026-11-14T02:33:35+08:00",
+      "tags": [
+        "science"
+      ]
+    },
+    {
+      "title": "A technical vision for the Haskell ecosystem",
+      "url": "https://discourse.haskell.org/t/a-technical-vision-for-the-haskell-ecosystem/15078",
+      "source": "Hacker News",
+      "points": 181,
+      "comments": 87,
+      "comments_url": "https://news.ycombinator.com/item?id=50484235",
+      "published_at": "2026-11-13T22:43:12+08:00",
+      "tags": [
+        "programming"
+      ]
+    },
+    {
+      "title": "Found: A protein that drives ageing without unleashing inflammation",
+      "url": "https://www.nature.com/articles/d41586-026-03638-3",
+      "source": "Hacker News",
+      "points": 132,
+      "comments": 21,
+      "comments_url": "https://news.ycombinator.com/item?id=50488470",
+      "published_at": "2026-11-14T03:25:21+08:00",
+      "tags": [
+        "misc"
+      ]
+    },
+    {
+      "title": "Minnesota guitarist's \"palmfrets\" invention strikes a new chord",
+      "url": "https://www.echopress.com/business/minnesota-guitarists-invention-strikes-a-new-chord",
+      "source": "Hacker News",
+      "points": 137,
+      "comments": 87,
+      "comments_url": "https://news.ycombinator.com/item?id=50484650",
+      "published_at": "2026-11-13T23:08:07+08:00",
+      "tags": [
+        "misc"
+      ]
+    },
+    {
+      "title": "Reverse engineering my Coway air purifier to ditch the cloud",
+      "url": "https://scottjg.com/posts/2026-11-11-reverse-engineering-my-coway-air-purifier-to-ditch-the-cloud/",
+      "source": "Hacker News",
+      "points": 681,
+      "comments": 200,
+      "comments_url": "https://news.ycombinator.com/item?id=50474959",
+      "published_at": "2026-11-13T06:03:09+08:00",
+      "tags": [
+        "misc"
+      ]
+    },
+    {
+      "title": "Perplexity Decider v1.3: Training, eval, and use cases",
+      "url": "https://www.perplexity.ai/hub/blog/perplexity-decider",
+      "source": "Hacker News",
+      "points": 99,
+      "comments": 21,
+      "comments_url": "https://news.ycombinator.com/item?id=50488464",
+      "published_at": "2026-11-14T03:24:47+08:00",
+      "tags": [
+        "misc"
+      ]
+    },
+    {
+      "title": "Congrats to the Hacktoberfest Open-Source AI Challenge Week 4: Ghost in the Machine Winners!",
+      "url": "https://dev.to/devteam/congrats-to-the-hacktoberfest-open-source-ai-challenge-week-4-ghost-in-the-machine-winners-nok",
+      "source": "DEV.to",
+      "points": 62,
+      "comments": 30,
+      "comments_url": "https://dev.to/devteam/congrats-to-the-hacktoberfest-open-source-ai-challenge-week-4-ghost-in-the-machine-winners-nok#comments",
+      "published_at": "2026-11-13T15:56:26Z",
+      "summary": "The results are in for the final week of our Hacktoberfest DEV Challenges! For Ghost in the Machine,...",
+      "tags": [
+        "ai"
+      ]
+    },
+    {
+      "title": "remove.bg Is Shutting Down — Here's a Free, No-Upload Alternative",
+      "url": "https://dev.to/akhourianmolkumar/removebg-is-shutting-down-heres-a-free-no-upload-alternative-4ebo",
+      "source": "DEV.to",
+      "points": 42,
+      "comments": 33,
+      "comments_url": "https://dev.to/akhourianmolkumar/removebg-is-shutting-down-heres-a-free-no-upload-alternative-4ebo#comments",
+      "published_at": "2026-11-13T11:05:50Z",
+      "summary": "On December 1, 2026 at 9:00 AM CET, remove.bg — the site that turned \"one-click background removal\"...",
+      "tags": [
+        "misc"
+      ]
+    },
+    {
+      "title": "The need for at least a third option",
+      "url": "https://blog.ovalerio.net/archives/3359",
+      "source": "Lobsters",
+      "points": 46,
+      "comments": 13,
+      "comments_url": "https://lobste.rs/s/9oq6fr/need_for_at_least_third_option",
+      "published_at": "2026-11-13T19:36:44+08:00",
+      "tags": [
+        "misc"
+      ]
+    },
+    {
+      "title": "datasette-cluster-map 0.19",
+      "url": "https://simonwillison.net/2026/Nov/13/datasette-cluster-map/",
+      "source": "Simon Willison",
+      "published_at": "2026-11-14T07:02:45+08:00",
+      "summary": "Release: datasette-cluster-map 0.19 One of the oldest Datasette plugins, and still one of my favorites. It now works with Datasette 1.0a42, and depends on the new datasette-leaflet to ensure OpenStreetMap tiles are requested with a referrer header. Here's a map of power plants…",
+      "tags": [
+        "misc"
+      ]
+    },
+    {
+      "title": "datasette-leaflet 0.3",
+      "url": "https://simonwillison.net/2026/Nov/13/datasette-leaflet/",
+      "source": "Simon Willison",
+      "published_at": "2026-11-14T06:30:54+08:00",
+      "summary": "Release: datasette-leaflet 0.3 OpenStreetMap have a very reasonable policy that hits to their hosted tile server should send a referrer header . Datasette table pages used the Referrer-Policy: no-referrer HTTP header, causing plugins that loaded tiles from OpenStreetMap to…",
+      "tags": [
+        "web"
+      ]
+    },
+    {
+      "title": "Probabilistic data structures in Go",
+      "url": "https://antonz.org/probabilistic-data-structures/",
+      "source": "Lobsters",
+      "points": 31,
+      "comments": 9,
+      "comments_url": "https://lobste.rs/s/xca2qj/probabilistic_data_structures_go",
+      "published_at": "2026-11-14T00:03:44+08:00",
+      "tags": [
+        "programming"
+      ]
+    },
+    {
+      "title": "Announcing Rust 1.100.0",
+      "url": "https://blog.rust-lang.org/2026/11/12/Rust-1.100.0/",
+      "source": "Lobsters",
+      "points": 148,
+      "comments": 13,
+      "comments_url": "https://lobste.rs/s/81hnjw/announcing_rust_1_100_0",
+      "published_at": "2026-11-13T02:43:41+08:00",
       "tags": [
         "programming",
         "release"
       ]
     },
     {
-      "title": "Anthropic IPO",
-      "url": "https://ipo.anthropic.com/us/",
-      "source": "Hacker News",
-      "points": 825,
-      "comments": 806,
-      "comments_url": "https://news.ycombinator.com/item?id=50465829",
-      "published_at": "2026-11-12T19:46:41+08:00",
-      "tags": [
-        "ai"
-      ]
-    },
-    {
-      "title": "Show HN: My $300 embroidery machine needed a subscription, so I built my own app",
-      "url": "https://github.com/simpsoka/zigzag",
-      "source": "Hacker News",
-      "points": 346,
-      "comments": 142,
-      "comments_url": "https://news.ycombinator.com/item?id=50470488",
-      "published_at": "2026-11-13T01:02:42+08:00",
-      "tags": [
-        "misc"
-      ]
-    },
-    {
-      "title": "Gemini 4 Hydrogen and Orchestrator",
-      "url": "https://antigravity.google/blog/gemini-4-hydrogen-in-google-antigravity/",
-      "source": "Hacker News",
-      "points": 310,
-      "comments": 73,
-      "comments_url": "https://news.ycombinator.com/item?id=50472260",
-      "published_at": "2026-11-13T02:52:01+08:00",
-      "tags": [
-        "ai"
-      ]
-    },
-    {
-      "title": "Chinese frontier AI models carry the fingerprint of export-controlled GPUs",
-      "url": "https://unemploymentlabs.com/checkpoint-forensics",
-      "source": "Hacker News",
-      "points": 174,
-      "comments": 47,
-      "comments_url": "https://news.ycombinator.com/item?id=50474883",
-      "published_at": "2026-11-13T05:56:11+08:00",
-      "tags": [
-        "ai"
-      ]
-    },
-    {
-      "title": "Dwarf planet candidate appears which takes roughly 280 years to orbit our sun",
-      "url": "https://www.smithsonianmag.com/smart-news/astronomers-found-a-mysterious-object-orbiting-far-beyond-pluto-it-could-be-a-new-dwarf-planet-hidden-in-our-solar-system-180989857/",
-      "source": "Hacker News",
-      "points": 203,
-      "comments": 94,
-      "comments_url": "https://news.ycombinator.com/item?id=50472490",
-      "published_at": "2026-11-13T03:05:33+08:00",
-      "tags": [
-        "misc"
-      ]
-    },
-    {
-      "title": "I'm making LLMs work on small and old devices",
-      "url": "https://github.com/hyperionaidev/smolmaxxing/",
-      "source": "Hacker News",
-      "points": 281,
-      "comments": 95,
-      "comments_url": "https://news.ycombinator.com/item?id=50468888",
-      "published_at": "2026-11-12T23:23:10+08:00",
-      "tags": [
-        "ai"
-      ]
-    },
-    {
-      "title": "AI is turning Apple's app review process into a nightmare for synth developers",
-      "url": "https://synthanatomy.com/2026/11/ai-is-turning-apples-app-review-process-into-a-nightmare-for-developers.html",
-      "source": "Hacker News",
-      "points": 101,
-      "comments": 91,
-      "comments_url": "https://news.ycombinator.com/item?id=50474311",
-      "published_at": "2026-11-13T05:09:49+08:00",
-      "tags": [
-        "ai"
-      ]
-    },
-    {
-      "title": "Writing correct software is hard and math alone won’t help us (2016)",
-      "url": "https://pron.github.io/posts/correctness-and-complexity",
-      "source": "Hacker News",
-      "points": 359,
-      "comments": 169,
-      "comments_url": "https://news.ycombinator.com/item?id=50465352",
-      "published_at": "2026-11-12T18:28:26+08:00",
-      "tags": [
-        "science"
-      ]
-    },
-    {
-      "title": "Abandoned Quake 4 expansion finished by modders and now playable",
-      "url": "https://www.moddb.com/mods/openq4/downloads/openq4-0141-windows-x64",
-      "source": "Hacker News",
-      "points": 242,
-      "comments": 83,
-      "comments_url": "https://news.ycombinator.com/item?id=50467618",
-      "published_at": "2026-11-12T22:18:49+08:00",
-      "tags": [
-        "misc"
-      ]
-    },
-    {
-      "title": "Our software engineering interviews are changing a little",
-      "url": "https://blog.janestreet.com/software-engineering-interviews-are-changing-a-little/",
-      "source": "Hacker News",
-      "points": 172,
-      "comments": 165,
-      "comments_url": "https://news.ycombinator.com/item?id=50467297",
-      "published_at": "2026-11-12T22:05:28+08:00",
-      "tags": [
-        "misc"
-      ]
-    },
-    {
-      "title": "Foundation Models framework",
-      "url": "https://developer.apple.com/foundation-models-framework/",
-      "source": "Hacker News",
-      "points": 131,
-      "comments": 17,
-      "comments_url": "https://news.ycombinator.com/item?id=50474361",
-      "published_at": "2026-11-13T05:13:26+08:00",
-      "tags": [
-        "ai",
-        "programming"
-      ]
-    },
-    {
-      "title": "Turning a 22-year-old Postgres type-confusion primitive into RCE",
-      "url": "https://mehmetince.net/part-3-6-how-i-ended-up-turning-a-22-year-old-postgresql-type-confusion-primitive-into-rce-cve-2026-6460/",
-      "source": "Hacker News",
-      "points": 146,
-      "comments": 21,
-      "comments_url": "https://news.ycombinator.com/item?id=50471761",
-      "published_at": "2026-11-13T02:22:22+08:00",
-      "tags": [
-        "misc"
-      ]
-    },
-    {
-      "title": "Edge0-145B: Frontier AI Capabilities on Your Own Computer",
-      "url": "https://edge0.ai/blog/introducing-edge0-145b-frontier-ai-capabilities-on-your-own-computer",
-      "source": "Hacker News",
-      "points": 52,
-      "comments": 16,
-      "comments_url": "https://news.ycombinator.com/item?id=50475713",
-      "published_at": "2026-11-13T07:06:17+08:00",
-      "tags": [
-        "ai"
-      ]
-    },
-    {
-      "title": "ExcalidrawZ: Local Native Excalidraw on macOS/iOS",
-      "url": "https://github.com/chocoford/ExcalidrawZ",
-      "source": "Hacker News",
-      "points": 107,
-      "comments": 24,
-      "comments_url": "https://news.ycombinator.com/item?id=50468944",
-      "published_at": "2026-11-12T23:25:52+08:00",
-      "tags": [
-        "misc"
-      ]
-    },
-    {
-      "title": "Show HN: AgentRun – open-source, Self-improving Managed Agents",
-      "url": "https://github.com/Parcha-ai/agentrun/blob/main/README.md",
-      "source": "Hacker News",
-      "points": 76,
-      "comments": 16,
-      "comments_url": "https://news.ycombinator.com/item?id=50471650",
-      "published_at": "2026-11-13T02:15:48+08:00",
-      "tags": [
-        "ai"
-      ]
-    },
-    {
-      "title": "Chicago schools to Google – we'd rather lose Search than be forced to accept AI",
-      "url": "https://www.techspot.com/news/114532-chicago-schools-tell-google-they-can-live-without.html",
-      "source": "Hacker News",
-      "points": 35,
-      "comments": 11,
-      "comments_url": "https://news.ycombinator.com/item?id=50476586",
-      "published_at": "2026-11-13T08:38:41+08:00",
-      "tags": [
-        "ai"
-      ]
-    },
-    {
-      "title": "Long Live Rails",
-      "url": "https://dev.to/ben/long-live-rails-3p21",
+      "title": "One Month After the Hackathon: Why My 4-Service App Stopped Working (and What @mansio Caught in the Verifiers)",
+      "url": "https://dev.to/earlgreyhot1701d/one-month-after-the-hackathon-why-my-4-service-app-stopped-working-and-what-mansio-caught-in-the-3i8h",
       "source": "DEV.to",
-      "points": 83,
-      "comments": 12,
-      "comments_url": "https://dev.to/ben/long-live-rails-3p21#comments",
-      "published_at": "2026-11-12T15:30:50Z",
-      "summary": "When DHH took the stage at Rails World 2026 and talked openly about going \"pencils down\" on...",
+      "points": 23,
+      "comments": 9,
+      "comments_url": "https://dev.to/earlgreyhot1701d/one-month-after-the-hackathon-why-my-4-service-app-stopped-working-and-what-mansio-caught-in-the-3i8h#comments",
+      "published_at": "2026-11-13T17:48:25Z",
+      "summary": "What breaks a month after a hackathon, and what a fellow DEV writer caught in the verifiers. TL;DR:...",
       "tags": [
         "programming"
       ]
@@ -515,8 +600,8 @@
       "title": "MCP Is Dead Simple. And That's Exactly the Problem",
       "url": "https://dev.to/sylwia-lask/mcp-is-dead-simple-and-thats-exactly-the-problem-5811",
       "source": "DEV.to",
-      "points": 82,
-      "comments": 53,
+      "points": 138,
+      "comments": 111,
       "comments_url": "https://dev.to/sylwia-lask/mcp-is-dead-simple-and-thats-exactly-the-problem-5811#comments",
       "published_at": "2026-11-12T08:14:36Z",
       "summary": "What exactly is MCP? Is it some mysterious technology that requires secret knowledge to implement?...",
@@ -525,25 +610,41 @@
       ]
     },
     {
-      "title": "A VS Code extension to turn ANY free chatbot website into an AI agent (kind of)",
-      "url": "https://dev.to/effessdev/a-vs-code-extension-to-turn-any-free-chatbot-website-into-an-ai-agent-kind-of-1jfb",
-      "source": "DEV.to",
-      "points": 37,
-      "comments": 55,
-      "comments_url": "https://dev.to/effessdev/a-vs-code-extension-to-turn-any-free-chatbot-website-into-an-ai-agent-kind-of-1jfb#comments",
-      "published_at": "2026-11-12T14:00:15Z",
-      "summary": "So, why should I bring this up again? Because Qoder (Alibaba’s AI IDE) free promo has officially...",
+      "title": "Build a Robot Pick-and-Place Simulation with SimReady Assets",
+      "url": "https://huggingface.co/blog/nvidia/simready-assets-robot-pick-and-place",
+      "source": "Hugging Face",
+      "published_at": "2026-11-14T02:00:39+08:00",
       "tags": [
-        "ai",
-        "devtools"
+        "hardware"
+      ]
+    },
+    {
+      "title": "Contra \"Glue work considered harmful\"",
+      "url": "https://sunshowers.io/posts/glue-work/",
+      "source": "Lobsters",
+      "points": 48,
+      "comments": 16,
+      "comments_url": "https://lobste.rs/s/f6u0cg/contra_glue_work_considered_harmful",
+      "published_at": "2026-11-13T10:36:05+08:00",
+      "tags": [
+        "misc"
+      ]
+    },
+    {
+      "title": "XYBench: Helping with the problem behind the question",
+      "url": "https://huggingface.co/blog/allenai/xybench",
+      "source": "Hugging Face",
+      "published_at": "2026-11-14T01:02:35+08:00",
+      "tags": [
+        "misc"
       ]
     },
     {
       "title": "How I accidentally became a millionaire",
       "url": "https://lyra.horse/blog/2026/11/disinformation-machine/",
       "source": "Lobsters",
-      "points": 227,
-      "comments": 27,
+      "points": 268,
+      "comments": 29,
       "comments_url": "https://lobste.rs/s/lnau2d/how_i_accidentally_became_millionaire",
       "published_at": "2026-11-12T05:53:24+08:00",
       "tags": [
@@ -551,11 +652,32 @@
       ]
     },
     {
+      "title": "llama.cpp v1.0.0 : A stronger foundation for the local AI ecosystem",
+      "url": "https://huggingface.co/blog/ggml-org/llama-cpp-v1",
+      "source": "Hugging Face",
+      "published_at": "2026-11-13T22:05:22+08:00",
+      "tags": [
+        "ai"
+      ]
+    },
+    {
+      "title": "ML Modules for Mere Mortals",
+      "url": "https://thunderseethe.dev/posts/ml-modules-for-mere-mortals/intro/",
+      "source": "Lobsters",
+      "points": 25,
+      "comments": 5,
+      "comments_url": "https://lobste.rs/s/mgiv0i/ml_modules_for_mere_mortals",
+      "published_at": "2026-11-13T19:33:56+08:00",
+      "tags": [
+        "ai"
+      ]
+    },
+    {
       "title": "The entirety of \"Let Over Lambda\" is now freely available online",
       "url": "https://letoverlambda.com/",
       "source": "Lobsters",
-      "points": 49,
-      "comments": 19,
+      "points": 71,
+      "comments": 23,
       "comments_url": "https://lobste.rs/s/ooshl8/entirety_let_over_lambda_is_now_freely",
       "published_at": "2026-11-12T20:44:34+08:00",
       "tags": [
@@ -563,17 +685,39 @@
       ]
     },
     {
-      "title": "Your MCP Servers Are Silently Draining Your Context Window: The Hidden Cost of Tool-Heavy AI Agents",
-      "url": "https://dev.to/necoz/your-mcp-servers-are-silently-draining-your-context-window-the-hidden-cost-of-tool-heavy-ai-agents-fkl",
-      "source": "DEV.to",
-      "points": 34,
-      "comments": 14,
-      "comments_url": "https://dev.to/necoz/your-mcp-servers-are-silently-draining-your-context-window-the-hidden-cost-of-tool-heavy-ai-agents-fkl#comments",
-      "published_at": "2026-11-12T16:30:00Z",
-      "summary": "Why attaching dozens of Model Context Protocol (MCP) tools degrades LLM reasoning, inflates API bills, and how small, focused TypeScript micro-tools fix the problem.",
+      "title": "Beating the frontier on NetHack",
+      "url": "https://antithesis.com/blog/2026/nethack/",
+      "source": "Lobsters",
+      "points": 24,
+      "comments": 2,
+      "comments_url": "https://lobste.rs/s/kb3fs1/beating_frontier_on_nethack",
+      "published_at": "2026-11-13T22:34:57+08:00",
       "tags": [
-        "ai",
-        "programming"
+        "misc"
+      ]
+    },
+    {
+      "title": "The anti-marketing aspect of the Gemini network",
+      "url": "https://ploum.net/2026-11-12-anti-marketing-gemini.html",
+      "source": "Lobsters",
+      "points": 51,
+      "comments": 29,
+      "comments_url": "https://lobste.rs/s/pty8pn/anti_marketing_aspect_gemini_network",
+      "published_at": "2026-11-13T00:17:25+08:00",
+      "tags": [
+        "ai"
+      ]
+    },
+    {
+      "title": "Running a law firm on Free software (2026 edition)",
+      "url": "https://decoded.legal/blog/2026/11/running-a-law-firm-on-free-software-2026-edition/",
+      "source": "Lobsters",
+      "points": 28,
+      "comments": 1,
+      "comments_url": "https://lobste.rs/s/ezl1sa/running_law_firm_on_free_software_2026",
+      "published_at": "2026-11-13T19:20:32+08:00",
+      "tags": [
+        "misc"
       ]
     },
     {
@@ -585,182 +729,33 @@
       "tags": [
         "devtools"
       ]
-    },
-    {
-      "title": "llm-gemini 0.37",
-      "url": "https://simonwillison.net/2026/Nov/12/llm-gemini/",
-      "source": "Simon Willison",
-      "published_at": "2026-11-13T06:55:19+08:00",
-      "summary": "Release: llm-gemini 0.37 Google launched Gemini 4 Hydrogen today - the lowest cost member of the Gemini 4 family. It's actually not too far off the price of its much bigger siblings, Carbon and Argon. I'm finding Gemini 4's pricing really confusing. Here's the pricing scheme:…",
-      "tags": [
-        "ai"
-      ]
-    },
-    {
-      "title": "Build once, run on any agent: A practical guide to agent skills",
-      "url": "https://github.blog/ai-and-ml/github-copilot/build-once-run-on-any-agent-a-practical-guide-to-agent-skills/",
-      "source": "GitHub Blog",
-      "published_at": "2026-11-13T06:54:52+08:00",
-      "summary": "Agent skills capture repeatable engineering work in files teams can review and reuse, while tools, project context, and permissions remain specific to the host that runs them. The post Build once, run on any agent: A practical guide to agent skills appeared first on The GitHub…",
-      "tags": [
-        "ai",
-        "devtools"
-      ]
-    },
-    {
-      "title": "The anti-marketing aspect of the Gemini network",
-      "url": "https://ploum.net/2026-11-12-anti-marketing-gemini.html",
-      "source": "Lobsters",
-      "points": 25,
-      "comments": 12,
-      "comments_url": "https://lobste.rs/s/pty8pn/anti_marketing_aspect_gemini_network",
-      "published_at": "2026-11-13T00:17:25+08:00",
-      "tags": [
-        "ai"
-      ]
-    },
-    {
-      "title": "Hello Baochip",
-      "url": "https://ratfactor.com/cards/hello-baochip",
-      "source": "Lobsters",
-      "points": 52,
-      "comments": 6,
-      "comments_url": "https://lobste.rs/s/3gw2f4/hello_baochip",
-      "published_at": "2026-11-12T18:09:16+08:00",
-      "tags": [
-        "misc"
-      ]
-    },
-    {
-      "title": "How do you actually self-host securely?",
-      "url": "https://lobste.rs/s/m43bas/how_do_you_actually_self_host_securely",
-      "source": "Lobsters",
-      "points": 125,
-      "comments": 72,
-      "comments_url": "https://lobste.rs/s/m43bas/how_do_you_actually_self_host_securely",
-      "published_at": "2026-11-11T20:01:19+08:00",
-      "summary": "I recognize that the title is rather vague, but I'm completely green when it comes to self-hosting, so I figured here would be a good place to ask for some pointers given the discussions I sometimes see happening in the comments. I tried researching first through DDG and…",
-      "tags": [
-        "devtools"
-      ]
-    },
-    {
-      "title": "LLMON: An LLM-Native Markup Language, now in Granite 4.1 3B and 8B",
-      "url": "https://huggingface.co/blog/ibm-granite/llmon-an-llm-native-markup-language-now-in-granite",
-      "source": "Hugging Face",
-      "published_at": "2026-11-13T03:07:35+08:00",
-      "tags": [
-        "ai"
-      ]
-    },
-    {
-      "title": "What are some \"No AI\" apps/companies/resources you know of?",
-      "url": "https://lobste.rs/s/nld6x3/what_are_some_no_ai_apps_companies",
-      "source": "Lobsters",
-      "points": 95,
-      "comments": 47,
-      "comments_url": "https://lobste.rs/s/nld6x3/what_are_some_no_ai_apps_companies",
-      "published_at": "2026-11-11T21:13:51+08:00",
-      "summary": "Hey everyone I'm wondering if there's any useful/helpful list of apps, companies, or resources in general that avoid AI (they don't have to be vocally or openly \"anti\", but at least explicitly avoid it) that you know of? I'm not looking to start a discussion on what's good/bad…",
-      "tags": [
-        "ai"
-      ]
-    },
-    {
-      "title": "Hijacking Samsung TV Smart Hub Ads",
-      "url": "https://dvratil.cz/2026/11/hijacking-samsung-tv-smart-hub-ads/",
-      "source": "Lobsters",
-      "points": 38,
-      "comments": 3,
-      "comments_url": "https://lobste.rs/s/2drgwh/hijacking_samsung_tv_smart_hub_ads",
-      "published_at": "2026-11-12T19:08:45+08:00",
-      "tags": [
-        "misc"
-      ]
-    },
-    {
-      "title": "The Secret of Monkey Island: all 13 versions side by side",
-      "url": "https://monkeyisland.pages.dev/",
-      "source": "Lobsters",
-      "points": 26,
-      "comments": 4,
-      "comments_url": "https://lobste.rs/s/ubbxhd/secret_monkey_island_all_13_versions_side",
-      "published_at": "2026-11-12T22:37:35+08:00",
-      "tags": [
-        "misc"
-      ]
-    },
-    {
-      "title": "How a false smoke alarm almost drowned Jane Street's only NYC datacenter",
-      "url": "https://michael.bacarella.com/2026/11/10/false-smoke-alarm-jane-street-datacenter/",
-      "source": "Lobsters",
-      "points": 81,
-      "comments": 15,
-      "comments_url": "https://lobste.rs/s/ii1gzp/how_false_smoke_alarm_almost_drowned_jane",
-      "published_at": "2026-11-12T00:27:51+08:00",
-      "tags": [
-        "devtools",
-        "ai"
-      ]
-    },
-    {
-      "title": "In Memoriam: Tim Peters 1952–2026",
-      "url": "https://discuss.python.org/t/in-memoriam-tim-peters-1952-2026/110028",
-      "source": "Lobsters",
-      "points": 119,
-      "comments": 2,
-      "comments_url": "https://lobste.rs/s/romf5e/memoriam_tim_peters_1952_2026",
-      "published_at": "2026-11-11T22:20:17+08:00",
-      "tags": [
-        "programming"
-      ]
-    },
-    {
-      "title": "The Definitive Fine-Tuning Guide for 3D Generation Models",
-      "url": "https://huggingface.co/blog/3d-lora-finetuning",
-      "source": "Hugging Face",
-      "published_at": "2026-11-12T08:00:00+08:00",
-      "tags": [
-        "ai"
-      ]
-    },
-    {
-      "title": "Gemini Decisions API",
-      "url": "https://simonwillison.net/2026/Nov/11/gemini-decisions-api/",
-      "source": "Simon Willison",
-      "published_at": "2026-11-12T06:03:25+08:00",
-      "summary": "Gemini Decisions API Google join Jev and OpenAI in the decision model category with \"Gemini Decision 1\". This new model API is almost identical to Jev: it supports the same three types of questions (yes/no, choice, and rubric-scoring) and even reuses Jev's term \"Noul\" for a…",
-      "tags": [
-        "ai",
-        "programming"
-      ]
     }
   ],
   "news_highlights": [
     {
-      "title": "Gemini 4 Hydrogen",
-      "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-hydrogen/",
-      "why_it_matters": "Google's new fast model for coding and agent work is available on every Gemini API tier at a flat $1.50/$7.50 per million tokens across a 1M context, with four thinking levels. It is a cheap option for the execution steps in agent pipelines."
+      "title": "AI unlocks Gödel's notebooks, said to contain hundreds of proved theorems",
+      "url": "https://www.theguardian.com/science/2026/nov/13/kurt-godel-notebooks-ai-helps-unlock-hidden-discoveries-man-who-transformed-maths",
+      "why_it_matters": "Helsinki logician Jan von Plato had been transcribing Gödel's 1,009-page 1940s workbooks (much of it in obsolete Gabelsberger shorthand) at about a page a week. After feeding his transcriptions to Claude, he got a 650-page digest in days. The model extracted 663 candidate theorems; about 400 verified in Coq as stated and ~200 were repaired. A reconstructed near-proof of the independence of the axiom of choice also passed Coq, though historians still need to separate Gödel from the reconstruction."
     },
     {
-      "title": "Gemini 4 Hydrogen and Orchestrator",
-      "url": "https://antigravity.google/blog/gemini-4-hydrogen-in-google-antigravity/",
-      "why_it_matters": "Antigravity's Orchestrator switches between Carbon (planning) and Hydrogen (edits and tests) within one session. Google reports near-Carbon success on Terminal-Bench with 24% less quota and 19% faster runs. It is the same advisor/executor split you can set up yourself with cheaper models."
+      "title": "MCP Is Dead Simple. And That's Exactly the Problem",
+      "url": "https://dev.to/sylwia-lask/mcp-is-dead-simple-and-thats-exactly-the-problem-5811",
+      "why_it_matters": "A widely discussed DEV.to piece argues that standing up an MCP server is easy, but production use still needs authorization, a human-in-the-loop for consequential writes, idempotency, and distrust of tool descriptions. In the demo, the agent filed the same HR complaint twice at different severities and ignored a DEMO ONLY header. Practical caution if you are wiring MCP servers into coding agents."
     },
     {
-      "title": "Build once, run on any agent: A practical guide to agent skills",
-      "url": "https://github.blog/ai-and-ml/github-copilot/build-once-run-on-any-agent-a-practical-guide-to-agent-skills/",
-      "why_it_matters": "GitHub's guide to portable SKILL.md skills: keep project details in a manifest, use one execution path, add human checkpoints, and generate Claude Code, Cursor and Copilot packaging from a single source with a CI check. Useful for keeping shared skills in sync across your bots."
+      "title": "llama.cpp v1.0.0 : A stronger foundation for the local AI ecosystem",
+      "url": "https://huggingface.co/blog/ggml-org/llama-cpp-v1",
+      "why_it_matters": "On 13 Nov 2026, ggml-org cut llama.cpp and ggml to library v1.0.0 and committed to semantic versioning: major bumps for breaking changes to the public C API/ABI. That is a stability signal for local inference apps and packagers (Homebrew, conda-forge, Docker, Debian, Winget, XCFramework) that already depend on these interfaces."
     },
     {
-      "title": "Turning a 22-year-old Postgres type-confusion primitive into RCE",
-      "url": "https://mehmetince.net/part-3-6-how-i-ended-up-turning-a-22-year-old-postgresql-type-confusion-primitive-into-rce-cve-2026-6460/",
-      "why_it_matters": "CVE-2026-6460 lets a low-privileged login role reach code execution with PREPARE plus ALTER TYPE on composite types. It was fixed in PostgreSQL's 9 November release (52 CVEs), and the author reports every managed Postgres vendor he tested was affected. Patch any Postgres you run."
+      "title": "After 600 experiments, here's what I discovered about JEPA world models",
+      "url": "https://haddyalchaer.com/jepa",
+      "why_it_matters": "After 600 experiments on LeCun-linked LeWM, Haddy Alchaer found the published model's predictions on trained paths already match perfect simulator physics; the big gains came from planning, not retraining. Chaining 25-step subgoals and charging a cost for jumps in a latent memory graph lifted long-horizon Push-T success from 22% to 85%. Scoring the pusher visible in a goal image was also quietly tanking results."
     },
     {
-      "title": "Anthropic IPO",
-      "url": "https://ipo.anthropic.com/us/",
-      "why_it_matters": "Anthropic's IPO site reports Q3'26 revenue of $17.0B (more than 12x year over year) and says pricing is expected on November 18 and trading on Nasdaq as \"ANT\" on November 19 (EST). This is a major market event for the company behind Claude Code."
+      "title": "Announcing Rust 1.100.0",
+      "url": "https://blog.rust-lang.org/2026/11/12/Rust-1.100.0/",
+      "why_it_matters": "Rust 1.100.0 (12 Nov 2026) finally stabilizes the never type ! after a decade, lands the core Allocator API for custom allocators on Vec and Box, and adds DropGuard. Cargo also gets dependency cooldowns (global-min-publish-age) so newly published crates can sit out a review window before they enter a lockfile — a practical supply-chain control for everyday builds."
     }
   ]
 }
