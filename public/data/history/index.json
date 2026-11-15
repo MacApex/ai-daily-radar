@@ -1,5 +1,12 @@
 [
   {
+    "date": "2026-11-15",
+    "featured": [
+      "JuliusBrussee/caveman"
+    ],
+    "archived_count": 5
+  },
+  {
     "date": "2026-11-14",
     "featured": [
       "ChromeDevTools/chrome-devtools-mcp",
